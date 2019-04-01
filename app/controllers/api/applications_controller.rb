@@ -33,6 +33,6 @@ class Api::ApplicationsController < ApplicationController
   end
 
   def application_params
-    params.require(:application).permit(:first_name, :last_name, :email, :phone_number, :current_city)
+    params.require(:application).permit(:part, :first_name, :last_name, :email, :phone_number, :current_city)
   end
 end
