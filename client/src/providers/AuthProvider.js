@@ -13,8 +13,8 @@ export class AuthProvider extends React.Component {
         this.setState({ user: res.data.data, });
         history.push("/");
       })
-    .catch( res => {
-      console.log(res);
+    .catch( err => {
+      alert(err);
     })
   }
   
@@ -24,8 +24,8 @@ export class AuthProvider extends React.Component {
         this.setState({ user: res.data.data, });
         history.push("/");
       })
-      .catch( res => {
-        console.log(res);
+      .catch( err => {
+        alert(err);
       })
   }
   
@@ -35,8 +35,8 @@ export class AuthProvider extends React.Component {
         this.setState({ user: null, });
         history.push('/login');
       })
-      .catch( res => {
-        console.log(res);
+      .catch( err => {
+        alert(err);
       })
   }
   
