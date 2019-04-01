@@ -29,6 +29,6 @@ class Api::ScholarshipsController < ApplicationController
     end
 
     def scholarship_params
-      params.require(:scholarship).permit(:name)  
+      params.require(:scholarship).permit(:first_name, :last_name, :full, :part, :email, :phone_number, :current_city)   
     end
 end
