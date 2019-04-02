@@ -20,7 +20,7 @@ class Navbar extends React.Component {
     } else {
       return (
         <Menu.Menu position='right'>
-          <Link to='/courses'>
+          <Link to='/fulltimeutah'>
             <Menu.Item 
               id='courses'
               name='courses'
