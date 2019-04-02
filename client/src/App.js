@@ -29,9 +29,9 @@ const App = () => (
           <Route exact path="/Application" component={Application} />
           <Route component={NoMatch} />
         </Switch>
-      <Footer />
       </Container>
     </FetchUser>
+      <Footer />
   </Fragment>
 )
 
