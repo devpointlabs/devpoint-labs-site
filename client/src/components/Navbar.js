@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from 'semantic-ui-react'
+import { Menu, Button } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class Navbar extends React.Component {
@@ -38,6 +38,7 @@ class Navbar extends React.Component {
               name='community'
           />
           </Link>
+          <Button >
           <Link to='/login'>
             <Menu.Item
               id='login'
@@ -45,6 +46,7 @@ class Navbar extends React.Component {
               active={location.pathname === '/login'}
             />
           </Link>
+          </Button>
           <Link to='/application'>
             <Menu.Item
               id='apply'
