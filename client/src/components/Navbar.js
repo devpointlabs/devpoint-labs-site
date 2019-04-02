@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from 'semantic-ui-react'
+import { Menu, Button } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class Navbar extends React.Component {
@@ -20,6 +20,25 @@ class Navbar extends React.Component {
     } else {
       return (
         <Menu.Menu position='right'>
+          <Link to='/courses'>
+            <Menu.Item 
+              id='courses'
+              name='courses'
+          />
+          </Link>
+          <Link to='/about'>
+            <Menu.Item 
+              id='about'
+              name='about'
+          />
+          </Link>
+          <Link to='/community'>
+            <Menu.Item 
+              id='community'
+              name='community'
+          />
+          </Link>
+          <Button >
           <Link to='/login'>
             <Menu.Item
               id='login'
@@ -27,10 +46,11 @@ class Navbar extends React.Component {
               active={location.pathname === '/login'}
             />
           </Link>
-          <Link to='/register'>
+          </Button>
+          <Link to='/application'>
             <Menu.Item
-              id='register'
-              name='register'
+              id='apply'
+              name='Apply Now'
               active={location.pathname === '/register'}
             />
           </Link>
@@ -45,7 +65,7 @@ class Navbar extends React.Component {
         <Menu pointing secondary>
           <Link to='/'>
             <Menu.Item
-              name='home'
+              name='this should be the devpoint logo'
               id='home'
               active={this.props.location.pathname === '/'}
             />
