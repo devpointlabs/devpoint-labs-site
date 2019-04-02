@@ -34,11 +34,11 @@ const CoursesSection = () => {
           <Grid.Row>
             <Card style={styles.cardSize}>
               <Card.Header style={styles.headerFont}>
-                Part-Time Web Development
+                Part-Time Web Development 
               </Card.Header>
 
               <Card.Meta style={styles.metaFont}>
-                Salt Lake City, Utah
+                Las Vegas, Nevada
               </Card.Meta>
               <br />
               <Card.Description style={styles.descFont}>
@@ -49,7 +49,7 @@ const CoursesSection = () => {
                 while wireframing
               </Card.Description>
               <br />
-              <Link to="/" style={styles.cardLink}>
+              <Link to="/PartTimeLV" style={styles.cardLink}>
                 Action Link
               </Link>
             </Card>
