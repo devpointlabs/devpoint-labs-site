@@ -4,6 +4,8 @@ import { Button, Divider, Grid, Header, Icon, Search, Segment } from 'semantic-u
 import styled from 'styled-components'
 import PageOptions from './PageOptions'
 import Landing from './Landing'
+import CoursesSection from './CoursesSection'
+
 
 class Home extends React.Component {
 
@@ -11,7 +13,9 @@ class Home extends React.Component {
     return (
       <>
         <Landing />
+        <PageOptions />
         <IDos/>
+        <CoursesSection />
       </>
     )
   }
