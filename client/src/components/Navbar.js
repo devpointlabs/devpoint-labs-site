@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, Button } from 'semantic-ui-react'
+import { Menu, Button, Dropdown, } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class Navbar extends React.Component {
