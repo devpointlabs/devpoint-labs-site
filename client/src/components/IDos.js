@@ -31,12 +31,12 @@ class Home extends React.Component {
                 </div>
                 <div style={{ fontSize: "2.2em" }}>
                   The DevPoint Labs Approach
-              </div>
+                </div>
                 <br />
                 <br />
                 <div style={{ fontSize: "1.5em", fontWeight: "50" }}>
                   We believe in a specific approach to teaching code.
-              </div>
+                </div>
                 <br />
               </Header>
             </Grid.Column>
