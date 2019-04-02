@@ -1,44 +1,39 @@
-import React from 'react';
+import React from 'react'
+import { Button, Divider, Grid, Header, Icon, Search, Segment } from 'semantic-ui-react'
 import styled from 'styled-components'
-import VideoCover from 'react-video-cover'
-import HeaderText from './HeaderText'
 
-class VideoBackground extends React.Component {
-  state = {
-      resizeNotifier: () => {},
-    }
-  render() {
-      const videoOptions = {
-        src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-        autoPlay: true,
-        loop: true,
-        muted: true
-      };
-      const style = {
-        width: '150vw',
-        height: '150vh',
-        position: 'fixed',
-        margin: 'auto',
-        top: '-25vh',
-        left: '-25vw',
-        zIndex: -2,
-      };
+const SegmentExamplePlaceholderGrid = () => (
+  <Segment as={SegmentStyles} style={{ background: 'transparent !important'}} placeholder>
+    <Grid columns={2} stackable textAlign='center'>
 
-  return (
-    <div style={style}>
-      <HeaderText />
-      <VideoCover
-        videoOptions={videoOptions}
-        remeasureOnWindowResize
-        getResizeNotifier={resizeNotifier => {
-          this.setState({
-            resizeNotifier,
-          });
-        }}
-      />
-    </div>
-      );
-    }
-  }
+      <Grid.Row verticalAlign='middle'>
+        <Grid.Column>
+          <Header style={{ fontSize: '5em', marginLeft: '10%', transform: 'translate(0, -100px)' }}>
+            Ready to <br/> code? Let's <br/> get started.
+          </Header>
+        </Grid.Column>
 
-export default VideoBackground;
+        <Grid.Column>
+          <ImageStyle src="https://www.desertjet.com/app/uploads/2015/10/placeholder-vertical.jpg" alt=""/>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+  </Segment>
+)
+
+const SegmentStyles = styled(Segment)`
+  width: 100%
+  height: 1000px
+  margin-top: -10% !important
+  border: none !important
+  background: transparent !important
+`
+
+const ImageStyle = styled.img`
+  width: 600px
+  height: 700px
+  display: flex !important
+  padding-top: 90px
+`
+
+export default SegmentExamplePlaceholderGrid
