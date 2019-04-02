@@ -20,6 +20,24 @@ class Navbar extends React.Component {
     } else {
       return (
         <Menu.Menu position='right'>
+          <Link to='/courses'>
+            <Menu.Item 
+              id='courses'
+              name='courses'
+          />
+          </Link>
+          <Link to='/about'>
+            <Menu.Item 
+              id='about'
+              name='about'
+          />
+          </Link>
+          <Link to='/community'>
+            <Menu.Item 
+              id='community'
+              name='community'
+          />
+          </Link>
           <Link to='/login'>
             <Menu.Item
               id='login'
@@ -27,10 +45,10 @@ class Navbar extends React.Component {
               active={location.pathname === '/login'}
             />
           </Link>
-          <Link to='/register'>
+          <Link to='/application'>
             <Menu.Item
-              id='register'
-              name='register'
+              id='apply'
+              name='Apply Now'
               active={location.pathname === '/register'}
             />
           </Link>
@@ -45,7 +63,7 @@ class Navbar extends React.Component {
         <Menu pointing secondary>
           <Link to='/'>
             <Menu.Item
-              name='home'
+              name='this should be the devpoint logo'
               id='home'
               active={this.props.location.pathname === '/'}
             />
