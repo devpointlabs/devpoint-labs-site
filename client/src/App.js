@@ -11,6 +11,7 @@ import Register from './components/Register';
 import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
+import Reviews from './components/Reviews';
 
 
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
           <Route exact path="/About" component={About} />
           <Route exact path="/Community" component={Community} />
           <Route exact path="/Application" component={Application} />
+          <Route exact path="/Reviews" component={Reviews} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
