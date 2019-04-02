@@ -6,6 +6,7 @@ import About from './components/About';
 import Community from './components/Community';
 import Application from './components/Application';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
 import { Switch, Route, } from 'react-router-dom';
@@ -28,6 +29,7 @@ const App = () => (
           <Route exact path="/Application" component={Application} />
           <Route component={NoMatch} />
         </Switch>
+      <Footer />
       </Container>
     </FetchUser>
   </Fragment>
