@@ -3,13 +3,16 @@ import IDos from './IDos'
 import { Button, Divider, Grid, Header, Icon, Search, Segment } from 'semantic-ui-react'
 import styled from 'styled-components'
 import PageOptions from './PageOptions'
-import CoursesSection  from './CoursesSection'
+import Landing from './Landing'
 
 class Home extends React.Component {
 
   render() {
     return (
-      <IDos />
+      <>
+        <Landing />
+        <IDos/>
+      </>
     )
   }
 }
