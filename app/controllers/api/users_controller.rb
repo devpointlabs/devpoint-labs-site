@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_user, only: [:show, :update, :destroy]
 
   def index
@@ -37,6 +38,6 @@ class Api::UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :description, :price, :department)
+      params.require(:user).permit(:firstname, :lastname, :email)
     end
   end
