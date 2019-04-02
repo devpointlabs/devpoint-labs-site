@@ -25,7 +25,7 @@ const CoursesSection = () => {
                 while wireframing
               </Card.Description>
               <br />
-              <Link to="/" style={styles.cardLink}>
+              <Link to="./PartTimeUtah" style={styles.cardLink}>
                 Action Link
               </Link>
             </Card>
