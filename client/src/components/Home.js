@@ -10,8 +10,8 @@ class Home extends React.Component {
   render() {
     return (
       <>
-      <Landing />
-      <IDos/>
+        <Landing />
+        <IDos/>
       </>
     )
   }
