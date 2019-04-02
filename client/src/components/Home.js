@@ -12,6 +12,7 @@ class Home extends React.Component {
     return (
       <>
         <Landing />
+        <PageOptions />
         <IDos/>
         <Reviews />
       </>
