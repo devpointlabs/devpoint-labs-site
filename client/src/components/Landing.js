@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button, Divider, Grid, Header, Icon, Search, Segment } from 'semantic-ui-react'
+import { Button, Divider, Grid, Header, Icon, Search, Segment, Container } from 'semantic-ui-react'
 import styled from 'styled-components'
 
 const Landing = () => (
+  <Container>
     <Grid as={SegmentStyles} columns={2} textAlign='center'>
-
       <Grid.Row verticalAlign='middle'>
         <Grid.Column>
           <Header style={{ fontSize: '5em', marginRight: '25%', transform: 'translate(0, -100px)' }}>
@@ -17,6 +17,7 @@ const Landing = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
+  </Container>
 )
 
 const SegmentStyles = styled(Grid)`

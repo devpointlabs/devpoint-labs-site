@@ -1,7 +1,9 @@
 import React from 'react'
-import { Grid, Button } from 'semantic-ui-react'
+import { Grid, Button, Container } from 'semantic-ui-react'
 
 const CampusTour = () => (
+
+
   <Grid>
     <Grid.Column width={5}>
       <h4>Want to come by for a <br /> campus tour</h4>
@@ -15,6 +17,7 @@ const CampusTour = () => (
       <Button inverted color='blue'>Schedule</Button>
     </Grid.Column>
   </Grid>
+
 )
 
 export default CampusTour

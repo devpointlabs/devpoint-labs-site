@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 const CoursesSection = () => {
   return (
     <>
+  
+
       <Grid columns={2}>
         <Grid.Column mobile={16} tablet={8} computer={8}>
           <Grid.Row>
@@ -74,12 +76,13 @@ const CoursesSection = () => {
             <Link
               to="/FullTimeUtah"
               style={{ textAlign: "center", fontWeight: "bold" }}
-            >
+              >
               Action Link
             </Link>
           </Card>
         </Grid.Column>
       </Grid>
+  
     </>
   );
 };

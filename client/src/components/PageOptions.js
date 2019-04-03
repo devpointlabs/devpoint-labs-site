@@ -1,9 +1,10 @@
 import React from 'react'
-import { Grid, Image, Header, Icon } from 'semantic-ui-react'
+import { Grid, Image, Header, Icon, Container } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 const PageOptions = () => (
   <>
+
     <Grid columns={3} style={{ marginBottom: '5em'}}>
       <Grid.Row>
         <Grid.Column>
@@ -50,6 +51,7 @@ const PageOptions = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
+
   </>
 )
 
