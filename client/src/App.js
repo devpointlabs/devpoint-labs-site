@@ -16,11 +16,9 @@ import Reviews from "./components/Reviews";
 import PartTimeUtah from "./components/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV";
 import ContactForm from "./components/ContactForm";
-import FetchUser from './components/FetchUser';
 import FinancingScholarships from './components/FinancingScholarships';
 import StudentHousing from './components/StudentHousing';
-import PartTimeUtah from './components/PartTimeUtah'
-import PartTimeLV from './components/PartTimeLV'
+
 
 
 const App = () => (
