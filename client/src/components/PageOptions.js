@@ -1,56 +1,50 @@
 import React from 'react'
-import { Grid, Image, Header } from 'semantic-ui-react'
+import { Grid, Image, Header, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 const PageOptions = () => (
   <>
-    <Grid columns={3}>
+    <Grid columns={3} style={{ marginBottom: '5em'}}>
       <Grid.Row>
         <Grid.Column>
-          <Image />
-            <Header textAlign='center'>
+          <Icon name='university' size='big' style={{ marginLeft: '50%'}} />
+            <Header  as='h2' textAlign='center'>
                 University Partner
             </Header>
-            <p style={{ textAlign: 'center', fontSize: '.9em' }}>
-              User Interface designs includes selecting
-              <br/>
-               and arranging interface elements
+            <p style={{ textAlign: 'center', fontSize: '1.2em' }}>
+            Learn the skills in web development to earn a University of Utah Professional Education endorsed certificate powered by DevPoint Labs.
             </p>
-            <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '.9em'}}>
-            <Link to='/' >
-              First Link 
-            </Link>
+            <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.2em'}}>
+            <a href='https://devpointlabs.continue.utah.edu/' target='_blank' >
+              More Info
+            </a>
             </p>
         </Grid.Column>
         <Grid.Column>
-          <Image />
-            <Header textAlign='center'>
+          <Icon name='student' size='big' style={{ marginLeft: '47%'}} />
+            <Header as='h2' textAlign='center'>
               Financing And Scholarships
             </Header>
-            <p style={{ textAlign: 'center', fontSize: '.9em' }}>
-              Page layout is where components
-              <br/>
-               come together, while wireframing
+            <p style={{ textAlign: 'center', fontSize: '1.2em' }}>
+            We're excited to offer two scholarships for our Full-Time ProEd Web Development and Part-Time Web Development classes. 
             </p>
-            <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '.9em'}}>
-            <Link to='/' >
-              Second Link
+            <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.2em'}}>
+            <Link to='/FinancingScholarships' >
+              More Info
             </Link>
             </p>
         </Grid.Column>
         <Grid.Column>
-          <Image />
-            <Header textAlign='center'>
+          <Icon name='home' size='big' style={{ marginLeft: '47%'}} />
+            <Header  as='h2' textAlign='center'>
               Free Student Housing
             </Header>
-            <p style={{ textAlign: 'center', fontSize: '.9em' }}>
-              For complex project, wireframes using
-              <br/>
-               computer software is popular
+            <p style={{ textAlign: 'center', fontSize: '1.2em' }}>
+              The DevHouse - Fully furnished free student housing steps away from campus.
             </p>
-            <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '.9em'}}>
-            <Link to='/' >
-              Third Link
+            <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.2em'}}>
+            <Link to='/StudentHousing' >
+              More Info
             </Link>
             </p>
         </Grid.Column>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, Button } from 'semantic-ui-react'
+import { Menu, Button, Dropdown } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class Navbar extends React.Component {
@@ -10,56 +10,34 @@ class Navbar extends React.Component {
     
     if (user) {
       return (
-        <Menu.Menu position='right'>
+        <>
           <Menu.Item
             name='logout'
             onClick={ () => handleLogout(this.props.history) }
-          />
-        </Menu.Menu>
+            />
+        </>
       )
     } else {
       return (
-        <Menu.Menu position='right'>
-          <Link to='/courses'>
-            <Menu.Item 
-              id='courses'
-              name='courses'
-          />
-          </Link>
-          <Link to='/about'>
-            <Menu.Item 
-              id='about'
-              name='about'
-          />
-          </Link>
-          <Link to='/community'>
-            <Menu.Item 
-              id='community'
-              name='community'
-          />
-          </Link>
-          <Button >
-          <Link to='/login'>
-            <Menu.Item
-              id='login'
-              name='login'
-              active={location.pathname === '/login'}
-            />
-          </Link>
-          </Button>
-          <Link to='/application'>
-            <Menu.Item
-              id='apply'
-              name='Apply Now'
-              active={location.pathname === '/register'}
-            />
-          </Link>
-        </Menu.Menu>
+          <>
+            <Link to='/login'>
+              <Menu.Item
+                id='login'
+                name='login'
+                active={location.pathname === '/login'}
+              />
+            </Link>
+          </>
       )
     }
   }
   
   render() {
+    const options = [
+      { key: 1, text: 'Events', value: 1, href: 'https://www.meetup.com/devpoint-labs/', target: '_blank' },
+      { key: 2, text: 'Blog', value: 2, href: 'https://devpointlabs.tumblr.com/', target: '_blank' },
+      { key: 3, text: 'Shop', value: 3, href: 'https://devpointlabs.bigcartel.com/', target: '_blank' },
+    ]
     return (
       <div>
         <Menu pointing secondary>
@@ -70,7 +48,33 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/'}
             />
           </Link>
-            { this.rightNavItems() }
+          <Menu.Menu position='right'>
+          <Link to='/courses'>
+            <Menu.Item 
+              id='courses'
+              name='courses'
+              active={this.props.location.pathname === '/courses'}
+          />
+          </Link>
+          <Link to='/about'>
+            <Menu.Item 
+              id='about'
+              name='about'
+              active={this.props.location.pathname === '/about'}
+          />
+          </Link>
+          <Menu.Item>
+            <Dropdown text='Community' options={options} simple item />
+          </Menu.Item>
+          { this.rightNavItems() }
+          <Link to='/application'>
+            <Menu.Item
+              id='apply'
+              name='Apply Now'
+              active={this.props.location.pathname === '/register'}
+            />
+          </Link>
+        </Menu.Menu>
         </Menu>
       </div>
     )
