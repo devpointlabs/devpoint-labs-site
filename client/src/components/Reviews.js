@@ -31,8 +31,8 @@ class Reviews extends React.Component {
         onSelect={this.handleSelect}
       >
         <Carousel.Item>
-          <div>
-            <Grid columns={2} relaxed='very' style={{ textAlign: 'center', }} >
+          <div style={{ margin: '5%'}}>
+            <Grid columns={2} relaxed='very' style={{ textAlign: 'center', }} divided>
               <Grid.Column>
                 <Icon name='user circle outline' size='big' />
                 <p>This course is diffiult but rewarding if your willing to put in the effort and ;me. Instructor and the staff is awesome but if you dont give it your all that all means nothing. It was an awesome experience for me overall. I highly recommend this course !</p>
@@ -47,14 +47,12 @@ class Reviews extends React.Component {
                 <p>Co-founder of Forma DS</p>
               </Grid.Column>
             </Grid>
-
-            <Divider vertical />
           </div>
         </Carousel.Item>
 
         <Carousel.Item>
-          <div>
-            <Grid columns={2} relaxed='very' style={{ textAlign: 'center'}}>
+          <div style={{ margin: '5%'}}>
+            <Grid columns={2} relaxed='very' style={{ textAlign: 'center'}} divided>
               <Grid.Column>
                 <Icon name='user circle outline' size='big' />
                 <p>I graduated from DevPoint Labs in January '18, and just over a year later it's proven to be one of the best decisions I have ever made in my career. The DPL fulltime full stack course offers quality, relevant content and tons of hands on experience and mentorship over the course of an intensive 11 weeks.</p>
@@ -68,8 +66,6 @@ class Reviews extends React.Component {
                 </a>
               </Grid.Column>
             </Grid>
-
-            <Divider vertical />
           </div>
         </Carousel.Item>
       </Carousel>

@@ -19,7 +19,7 @@ class Navbar extends React.Component {
       )
     } else {
       return (
-          <Button >
+          <>
             <Link to='/login'>
               <Menu.Item
                 id='login'
@@ -27,7 +27,7 @@ class Navbar extends React.Component {
                 active={location.pathname === '/login'}
               />
             </Link>
-          </Button>
+          </>
       )
     }
   }
@@ -53,19 +53,21 @@ class Navbar extends React.Component {
             <Menu.Item 
               id='courses'
               name='courses'
+              active={this.props.location.pathname === '/courses'}
           />
           </Link>
           <Link to='/about'>
             <Menu.Item 
               id='about'
               name='about'
+              active={this.props.location.pathname === '/about'}
           />
           </Link>
           <Menu.Item>
             <Dropdown text='Community' options={options} simple item />
           </Menu.Item>
-            { this.rightNavItems() }
-            <Link to='/application'>
+          { this.rightNavItems() }
+          <Link to='/application'>
             <Menu.Item
               id='apply'
               name='Apply Now'
