@@ -16,6 +16,12 @@ import Reviews from "./components/Reviews";
 import PartTimeUtah from "./components/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV";
 import ContactForm from "./components/ContactForm";
+import FetchUser from './components/FetchUser';
+import FinancingScholarships from './components/FinancingScholarships';
+import StudentHousing from './components/StudentHousing';
+import PartTimeUtah from './components/PartTimeUtah'
+import PartTimeLV from './components/PartTimeLV'
+
 
 const App = () => (
   <Fragment>
@@ -30,10 +36,11 @@ const App = () => (
           <Route exact path="/About" component={About} />
           <Route exact path="/Community" component={Community} />
           <Route exact path="/Application" component={Application} />
-          <Route exact path="/Reviews" component={Reviews} />
+          <Route exact path="/FinancingScholarships" component={FinancingScholarships} />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
           <Route exact path="/ContactUs" component={ContactForm} />
+          <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route component={NoMatch} />
         </Switch>
       </Container>

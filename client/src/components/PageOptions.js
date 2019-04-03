@@ -12,14 +12,12 @@ const PageOptions = () => (
                 University Partner
             </Header>
             <p style={{ textAlign: 'center', fontSize: '1.2em' }}>
-              User Interface designs includes selecting
-              <br/>
-               and arranging interface elements
+            Learn the skills in web development to earn a University of Utah Professional Education endorsed certificate powered by DevPoint Labs.
             </p>
             <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.2em'}}>
-            <Link to='/' >
-              First Link 
-            </Link>
+            <a href='https://devpointlabs.continue.utah.edu/' target='_blank' >
+              More Info
+            </a>
             </p>
         </Grid.Column>
         <Grid.Column>
@@ -28,13 +26,11 @@ const PageOptions = () => (
               Financing And Scholarships
             </Header>
             <p style={{ textAlign: 'center', fontSize: '1.2em' }}>
-              Page layout is where components
-              <br/>
-               come together, while wireframing
+            We're excited to offer two scholarships for our Full-Time ProEd Web Development and Part-Time Web Development classes. 
             </p>
             <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.2em'}}>
-            <Link to='/' >
-              Second Link
+            <Link to='/FinancingScholarships' >
+              More Info
             </Link>
             </p>
         </Grid.Column>
@@ -44,13 +40,11 @@ const PageOptions = () => (
               Free Student Housing
             </Header>
             <p style={{ textAlign: 'center', fontSize: '1.2em' }}>
-              For complex project, wireframes using
-              <br/>
-               computer software is popular
+              The DevHouse - Fully furnished free student housing steps away from campus.
             </p>
             <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.2em'}}>
-            <Link to='/' >
-              Third Link
+            <Link to='/StudentHousing' >
+              More Info
             </Link>
             </p>
         </Grid.Column>
