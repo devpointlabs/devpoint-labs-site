@@ -5,6 +5,7 @@ import Courses from './components/Courses';
 import About from './components/About';
 import Community from './components/Community';
 import Application from './components/Application';
+import Schoalrship from './components/Scholarship'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './components/Login';
@@ -26,6 +27,7 @@ const App = () => (
           <Route exact path="/Courses" component={Courses} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Community" component={Community} />
+          <Route exact path="/Scholarship" component={Schoalrship} />
           <Route exact path="/Application" component={Application} />
           <Route component={NoMatch} />
         </Switch>
