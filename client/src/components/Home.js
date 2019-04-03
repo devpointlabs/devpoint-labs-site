@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import PageOptions from './PageOptions'
 import Landing from './Landing'
 import Reviews from './Reviews';
+import CoursesSection from './CoursesSection';
+import CampusTour from './CampusTour';
 
 class Home extends React.Component {
 
@@ -15,6 +17,8 @@ class Home extends React.Component {
         <PageOptions />
         <IDos/>
         <Reviews />
+        <CampusTour />
+        <CoursesSection />
       </>
     )
   }
