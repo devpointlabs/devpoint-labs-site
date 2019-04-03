@@ -6,7 +6,7 @@ const CoursesSection = () => {
   return (
     <>
       <Grid columns={2}>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={4}>
           <Grid.Row>
             <Card style={styles.cardSize}>
               <Card.Header style={styles.headerFont}>
@@ -55,7 +55,7 @@ const CoursesSection = () => {
             </Card>
           </Grid.Row>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={4}>
           <Card style={styles.rCardSize}>
             <Card.Header style={styles.headerFont} textAlign="center">
               University of Utah Full-Time Web Development

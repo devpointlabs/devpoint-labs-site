@@ -8,6 +8,7 @@ import Reviews from './Reviews';
 import CoursesSection from './CoursesSection';
 import CampusTour from './CampusTour';
 
+
 class Home extends React.Component {
 
   render() {
