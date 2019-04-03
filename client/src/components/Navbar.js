@@ -1,7 +1,11 @@
 import React from 'react'
 import CoursesDropDown from './CoursesDropDown'
 import { AuthConsumer, } from "../providers/AuthProvider";
+<<<<<<< HEAD
 import { Menu, Button, Dropdown, } from 'semantic-ui-react'
+=======
+import { Menu, Button, Dropdown } from 'semantic-ui-react'
+>>>>>>> fcbb1b20accddfab0bdab7ef351a198b6904f47f
 import { Link, withRouter, } from 'react-router-dom'
 import CourseDropDown from './CoursesDropDown';
 
@@ -21,7 +25,7 @@ class Navbar extends React.Component {
       )
     } else {
       return (
-          <Button >
+          <>
             <Link to='/login'>
               <Menu.Item
                 id='login'
@@ -29,7 +33,7 @@ class Navbar extends React.Component {
                 active={location.pathname === '/login'}
               />
             </Link>
-          </Button>
+          </>
       )
     }
   }
@@ -37,6 +41,11 @@ class Navbar extends React.Component {
 
   
   render() {
+    const options = [
+      { key: 1, text: 'Events', value: 1, href: 'https://www.meetup.com/devpoint-labs/', target: '_blank' },
+      { key: 2, text: 'Blog', value: 2, href: 'https://devpointlabs.tumblr.com/', target: '_blank' },
+      { key: 3, text: 'Shop', value: 3, href: 'https://devpointlabs.bigcartel.com/', target: '_blank' },
+    ]
     return (
       <div>
         <Menu pointing secondary>
@@ -47,22 +56,26 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/'}
             />
           </Link>
-          <Menu.Menu position='right' >
-          <Dropdown item name='coursesoptions={CoursesDropDown} />
+          <Menu.Menu position='right'>
+          <Link to='/courses'>
+            <Menu.Item 
+              id='courses'
+              name='courses'
+              active={this.props.location.pathname === '/courses'}
+          />
+          </Link>
           <Link to='/about'>
             <Menu.Item 
               id='about'
               name='about'
+              active={this.props.location.pathname === '/about'}
           />
           </Link>
-          <Link to='/community'>
-            <Menu.Item 
-              id='community'
-              name='community'
-          />
-          </Link>
-            { this.rightNavItems() }
-            <Link to='/application'>
+          <Menu.Item>
+            <Dropdown text='Community' options={options} simple item />
+          </Menu.Item>
+          { this.rightNavItems() }
+          <Link to='/application'>
             <Menu.Item
               id='apply'
               name='Apply Now'
