@@ -1,24 +1,39 @@
-import React from 'react';
+import React from "react";
 import { Form, Header, Checkbox } from "semantic-ui-react";
 
 class ApplicationsForm extends React.Component {
-  defaultValues = { first_name: "", last_name: "", email: "", phone_number: "", current_city: "" };
-  state = { ...this.defaultValues, };
+  defaultValues = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone_number: "",
+    current_city: ""
+  };
+  state = { ...this.defaultValues };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
-    const product = { ...this.state, };
+    const product = { ...this.state };
     // TODO: make api POST request
-    this.setState({ ...this.defaultValues, });
-  }
+    this.setState({ ...this.defaultValues });
+  };
 
-  handleChange = (e) => {
-    const { target: { name, value, } } = e;
-    this.setState({ [name]: value, });
-  }
+  handleChange = e => {
+    const {
+      target: { name, value }
+    } = e;
+    this.setState({ [name]: value });
+  };
 
   render() {
-    const { first_name, last_name, email, phone_number, current_city, part } = this.state;
+    const {
+      first_name,
+      last_name,
+      email,
+      phone_number,
+      current_city,
+      part
+    } = this.state;
 
     return (
       <div>
@@ -76,7 +91,7 @@ class ApplicationsForm extends React.Component {
           <Form.Button color="blue">Submit</Form.Button>
         </Form>
       </div>
-    )
+    );
   }
 }
 
