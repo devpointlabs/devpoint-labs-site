@@ -6,7 +6,7 @@ const CoursesSection = () => {
   return (
     <>
       <Grid columns={2}>
-        <Grid.Column mobile={16} tablet={8} computer={4}>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
           <Grid.Row>
             <Card style={styles.cardSize}>
               <Card.Header style={styles.headerFont}>
@@ -34,12 +34,10 @@ const CoursesSection = () => {
           <Grid.Row>
             <Card style={styles.cardSize}>
               <Card.Header style={styles.headerFont}>
-                Part-Time Web Development 
+                Part-Time Web Development
               </Card.Header>
 
-              <Card.Meta style={styles.metaFont}>
-                Las Vegas, Nevada
-              </Card.Meta>
+              <Card.Meta style={styles.metaFont}>Las Vegas, Nevada</Card.Meta>
               <br />
               <Card.Description style={styles.descFont}>
                 Page Layout is where these
@@ -55,7 +53,7 @@ const CoursesSection = () => {
             </Card>
           </Grid.Row>
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={8} computer={4}>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
           <Card style={styles.rCardSize}>
             <Card.Header style={styles.headerFont} textAlign="center">
               University of Utah Full-Time Web Development
@@ -73,7 +71,10 @@ const CoursesSection = () => {
               visuals. Visual guides also allow you to define
             </Card.Description>
             <br />
-            <Link to="/FullTimeUtah" style={{ textAlign: "center", fontWeight: "bold" }}>
+            <Link
+              to="/FullTimeUtah"
+              style={{ textAlign: "center", fontWeight: "bold" }}
+            >
               Action Link
             </Link>
           </Card>
