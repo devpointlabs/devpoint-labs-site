@@ -1,7 +1,9 @@
 import React from 'react'
+import CoursesDropDown from './CoursesDropDown'
 import { AuthConsumer, } from "../providers/AuthProvider";
 import { Menu, Button, Dropdown, } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
+import CourseDropDown from './CoursesDropDown';
 
 class Navbar extends React.Component {
   
@@ -31,6 +33,8 @@ class Navbar extends React.Component {
       )
     }
   }
+
+
   
   render() {
     return (
@@ -43,13 +47,8 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/'}
             />
           </Link>
-          <Menu.Menu position='right'>
-          <Link to='/courses'>
-            <Menu.Item 
-              id='courses'
-              name='courses'
-          />
-          </Link>
+          <Menu.Menu position='right' >
+          <Dropdown item name='coursesoptions={CoursesDropDown} />
           <Link to='/about'>
             <Menu.Item 
               id='about'
