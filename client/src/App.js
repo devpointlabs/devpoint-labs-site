@@ -12,7 +12,7 @@ import Register from "./components/Register";
 import { Switch, Route, } from "react-router-dom";
 import { Container, } from "semantic-ui-react";
 import FetchUser from "./components/FetchUser";
-import Schoalrship from "./components/Scholarship";
+import Scholarship from "./components/Scholarship";
 import Reviews from "./components/Reviews";
 import PartTimeUtah from "./components/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV";
