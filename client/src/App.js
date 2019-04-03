@@ -25,7 +25,6 @@ const App = () => (
   <Fragment>
     <Navbar />
     <FetchUser>
-
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
@@ -41,9 +40,8 @@ const App = () => (
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route component={NoMatch} />
         </Switch>
-
     </FetchUser>
-      <Footer />
+    <Footer />
   </Fragment>
 );
 
