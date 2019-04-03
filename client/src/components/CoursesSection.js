@@ -73,7 +73,7 @@ const CoursesSection = () => {
               visuals. Visual guides also allow you to define
             </Card.Description>
             <br />
-            <Link to="/" style={{ textAlign: "center", fontWeight: "bold" }}>
+            <Link to="/FullTimeUtah" style={{ textAlign: "center", fontWeight: "bold" }}>
               Action Link
             </Link>
           </Card>
