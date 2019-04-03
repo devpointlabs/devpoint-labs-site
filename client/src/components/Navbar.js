@@ -1,51 +1,54 @@
 import React from 'react'
-import CoursesDropDown from './CoursesDropDown'
-import { AuthConsumer, } from "../providers/AuthProvider";
-<<<<<<< HEAD
-import { Menu, Button, Dropdown, } from 'semantic-ui-react'
-=======
-import { Menu, Button, Dropdown } from 'semantic-ui-react'
->>>>>>> fcbb1b20accddfab0bdab7ef351a198b6904f47f
+import { AuthConsumer, } from "../providers/AuthProvider"
+import { Menu, Dropdown, } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
-import CourseDropDown from './CoursesDropDown';
+
 
 class Navbar extends React.Component {
-  
+
   rightNavItems = () => {
     const { auth: { user, handleLogout, }, location, } = this.props;
-    
+
     if (user) {
       return (
         <>
           <Menu.Item
             name='logout'
-            onClick={ () => handleLogout(this.props.history) }
-            />
+            onClick={() => handleLogout(this.props.history)}
+          />
         </>
       )
     } else {
       return (
-          <>
-            <Link to='/login'>
-              <Menu.Item
-                id='login'
-                name='login'
-                active={location.pathname === '/login'}
-              />
-            </Link>
-          </>
+        <>
+          <Link to='/login'>
+            <Menu.Item
+              id='login'
+              name='login'
+              active={location.pathname === '/login'}
+            />
+          </Link>
+        </>
       )
     }
   }
 
 
-  
+
   render() {
+
     const options = [
       { key: 1, text: 'Events', value: 1, href: 'https://www.meetup.com/devpoint-labs/', target: '_blank' },
       { key: 2, text: 'Blog', value: 2, href: 'https://devpointlabs.tumblr.com/', target: '_blank' },
       { key: 3, text: 'Shop', value: 3, href: 'https://devpointlabs.bigcartel.com/', target: '_blank' },
     ]
+
+    const courseOptions = [
+      { key: 1, text: 'Full Time Course - SLC, Utah', value: 1, href: '/fulltimeutah', target: '_blank' },
+      { key: 2, text: 'Part Time Course - SLC, Utah', value: 2, href: '/parttimeutah', target: '_blank' },
+      { key: 3, text: 'Part Time Course - UNLV, Nevada', value: 3, href: '/parttimeLV', target: '_blank' },
+    ]
+
     return (
       <div>
         <Menu pointing secondary>
@@ -57,32 +60,29 @@ class Navbar extends React.Component {
             />
           </Link>
           <Menu.Menu position='right'>
-          <Link to='/courses'>
-            <Menu.Item 
-              id='courses'
-              name='courses'
-              active={this.props.location.pathname === '/courses'}
-          />
-          </Link>
-          <Link to='/about'>
-            <Menu.Item 
-              id='about'
-              name='about'
-              active={this.props.location.pathname === '/about'}
-          />
-          </Link>
-          <Menu.Item>
-            <Dropdown text='Community' options={options} simple item />
-          </Menu.Item>
-          { this.rightNavItems() }
-          <Link to='/application'>
-            <Menu.Item
-              id='apply'
-              name='Apply Now'
-              active={this.props.location.pathname === '/register'}
-            />
-          </Link>
-        </Menu.Menu>
+            <Menu.Item>
+              <Dropdown text='Courses' options={courseOptions} simple item />
+            </Menu.Item>
+            <Link to='/about'>
+              <Menu.Item
+                
+                id='about'
+                name='about'
+                active={this.props.location.pathname === '/about'}
+              />
+            </Link>
+            <Menu.Item>
+              <Dropdown text='Community' options={options} simple item />
+            </Menu.Item>
+            {this.rightNavItems()}
+            <Link to='/application'>
+              <Menu.Item
+                id='apply'
+                name='Apply Now'
+                active={this.props.location.pathname === '/register'}
+              />
+            </Link>
+          </Menu.Menu>
         </Menu>
       </div>
     )
@@ -92,9 +92,9 @@ class Navbar extends React.Component {
 export class ConnectedNavbar extends React.Component {
   render() {
     return (
-      <AuthConsumer> 
-        { auth => 
-          <Navbar { ...this.props } auth={auth} />
+      <AuthConsumer>
+        {auth =>
+          <Navbar {...this.props} auth={auth} />
         }
       </AuthConsumer>
     )
