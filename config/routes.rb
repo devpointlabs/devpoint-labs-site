@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :applications
     resources :scholarships
+    resources :contacts
   end
 
     
