@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Grid, Image, Header, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -10,6 +11,7 @@ const PageOptions = () => (
       class="ui equal width grid"
       style={{ marginBottom: "5em" }}
     >
+
       <Grid.Row>
         <Grid.Column mobile={16} tablet={8} computer={6}>
           <Icon name="university" size="big" style={{ marginLeft: "50%" }} />
@@ -74,6 +76,7 @@ const PageOptions = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
+
   </>
 );
 

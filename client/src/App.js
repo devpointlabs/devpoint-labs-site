@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import { Switch, Route, } from "react-router-dom";
-import { Container, } from "semantic-ui-react";
+
 import FetchUser from "./components/FetchUser";
 import Reviews from "./components/Reviews";
 import PartTimeUtah from "./components/PartTimeUtah";
