@@ -12,7 +12,8 @@ import Register from './components/Register';
 import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
-import Reviews from './components/Reviews';
+import FinancingScholarships from './components/FinancingScholarships';
+import StudentHousing from './components/StudentHousing';
 import PartTimeUtah from './components/PartTimeUtah'
 import PartTimeLV from './components/PartTimeLV'
 
@@ -30,9 +31,10 @@ const App = () => (
           <Route exact path="/About" component={About} />
           <Route exact path="/Community" component={Community} />
           <Route exact path="/Application" component={Application} />
-          <Route exact path="/Reviews" component={Reviews} />
+          <Route exact path="/FinancingScholarships" component={FinancingScholarships} />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
+          <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
