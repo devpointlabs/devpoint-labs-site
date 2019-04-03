@@ -11,7 +11,7 @@ const PageOptions = () => (
       style={{ marginBottom: "5em" }}
     >
       <Grid.Row>
-        <Grid.Column mobile={16} tablet={8} computer={4}>
+        <Grid.Column mobile={16} tablet={8} computer={6}>
           <Icon name="university" size="big" style={{ marginLeft: "50%" }} />
           <Header as="h2" textAlign="center">
             University Partner
@@ -33,7 +33,8 @@ const PageOptions = () => (
             </a>
           </p>
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={8} computer={4}>
+        <br />
+        <Grid.Column mobile={16} tablet={8} computer={5}>
           <Icon name="student" size="big" style={{ marginLeft: "47%" }} />
           <Header as="h2" textAlign="center">
             Financing And Scholarships
