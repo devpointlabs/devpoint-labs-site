@@ -63,7 +63,7 @@ class Reviews extends React.Component {
               </Grid.Column>
 
               <Grid.Column verticalAlign='middle'>
-                <a href='https://www.coursereport.com/schools/devpoint-labs#/reviews'>
+                <a href='https://www.coursereport.com/schools/devpoint-labs#/reviews' target='_blank'>
                   <Button inverted color='blue'>See more Reviews</Button>
                 </a>
               </Grid.Column>
