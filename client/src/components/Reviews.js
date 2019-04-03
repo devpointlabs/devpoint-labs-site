@@ -35,14 +35,14 @@ class Reviews extends React.Component {
             <Grid columns={2} relaxed='very' style={{ textAlign: 'center', }} divided>
               <Grid.Column>
                 <Icon name='user circle outline' size='big' />
-                <p>This course is diffiult but rewarding if your willing to put in the effort and ;me. Instructor and the staff is awesome but if you dont give it your all that all means nothing. It was an awesome experience for me overall. I highly recommend this course !</p>
+                <p>This course is difficult but rewarding if your willing to put in the effort and time. Instructor and the staff is awesome but if you dont give it your all that all means nothing. It was an awesome experience for me overall. I highly recommend this course!</p>
                 <h3>Usong Cho</h3>
                 <p>U of U Full-Time Student</p>
               </Grid.Column>
 
               <Grid.Column>
                 <Icon name='user circle outline' size='big' />
-                <p>It was incredibly challenging and satisfying. The curriculum was difficult but there was always consistent and relevant support from the instructors, the TAs as well as the ac;ve mentors. I would do it again.</p>
+                <p>It was incredibly challenging and satisfying. The curriculum was difficult but there was always consistent and relevant support from the instructors, the TAs as well as the active mentors. I would do it again.</p>
                 <h3>Bryan Holbrook</h3>
                 <p>Co-founder of Forma DS</p>
               </Grid.Column>
