@@ -10,7 +10,6 @@ import CampusTour from './CampusTour';
 
 
 class Home extends React.Component {
-
   render() {
     return (
       <>
@@ -23,10 +22,8 @@ class Home extends React.Component {
           <CoursesSection />
         </Container>
       </>
-    )
+    );
   }
 }
 
-
-
-export default Home
+export default Home;
