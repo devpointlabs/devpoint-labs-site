@@ -42,7 +42,7 @@ const CostDates = () => (
               <br />
               <br />
               <br />
-              <CardButton primary>Apply Now</CardButton>
+              <CardButton href="/ApplicationsForm" primary>Apply Now</CardButton>
               <br />
               <br />
               <br />
@@ -70,7 +70,7 @@ const CostDates = () => (
               <br />
               <br />
               <br />
-              <CardButton primary>Apply Now</CardButton>
+              <CardButton href="/ApplicationsForm" primary>Apply Now</CardButton>
             </CardDescription>
           </Grid.Column>
         </Grid.Row>
