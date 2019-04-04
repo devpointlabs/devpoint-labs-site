@@ -1,13 +1,13 @@
 import React from 'react'
-import { Button, Divider, Grid, Header, Icon, Search, Segment, Container } from 'semantic-ui-react'
+import { Grid, Header, Container } from 'semantic-ui-react'
 import styled from 'styled-components'
+import media from '../theme/media'
 
 const Landing = () => (
-  <Container>
     <Grid as={SegmentStyles} columns={2} textAlign='center'>
       <Grid.Row verticalAlign='middle'>
         <Grid.Column>
-          <Header style={{ fontSize: '5em', marginRight: '25%', transform: 'translate(0, -100px)' }}>
+          <Header style={{ fontSize: '5em', transform: 'translate(0, -2em)' }}>
             Ready to <br/> code? Let's <br/> get started.
           </Header>
         </Grid.Column>
@@ -17,22 +17,22 @@ const Landing = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
-  </Container>
 )
 
 const SegmentStyles = styled(Grid)`
-  width: 100%
-  height: 1000px
-  margin-top: -10% !important
+  height: 70em
+  display: flex !important
+  flex-wrap: wrap !important
   border: none !important
-  background: transparent !important
 `
 
 const ImageStyle = styled.img`
-  width: 600px
-  height: 700px
-  display: flex !important
-  padding-top: 90px
+  width: 50em
+  height: 60em
+
+  ${media.phone`
+    display: none
+  `}
 `
 
 export default Landing
