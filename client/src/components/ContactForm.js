@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
-import { Header, Form, Dropdown } from "semantic-ui-react";
+import styled from 'styled-components'
+import media from '../theme/media'
+import { Header, Form, Dropdown, Container } from "semantic-ui-react";
 
 class ContactForm extends React.Component {
   defaultValues = {
@@ -68,7 +70,7 @@ class ContactForm extends React.Component {
       }
     ];
     return (
-      <div>
+      <FormStyle>
         <br />
         <Header as="h1" textAlign="center">
           {" "}
@@ -141,9 +143,18 @@ class ContactForm extends React.Component {
           />
           <Form.Button onClick={this.handleSubmit}>Submit</Form.Button>
         </Form>
-      </div>
+      </FormStyle>
     );
   }
 }
+
+const FormStyle = styled(Container)`
+  margin: 5em
+  ${media.phone`
+      padding-left: 100px !important
+      padding-right: 10px !important
+      padding-top: 10px !important
+  `}
+`
 
 export default ContactForm;
