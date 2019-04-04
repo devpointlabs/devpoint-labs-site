@@ -18,8 +18,6 @@ import PartTimeLV from "./components/PartTimeLV";
 import ContactForm from "./components/ContactForm";
 import FinancingScholarships from './components/FinancingScholarships';
 import StudentHousing from './components/StudentHousing';
-import StudentSchedule from './components/StudentSchedule';
-
 
 
 const App = () => (
@@ -40,7 +38,6 @@ const App = () => (
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
           <Route exact path="/ContactUs" component={ContactForm} />
           <Route exact path="/StudentHousing" component={StudentHousing} />
-          <Route exact path="/StudentSchedule" component={StudentSchedule} />
           <Route component={NoMatch} />
         </Switch>
     </FetchUser>
