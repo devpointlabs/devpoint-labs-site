@@ -4,7 +4,7 @@ import NoMatch from "./components/NoMatch";
 import FullTimeUtah from "./components/FullTimeUtah";
 import About from "./components/About";
 import Community from "./components/Community";
-import Application from "./components/Application";
+import ApplicationsForm from "./components/ApplicationsForm";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
@@ -34,7 +34,7 @@ const App = () => (
           <Route exact path="/About" component={About} />
           <Route exact path="/Community" component={Community} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
-          <Route exact path="/Application" component={Application} />
+          <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
           <Route exact path="/FinancingScholarships" component={FinancingScholarships} />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
