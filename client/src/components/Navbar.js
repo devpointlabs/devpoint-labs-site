@@ -3,7 +3,7 @@ import { AuthConsumer, } from "../providers/AuthProvider"
 import { Menu, Dropdown, Icon, Button } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 import styled from 'styled-components'
-import media from '../theme/media'
+import { media } from '../theme/media'
 
 
 class Navbar extends React.Component {
