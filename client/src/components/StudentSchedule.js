@@ -9,9 +9,10 @@ const StudentSchedule = () => (
 
       <Grid.Row width={16}>
         <Grid.Column>
-          <Header as='h1' textAlign='center'>
+          <Header style={{ fontSize: '3em' }} textAlign='center'>
             Student Schedule
           </Header>
+          <br />
         </Grid.Column>
       </Grid.Row>
 
@@ -20,10 +21,10 @@ const StudentSchedule = () => (
           <Icon name='sun' size='big' />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h4'>
+          <Header as='h3'>
             Feature One
           </Header>
-          <p style={{fontSize: 'x-small'}}>
+          <p>
             In such a test, the user perfomrs realistic tasks by interacting 
             with the paper prototype
           </p>
@@ -32,10 +33,10 @@ const StudentSchedule = () => (
           <Icon name='sun outline' size='big' />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h4'>
+          <Header as='h3'>
             Feature Two
           </Header>
-          <p style={{fontSize: 'x-small'}}>
+          <p>
             Three techniques of paper prototyping used for usability testing 
             are comps, wireframes
           </p>
@@ -47,10 +48,10 @@ const StudentSchedule = () => (
           <Icon name='life ring' size='big' />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h4'>
+          <Header as='h3'>
             Feature Three
           </Header>
-          <p style={{fontSize: 'x-small'}}>
+          <p>
             Rapid prototyping involves a group of designers who each create 
             a paper prototype
           </p>
@@ -59,10 +60,10 @@ const StudentSchedule = () => (
           <Icon name='life ring outline' size='big' />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h4'>
+          <Header as='h3'>
             Feature Four
           </Header>
-          <p style={{fontSize: 'x-small'}}>
+          <p>
             Functionality is similarly unimportant, but in this case are 
             closer to the final product
           </p>
@@ -74,10 +75,10 @@ const StudentSchedule = () => (
           <Icon name='snowflake' size='big' />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h4'>
+          <Header as='h3'>
             Feature Five
           </Header>
-          <p style={{fontSize: 'x-small'}}>
+          <p>
             Three techniques of paper prototyping used for usability 
             testing are comps, wireframes
           </p>
@@ -86,10 +87,10 @@ const StudentSchedule = () => (
           <Icon name='asterisk' size='big' />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h4'>
+          <Header as='h3'>
             Feature Six
           </Header>
-          <p style={{fontSize: 'x-small'}}>
+          <p>
             In such a test, the user perfomrs realistic tasks by 
             interacting with the paper prototype
           </p>
@@ -101,15 +102,15 @@ const StudentSchedule = () => (
 
 const styles = {
   grid: {
-    paddingTop: '5em',
-    paddingBottom: '5em',
+    paddingTop: '7em',
+    paddingBottom: '7em',
   }
 }
 
 const GridStyle = styled(Container)`
   ${media2.tablet`
-      padding-left: 20% !important
-      padding-right: 20% !important
+      padding-left: 10% !important
+      padding-right: 10% !important
   `}
 `
 
