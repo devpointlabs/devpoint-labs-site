@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Form, Header, Dropdown } from "semantic-ui-react";
+import media from '../theme/media';
+import styled from 'styled-components'
+import { Form, Header, Dropdown, Container } from "semantic-ui-react";
 
 class ShcolarshipForm extends React.Component {
   defaultValues = { 
@@ -67,9 +69,8 @@ class ShcolarshipForm extends React.Component {
       }
     ]
     return (
-      <div>
+      <FormStyle>
         <Header>
-          <br />
           <em>
             <div style={{textAlign:'center', fontSize: "2em", fontWeight: "100"}}> DevPoint Labs - Scholarship Essay Questions </div>
           </em>
@@ -78,7 +79,9 @@ class ShcolarshipForm extends React.Component {
           <h4 style={{textAlign:'center'}}> Thanks for your Interest in DevPoint Labs Scholarship! Fill in the form below and answer the essay questions. Please limit responses to 300 words.</h4>
           </em>
         </Header>
-        <Form onSubmit={this.handleSubmit}>
+        <Form 
+          style={{ position: "relative", marginBottom: "5em" }}
+          onSubmit={this.handleSubmit}>
             <Form.Input
               label="First Name"
               name="first_name"
@@ -151,9 +154,23 @@ class ShcolarshipForm extends React.Component {
               />
           <Form.Button color="purple" onClick={this.handleSubmit}> Submit </Form.Button>
         </Form>
-      </div>
+      </FormStyle>
     )
   }
 }
+
+const FormStyle = styled(Container)`
+  margin: 5em
+  ${media.tablet`
+      padding-left: 10px !important
+      padding-right:80px !important
+      padding-top: 15px !important
+  `}
+  ${media.phone`
+      padding-left: 40px !important
+      padding-right: 10px !important
+      padding-top: 15px !important
+  `}
+`
 
 export default ShcolarshipForm;
