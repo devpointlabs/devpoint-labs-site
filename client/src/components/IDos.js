@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button, Divider, Grid, Header, Icon, Search, Segment } from 'semantic-ui-react'
+import { Grid, Header, Icon, } from 'semantic-ui-react'
 import styled from 'styled-components'
 
-class Home extends React.Component {
+class IDos extends React.Component {
 
   render() {
     return (
@@ -10,7 +10,7 @@ class Home extends React.Component {
         <Grid columns={2}>
 
           <Grid.Row >
-            <Grid.Column stackable textAlign='left'
+            <Grid.Column mobile={14} tablet={8} computer={8} stackable textAlign='left'
             >
               <Header style={{ "fontSize": "5.5em" }}>
                 I Do
@@ -21,7 +21,7 @@ class Home extends React.Component {
             </Header>
             </Grid.Column>
 
-            <Grid.Column stackable textAlign='left'>
+            <Grid.Column mobile={14} tablet={8} computer={8}  stackable textAlign='left'>
               <Header>
                 <br />
                 <div icon>
@@ -29,14 +29,14 @@ class Home extends React.Component {
                   <br />
                   <br />
                 </div>
-                <div style={{ fontSize: "2.2em" }}>
+                <Lin1Style>
                   The DevPoint Labs Approach
-                </div>
+                </Lin1Style>
                 <br />
                 <br />
-                <div style={{ fontSize: "1.5em", fontWeight: "50" }}>
+                <Lin2Style>
                   We believe in a specific approach to teaching code.
-                </div>
+                </Lin2Style>
                 <br />
               </Header>
             </Grid.Column>
@@ -47,8 +47,38 @@ class Home extends React.Component {
   }
 }
 
-const HeaderStyle = styled(Header)`
-  width: fluid;
+const Lin1Style = styled.div`
+    font-size: 2.2em;
+
+   @media (max-width: 700px) {
+    font-size: 1.55em
+   }
+   @media (max-width: 1025px) {
+    font-size: 1.6em
+   }
+   @media (max-width: 400px) {
+    font-size: 1.4em
+   }
+   @media (max-width: 400px) {
+    font-size: 1.4em
+   }
+
+`
+const Lin2Style = styled.div`
+    font-size: 1.5em;
+    font-weight: 50;
+
+   @media (max-width: 700px) {
+    font-size: 1.25em
+   }
+   @media (max-width: 1025px) {
+    font-size: 1.3em
+   }
+   @media (max-width: 400px) {
+    font-size: 1.2em
+   }
+
 `
 
-export default Home
+
+export default IDos
