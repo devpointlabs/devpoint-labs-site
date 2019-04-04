@@ -6,7 +6,7 @@ import HeroImage from './HeroImage';
 const PartTimeUtah = () => {
     return (
         <>
-            <HeroImage />
+            
 
         </>
     )
