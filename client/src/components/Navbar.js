@@ -44,73 +44,73 @@ class Navbar extends React.Component {
 
     if (show)
       return(
-        <Menu vertical>
-          <Menu.Item>
+        <MobileMenu vertical tabular='right'>
+          <MenuItemStyle>
             <Menu.Header>Products</Menu.Header>
 
             <Menu.Menu>
-              <Menu.Item
+              <MenuItemStyle
                 name='enterprise'
                 active={this.activeItem === 'enterprise'}
                 onClick={this.handleItemClick}
               />
-              <Menu.Item
+              <MenuItemStyle
                 name='consumer'
                 active={this.activeItem === 'consumer'}
                 onClick={this.handleItemClick}
               />
             </Menu.Menu>
-          </Menu.Item>
+          </MenuItemStyle>
 
-          <Menu.Item>
+          <MenuItemStyle>
             <Menu.Header>CMS Solutions</Menu.Header>
 
             <Menu.Menu>
-              <Menu.Item
+              <MenuItemStyle
                 name='rails'
                 active={this.activeItem === 'rails'}
                 onClick={this.handleItemClick}
               />
-              <Menu.Item
+              <MenuItemStyle
                 name='python'
                 active={this.activeItem === 'python'}
                 onClick={this.handleItemClick}
               />
-              <Menu.Item name='php' active={this.activeItem === 'php'} onClick={this.handleItemClick} />
+              <MenuItemStyle name='php' active={this.activeItem === 'php'} onClick={this.handleItemClick} />
             </Menu.Menu>
-          </Menu.Item>
+          </MenuItemStyle>
 
-          <Menu.Item>
+          <MenuItemStyle>
             <Menu.Header>Hosting</Menu.Header>
 
             <Menu.Menu>
-              <Menu.Item
+              <MenuItemStyle
                 name='shared'
                 active={this.activeItem === 'shared'}
                 onClick={this.handleItemClick}
               />
-              <Menu.Item
+              <MenuItemStyle
                 name='dedicated'
                 active={this.activeItem === 'dedicated'}
                 onClick={this.handleItemClick}
               />
             </Menu.Menu>
-          </Menu.Item>
+          </MenuItemStyle>
 
-          <Menu.Item>
+          <MenuItemStyle>
             <Menu.Header>Support</Menu.Header>
 
             <Menu.Menu>
-              <Menu.Item name='email' active={this.activeItem === 'email'} onClick={this.handleItemClick}>
+              <MenuItemStyle name='email' active={this.activeItem === 'email'} onClick={this.handleItemClick}>
                 E-mail Support
-              </Menu.Item>
+              </MenuItemStyle>
 
-              <Menu.Item name='faq' active={this.activeItem === 'faq'} onClick={this.handleItemClick}>
+              <MenuItemStyle name='faq' active={this.activeItem === 'faq'} onClick={this.handleItemClick}>
                 FAQs
-              </Menu.Item>
+              </MenuItemStyle>
             </Menu.Menu>
-          </Menu.Item>
-        </Menu>
+          </MenuItemStyle>
+        </MobileMenu>
     ) 
     else {
       return (
@@ -147,6 +147,7 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/'}
             />
           </Link>
+          
           <MenuWeb position='right'>
             <Menu.Item>
               <Dropdown text='Courses' options={courseOptions} simple item />
@@ -172,10 +173,11 @@ class Navbar extends React.Component {
             </Link>
           </MenuWeb>
 
-          <MenuMobile pointing secondary> 
-            <Menu.Menu position='right'>
+          <MenuMobile pointing secondary position='right'> 
+            <Menu.Menu>
               <Menu.Item >
-                <Button 
+                <ButtonStyle 
+                  floated='right'
                   icon
                   onClick={this.toggleClick}
                   >
@@ -183,7 +185,7 @@ class Navbar extends React.Component {
                   name='align justify'
                   >
                   </Icon>
-                </Button>
+                </ButtonStyle>
               </Menu.Item>
               { this.handleDropdown() }
           </Menu.Menu>
@@ -223,5 +225,18 @@ export class ConnectedNavbar extends React.Component {
     )
   }
 }
+
+const MenuItemStyle = styled(Menu.Item)`
+  width: 100%
+  text-align: left
+`
+
+const MobileMenu = styled(Menu)`
+  border: none !important
+  background: transparent !important
+`
+const ButtonStyle = styled(Button)`
+  position: relative !important
+`
 
 export default withRouter(ConnectedNavbar);
