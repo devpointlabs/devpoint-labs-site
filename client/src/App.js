@@ -12,6 +12,7 @@ import Register from "./components/Register";
 import { Switch, Route, } from "react-router-dom";
 
 import FetchUser from "./components/FetchUser";
+import ScholarshipForm from "./components/ScholarshipForm";
 import Reviews from "./components/Reviews";
 import PartTimeUtah from "./components/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV";
@@ -32,6 +33,7 @@ const App = () => (
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Community" component={Community} />
+          <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/Application" component={Application} />
           <Route exact path="/FinancingScholarships" component={FinancingScholarships} />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
