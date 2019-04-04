@@ -13,13 +13,11 @@ import { Switch, Route, } from "react-router-dom";
 
 import FetchUser from "./components/FetchUser";
 import ScholarshipForm from "./components/ScholarshipForm";
-import Reviews from "./components/Reviews";
 import PartTimeUtah from "./components/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV";
 import ContactForm from "./components/ContactForm";
 import FinancingScholarships from './components/FinancingScholarships';
 import StudentHousing from './components/StudentHousing';
-
 
 
 const App = () => (
