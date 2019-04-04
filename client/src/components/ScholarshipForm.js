@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import media from '../theme/media';
+import { media } from '../theme/media';
 import styled from 'styled-components'
 import { Form, Header, Dropdown, Container } from "semantic-ui-react";
 
@@ -141,7 +141,7 @@ class ShcolarshipForm extends React.Component {
                 onChange={this.handleChange}
               />
               <Form.Input
-                placeholder="What skills do you currently have? (Photoship, HTML, etc..)"
+                placeholder="What skills do you currently have? (Photoshop, HTML, etc..)"
                 name="comments2"
                 value={comments2}
                 onChange={this.handleChange}

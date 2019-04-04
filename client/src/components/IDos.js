@@ -1,12 +1,13 @@
 import React from 'react';
-import { Grid, Header, Icon, } from 'semantic-ui-react'
+import { Grid, Header, Icon, Container } from 'semantic-ui-react'
 import styled from 'styled-components'
+import { media2 } from '../theme/media'
 
 class IDos extends React.Component {
 
   render() {
     return (
-      <>
+      <GridStyle>
         <Grid columns={2}>
 
           <Grid.Row >
@@ -42,7 +43,7 @@ class IDos extends React.Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </>
+      </GridStyle>
     )
   }
 }
@@ -80,5 +81,11 @@ const Lin2Style = styled.div`
 
 `
 
+const GridStyle = styled(Container)`
+  ${media2.tablet`
+  padding-left: 10% !important
+  padding-right: 10% !important
+  `}
+`
 
 export default IDos

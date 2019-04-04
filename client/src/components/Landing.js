@@ -1,10 +1,9 @@
 import React from 'react'
 import { Grid, Header, Container } from 'semantic-ui-react'
 import styled from 'styled-components'
-import media from '../theme/media'
+import { media } from '../theme/media'
 
 const Landing = () => (
-  <ContainerStyles>
     <Grid as={SegmentStyles} columns={2} textAlign='center'>
       <Grid.Row verticalAlign='middle'>
         <Grid.Column>
@@ -18,7 +17,6 @@ const Landing = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
-  </ContainerStyles>
 )
 
 const SegmentStyles = styled(Grid)`
@@ -26,7 +24,6 @@ const SegmentStyles = styled(Grid)`
   display: flex !important
   flex-wrap: wrap !important
   border: none !important
-  background: transparent !important
 `
 
 const ImageStyle = styled.img`
@@ -35,12 +32,6 @@ const ImageStyle = styled.img`
 
   ${media.phone`
     display: none
-  `}
-`
-const ContainerStyles = styled(Container)`
-  ${media.phone`
-    background: url('https://www.desertjet.com/app/uploads/2015/10/placeholder-vertical.jpg')
-    background-repeat: no-repeat 
   `}
 `
 
