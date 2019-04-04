@@ -1,6 +1,6 @@
-import React from 'react';
-import { Header, Form, Icon, Container, } from 'semantic-ui-react';
-import styled from 'styled-components';
+import React from 'react'
+import { Header, Form, Icon } from 'semantic-ui-react'
+import styled from 'styled-components'
 
 class Footer extends React.Component {
   
@@ -76,4 +76,4 @@ const ColumnStyle = styled.div`
   margin-bottom: 6em
 `
 
-export default Footer;
+export default Footer

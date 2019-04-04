@@ -39,8 +39,7 @@ class Reviews extends React.Component {
               style={{ textAlign: 'center', }}
               divided
             >
-              <Grid.Column
-              >
+              <Grid.Column>
                 <div>
                   <Icon name='user circle outline' size='big' />
                   <p allowFontScaling={false}>
@@ -57,8 +56,7 @@ class Reviews extends React.Component {
                 </div>
               </Grid.Column>
 
-              <Grid.Column
-              >
+              <Grid.Column>
                 <div>
                   <Icon name='user circle outline' size='big' />
                   <p allowFontScaling={false}>
@@ -87,8 +85,7 @@ class Reviews extends React.Component {
               style={{ textAlign: 'center' }}
               divided
             >
-              <Grid.Column
-              >
+              <Grid.Column>
                 <div>
                   <Icon name='user circle outline' size='big' />
                   <p allowFontScaling={false}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import media from '../theme/media';
+import { media } from '../theme/media';
 import styled from 'styled-components'
 import { Form, Header, Dropdown, Container } from "semantic-ui-react";
 

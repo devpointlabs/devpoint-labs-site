@@ -1,18 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import HeroImage from './HeroImage';
+class PartTimeUTah extends React.Component {
 
-
-const PartTimeUtah = () => {
+  render () {
     return (
-        <>
-            <HeroImage />
-
-        </>
+      <div>
+        <h1>Future page for Part Time Course in Utah</h1>
+      </div>
     )
+  }
 }
 
-
-
-
-export default PartTimeUtah
+export default PartTimeUTah;

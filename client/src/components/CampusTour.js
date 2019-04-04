@@ -23,6 +23,8 @@ const styles = {
   grid: {
     paddingTop: '5em',
     paddingBottom: '5em',
+    paddingLeft: '10%',
+    paddingRight: '10%'
   }
 }
 
