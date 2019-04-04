@@ -1,13 +1,14 @@
 import React from 'react';
+import FreeHousing from './FreeHousing'
 
 
 class FullTimeUTah extends React.Component {
 
   render () {
     return (
-      <div>
-        <h1>Future page for Full Time Course in Utah</h1>
-      </div>
+      <>
+        <FreeHousing />
+      </>
     )
   }
 }
