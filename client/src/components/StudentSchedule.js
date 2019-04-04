@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Header, Icon, Container } from 'semantic-ui-react'
 import styled from 'styled-components'
-import media from '../theme/media'
+import { media2 } from '../theme/media'
 
 const StudentSchedule = () => (
   <GridStyle>
@@ -107,7 +107,7 @@ const styles = {
 }
 
 const GridStyle = styled(Container)`
-  ${media.desktop`
+  ${media2.tablet`
       padding-left: 20% !important
       padding-right: 20% !important
   `}

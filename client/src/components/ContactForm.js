@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import styled from 'styled-components'
-import media from '../theme/media'
+import { media } from '../theme/media'
 import { Header, Form, Dropdown, Container } from "semantic-ui-react";
 
 class ContactForm extends React.Component {
