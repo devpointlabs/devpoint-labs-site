@@ -7,17 +7,17 @@ const sizes = {
   giant: 1170
 }
 
-function phone(...args) {
-  return css`
-    @media(max-width: ${sizes.phone}px) {
-      ${css(...args)}
+const media = Object.keys(sizes).reduce((finalMedia, size) => {
+  return {
+    ...finalMedia,
+    [size]: function(...args) {
+        return css`
+         @media(max-width: ${sizes[size]}px) {
+          ${css(...args)}
+        }
+      `
     }
-  `
-}
-
-
-const media = {
-  phone
-}
+  };
+}, {})
 
 export default media
