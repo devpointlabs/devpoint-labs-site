@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider"
-import { Menu, Dropdown, Icon, Button } from 'semantic-ui-react'
+import { Menu, Dropdown, Icon, Button, Image } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 import styled from 'styled-components'
 import { media } from '../theme/media'
@@ -42,18 +42,27 @@ class Navbar extends React.Component {
   handleDropdown = () => {
     const { show } = this.state
 
+    const courseOptions = [
+      { key: 1, text: 'Full Time Course - SLC, Utah', value: 1, href: '/fulltimeutah', target: '_blank' },
+      { key: 2, text: 'Part Time Course - SLC, Utah', value: 2, href: '/parttimeutah', target: '_blank' },
+      { key: 3, text: 'Part Time Course - UNLV, Nevada', value: 3, href: '/parttimeLV', target: '_blank' },
+    ]
+
     if (show)
       return(
-        <MobileMenu vertical tabular='right'>
+        <MobileMenu vertical tabular='left'>
+          <Image
+            style={{ display: 'flex !important', justifyContent: 'center !important'}}
+            src="https://cdn-images-1.medium.com/max/1200/0*dtc87Aa74oYbGyrI.jpg" 
+            alt=""
+          />
           <MenuItemStyle>
             <Menu.Header>Products</Menu.Header>
 
             <Menu.Menu>
-              <MenuItemStyle
-                name='enterprise'
-                active={this.activeItem === 'enterprise'}
-                onClick={this.handleItemClick}
-              />
+              <Menu.Item>
+                <Dropdown text='Courses' options={courseOptions} simple item />
+              </Menu.Item>
               <MenuItemStyle
                 name='consumer'
                 active={this.activeItem === 'consumer'}
@@ -141,7 +150,7 @@ class Navbar extends React.Component {
       <div>
         <Menu pointing secondary>
           <Link to='/'>
-            <Menu.Item
+            <MenuWebItem
               name='this should be the devpoint logo'
               id='home'
               active={this.props.location.pathname === '/'}
@@ -173,7 +182,7 @@ class Navbar extends React.Component {
             </Link>
           </MenuWeb>
 
-          <MenuMobile pointing secondary position='right'> 
+          <MenuMobile pointing secondary position='left'> 
             <Menu.Menu>
               <Menu.Item >
                 <ButtonStyle 
@@ -181,7 +190,7 @@ class Navbar extends React.Component {
                   icon
                   onClick={this.toggleClick}
                   >
-                  <Icon 
+                  <Icon
                   name='align justify'
                   >
                   </Icon>
@@ -213,6 +222,14 @@ const MenuWeb = styled(Menu.Menu)`
     display: none !important
   `}
 `
+const MenuWebItem = styled(Menu.Item)`
+  display: flex
+
+  ${media.phone`
+    display: none !important
+  `}
+`
+
 
 export class ConnectedNavbar extends React.Component {
   render() {
