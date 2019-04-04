@@ -1,7 +1,10 @@
 import React from 'react'
-import { Grid, Header, Icon } from 'semantic-ui-react'
+import { Grid, Header, Icon, Container } from 'semantic-ui-react'
+import styled from 'styled-components'
+import media from '../theme/media'
 
 const StudentSchedule = () => (
+  <GridStyle>
     <Grid style={styles.grid} container>
 
       <Grid.Row width={16}>
@@ -20,7 +23,7 @@ const StudentSchedule = () => (
           <Header as='h4'>
             Feature One
           </Header>
-          <p size='x-small'>
+          <p style={{fontSize: 'x-small'}}>
             In such a test, the user perfomrs realistic tasks by interacting 
             with the paper prototype
           </p>
@@ -32,7 +35,7 @@ const StudentSchedule = () => (
           <Header as='h4'>
             Feature Two
           </Header>
-          <p size='x-small'>
+          <p style={{fontSize: 'x-small'}}>
             Three techniques of paper prototyping used for usability testing 
             are comps, wireframes
           </p>
@@ -47,7 +50,7 @@ const StudentSchedule = () => (
           <Header as='h4'>
             Feature Three
           </Header>
-          <p size='x-small'>
+          <p style={{fontSize: 'x-small'}}>
             Rapid prototyping involves a group of designers who each create 
             a paper prototype
           </p>
@@ -59,7 +62,7 @@ const StudentSchedule = () => (
           <Header as='h4'>
             Feature Four
           </Header>
-          <p size='x-small'>
+          <p style={{fontSize: 'x-small'}}>
             Functionality is similarly unimportant, but in this case are 
             closer to the final product
           </p>
@@ -74,7 +77,7 @@ const StudentSchedule = () => (
           <Header as='h4'>
             Feature Five
           </Header>
-          <p size='x-small'>
+          <p style={{fontSize: 'x-small'}}>
             Three techniques of paper prototyping used for usability 
             testing are comps, wireframes
           </p>
@@ -86,22 +89,28 @@ const StudentSchedule = () => (
           <Header as='h4'>
             Feature Six
           </Header>
-          <p size='x-small'>
+          <p style={{fontSize: 'x-small'}}>
             In such a test, the user perfomrs realistic tasks by 
             interacting with the paper prototype
           </p>
         </Grid.Column>
       </Grid.Row>
     </Grid>
+  </GridStyle>
 )
 
 const styles = {
   grid: {
     paddingTop: '5em',
     paddingBottom: '5em',
-    // paddingLeft: '20%',
-    // paddingRight: '20%'
   }
 }
+
+const GridStyle = styled(Container)`
+  ${media.desktop`
+      padding-left: 20% !important
+      padding-right: 20% !important
+  `}
+`
 
 export default StudentSchedule

@@ -15,9 +15,18 @@ function phone(...args) {
   `
 }
 
+function desktop(...args) {
+  return css`
+    @media(min-width: ${sizes.desktop}px) {
+      ${css(...args)}
+    }
+  `
+}
 
 const media = {
-  phone
+  phone,
+  desktop
 }
+
 
 export default media
