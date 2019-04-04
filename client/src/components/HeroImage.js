@@ -99,7 +99,7 @@ const CardStyle1 = styled(Card)`
 
 const styles = {
     cardSize: {
-        width: '90%',
+        width: '95%',
         height: '35em',
         paddingTop: '10em',
         marginBottom: '-2em',
@@ -107,9 +107,9 @@ const styles = {
     },
 
     cardSize2: {
-        width: '90%',
+        width: '95%',
         height: '20em',
-        marginLeft: '3.3em',
+        marginLeft: '3.4em',
         padding: '5em',
         marginBottom: '-2em'
        
