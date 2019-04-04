@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_04_03_231803) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,9 +21,9 @@ ActiveRecord::Schema.define(version: 2019_04_03_231803) do
     t.string "last_name"
     t.string "email"
     t.string "phone_number"
-    t.string "currenty_city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "current_city"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -33,6 +34,8 @@ ActiveRecord::Schema.define(version: 2019_04_03_231803) do
     t.string "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "course"
+    t.string "location"
   end
 
   create_table "posts", force: :cascade do |t|

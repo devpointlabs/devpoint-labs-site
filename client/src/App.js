@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import { Switch, Route, } from "react-router-dom";
-import { Container, } from "semantic-ui-react";
+
 import FetchUser from "./components/FetchUser";
 import ScholarshipForm from "./components/ScholarshipForm";
 import Reviews from "./components/Reviews";
@@ -26,7 +26,6 @@ const App = () => (
   <Fragment>
     <Navbar />
     <FetchUser>
-      <Container>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
@@ -43,9 +42,8 @@ const App = () => (
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route component={NoMatch} />
         </Switch>
-      </Container>
     </FetchUser>
-      <Footer />
+    <Footer />
   </Fragment>
 );
 
