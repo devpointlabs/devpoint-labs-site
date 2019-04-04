@@ -1,6 +1,8 @@
 import React from 'react'
 import { Grid, Card, Container, Button, } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import media from '../theme/media'
+import styled from 'styled-components'
 
 const HeroImage = () => {
     return (
@@ -10,7 +12,7 @@ const HeroImage = () => {
 
 
 
-            <Grid>
+            <GridStyle>
                 <Grid.Column mobile={16} tablet={8} computer={18}>
                     <Card style={styles.cardSize} >
                         <Card.Header style={styles.headerFont}>
@@ -55,12 +57,27 @@ const HeroImage = () => {
                         <Link to='/' style={styles.linkSize}>Action Link</Link>
                     </Card>
                 </Grid.Column>
-            </Grid>
+            </GridStyle>
 
 
             </>
     )
 }
+
+const GridStyle = styled(Grid)`
+    margin: 5em
+    ${ media.tablet`
+        padding-left: 10px !important
+        padding-right: 80px !important
+        padding-top: 15px !important
+ `}
+    margin: 5em
+    ${ media.phone`
+        padding-left: 10px !important
+        padding-right: 80px !important
+        padding-top: 15px !important
+ `}
+    `
 
 
 const styles = {
