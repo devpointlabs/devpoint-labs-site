@@ -62,6 +62,12 @@ ActiveRecord::Schema.define(version: 2019_04_03_231803) do
     t.string "current_city"
   end
 
+  create_table "subscribes", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
     t.string "uid", default: "", null: false

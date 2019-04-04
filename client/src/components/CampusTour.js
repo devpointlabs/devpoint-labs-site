@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Button, Container } from 'semantic-ui-react'
+import { Grid, Button,} from 'semantic-ui-react'
 
 const CampusTour = () => (
   <Grid style={styles.grid} stackable>
@@ -23,6 +23,8 @@ const styles = {
   grid: {
     paddingTop: '5em',
     paddingBottom: '5em',
+    paddingLeft: '10%',
+    paddingRight: '10%'
   }
 }
 
