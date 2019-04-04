@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Divider, Grid, Segment, Icon, Container } from 'semantic-ui-react'
+import { Button, Divider, Grid, Segment, Icon, } from 'semantic-ui-react'
 import { Carousel } from 'react-bootstrap'
 
 class Reviews extends React.Component {

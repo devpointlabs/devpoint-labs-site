@@ -1,24 +1,34 @@
 import React from 'react'
-import { Grid, Card} from 'semantic-ui-react'
+import { Grid, Card, Container, Button} from 'semantic-ui-react'
 
 const HeroImage = () => {
     return (
         <>
         <br/>
         <br/>
+
+
+
             <Grid>
-                <Card style={styles.cardSize}>
-                    <Card.Header style={styles.headerFont}>
-                        DEVPOINT LABS | WEB DEVELOPMENT
-                    </Card.Header>
-                    <Card.Meta>
-                        Part-time Web Development
-                    </Card.Meta>
-                    <Card.Description>
-                            Learn why we're the best at what we do
-                    </Card.Description>
-                </Card>
+                <Grid.Column mobile={16} tablet={8} computer={18}>
+                    <Card style={styles.cardSize} >
+                        <Card.Header style={styles.headerFont}>
+                            Getting Ready to design
+                        </Card.Header>
+                        <Card.Description style={styles.descFont}>
+                                After research, the designer must make sense
+                                <br/>
+                                    of the data they've collected
+                        </Card.Description>
+                        <br />
+                        <Button style={{ width: '7em', marginLeft: '50em'}}>
+                            Button
+                        </Button>
+                    </Card>
+                </Grid.Column>
             </Grid>
+
+
             </>
     )
 }
@@ -26,13 +36,25 @@ const HeroImage = () => {
 
 const styles = {
     cardSize: {
-        width: '150%',
-        height: '30em'
+        width: '90%',
+        height: '35em',
+        paddingTop: '10em',
+        marginLeft: '5em'
     },
 
     headerFont: {
-        fontSize: '2em'
+        fontSize: '4em',
+        textAlign: 'center'
+    },
+    
+ 
+
+    descFont: {
+        fontSize: '2em',
+        textAlign: 'center'
     }
 }
+
+
 
 export default HeroImage
