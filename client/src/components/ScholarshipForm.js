@@ -1,15 +1,29 @@
 import React from 'react';
-import { Form, Header, Checkbox } from "semantic-ui-react";
+import axios from 'axios';
+import { Form, Header, Dropdown } from "semantic-ui-react";
 
 class ShcolarshipForm extends React.Component {
-  defaultValues = { first_name: "", last_name: "", email: "", phone_number: "", current_city: "" };
+  defaultValues = { 
+    first_name: "", 
+    last_name: "", 
+    email: "", 
+    phone_number: "", 
+    current_city: "", 
+    comments:"", 
+    comments1:"", 
+    comments2:"", 
+    comments3:""};
   state = { ...this.defaultValues, };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const product = { ...this.state, };
-    // TODO: make api POST request
-    this.setState({ ...this.defaultValues, });
+    const scholarship = this.state;
+    axios.post("/api/scholarships", scholarship).then(res => {
+      console.log()
+      this.props.history.push("/");
+    });
+    this.setState({ ...this.state });
+
   }
 
   handleChange = (e) => {
@@ -18,9 +32,52 @@ class ShcolarshipForm extends React.Component {
   }
 
   render() {
-    const { first_name, last_name, email, phone_number, current_city, why, background, hobbies } = this.state;
+    const { 
+      first_name, 
+      last_name, 
+      email, 
+      phone_number, 
+      course,
+      comments, 
+      comments1, 
+      comments2, 
+      comments3 
+    } = this.state;
+
+    const options = [
+      {
+        key: "1",
+        text: "U of U Professional Education Web Development (May 6th - July 23rd, 2019)",
+        value: "course",
+      },
+      {
+        key: "2",
+        text: "U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)",
+        value: "course",
+      },
+      {
+        key: "3",
+        text: "Part-Time Web Development (May 6th - July 23rd, 2019)",
+        value: "course",
+      },
+      {
+        key: "4",
+        text: "Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)",
+        value: "course",
+      }
+    ]
     return (
       <div>
+        <Header>
+          <br />
+          <em>
+            <div style={{textAlign:'center', fontSize: "2em", fontWeight: "100"}}> DevPoint Labs - Scholarship Essay Questions </div>
+          </em>
+          <br />
+          <em>
+          <h4 style={{textAlign:'center'}}> Thanks for your Interest in DevPoint Labs Scholarship! Fill in the form below and answer the essay questions. Please limit responses to 300 words.</h4>
+          </em>
+        </Header>
         <Form onSubmit={this.handleSubmit}>
             <Form.Input
               label="First Name"
@@ -55,83 +112,44 @@ class ShcolarshipForm extends React.Component {
               onChange={this.handleChange}
               required
             />
-            <Form.Input
-              label="Current City"
-              name="current_city"
-              placeholder="Current City"
-              type="current_city"
-              value={current_city}
-              onChange={this.handleChange}
-              required
-            />
-            <Form.Input
-              label="Why Are You Applying to DevPoint Labs"
-              name="why"
-              type=""
-              value={why}
-              required
+            <Dropdown
+            placeholder="Which course are you interested in?"
+            fluid
+            value={course}
+            selection
+            options={options}
+            required
+          />
+            <br />
+            <br />
+            <em>
+            <h3>Essay Questions</h3>
+            </em>
+              <Form.Input
+                placeholder="Tell us about your background"
+                name="comments"
+                value={comments}
+                onChange={this.handleChange}
               />
-            <Form.Input 
-              label="What Is Your Education Background?"
-              name="background"
-              type=""
-              value={background}
-              required
+              <Form.Input
+                placeholder="Why do you want to be a developer?"
+                name="comments1"
+                value={comments1}
+                onChange={this.handleChange}
               />
-            <Form.Input 
-              label="What Hobbies Do You Have And What Are You Passionate About In Life?"
-              name="background"
-              type=""
-              value={hobbies}
-              required
+              <Form.Input
+                placeholder="What skills do you currently have? (Photoship, HTML, etc..)"
+                name="comments2"
+                value={comments2}
+                onChange={this.handleChange}
               />
-            <Form.Field label="What Course Are You Interested in?" control='select'>
-              <option value=''></option>
-              <option value='q1'>U of U Professional Education Web Development (May 6th - July 23rd, 2019)</option>
-              <option value='q1'>U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)</option>
-              <option value='q1'>Part-Time Web Development (May 6th - July 23rd, 2019)</option>
-              <option value='q1'>Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)</option>
-            </Form.Field>
-            <br />
-            <Form.Field label="What Location Are You Interested In?" control='select'>
-              <option value=''></option>
-              <option value='q1'>Salt Lake City, UT</option>
-              <option value='q1'>Las Vegas, NV</option>
-            </Form.Field>
-            <br />
-            <Form.Field label="What Do You Want To Do After Graduating Our Course?" control='select'>
-              <option value=''></option>
-              <option value='q1'>Become a developer</option>
-              <option value='q2'>Work at an awesome startup</option>
-              <option value='q3'>I am not sure</option>
-            </Form.Field>
-            <br />
-            <Form.Field label="What Is Your Coding BackGround?" control='select'>
-              <option value=''></option>
-              <option value='q1'>No coding experience, just basic computer skills</option>
-              <option value='q2'>Some code experience. Familiar with HTML and CSS</option>
-              <option value='q3'>Moderate coding experience. I know how to launch a Rails app, but I still have a lot to learn</option>
-              <option value='q4'>Intermerdiate experience. I have built a few apps from start to finish</option>
-            </Form.Field>
-            <br />
-            <Form.Field label="What Is Your Gender?" control='select'>
-              <option value=''></option>
-              <option value='Male'>Male</option>
-              <option value='Female'>Female</option>
-              <option value='Other'>Other</option>
-              <option value='Prefer Not To Answer'>Prefer Not To Answer</option>
-            </Form.Field>
-            <br />
-            <Form.Field label="How Did You Hear About Us?" control='select'>
-              <option value=''></option>
-              <option value='Twitter'>Twitter</option>
-              <option value='Toogle'>Google</option>
-              <option value='Bing/Yahoo'>Bing/Yahoo</option>
-              <option value='Ruby User Group'>Ruby User Group</option>
-              <option value='Course Report'>Course Report</option>
-              <option value='Other'>Other</option>
-            </Form.Field>
-          <Form.Button color="purple">Submit</Form.Button>
+              <Form.Input
+                placeholder="What would you want to do with the skills you gain at Devpoint Labs?"
+                name="comments3"
+                value={comments3}
+                onChange={this.handleChange}
+              />
+          <Form.Button color="purple" onClick={this.handleSubmit}> Submit </Form.Button>
         </Form>
       </div>
     )
