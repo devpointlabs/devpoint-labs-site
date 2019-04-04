@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Card, Container, Button, } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import media from '../theme/media'
+import { media } from '../theme/media'
 import styled from 'styled-components'
 
 const HeroImage = () => {

@@ -1,25 +1,23 @@
-import React from 'react';
+import React from 'react'
+import StudentSchedule from './StudentSchedule'
+import HeroImage from './HeroImage';
 import CostDates from './CostDates'
-import HeroImage from './HeroImage'
 
 
-class FullTimeUTah extends React.Component {
-
-  render () {
-    return (
-      <>
+const FullTimeUtah = () => {
+  return (
+    <>
       <div>
         <h1>Future page for Full Time Course in Utah</h1>
       </div>
       <HeroImage />
-      <br/>
-      <br/>
-      <br/>
-      
+      <StudentSchedule />
       <CostDates />
-      </>
-    )
-  }
+    </>
+  )
 }
 
-export default FullTimeUTah;
+
+
+
+export default FullTimeUtah

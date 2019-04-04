@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Header, Container } from 'semantic-ui-react'
 import styled from 'styled-components'
-import media from '../theme/media'
+import { media } from '../theme/media'
 
 const Landing = () => (
     <Grid as={SegmentStyles} columns={2} textAlign='center'>

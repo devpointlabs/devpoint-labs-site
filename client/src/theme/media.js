@@ -7,7 +7,7 @@ const sizes = {
   giant: 1170
 }
 
-const media = Object.keys(sizes).reduce((finalMedia, size) => {
+export const media = Object.keys(sizes).reduce((finalMedia, size) => {
   return {
     ...finalMedia,
     [size]: function(...args) {
@@ -20,4 +20,15 @@ const media = Object.keys(sizes).reduce((finalMedia, size) => {
   };
 }, {})
 
-export default media
+export const media2 = Object.keys(sizes).reduce((finalMedia, size) => {
+  return {
+    ...finalMedia,
+    [size]: function(...args) {
+        return css`
+         @media(min-width: ${sizes[size]}px) {
+          ${css(...args)}
+        }
+      `
+    }
+  };
+}, {})
