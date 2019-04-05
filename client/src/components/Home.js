@@ -7,7 +7,7 @@ import Landing from './Landing'
 import Reviews from './Reviews';
 import CoursesSection from './CoursesSection';
 import CampusTour from './CampusTour';
-import { media } from '../theme/media'
+import { media } from '../theme/media';
 
 
 class Home extends React.Component {
