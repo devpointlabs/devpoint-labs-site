@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { media } from "../theme/media";
-import expstaff from "../images/expstaff.png";
 import { Header, Form, Icon, Container, Grid, Image } from "semantic-ui-react";
 
 export default class DPLExperience extends React.Component {
