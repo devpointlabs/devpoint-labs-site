@@ -34,6 +34,7 @@ class Reviews extends React.Component {
         <Carousel.Item>
           <Segment style={styles.segment}>
             <Grid
+              stackable
               columns={2}
               relaxed='very'
               style={{ textAlign: 'center', }}
@@ -80,6 +81,7 @@ class Reviews extends React.Component {
         <Carousel.Item>
           <Segment style={styles.segment}>
             <Grid
+              stackable
               columns={2}
               relaxed='very'
               style={{ textAlign: 'center' }}
