@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider"
-import { Menu, Dropdown, Icon, Button, Image } from 'semantic-ui-react'
+import { Menu, Dropdown, Icon, Button, Image, MenuHeader } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 import styled from 'styled-components'
 import { media } from '../theme/media'
@@ -42,6 +42,12 @@ class Navbar extends React.Component {
   handleDropdown = () => {
     const { show } = this.state
 
+    const options = [
+      { key: 1, text: 'Events', value: 1, href: 'https://www.meetup.com/devpoint-labs/', target: '_blank' },
+      { key: 2, text: 'Blog', value: 2, href: 'https://devpointlabs.tumblr.com/', target: '_blank' },
+      { key: 3, text: 'Shop', value: 3, href: 'https://devpointlabs.bigcartel.com/', target: '_blank' },
+    ]
+
     const courseOptions = [
       { key: 1, text: 'Full Time Course - SLC, Utah', value: 1, href: '/fulltimeutah', target: '_blank' },
       { key: 2, text: 'Part Time Course - SLC, Utah', value: 2, href: '/parttimeutah', target: '_blank' },
@@ -57,68 +63,28 @@ class Navbar extends React.Component {
             alt=""
           />
           <MenuItemStyle>
-            <Menu.Header>Products</Menu.Header>
-
-            <Menu.Menu>
-              <Menu.Item>
-                <Dropdown text='Courses' options={courseOptions} simple item />
-              </Menu.Item>
-              <MenuItemStyle
-                name='consumer'
-                active={this.activeItem === 'consumer'}
-                onClick={this.handleItemClick}
-              />
-            </Menu.Menu>
+          <Dropdown as={Menu.Item} text='Courses' options={courseOptions} simple item />
           </MenuItemStyle>
 
-          <MenuItemStyle>
-            <Menu.Header>CMS Solutions</Menu.Header>
-
-            <Menu.Menu>
-              <MenuItemStyle
-                name='rails'
-                active={this.activeItem === 'rails'}
-                onClick={this.handleItemClick}
+          <Link as={MenuItemStyle} to='/about'>
+              <Menu.Item
+                
+                id='about'
+                name='about'
+                active={this.props.location.pathname === '/about'}
               />
-              <MenuItemStyle
-                name='python'
-                active={this.activeItem === 'python'}
-                onClick={this.handleItemClick}
+            </Link>
+            <MenuItemStyle>
+              <Dropdown as={Menu.Item} text='Community' options={options} simple item />
+            </MenuItemStyle>
+            <Link to='/application'>
+              <Menu.Item
+                id='apply'
+                name='Apply Now'
+                active={this.props.location.pathname === '/register'}
               />
-              <MenuItemStyle name='php' active={this.activeItem === 'php'} onClick={this.handleItemClick} />
-            </Menu.Menu>
-          </MenuItemStyle>
-
-          <MenuItemStyle>
-            <Menu.Header>Hosting</Menu.Header>
-
-            <Menu.Menu>
-              <MenuItemStyle
-                name='shared'
-                active={this.activeItem === 'shared'}
-                onClick={this.handleItemClick}
-              />
-              <MenuItemStyle
-                name='dedicated'
-                active={this.activeItem === 'dedicated'}
-                onClick={this.handleItemClick}
-              />
-            </Menu.Menu>
-          </MenuItemStyle>
-
-          <MenuItemStyle>
-            <Menu.Header>Support</Menu.Header>
-
-            <Menu.Menu>
-              <MenuItemStyle name='email' active={this.activeItem === 'email'} onClick={this.handleItemClick}>
-                E-mail Support
-              </MenuItemStyle>
-
-              <MenuItemStyle name='faq' active={this.activeItem === 'faq'} onClick={this.handleItemClick}>
-                FAQs
-              </MenuItemStyle>
-            </Menu.Menu>
-          </MenuItemStyle>
+            </Link>
+            { this.rightNavItems() }
         </MobileMenu>
     ) 
     else {
