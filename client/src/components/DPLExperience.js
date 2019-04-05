@@ -50,17 +50,6 @@ export default class DPLExperience extends React.Component {
                     <br />
                     <ModHead>
                       <ExpIcon>
-                        <Icon size="big" name="building" />
-                      </ExpIcon>
-                      Conveniently Downtown
-                    </ModHead>
-                    <ModText>Located in the heart of Downtown, SLC.</ModText>
-                  </div>
-                </Grid.Column>
-                <Grid.Column mobile={16} tablet={8} style={{ width: "50%" }}>
-                  <div>
-                    <ModHead>
-                      <ExpIcon>
                         <Icon size="big" name="mobile alternate" />
                       </ExpIcon>
                       DPL Nights | Student Activities
@@ -70,6 +59,20 @@ export default class DPLExperience extends React.Component {
                       Bowling Classic, Tuesday Movie Nights, or some casual
                       meetups.
                     </ModText>
+                  </div>
+                </Grid.Column>
+                <Grid.Column mobile={16} tablet={8} style={{ width: "50%" }}>
+                  <div>
+                    <ModHead>
+                      <ExpIcon>
+                        <Icon size="big" name="building" />
+                      </ExpIcon>
+                      Conveniently Downtown
+                    </ModHead>
+                    <ModText>Located in the heart of Downtown, SLC.</ModText>
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <ModHead>
                       <ExpIcon>
@@ -137,6 +140,7 @@ const ModHead = styled.p`
   font-size: 1.2em;
   font-weight: 700;
   font-style: italic;
+  padding-left: 10px;
   ${media.phone`
     width: auto
     text-align: center
@@ -151,6 +155,8 @@ const ModText = styled.p`
   width: 80%
   text-align: left
   padding-top: 10px
+  padding-left: 50px
+  font-weight: 100
   ${media.phone`
     width: 100%
     text-align: left
