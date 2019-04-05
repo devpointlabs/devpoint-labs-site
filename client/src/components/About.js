@@ -1,16 +1,21 @@
-import React from 'react';
-import { Header, Form, Icon, Container, } from 'semantic-ui-react';
+import React from "react";
+import Reviews from './Reviews';
+import AboutDPL from './AboutDPL'
+import DPLExperience from "./DPLExperience";
 
 class About extends React.Component {
-
-  render () {
+  render() {
     return (
       <>
-      <div>
-        <h1>About Page</h1>
-      </div>
+      <AboutDPL />
+        <br />
+        <Reviews />
+        <br />
+        <br />
+        <DPLExperience />
       </>
-    )
+    );
   }
 }
+
 export default About;
