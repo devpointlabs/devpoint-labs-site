@@ -1,18 +1,22 @@
 import React from 'react';
 import styled from 'styled-components'
 import { Container, Image, Header } from 'semantic-ui-react'
+import ScholarshipAbout from './ScholarshipAbout';
 
 
 class FinancingScholarships extends React.Component {
 
   render () {
     return (
+      <div>
         <ContainerStyles>
           <Header inverted style={{ zIndex: '1 !important', position: 'absolute !important', transform: 'translate(4em, 6em)' }}> Scholarship </Header>
            <HeaderStyles inverted>Deadlines:</HeaderStyles>
            <HeaderStyles inverted>Mar. 31th, 2019 (Summer Cohort)</HeaderStyles>
            <HeaderStyles inverted>July 6th, 2019 (Fall Cohort)</HeaderStyles>
         </ContainerStyles>
+        <ScholarshipAbout />
+      </div>
     )
   }
 }

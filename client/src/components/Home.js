@@ -9,7 +9,6 @@ import CoursesSection from './CoursesSection';
 import CampusTour from './CampusTour';
 import HomeLogos from './HomeLogos';
 import { media } from '../theme/media'
-import ScholarshipAbout from './ScholarshipAbout';
 
 
 class Home extends React.Component {
@@ -24,7 +23,6 @@ class Home extends React.Component {
           <Reviews />
           <CampusTour />
           <CoursesSection />
-          <ScholarshipAbout />
         </ContainerStyles>
       </>
     );
