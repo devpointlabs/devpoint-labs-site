@@ -26,9 +26,9 @@ const HeroImage = () => {
                                         of the data they've collected
                             </Card.Description>
                             <br />
-                            <Button style={{ width: '7em', marginLeft: '53em'}}>
+                            <ButtonStyle style={{ width: '7em', marginLeft: '53em'}}>
                                 Button
-                            </Button>
+                            </ButtonStyle>
                         </CardStyle>
                     </Grid.Column>
                     <Grid.Row>
@@ -65,6 +65,14 @@ const HeroImage = () => {
             </>
     )
 }
+
+
+const ButtonStyle = styled(Button)`
+    margin: 5em
+    ${media.tablet`
+    margin-left: 8em !important
+`}
+`
 
 const CardStyle = styled(Card)`
     margin: 5em
