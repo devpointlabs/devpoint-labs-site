@@ -16,7 +16,6 @@ const CampusTour = () => (
       <Button inverted color='blue'>Schedule</Button>
     </Grid.Column>
   </Grid>
-
 )
 
 const styles = {

@@ -26,7 +26,7 @@ const HeroImage = () => {
                                         of the data they've collected
                             </Card.Description>
                             <br />
-                            <Button style={{ width: '7em', marginLeft: '50em'}}>
+                            <Button style={{ width: '7em', marginLeft: '53em'}}>
                                 Button
                             </Button>
                         </CardStyle>

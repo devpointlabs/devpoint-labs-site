@@ -7,7 +7,12 @@ import Landing from './Landing'
 import Reviews from './Reviews';
 import CoursesSection from './CoursesSection';
 import CampusTour from './CampusTour';
+<<<<<<< HEAD
 import { media } from '../theme/media';
+=======
+import HomeLogos from './HomeLogos';
+import { media } from '../theme/media'
+>>>>>>> 8963962260b8645033fd5f9458d22ac2785b8d7f
 
 
 class Home extends React.Component {
@@ -16,6 +21,7 @@ class Home extends React.Component {
       <>
         <ContainerStyles>
           <Landing />
+          <HomeLogos />
           <PageOptions />
           <IDos/>
           <Reviews />
