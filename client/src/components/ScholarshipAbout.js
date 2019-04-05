@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 const ScholarshipAbout = () => (
   <div>
-    <Grid style={{ padding: '8%', background: 'gainsboro' }}>
+    <Grid stackable style={{ padding: '8%', background: 'gainsboro' }}>
       <Grid.Row>
         <Grid.Column>
           <Header textAlign='center' style={styles.header}>About</Header>
