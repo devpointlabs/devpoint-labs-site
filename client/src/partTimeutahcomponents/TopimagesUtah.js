@@ -22,7 +22,7 @@ const Topimages = () => {
               of the data they've collected
             </Card.Description>
             <br />
-            <Button style={{ width: "7em", marginLeft: "53em" }}>Button</Button>
+            <ButtonStyle style={{ width: "7em", marginLeft: "53em" }}>Button</ButtonStyle>
           </CardStyle>
         </Grid.Column>
         <Grid.Row>
@@ -60,6 +60,14 @@ const Topimages = () => {
     </>
   );
 };
+
+
+const ButtonStyle = styled(Button)`
+    margin: 5em
+    ${media.tablet`
+    margin-left: 8em !important
+`}
+`
 
 const CardStyle = styled(Card)`
     margin: 5em
