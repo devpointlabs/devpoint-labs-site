@@ -53,9 +53,9 @@ const CostDates = () => (
               <br />
               <Grid columns={1}>
                 <Grid.Row>
-                  <CardButton href="/ApplicationsForm" primary>
-                    Apply Now
-                  </CardButton>
+                  <Link to="/ApplicationsForm">
+                    <CardButton>Apply Now</CardButton>
+                  </Link>
                   <span style={{ margin: "10px 30px" }}>Or</span>
                   <Link
                     to="/"
