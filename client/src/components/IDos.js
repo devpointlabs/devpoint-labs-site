@@ -85,6 +85,7 @@ const GridStyle = styled(Container)`
   ${media2.tablet`
   padding-left: 10% !important
   padding-right: 10% !important
+  margin-bottom: 5em 
   `}
 `
 

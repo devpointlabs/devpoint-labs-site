@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :applications
     resources :scholarships
     resources :contacts
+    resources :subscribes
   end
 
     
