@@ -6,6 +6,8 @@ class Api::ScholarshipsController < ApplicationController
   end
 
   def show
+
+    @scholarship = Scholarship.find(params[:id])
     render json: @scholarship
   end
 

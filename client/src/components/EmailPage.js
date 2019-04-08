@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Table, Header } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import Scholarship from './Scholarship'
 
 
 
@@ -33,7 +34,7 @@ class EmailPage extends React.Component {
                 <Table.Body>
                 { applications.map( application =>
                     <Table.Row  key={application.id}>
-                <Link to='/Applications'>
+                <Link to={`/applications/${application.id}`}>
                 <Table.Cell>{application.first_name}</Table.Cell>
                 </Link>
                 <Table.Cell>{application.last_name}</Table.Cell>
@@ -43,6 +44,7 @@ class EmailPage extends React.Component {
                 )}
                 </Table.Body>
             </Table>
+            <Scholarship />
             </>
                 
         )
