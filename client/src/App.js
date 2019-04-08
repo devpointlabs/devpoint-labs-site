@@ -18,13 +18,15 @@ import PartTimeLV from "./components/PartTimeLV";
 import ContactForm from "./components/ContactForm";
 import FinancingScholarships from './components/FinancingScholarships';
 import StudentHousing from './components/StudentHousing';
-
+import EmailPage from './components/EmailPage'
+import ProtectedRoute from './components/ProtectedRoute'
 
 const App = () => (
   <Fragment>
     <Navbar />
     <FetchUser>
         <Switch>
+          <ProtectedRoute exact path='/EmailPage' component={EmailPage} />
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
