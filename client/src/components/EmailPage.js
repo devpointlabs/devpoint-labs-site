@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Table, Header } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import ApplicationsView from './ApplicationsView'
+import Scholarship from './Scholarship'
 
 
 
@@ -44,6 +44,7 @@ class EmailPage extends React.Component {
                 )}
                 </Table.Body>
             </Table>
+            <Scholarship />
             </>
                 
         )
