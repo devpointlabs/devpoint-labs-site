@@ -1,95 +1,183 @@
-import React from 'react'
-import styled from 'styled-components'
-import { media } from '../theme/media'
-import { Header, Container, Grid, Button } from 'semantic-ui-react'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { media } from "../theme/media";
+import {
+  Header,
+  Container,
+  Grid,
+  Button,
+  Card,
+  Image
+} from "semantic-ui-react";
 
 const CostDates = () => (
   <>
     <TextContainer>
-      <Header textAlign="center" style={{ fontSize: "4em", }}>Tuition & Course Dates</Header>
+      <Header textAlign="center" style={{ fontSize: "4em" }}>
+        Tuition & Course Dates
+      </Header>
       <br />
-      <BlockText>This non-credit program is offered in partnership with The University of Utah Professional Education. The
-        online application process is handled by DevPoint Labs.
-        Appliocant can expect to receive a call or email from 
+      <BlockText>
+        This non-credit program is offered in partnership with The University of
+        Utah Professional Education. The online application process is handled
+        by DevPoint Labs. Appliocant can expect to receive a call or email from
         one of our admissions advisors. Please contact The University of Utah's
-          Professional Education department at (801)-587-0139.
+        Professional Education department at (801)-587-0139.
       </BlockText>
     </TextContainer>
     <br />
     <br />
     <br />
     <CostContainer>
-      <Grid columns={2}>
+      <Grid stackable columns={3}>
         <Grid.Row>
-          <Grid.Column style={styles.costBox}>
-          <br />
-            <CardHeader>Summer 2019</CardHeader>
-            <CardDescription>
+          <Grid.Column>
+            <CostCard style={styles.costBox}>
+              <Image src="https://www.screengeek.net/wp-content/uploads/2018/11/avatar-movie.jpg" />
               <br />
-              Start Date: May 6th - July 23rd, 2019
+
+              <CardHeader>Fall 2019</CardHeader>
+              <CostDes>
+                This is an 11 week program to learn full-stack web development,
+                this is an amazing course.
+              </CostDes>
+              <ul>
+                <CostPoint>
+                  Start Date: August 12th - October 25th, 2019
+                </CostPoint>
+                <CostPoint>Schedule: Mon - Fri: 9:30 AM to 5:30 PM </CostPoint>
+                <CostPoint>Cost: $9,995.00 USD</CostPoint>
+                <CostPoint>Location: Salt Lake City, Utah</CostPoint>
+              </ul>
               <br />
-              <br />
-              <br />
-              Schedule: Mon - Fri: 9:30 AM - 5:30 PM
-              <br />
-              <br />
-              <br />
-              Cost: $9.995.00 USD
-              <br />
-              <br />
-              <br />
-              Location: Salt Lake City, UT
-              <br />
-              <br />
-              <br />
-              <CardButton href="/ApplicationsForm" primary>Apply Now</CardButton>
-              <br />
-              <br />
-              <br />
-              <br />
-            </CardDescription>
+              <Grid columns={1}>
+                <Grid.Row>
+                  <CardButton href="/ApplicationsForm" primary>
+                    Apply Now
+                  </CardButton>
+                  <span style={{ margin: "10px 30px" }}>Or</span>
+                  <Link
+                    to="/"
+                    style={{
+                      margin: "5px 5px",
+                      fontSize: "20px",
+                      fontStyle: "bold"
+                    }}
+                  >
+                    Learn More
+                  </Link>
+                </Grid.Row>
+              </Grid>
+            </CostCard>
           </Grid.Column>
-          <Grid.Column style={styles.costBox}>
-          <br />
-            <CardHeader>Fall 2019</CardHeader>
-            <CardDescription>
+          <Grid.Column>
+            <CostCard style={styles.costBox}>
+              <Image src="https://www.screengeek.net/wp-content/uploads/2018/11/avatar-movie.jpg" />
               <br />
-              Start Date: August 12th - October 25th, 2019
+
+              <CardHeader>Fall 2019</CardHeader>
+              <CostDes>
+                This is an 11 week program to learn full-stack web development,
+                this is an amazing course.
+              </CostDes>
+              <ul>
+                <CostPoint>
+                  Start Date: August 12th - October 25th, 2019
+                </CostPoint>
+                <CostPoint>Schedule: Mon - Fri: 9:30 AM to 5:30 PM </CostPoint>
+                <CostPoint>Cost: $9,995.00 USD</CostPoint>
+                <CostPoint>Location: Salt Lake City, Utah</CostPoint>
+              </ul>
               <br />
+              <Grid columns={1}>
+                <Grid.Row>
+                  <CardButton href="/ApplicationsForm" primary>
+                    Apply Now
+                  </CardButton>
+                  <span style={{ margin: "10px 30px" }}>Or</span>
+                  <Link
+                    to="/"
+                    style={{
+                      margin: "5px 5px",
+                      fontSize: "20px",
+                      fontStyle: "bold"
+                    }}
+                  >
+                    Learn More
+                  </Link>
+                </Grid.Row>
+              </Grid>
+            </CostCard>
+          </Grid.Column>
+          <Grid.Column>
+            <CostCard style={styles.costBox}>
+              <Image src="https://www.screengeek.net/wp-content/uploads/2018/11/avatar-movie.jpg" />
               <br />
+
+              <CardHeader>Fall 2019</CardHeader>
+              <CostDes>
+                This is an 11 week program to learn full-stack web development,
+                this is an amazing course.
+              </CostDes>
+              <ul>
+                <CostPoint>
+                  Start Date: August 12th - October 25th, 2019
+                </CostPoint>
+                <CostPoint>Schedule: Mon - Fri: 9:30 AM to 5:30 PM </CostPoint>
+                <CostPoint>Cost: $9,995.00 USD</CostPoint>
+                <CostPoint>Location: Salt Lake City, Utah</CostPoint>
+              </ul>
               <br />
-              Schedule: Mon - Fri: 9:30 AM to 5:30 PM
-              <br />
-              <br />
-              <br />
-              Cost: $9,995.00 USD
-              <br />
-              <br />
-              <br />
-              Location: Salt Lake City, Utah
-              <br />
-              <br />
-              <br />
-              <CardButton href="/ApplicationsForm" primary>Apply Now</CardButton>
-            </CardDescription>
+              <Grid columns={1}>
+                <Grid.Row>
+                  <CardButton href="/ApplicationsForm" primary>
+                    Apply Now
+                  </CardButton>
+                  <span style={{ margin: "10px 30px" }}>Or</span>
+                  <Link
+                    to="/"
+                    style={{
+                      margin: "5px 5px",
+                      fontSize: "20px",
+                      fontStyle: "bold"
+                    }}
+                  >
+                    Learn More
+                  </Link>
+                </Grid.Row>
+              </Grid>
+            </CostCard>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </CostContainer>
   </>
-)
+);
 
 const styles = {
   costBox: {
-    border: "25px solid white",
-    padding: "10px",
-    background: "#f5f5f5"
+    width: "500px",
+    padding: 0
   }
-}
+};
 
-const TextContainer = styled(Container)`
-  
-`
+const CostPoint = styled.p`
+  font-size: 14px;
+  text-align: left;
+`;
+
+const CostDes = styled.text`
+  font-size: 18px;
+  text-align: left;
+  padding: 20px;
+`;
+
+const CostCard = styled(Card)`
+  height: auto;
+`;
+
+const TextContainer = styled(Container)``;
 
 const BlockText = styled.div`
   margin-left: 7em
@@ -100,29 +188,35 @@ const BlockText = styled.div`
     margin-left: 0
     width: 100%
   `}
-`
+`;
 const CostContainer = styled(Container)`
-  text-align: center
-  ${media.phone`
+  text-align: center ${media.phone`
     width: 450px
     margin-left: 0px
-  `}
-`
+  `};
+`;
 const CardHeader = styled.h1`
-  font-size: 26px
+  font-size: 24px
   font-weight: bold
-`
+  text-align: left
+  margin-left: 5%
+`;
 const CardDescription = styled.p`
-  font-size: 18px
- ${media.phone`
+  font-size: 18px ${media.phone`
     text-align: left
- `}
-`
-const CardButton = styled(Button)`
-  width: 20em
+ `};
+`;
+const CardButton = styled.button`
+  width: 120px;
+  padding: 10px;
+  background: #1d8ece;
+  color: white;
+  font-weight: 600;
+  margin-left: 50px;
+  margin-bottom: 40px;
   ${media.phone`
     width: 7.5em
-  `}
-`
+  `};
+`;
 
-export default CostDates
+export default CostDates;
