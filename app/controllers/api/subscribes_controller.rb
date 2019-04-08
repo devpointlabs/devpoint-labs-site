@@ -10,11 +10,12 @@ class Api::SubcribeController < ApplicationController
   end
 
   def create
-    @subscribe = Subscribe.new(subscribe_params)
-    if @subscribe.save
-      render json: @subscribe
+    binding.pry
+    subscribe = Subscribe.new(subscribe_params)
+    if subscribe.save
+      render json: subscribe
     else
-      render json: @subscribe.errors, status: 422  
+      render json: subscribe.errors, status: 422  
     end
   end
 
