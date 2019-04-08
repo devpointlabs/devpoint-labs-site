@@ -7,7 +7,7 @@ class ScholarshipsView extends React.Component {
 
     componentDidMount() {
         const { id } = this.props.match.params
-        axios.get(`api/scholarships/${id}`)
+        axios.get(`/api/scholarships/${id}`)
             .then( res => this.setState({ scholarship: res.data }))
     }
 
