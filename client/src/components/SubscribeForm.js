@@ -9,6 +9,7 @@ export default class SubscribeForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    debugger;
     const subscribe = this.state;
     axios.post("/api/subscribes", subscribe).then(res => {
       console.log();
