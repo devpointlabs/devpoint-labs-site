@@ -20,6 +20,7 @@ import FinancingScholarships from './components/FinancingScholarships';
 import StudentHousing from './components/StudentHousing';
 import EmailPage from './components/EmailPage'
 import ProtectedRoute from './components/ProtectedRoute'
+import ApplicationsView from "./components/ApplicationsView";
 
 const App = () => (
   <Fragment>
@@ -41,6 +42,7 @@ const App = () => (
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
           <Route exact path="/ContactUs" component={ContactForm} />
           <Route exact path="/StudentHousing" component={StudentHousing} />
+          <Route exact path="/applications/:id" render = { () => <ApplicationsView /> } />  
           <Route component={NoMatch} />
         </Switch>
     </FetchUser>

@@ -5,6 +5,12 @@ class Api::ApplicationsController < ApplicationController
     render json: Application.all
   end
 
+  def show
+    @application = Application.find(params[:id])
+    render json: @application
+  end
+
+
   def create
     application = Application.create(application_params)
     
