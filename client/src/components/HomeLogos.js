@@ -10,7 +10,7 @@ import { media, media2 } from "../theme/media";
 
 const HomeLogos = () => (
   <>
-    <LogoGrid container centered columns={5} class="ui equal width grid">
+    <LogoGrid relaxed='very' container centered columns={5} class="ui equal width grid">
       <Grid.Row>
         <Grid.Column width={2}>
           <Image src={Fila} alt="fila" size="tiny" />
@@ -34,6 +34,8 @@ const HomeLogos = () => (
 
 const LogoGrid = styled(Grid)`
   width: 100%;
+  opacity: .3 !important
+  padding-bottom: 8em !important
   ${media.phone`
     visibility: hidden
   `};
