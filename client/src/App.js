@@ -22,7 +22,7 @@ import EmailPage from './components/EmailPage'
 import ProtectedRoute from './components/ProtectedRoute'
 
 const App = () => (
-  <Fragment>
+  <Fragment > 
     <Navbar />
     <FetchUser>
         <Switch>
@@ -42,10 +42,13 @@ const App = () => (
           <Route exact path="/ContactUs" component={ContactForm} />
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route component={NoMatch} />
-        </Switch>
+          </Switch>
+        <Footer />  
     </FetchUser>
-    <Footer />
   </Fragment>
-);
+)
+
+
+
 
 export default App;
