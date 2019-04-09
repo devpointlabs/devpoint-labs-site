@@ -8,10 +8,10 @@ const PageOptions = () => (
       container
       columns={3}
       class="ui equal width grid"
-      style={{ marginBottom: "5em" }}
+      style={{ display: "flex", paddingBottom: "40px" }}
     >
       <Grid.Row>
-        <Grid.Column mobile={16} tablet={8} computer={6}>
+        <Grid.Column>
           <Icon name="university" size="big" style={{ marginLeft: "50%" }} />
           <Header as="h2" textAlign="center">
             University Partner
@@ -34,7 +34,7 @@ const PageOptions = () => (
           </p>
         </Grid.Column>
         <br />
-        <Grid.Column mobile={16} tablet={8} computer={5}>
+        <Grid.Column>
           <Icon name="student" size="big" style={{ marginLeft: "47%" }} />
           <Header as="h2" textAlign="center">
             Financing And Scholarships
@@ -50,12 +50,14 @@ const PageOptions = () => (
               fontSize: "1.2em"
             }}
           >
+            <br />
+
             <Link to="/FinancingScholarships">More Info</Link>
           </p>
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={8} computer={4}>
+        <Grid.Column>
           <Icon name="home" size="big" style={{ marginLeft: "47%" }} />
-          <Header as="h2" textAlign="center">
+          <Header as="h2" textAlign="center" style={{ marginLeft: "10px" }}>
             Free Student Housing
           </Header>
           <p style={{ textAlign: "center", fontSize: "1.2em" }}>
@@ -69,12 +71,14 @@ const PageOptions = () => (
               fontSize: "1.2em"
             }}
           >
+            <br />
+            <br />
+
             <Link to="/StudentHousing">More Info</Link>
           </p>
         </Grid.Column>
       </Grid.Row>
     </Grid>
-
   </>
 );
 
