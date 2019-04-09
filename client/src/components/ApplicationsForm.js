@@ -297,8 +297,7 @@ class ApplicationsForm extends React.Component {
             value={course}
             selection
             options={options}
-            required
-          />
+            />
           <br />
           <Dropdown
             placeholder="Which Location Are You Interested In?"
@@ -306,7 +305,6 @@ class ApplicationsForm extends React.Component {
             value={location}
             selection
             options={options1}
-            required
           />
           <br />
           <Dropdown
@@ -315,7 +313,6 @@ class ApplicationsForm extends React.Component {
             value={grad}
             selection
             options={options2}
-            required
           />
           <br />
           <Dropdown
@@ -324,7 +321,6 @@ class ApplicationsForm extends React.Component {
             value={experience}
             selection
             options={options3}
-            required
           />
           <br />
           <Dropdown
