@@ -1,11 +1,13 @@
 class Api::SubscribersController < ApplicationController
-before_action :set_subscriber, only: [:show, :update, :destroy]
+before_action :set_subscribe, only: [:show, :update, :destroy]
 
   def index
     render json: Subscriber.all
   end
 
   def show
+
+    @subscriber = Subscriber.find(params[:id])
     render json: @subscriber
   end
 

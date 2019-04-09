@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Table, Header, Container} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Scholarship from './Scholarship'
-
+import Subscribers from './Subscribers'
 
 
 class EmailPage extends React.Component {
@@ -46,6 +46,9 @@ class EmailPage extends React.Component {
               </Table.Body>
             </Table>
          <Scholarship />
+         <br/>
+         
+         <Subscribers />
         </Container>
         </>       
         )
