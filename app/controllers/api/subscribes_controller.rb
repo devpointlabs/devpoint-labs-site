@@ -10,6 +10,7 @@ class Api::SubcribeController < ApplicationController
   end
 
   def create
+    binding.pry
     subscribe = Subscribe.new(subscribe_params)
     if subscribe.save
       render json: subscribe
@@ -20,7 +21,7 @@ class Api::SubcribeController < ApplicationController
 
   def destroy
     @subscribe.destroy
-    render json: { message: "subscribe #{@subscribe.name} was deleted" }
+    render json: { message: "subscription was deleted" }
   end
 
   private

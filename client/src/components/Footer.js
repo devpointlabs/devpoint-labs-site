@@ -1,10 +1,10 @@
-import React from 'react'
-import { Header, Form, Icon } from 'semantic-ui-react'
-import styled from 'styled-components'
+import React from "react";
+import { Header, Form, Icon } from "semantic-ui-react";
+import styled from "styled-components";
+import SubscribeForm from "./SubscribeForm";
 
 class Footer extends React.Component {
-  
-  render () {
+  render() {
     return (
       <>
       <AppContainer>
@@ -25,7 +25,7 @@ class Footer extends React.Component {
               <a ref="Link one" class="item"> Link three</a>
               <a ref="Link one" class="item"> Link four</a>
               </div>
-            </ColumnStyle>
+            
             <ColumnStyle class="three wide column" style={{ textAlign: "center" }} >
               <h4 class="ui header"> Second Column </h4>
              <div class="ui link list">
@@ -35,30 +35,16 @@ class Footer extends React.Component {
               <a ref="Link one" class="item"> Link three</a>
               <a ref="Link one" class="item"> Link four</a>
               </div>
-            </ColumnStyle>
-            <ColumnStyle class="three wide column" style={{ textAlign: "center" }}>
+             </ColumnStyle>
+             <ColumnStyle class="three wide column" style={{ textAlign: "center" }}>
               <h4 class="ui header"> Third Column </h4>
-             <div class="ui link list">
-             <br/>
-              <a ref="Link one" class="item"> Link one</a>
-              <a ref="Link one" class="item"> Link two</a>
-              <a ref="Link one" class="item"> Link three</a>
-              <a ref="Link one" class="item"> Link four</a>
-              </div>
-            </ColumnStyle>
-            <ColumnStyle class="three wide column">
-              <h4 class="ui header"> Subcribe </h4>
-                <Form>
-                  <Form.Input 
-                    placeholder="Email"/>
-                </Form>
-            </ColumnStyle>
+              <SubscribeForm />
+             </ColumnStyle>
+            </div>
           </div>
-        </div>
-      </div>
-      </AppContainer>
+        </AppContainer>
       </>
-    )
+    );
   }
 }
 
@@ -82,4 +68,5 @@ const ColumnStyle = styled.div`
   margin-bottom: 6em;
 `
 
-export default Footer
+
+export default Footer;
