@@ -20,18 +20,18 @@ const Landing = () => (
 )
 
 const SegmentStyles = styled(Grid)`
-  height: 70em
-  display: flex !important
-  flex-wrap: wrap !important
-  border: none !important
+  height: 70em;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  border: none !important;
 `
 
 const ImageStyle = styled.img`
-  width: 50em
-  height: 60em
+  width: 50em;
+  height: 60em;
 
   ${media.phone`
-    display: none
+    display: none;
   `}
 `
 

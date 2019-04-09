@@ -25,7 +25,7 @@ import Scholarship from './components/Scholarship'
 import ScholarshipsView from './components/ScholarshipsView'
 
 const App = () => (
-  <Fragment>
+  <Fragment > 
     <Navbar />
     <FetchUser>
         <Switch>
@@ -48,10 +48,13 @@ const App = () => (
           <Route exact path="/applications/:id" render = { () => <ApplicationsView /> } />  
           <Route exact path="/scholarships/:id" render = { () => <ScholarshipsView /> } />
           <Route component={NoMatch} />
-        </Switch>
+          </Switch>
+        <Footer />  
     </FetchUser>
-    <Footer />
   </Fragment>
-);
+)
+
+
+
 
 export default App;
