@@ -23,14 +23,17 @@ import ProtectedRoute from './components/ProtectedRoute'
 import ApplicationsView from "./components/ApplicationsView";
 import Scholarship from './components/Scholarship'
 import ScholarshipsView from './components/ScholarshipsView'
+import Subscribers from './components/Subscribers'
+import SubscribersView from './components/SubscribersView'
 
 const App = () => (
-  <Fragment>
+  <Fragment > 
     <Navbar />
     <FetchUser>
         <Switch>
           <ProtectedRoute exact path='/EmailPage' component={EmailPage} />
           <ProtectedRoute exact path='/Scholarship' component={Scholarship} />
+          <ProtectedRoute exact path='/Subscribers' component={Subscribers} />
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
@@ -47,11 +50,18 @@ const App = () => (
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route exact path="/applications/:id" render = { () => <ApplicationsView /> } />  
           <Route exact path="/scholarships/:id" render = { () => <ScholarshipsView /> } />
+<<<<<<< HEAD
+=======
+          <Route exact path="/subscribers/:id" render = { () => <SubscribersView /> } />
+>>>>>>> 91ef2717012c21cd6da7a015d730a31533678841
           <Route component={NoMatch} />
-        </Switch>
+          </Switch>
+        <Footer />  
     </FetchUser>
-    <Footer />
   </Fragment>
-);
+)
+
+
+
 
 export default App;

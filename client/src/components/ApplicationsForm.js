@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { media } from "../theme/media";
 import styled from "styled-components";
-import { Form, Header, Dropdown, Container } from "semantic-ui-react";
+import { Form, Header, Dropdown, Container, Select } from "semantic-ui-react";
 
 class ApplicationsForm extends React.Component {
   defaultValues = {
@@ -33,12 +33,10 @@ class ApplicationsForm extends React.Component {
     this.setState({ ...this.state });
   };
 
-  handleChange = e => {
-    const {
-      target: { name, value }
-    } = e;
+  handleChange = (e, { name, value }) => {
     this.setState({ [name]: value });
   };
+
 
   render() {
     const {
@@ -63,23 +61,23 @@ class ApplicationsForm extends React.Component {
         key: "1",
         text:
           "U of U Professional Education Web Development (May 6th - July 23rd, 2019)",
-        value: "course"
+        value: "U of U Professional Education Web Development (May 6th - July 23rd, 2019)"
       },
       {
         key: "2",
         text:
           "U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)",
-        value: "course"
+        value: "U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)"
       },
       {
         key: "3",
         text: "Part-Time Web Development (May 6th - July 23rd, 2019)",
-        value: "course"
+        value: "Part-Time Web Development (May 6th - July 23rd, 2019)"
       },
       {
         key: "4",
         text: "Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)",
-        value: "course"
+        value: "Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)"
       }
     ];
 
@@ -87,12 +85,12 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Salt Lake City, UT",
-        value: "location"
+        value: "Salt Lake City, UT"
       },
       {
         key: "2",
         text: "Las Vegas, NV",
-        value: "location"
+        value: "Las Vegas, NV"
       }
     ];
 
@@ -100,17 +98,17 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Become A Developer",
-        value: "grad"
+        value: "Become A Developer"
       },
       {
         key: "2",
         text: "Work at an awesome startup",
-        value: "grad"
+        value: "Work at an awesome startup"
       },
       {
         key: "3",
         text: "Not sure",
-        value: "grad"
+        value: "Not sure"
       }
     ];
 
@@ -118,24 +116,24 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "No coding experience, just basic computer skills",
-        value: "experience"
+        value: "No coding experience, just basic computer skills"
       },
       {
         key: "2",
         text: "Some coding experience. Familiar  with HTML and CSS",
-        value: "experience"
+        value: "Some coding experience. Familiar  with HTML and CSS"
       },
       {
         key: "3",
         text:
           "Moderate coding experiece. I know how to launch a Rails app, but I still have a lot to learn",
-        value: "experience"
+        value: "Moderate coding experiece. I know how to launch a Rails app, but I still have a lot to learn"
       },
       {
         key: "4",
         text:
           "Intermerdiate experience. I have built a few apps form start to finish",
-        value: "experience"
+        value: "Intermerdiate experience. I have built a few apps form start to finish"
       }
     ];
 
@@ -143,22 +141,22 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Male",
-        value: "gender"
+        value: "Male"
       },
       {
         key: "2",
         text: "Female",
-        value: "gender"
+        value: "Female"
       },
       {
         key: "3",
         text: "Other",
-        value: "gender"
+        value: "Other"
       },
       {
         key: "4",
         text: "Prefer Not To Answer",
-        value: "gender"
+        value: "Prefer Not To Answer"
       }
     ];
 
@@ -166,32 +164,32 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Facebook",
-        value: "social"
+        value: "Facebook"
       },
       {
         key: "2",
         text: "Twitter",
-        value: "social"
+        value: "Twitter"
       },
       {
         key: "3",
         text: "Bing/Yahoo",
-        value: "social"
+        value: "Bing/Yahoo"
       },
       {
         key: "4",
         text: "Ruby User Report",
-        value: "social"
+        value: "Ruby User Report"
       },
       {
         key: "5",
         text: "Course Report",
-        value: "social"
+        value: "Course Report"
       },
       {
         key: "6",
         text: "Other",
-        value: "social"
+        value: "Other"
       }
     ];
     return (
@@ -294,55 +292,62 @@ class ApplicationsForm extends React.Component {
           <Dropdown
             placeholder="Which Course Are You Interested In?"
             fluid
-            value={course}
             selection
             options={options}
-            required
-          />
+            onChange={this.handleChange}
+            value={course}
+            name="course"
+            />
           <br />
           <Dropdown
             placeholder="Which Location Are You Interested In?"
             fluid
-            value={location}
             selection
             options={options1}
-            required
+            onChange={this.handleChange}
+            value={location}
+            name="location"
           />
           <br />
           <Dropdown
             placeholder="What Do You Want To Do After Graduating Our Course?"
             fluid
-            value={grad}
             selection
             options={options2}
-            required
+            onChange={this.handleChange}
+            value={grad}
+            name="grad"
           />
           <br />
           <Dropdown
             placeholder="What Is Your Coding Background?"
             fluid
-            value={experience}
             selection
             options={options3}
-            required
+            onChange={this.handleChange}
+            value={experience}
+            name="experience"
           />
           <br />
           <Dropdown
             placeholder="What Is Your Gender?"
             fluid
-            value={gender}
             selection
             options={options4}
-            required
+            onChange={this.handleChange}
+            value={gender}
+            name="gender"
+
           />
           <br />
           <Dropdown
             placeholder="How Did You Hear About Us?"
             fluid
-            value={social}
             selection
             options={options5}
-            required
+            onChange={this.handleChange}
+            value={social}
+            name="social"
           />
           <br />
           <Form.Button color="purple">Submit</Form.Button>

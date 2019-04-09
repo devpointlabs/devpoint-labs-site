@@ -19,14 +19,19 @@ const Landing = () => (
 )
 
 const SegmentStyles = styled(Grid)`
-  background: url('https://www.hallevans.com/wp-content/uploads/2019/02/SLC_Media.jpg') !important
-  background-size: cover !important
-  height: 60em
-  margin-bottom: 2em !important
-  display: flex !important
-  flex-wrap: wrap !important
-  border: none !important
-  transform: translate(0, -5em) !important
+  height: 70em;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  border: none !important;
+`
+
+const ImageStyle = styled.img`
+  width: 50em;
+  height: 60em;
+
+  ${media.phone`
+    display: none;
+  `}
 `
 
 export default Landing

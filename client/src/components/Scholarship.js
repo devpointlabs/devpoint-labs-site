@@ -17,33 +17,34 @@ class Scholarship extends React.Component {
         const { scholarships } = this.state
         return (
             <>
-            <Header>Scholarships</Header>
+            <Header>Scholarship Applications</Header>
             <Table celled>
-                
-                <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell>First Name</Table.HeaderCell>
-                        <Table.HeaderCell>Last Name</Table.HeaderCell>
-                        <Table.HeaderCell>Email</Table.HeaderCell>
-                        <Table.HeaderCell>Phone Number</Table.HeaderCell>
-                    </Table.Row>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>First Name</Table.HeaderCell>
+                  <Table.HeaderCell>Last Name</Table.HeaderCell>
+                  <Table.HeaderCell>Email</Table.HeaderCell>
+                  <Table.HeaderCell>Phone Number</Table.HeaderCell>
+                  <Table.HeaderCell>Contacted?</Table.HeaderCell>
+                </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                { scholarships.map( scholarship =>
-                    <Table.Row  key={scholarship.id}>
-                <Link to={`/scholarships/${scholarship.id}`}>
-                <Table.Cell>{scholarship.first_name}</Table.Cell>
-                </Link>
-                <Table.Cell>{scholarship.last_name}</Table.Cell>
-                <Table.Cell>{scholarship.email}</Table.Cell>
-                <Table.Cell>{scholarship.phone_number}</Table.Cell>
-                    </Table.Row>
-                )}
+                  { scholarships.map( scholarship =>
+                  <Table.Row  key={scholarship.id}>
+                    <Link to={`/scholarships/${scholarship.id}`}>
+                    <Table.Cell>{scholarship.first_name}</Table.Cell>
+                  </Link>
+                    <Table.Cell>{scholarship.last_name}</Table.Cell>
+                    <Table.Cell>{scholarship.email}</Table.Cell>
+                    <Table.Cell>{scholarship.phone_number}</Table.Cell>
+                    <Table.Cell>{scholarship.course}</Table.Cell>
+                  </Table.Row>
+                 )}
                 </Table.Body>
             </Table>
             </>
-        )
-    }
+         )
+      }
 }
 
 export default Scholarship

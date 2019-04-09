@@ -28,10 +28,7 @@ class ScholarshipForm extends React.Component {
     this.setState({ ...this.state });
   };
 
-  handleChange = e => {
-    const {
-      target: { name, value }
-    } = e;
+  handleChange = (e, { name, value }) => {
     this.setState({ [name]: value });
   };
 
@@ -53,23 +50,23 @@ class ScholarshipForm extends React.Component {
         key: "1",
         text:
           "U of U Professional Education Web Development (May 6th - July 23rd, 2019)",
-        value: "course"
+        value: "U of U Professional Education Web Development (May 6th - July 23rd, 2019)"
       },
       {
         key: "2",
         text:
           "U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)",
-        value: "course"
+        value: "U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)"
       },
       {
         key: "3",
         text: "Part-Time Web Development (May 6th - July 23rd, 2019)",
-        value: "course"
+        value: "Part-Time Web Development (May 6th - July 23rd, 2019)"
       },
       {
         key: "4",
         text: "Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)",
-        value: "course"
+        value: "Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)"
       }
     ];
     return (
@@ -137,10 +134,11 @@ class ScholarshipForm extends React.Component {
           <Dropdown
             placeholder="Which course are you interested in?"
             fluid
-            value={course}
             selection
             options={options}
-            required
+            onChange={this.handleChange}
+            value={course}
+            name="course"
           />
           <br />
           <br />

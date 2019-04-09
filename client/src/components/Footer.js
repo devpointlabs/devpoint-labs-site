@@ -8,20 +8,13 @@ class Footer extends React.Component {
     return (
       <>
         <AppContainer>
-          <div
-            class="ui vertical footer segment"
-            style={{ transform: "translate(3em)" }}
-          >
-            <div class="ui center aligned containter">
+          <div class="ui vertical footer segment">
+            <div class="ui center aligned container">
               <div class="ui stackable divided grid">
                 <div
                   Icon
                   class="two wide column"
-                  style={{
-                    textAlign: "left",
-                    paddingTop: "4em",
-                    transform: "translate(-4em, 0)"
-                  }}
+                  style={{ textAlign: "left", paddingTop: "4em" }}
                 >
                   <Icon name="hand paper outline" size="small" />
                   <p> All rights reserved. @2019 FP Studio</p>
@@ -101,8 +94,11 @@ class Footer extends React.Component {
                     </a>
                   </div>
                 </ColumnStyle>
-                <ColumnStyle class="three wide column">
-                  <h4 class="ui header"> Subcribe </h4>
+                <ColumnStyle
+                  class="three wide column"
+                  style={{ textAlign: "center" }}
+                >
+                  <h4 class="ui header"> Fourth Column </h4>
                   <SubscribeForm />
                 </ColumnStyle>
               </div>
@@ -115,17 +111,23 @@ class Footer extends React.Component {
 }
 
 const AppContainer = styled.div`
-  display: flex !important
-  align-items: flex-end !important
+  display: flex;
+  align-items: flex-end;
   bottom: 0;
-  margin-left: 15% !important
+
   width: 100%;
+  justify-content: center;
+
+  @media (max-width: 380px) {
+    margin-top: 4000px;
+  }
 `;
 
 const ColumnStyle = styled.div`
-  margin-right: 6em
-  margin-top: 5em
-  margin-bottom: 6em
+  bottom: 0;
+  margin-right: 6em;
+  margin-top: 5em;
+  margin-bottom: 6em;
 `;
 
 export default Footer;
