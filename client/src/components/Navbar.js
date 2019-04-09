@@ -137,7 +137,7 @@ class Navbar extends React.Component {
             </Link>
             <Dropdown text='Community' options={options} simple item />
             {this.rightNavItems()}
-            <Link to='/application'>
+            <Link to='/ApplicationsForm'>
               <ButtonStyle
                 animated 
                 color='black'
