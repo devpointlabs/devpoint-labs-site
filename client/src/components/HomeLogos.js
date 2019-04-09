@@ -37,7 +37,7 @@ const LogoGrid = styled(Grid)`
   ${media.phone`
     visibility: hidden
   `};
-  ${media2.tablet`
+  ${media.tablet`
     visibility: hidden
   `}
 `;
