@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Grid, Segment, Icon } from 'semantic-ui-react'
 import { Carousel } from 'react-bootstrap'
+import styled from 'styled-components'
 
 class Reviews extends React.Component {
   constructor(props, context) {
@@ -25,6 +26,7 @@ class Reviews extends React.Component {
     const { index, direction } = this.state;
 
     return (
+      <RevStyle>
       <Carousel
         activeIndex={index}
         direction={direction}
@@ -123,6 +125,7 @@ class Reviews extends React.Component {
           </Segment>
         </Carousel.Item>
       </Carousel>
+      </RevStyle>
     )
   }
 }
@@ -137,5 +140,23 @@ const styles = {
     background: 'gainsboro',
   },
 }
+
+const RevStyle = styled.div`
+  @media (max-width: 1440px) {
+    height: 19em    
+  }
+
+  @media (max-width: 770px) {
+    height: 21em    
+  }
+
+  @media (max-width: 430px) {
+    height: 36em
+  }
+
+  @media (max-width: 365px) {
+    height: 39em
+  }
+`
 
 export default Reviews
