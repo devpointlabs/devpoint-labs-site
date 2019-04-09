@@ -12,28 +12,44 @@ class Navbar extends React.Component {
     show: false
   }
 
+  showMenu(event) {
+    event.preventDefault();
+    
+    this.setState({
+      showMenu: true,
+    });
+  }
+
   rightNavItems = () => {
     const { auth: { user, handleLogout, }, location, } = this.props;
-
+    
     if (user) {
+
       return (
-        <>
-          <Menu.Item
-            name='logout'
-            onClick={() => handleLogout(this.props.history)}
-          />
-        </>
+          <Dropdown as={Icon}
+            name='user circle'
+            color='black'
+            size='large'
+            style={{ transform: 'translate(0, 1em)'}}
+          >
+            <Dropdown.Menu>
+              <Dropdown.Item text='Profile' href='/EmailPage' />
+              <Dropdown.Item onClick={() => handleLogout(this.props.history)} href='/' text='Logout' />
+            </Dropdown.Menu>
+          </Dropdown>
       )
     } else {
       return (
         <>
-          <Link to='/login'>
-            <Menu.Item
-              id='login'
-              name='login'
-              active={location.pathname === '/login'}
-            />
-          </Link>
+        <Link to='/login' style={{ transform: 'translate(0, 1em)'}}>
+          <Menu.Item as={Button}
+            inverted
+            color='black'
+            id='login'
+            name='login'
+            active={location.pathname === '/login'}
+          />
+        </Link>
         </>
       )
     }
@@ -62,27 +78,18 @@ class Navbar extends React.Component {
             src="https://cdn-images-1.medium.com/max/1200/0*dtc87Aa74oYbGyrI.jpg" 
             alt=""
           />
-          <MenuItemStyle>
           <Dropdown as={Menu.Item} text='Courses' options={courseOptions} simple item />
-          </MenuItemStyle>
 
           <Link as={MenuItemStyle} to='/about'>
               <Menu.Item
-                
                 id='about'
                 name='about'
                 active={this.props.location.pathname === '/about'}
               />
             </Link>
-            <MenuItemStyle>
               <Dropdown as={Menu.Item} text='Community' options={options} simple item />
-            </MenuItemStyle>
             <Link to='/application'>
-              <Menu.Item
-                id='apply'
-                name='Apply Now'
-                active={this.props.location.pathname === '/register'}
-              />
+              <Icon name='edit' />
             </Link>
             { this.rightNavItems() }
         </MobileMenu>
@@ -114,41 +121,40 @@ class Navbar extends React.Component {
 
     return (
       <div>
-        <Menu pointing secondary>
+        <MenuStyles secondary>
           <Link to='/'>
-            <MenuWebItem
-              name='this should be the devpoint logo'
-              id='home'
-              active={this.props.location.pathname === '/'}
-            />
+            <LogoStyle src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142674.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=WtADJjHKLaiVmZh%2BIHmiw%2FjnJPw%3D' />
           </Link>
           
           <MenuWeb position='right'>
-            <Menu.Item>
-              <Dropdown text='Courses' options={courseOptions} simple item />
-            </Menu.Item>
+            <Dropdown text='Courses' options={courseOptions} simple item />
             <Link to='/about'>
-              <Menu.Item
-                
+              <MenuItem
                 id='about'
                 name='about'
-                active={this.props.location.pathname === '/about'}
-              />
+                active={this.props.location.pathname === '/about'} 
+                />
             </Link>
-            <Menu.Item>
-              <Dropdown text='Community' options={options} simple item />
-            </Menu.Item>
+            <Dropdown text='Community' options={options} simple item />
             {this.rightNavItems()}
             <Link to='/application'>
-              <Menu.Item
-                id='apply'
-                name='Apply Now'
+              <ButtonStyle
+                animated 
+                color='black'
                 active={this.props.location.pathname === '/register'}
-              />
+              >
+                <Button.Content visible>Apply Now</Button.Content>
+                <Button.Content 
+                  hidden
+                  color='black'
+                  >
+                  <Icon name='arrow right' />
+                </Button.Content>
+              </ButtonStyle>
             </Link>
           </MenuWeb>
 
-          <MenuMobile pointing secondary position='left'> 
+          <MenuMobile secondary position='left'> 
             <Menu.Menu>
               <Menu.Item >
                 <ButtonStyle 
@@ -157,7 +163,7 @@ class Navbar extends React.Component {
                   onClick={this.toggleClick}
                   >
                   <Icon
-                  name='align justify'
+                    name='align justify'
                   >
                   </Icon>
                 </ButtonStyle>
@@ -165,12 +171,21 @@ class Navbar extends React.Component {
               { this.handleDropdown() }
           </Menu.Menu>
           </MenuMobile>
-
-        </Menu>
+        </MenuStyles>
       </div>
     )
   }
 }
+
+const LogoStyle = styled(Image)`
+  width: 22em
+  height: 5em
+`
+
+const MenuStyles = styled(Menu)`
+  position: relative !important
+  z-index: 1 !important
+`
 
 const MenuMobile = styled(Menu.Menu)`
   display: none !important
@@ -183,6 +198,7 @@ const MenuMobile = styled(Menu.Menu)`
 
 const MenuWeb = styled(Menu.Menu)`
   display: flex
+  background: transparent !important
 
   ${media.phone`
     display: none !important
@@ -196,6 +212,11 @@ const MenuWebItem = styled(Menu.Item)`
   `}
 `
 
+const ButtonStyle = styled(Button)`
+  margin-right: 1em !important
+  margin-left: .5em !important
+  transform: translate(0, 1em) !important
+`
 
 export class ConnectedNavbar extends React.Component {
   render() {
@@ -218,8 +239,8 @@ const MobileMenu = styled(Menu)`
   border: none !important
   background: transparent !important
 `
-const ButtonStyle = styled(Button)`
-  position: relative !important
+const MenuItem = styled(Menu.Item)`
+  transform: translate(0, 1.2em) !important
 `
 
 export default withRouter(ConnectedNavbar);

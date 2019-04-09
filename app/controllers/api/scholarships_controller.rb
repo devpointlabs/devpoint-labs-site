@@ -6,6 +6,8 @@ class Api::ScholarshipsController < ApplicationController
   end
 
   def show
+
+    @scholarship = Scholarship.find(params[:id])
     render json: @scholarship
   end
 
@@ -29,6 +31,17 @@ class Api::ScholarshipsController < ApplicationController
     end
 
     def scholarship_params
-      params.require(:scholarship).permit(:first_name, :last_name, :full, :part, :email, :phone_number, :current_city)   
+      params.require(:scholarship).permit(
+        :first_name, 
+        :last_name, 
+        :full, 
+        :part, 
+        :email, 
+        :phone_number, 
+        :current_city, 
+        :comments, 
+        :comments1, 
+        :comments2, 
+        :comments3)   
     end
 end
