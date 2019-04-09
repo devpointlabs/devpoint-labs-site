@@ -72,6 +72,7 @@ const AppContainer = styled.div`
   
   @media (max-width: 380px) {
     margin-top: 4000px;
+    
    }
 `
 
