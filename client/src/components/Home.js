@@ -1,15 +1,7 @@
 import React from "react";
 import IDos from "./IDos";
-import {
-  Button,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Search,
-  Segment,
-  Container
-} from "semantic-ui-react";
+import {Container, Image} from "semantic-ui-react";
+import images from '../assets/images/Airplaneshot-1-min.png'
 import styled from "styled-components";
 import PageOptions from "./PageOptions";
 import Landing from "./Landing";
@@ -19,44 +11,36 @@ import CampusTour from "./CampusTour";
 import HomeLogos from "./HomeLogos";
 import { media } from "../theme/media";
 
+const BackgroundStyles = {
+  backgroundImage: `url('${images}')`,
+  backgroundPosition: `center`,
+  backgroundRepeat: `no-repeat`,
+  backgroundSize: `cover`,
+  height: `60em`,
+  transform: `translate(0, -4em)`
+}
+
 class Home extends React.Component {
+
   render() {
     return (
-      <div as={BackgroundStyles}>
+      <div style={BackgroundStyles}>
         <Landing />
-        <ContainerStyles>
+        <Container>
           <HomeLogos />
-        </ContainerStyles>
-        <PageOptions />
-        <ContainerStyles>
+        </Container>
+          <PageOptions />
+        <Container>
           <IDos />
+        </Container>
           <Reviews />
+        <Container>
           <CampusTour />
           <CoursesSection />
-        </ContainerStyles>
+        </Container>
       </div>
     );
   }
 }
-
-const BackgroundStyles = styled.div`
-  background: url('https://www.hallevans.com/wp-content/uploads/2019/02/SLC_Media.jpg') !important
-  background-position: center !important
-  background-repeat: no-repeat !important
-  background-size: cover !important
-  height: 60em
-`
-
-const ContainerStyles = styled(Container)`
-  ${media.phone`
-    width: 100% !important
-    background: url('https://www.hallevans.com/wp-content/uploads/2019/02/SLC_Media.jpg') !important
-    background-position: center !important
-    background-repeat: no-repeat !important
-    background-size: cover !important
-    height: 50em
-    transform: translate(0, 2em)
-  `}
-`;
 
 export default Home;
