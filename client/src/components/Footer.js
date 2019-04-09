@@ -113,13 +113,25 @@ class Footer extends React.Component {
 const AppContainer = styled.div`
   display: flex;
   align-items: flex-end;
- 
+  margin-top: 1900px;
   
   width: 100%;
   justify-content: center;
 
+  @media (max-width: 1024px) {
+    margin-top: 1950px;    
+   }
+  @media (max-width: 770px) {
+    margin-top: 2000px;    
+   }
+  @media (max-width: 430px) {
+    margin-top: 3250px;    
+   }
   @media (max-width: 380px) {
-    margin-top: 4000px;    
+    margin-top: 3500px;    
+   }
+  @media (max-width: 325px) {
+    margin-top: 3600px;    
    }
 `
 
