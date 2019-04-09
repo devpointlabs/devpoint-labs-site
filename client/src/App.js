@@ -27,7 +27,7 @@ import Subscribers from './components/Subscribers'
 import SubscribersView from './components/SubscribersView'
 
 const App = () => (
-  <Fragment>
+  <Fragment > 
     <Navbar />
     <FetchUser>
         <Switch>
@@ -52,10 +52,13 @@ const App = () => (
           <Route exact path="/scholarships/:id" render = { () => <ScholarshipsView /> } />
           <Route exact path="/subscribers/:id" render = { () => <SubscribersView /> } />
           <Route component={NoMatch} />
-        </Switch>
+          </Switch>
+        <Footer />  
     </FetchUser>
-    <Footer />
   </Fragment>
-);
+)
+
+
+
 
 export default App;
