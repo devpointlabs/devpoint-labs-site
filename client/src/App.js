@@ -50,7 +50,10 @@ const App = () => (
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route exact path="/applications/:id" render = { () => <ApplicationsView /> } />  
           <Route exact path="/scholarships/:id" render = { () => <ScholarshipsView /> } />
+<<<<<<< HEAD
+=======
           <Route exact path="/subscribers/:id" render = { () => <SubscribersView /> } />
+>>>>>>> 91ef2717012c21cd6da7a015d730a31533678841
           <Route component={NoMatch} />
           </Switch>
         <Footer />  
