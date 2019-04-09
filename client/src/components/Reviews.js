@@ -43,7 +43,7 @@ class Reviews extends React.Component {
               <Grid.Column>
                 <div>
                   <Icon name='user circle outline' size='big' />
-                  <p allowFontScaling={false}>
+                  <p>
                     This course is difficult but rewarding if your willing to put in the effort and time.
                     Instructor and the staff is awesome but if you dont give it your all that all means nothing.
                     It was an awesome experience for me overall. I highly recommend this course!
@@ -60,7 +60,7 @@ class Reviews extends React.Component {
               <Grid.Column>
                 <div>
                   <Icon name='user circle outline' size='big' />
-                  <p allowFontScaling={false}>
+                  <p>
                     It was incredibly challenging and satisfying. The curriculum was difficult but there was always
                     consistent and relevant support from the instructors, the TAs as well as the active mentors.
                     I would do it again.
@@ -90,7 +90,7 @@ class Reviews extends React.Component {
               <Grid.Column>
                 <div>
                   <Icon name='user circle outline' size='big' />
-                  <p allowFontScaling={false}>
+                  <p>
                     I graduated from DevPoint Labs in January '18, and just over a year later it's proven to be
                     one of the best decisions I have ever made in my career. The DPL fulltime full stack course
                     offers quality, relevant content and tons of hands on experience and mentorship over the course
