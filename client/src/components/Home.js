@@ -14,9 +14,9 @@ import { media } from '../theme/media'
 class Home extends React.Component {
   render() {
     return (
-      <>
+      <div as={BackgroundStyles}>
+        <Landing />
         <ContainerStyles>
-          <Landing />
           <HomeLogos />
           <PageOptions />
           <IDos/>
@@ -24,15 +24,23 @@ class Home extends React.Component {
           <CampusTour />
           <CoursesSection />
         </ContainerStyles>
-      </>
+      </div>
     );
   }
 }
 
+const BackgroundStyles = styled.div`
+  background: url('https://www.hallevans.com/wp-content/uploads/2019/02/SLC_Media.jpg') !important
+  background-position: center !important
+  background-repeat: no-repeat !important
+  background-size: cover !important
+  height: 60em
+`
+
 const ContainerStyles = styled(Container)`
   ${media.phone`
     width: 100% !important
-    background: url('https://www.desertjet.com/app/uploads/2015/10/placeholder-vertical.jpg') !important
+    background: url('https://www.hallevans.com/wp-content/uploads/2019/02/SLC_Media.jpg') !important
     background-position: center !important
     background-repeat: no-repeat !important
     background-size: cover !important
