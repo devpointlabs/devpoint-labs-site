@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { withRouter } from 'react-router-dom'
-import { Card } from 'semantic-ui-react'
+import { Card, Container, Header } from 'semantic-ui-react'
 
 
 class ApplicationsView extends React.Component {
@@ -14,16 +14,35 @@ class ApplicationsView extends React.Component {
             .then( res => this.setState({ application: res.data }))
     }
 
-
     render () {
-        const { first_name, last_name, email, phone_number, current_city, comments, comments1, comments2, course, location, grad, experience, gender, social } = this.state.application
+        const { 
+            first_name, 
+            last_name, 
+            email, 
+            phone_number, 
+            current_city, 
+            comments, 
+            comments1, 
+            comments2, 
+            course, 
+            location, 
+            grad, 
+            experience, 
+            gender, 
+            social 
+        } = this.state.application
 
         return (
+            <Container>
+                <br />
            <Card>
                <Card.Content>
-                   { first_name }
-                   <br/>
-                   { last_name }
+                   <Card.Header>
+                    {first_name}
+                    {" "}
+                    {last_name}
+                    </Card.Header>
+                
                    <br/>
                    { email }
                    <br/>
@@ -50,6 +69,7 @@ class ApplicationsView extends React.Component {
                     { social }
                </Card.Content>
            </Card>
+            </Container>
         )
     }
 }
