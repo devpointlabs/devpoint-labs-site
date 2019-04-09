@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios';
-import { Table, Header, Container} from 'semantic-ui-react'
+import { Table, Header, Container, Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Scholarship from './Scholarship'
 import Subscribers from './Subscribers'
@@ -14,6 +14,14 @@ class EmailPage extends React.Component {
         .then(res => this.setState({ applications: res.data }))
     }
 
+    handleDelete = (id) => {
+        axios.delete(`/api/applications/${id}`)
+        .then( res => {
+            const { applications } = this.state
+            this.setState({ applications: applications.filter( t => t.id !==id )})
+        })
+    }
+
     render() {
       const { applications } = this.state
         return (
@@ -21,7 +29,7 @@ class EmailPage extends React.Component {
         <Container>
             <br/>
           <Header>DevPoint Labs Applications</Header>
-            <Table style={{ position: "relative", marginBottom: "5em" }}>
+            <Table celled style={{ position: "relative", marginBottom: "5em" }}>
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>First Name</Table.HeaderCell>
@@ -41,13 +49,18 @@ class EmailPage extends React.Component {
                   <Table.Cell>{application.last_name}</Table.Cell>
                   <Table.Cell>{application.email}</Table.Cell>
                   <Table.Cell>{application.phone_number}</Table.Cell>
+                    <Table.Cell>
+                        <Button floated='right' onClick={() => this.handleDelete(application.id) } color='red'>
+                            <Icon name='trash' />
+                        </Button>
+                    </Table.Cell>
                 </Table.Row>
                )}
               </Table.Body>
             </Table>
          <Scholarship />
          <br/>
-         
+
          <Subscribers />
         </Container>
         </>       
