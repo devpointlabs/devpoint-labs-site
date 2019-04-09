@@ -12,45 +12,44 @@ class Navbar extends React.Component {
     show: false
   }
 
+  showMenu(event) {
+    event.preventDefault();
+    
+    this.setState({
+      showMenu: true,
+    });
+  }
+
   rightNavItems = () => {
     const { auth: { user, handleLogout, }, location, } = this.props;
-
-    const LoginOptions = [
-      { key: 1, text: 'Events', value: 1, href: 'https://www.meetup.com/devpoint-labs/', target: '_blank' },
-      { key: 2, text: 'Blog', value: 2, href: 'https://devpointlabs.tumblr.com/', target: '_blank' },
-    ]
-
+    
     if (user) {
-      let LoginIcon = () => (
-          <Icon
-            name='user circle'
-            size='big'
-            color='black'
-          ></Icon>
-      )
 
       return (
-        <Dropdown
-          as={Icon}
-          name='user circle'
-          size='big'
-          color='black'
-          options={LoginOptions}
+          <Dropdown as={Icon}
+            name='user circle'
+            color='black'
+            size='large'
+            style={{ transform: 'translate(0, 1em)'}}
           >
+            <Dropdown.Menu>
+              <Dropdown.Item text='Profile' href='/EmailPage' />
+              <Dropdown.Item onClick={() => handleLogout(this.props.history)} href='/' text='Logout' />
+            </Dropdown.Menu>
           </Dropdown>
-
       )
     } else {
       return (
         <>
-          <Link to='/login'>
-            <Icon 
-              color='black'
-              size='big'
-              name='user circle' 
-              style={{ transform: 'translate(0, .75em)'}}
-            />
-          </Link>
+        <Link to='/login' style={{ transform: 'translate(0, 1em)'}}>
+          <Menu.Item as={Button}
+            inverted
+            color='black'
+            id='login'
+            name='login'
+            active={location.pathname === '/login'}
+          />
+        </Link>
         </>
       )
     }
@@ -83,7 +82,6 @@ class Navbar extends React.Component {
 
           <Link as={MenuItemStyle} to='/about'>
               <Menu.Item
-                
                 id='about'
                 name='about'
                 active={this.props.location.pathname === '/about'}
