@@ -114,9 +114,9 @@ class Navbar extends React.Component {
     ]
 
     const courseOptions = [
-      { key: 1, text: 'Full Time Course - SLC, Utah', value: 1, href: '/fulltimeutah', target: '_blank' },
-      { key: 2, text: 'Part Time Course - SLC, Utah', value: 2, href: '/parttimeutah', target: '_blank' },
-      { key: 3, text: 'Part Time Course - UNLV, Nevada', value: 3, href: '/parttimeLV', target: '_blank' },
+      { key: 1, text: 'Full Time Course - SLC, Utah', value: 1, href: '/fulltimeutah' },
+      { key: 2, text: 'Part Time Course - SLC, Utah', value: 2, href: '/parttimeutah' },
+      { key: 3, text: 'Part Time Course - UNLV, Nevada', value: 3, href: '/parttimeLV' },
     ]
 
     return (
