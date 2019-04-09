@@ -1,44 +1,46 @@
-import React from 'react';
-import IDos from './IDos'
-import { Button, Divider, Grid, Header, Icon, Search, Segment, Container } from 'semantic-ui-react'
-import styled from 'styled-components'
-import PageOptions from './PageOptions'
-import Landing from './Landing'
-import Reviews from './Reviews';
-import CoursesSection from './CoursesSection';
-import CampusTour from './CampusTour';
-import HomeLogos from './HomeLogos';
-import { media } from '../theme/media'
+import React from "react";
+import IDos from "./IDos";
+import {Container, Image} from "semantic-ui-react";
+import images from '../assets/images/Airplaneshot-1-min.png'
+import styled from "styled-components";
+import PageOptions from "./PageOptions";
+import Landing from "./Landing";
+import Reviews from "./Reviews";
+import CoursesSection from "./CoursesSection";
+import CampusTour from "./CampusTour";
+import HomeLogos from "./HomeLogos";
+import { media } from "../theme/media";
 
+const BackgroundStyles = {
+  backgroundImage: `url('${images}')`,
+  backgroundPosition: `center`,
+  backgroundRepeat: `no-repeat`,
+  backgroundSize: `cover`,
+  height: `60em`,
+  transform: `translate(0, -4em)`
+}
 
 class Home extends React.Component {
+
   render() {
     return (
-      <>
-        <ContainerStyles>
-          <Landing />
+      <div style={BackgroundStyles}>
+        <Landing />
+        <Container>
           <HomeLogos />
+        </Container>
           <PageOptions />
-          <IDos/>
+        <Container>
+          <IDos />
+        </Container>
           <Reviews />
+        <Container>
           <CampusTour />
           <CoursesSection />
-        </ContainerStyles>
-      </>
+        </Container>
+      </div>
     );
   }
 }
-
-const ContainerStyles = styled(Container)`
-  ${media.phone`
-    width: 100% !important
-    background: url('https://www.desertjet.com/app/uploads/2015/10/placeholder-vertical.jpg') !important
-    background-position: center !important
-    background-repeat: no-repeat !important
-    background-size: cover !important
-    height: 50em
-    transform: translate(0, 2em)
-  `}
-`
 
 export default Home;

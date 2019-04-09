@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :scholarships
     resources :contacts
     resources :instagrams, only: :index
+    resources :subscribers
   end
 
     

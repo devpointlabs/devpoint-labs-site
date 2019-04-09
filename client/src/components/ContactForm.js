@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import styled from 'styled-components'
-import { media } from '../theme/media'
+import styled from "styled-components";
+import { media } from "../theme/media";
 import { Header, Form, Dropdown, Container } from "semantic-ui-react";
 
 class ContactForm extends React.Component {
@@ -149,12 +149,11 @@ class ContactForm extends React.Component {
 }
 
 const FormStyle = styled(Container)`
-  margin: 5em
-  ${media.phone`
+  margin: 5em ${media.phone`
       padding-left: 100px !important
       padding-right: 10px !important
       padding-top: 10px !important
-  `}
-`
+  `};
+`;
 
 export default ContactForm;
