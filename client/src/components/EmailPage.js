@@ -63,7 +63,7 @@ class EmailPage extends React.Component {
             </Table>
          <Scholarship />
          <br/>
-         
+
          <Subscribers />
         </Container>
         </>       

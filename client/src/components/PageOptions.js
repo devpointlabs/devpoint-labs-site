@@ -10,7 +10,7 @@ const PageOptions = () => (
         columns={3}
         stackable
         class="ui equal width grid"
-        style={{ display: "flex", paddingBottom: "40px" }}
+        style={{ display: "flex", paddingBottom: "30px" }}
       >
         <Grid.Row>
           <Grid.Column>

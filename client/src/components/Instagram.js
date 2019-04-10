@@ -38,14 +38,11 @@ class Instagram extends React.Component {
       <Segment>
         <Grid columns={4}>
           <Grid.Row>
-        {this.state.photos.map( photo => {
-        return (
+        {this.state.photos.slice(0, 6).map( photo => (
           <Grid.Column key={photo.id}>
-          <Image 
-          src={photo.images.standard_resolution.url} 
-          />
+          <Image src={photo.images.standard_resolution.url} />
           </Grid.Column>
-        )})}
+        ))}
         </Grid.Row>
         </Grid>
       </Segment>
