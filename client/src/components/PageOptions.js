@@ -8,6 +8,7 @@ const PageOptions = () => (
       <Grid
         container
         columns={3}
+        stackable
         class="ui equal width grid"
         style={{ display: "flex", paddingBottom: "40px" }}
       >
