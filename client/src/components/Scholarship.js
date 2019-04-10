@@ -25,6 +25,7 @@ class Scholarship extends React.Component {
                   <Table.HeaderCell>Last Name</Table.HeaderCell>
                   <Table.HeaderCell>Email</Table.HeaderCell>
                   <Table.HeaderCell>Phone Number</Table.HeaderCell>
+                  <Table.HeaderCell>Course</Table.HeaderCell>
                   <Table.HeaderCell>Contacted?</Table.HeaderCell>
                 </Table.Row>
                 </Table.Header>

@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { media } from "../theme/media";
 import styled from "styled-components";
-import { Form, Header, Dropdown, Container, Select } from "semantic-ui-react";
+import { Form, Header, Dropdown, Container, Select, Input } from "semantic-ui-react";
 
 class ApplicationsForm extends React.Component {
   defaultValues = {
@@ -26,11 +26,13 @@ class ApplicationsForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const application = this.state;
-    axios.post("/api/applications", application).then(res => {
-      console.log();
-      this.props.history.push("/");
-    });
-    this.setState({ ...this.state });
+    axios.post("/api/applications", application)
+      .then(res => {
+        this.props.history.push("/")
+      })
+      .catch(err => {
+        alert('Please Fill Out All Fields Before Submitting')
+      })
   };
 
   handleChange = (e, { name, value }) => {
@@ -283,6 +285,7 @@ class ApplicationsForm extends React.Component {
             name="comments2"
             value={comments2}
             onChange={this.handleChange}
+
           />
           <br />
           <br />
@@ -297,7 +300,7 @@ class ApplicationsForm extends React.Component {
             onChange={this.handleChange}
             value={course}
             name="course"
-            />
+          />
           <br />
           <Dropdown
             placeholder="Which Location Are You Interested In?"

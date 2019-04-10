@@ -39,6 +39,7 @@ class Api::ScholarshipsController < ApplicationController
         :email, 
         :phone_number, 
         :current_city, 
+        :course,
         :comments, 
         :comments1, 
         :comments2, 
