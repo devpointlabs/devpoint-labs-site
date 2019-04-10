@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_202148) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
+    t.string "course"
     t.boolean "active"
     t.text "notes"
   end
