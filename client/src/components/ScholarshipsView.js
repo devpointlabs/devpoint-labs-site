@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import { Container, Card } from 'semantic-ui-react';
+import { Container, Card, Item } from 'semantic-ui-react';
 
 class ScholarshipsView extends React.Component {
     state = { scholarship: {} }
@@ -9,44 +9,53 @@ class ScholarshipsView extends React.Component {
     componentDidMount() {
         const { id } = this.props.match.params
         axios.get(`/api/scholarships/${id}`)
-            .then( res => this.setState({ scholarship: res.data }))
+            .then(res => this.setState({ scholarship: res.data }))
     }
 
-    render () {
-        const { 
-            first_name, 
-            last_name, 
-            email, 
-            phone_number, 
-            comments, 
-            comments1, 
-            comments2, 
-            comments3 
-        } = this.state.scholarship
-        
+    render() {
+        const {
+            first_name,
+            last_name,
+            email,
+            phone_number,
+            course,
+            comments,
+            comments1,
+            comments2,
+            comments3
+        } = this.state.scholarship;
+
         return (
             <Container>
-                <br />
-             <Card>
-               <Card.Content>
-                   <Card.Header>
-                    {first_name}
-                    {" "}
-                    {last_name}
-                    </Card.Header>
-                   <br/>
-                   { email }
-                   <br/>
-                   { phone_number }
-                    <br/>
-                    { comments }
-                    <br/>
-                    { comments1 }
-                    <br/>
-                    { comments2 }
-                    <br/>
-               </Card.Content>
-             </Card>
+                <h1>Scholarship Applicant </h1>
+                <Item.Group>
+                    <Item>
+                        <Item.Content>
+                            <Item.Header as='a'>{first_name}{" "}{last_name}</Item.Header>
+                            <br />
+                            <Item.Header as='a'>{email}</Item.Header>
+                            <br />
+                            <Item.Header as='a'>{phone_number}</Item.Header>
+                            <br />
+                            <Item.Description>
+                                <em><h4>Which course are you interested in?</h4></em>
+                                <p> {course}</p>
+                                <br />
+                                <em><h4>Tell us about your background</h4></em>
+                                <p>{comments}</p>
+                                <br />
+                                <em><h4>Why do you want to be a devleoper?</h4></em>
+                                <p>{comments1}</p>
+                                <br />
+                                <em><h4>What skills do you currently have (Photoshop, HTML, etc...)?</h4></em>
+                                <p>{comments2}</p>
+                                <br />
+                                <em><h4>What would you do with the skills you gain at DevPoint Labs?</h4></em>
+                                <p>{comments3}</p>
+                            </Item.Description>
+                        </Item.Content>
+                    </Item>
+                </Item.Group>
             </Container>
         )
     }

@@ -33,7 +33,6 @@ class Navbar extends React.Component {
             style={{ transform: 'translate(0, 1em)'}}
           >
             <Dropdown.Menu>
-              <Dropdown.Item text='Profile' href='/Profile' />
               <Dropdown.Item text='Applicants' href='/EmailPage' />
               <Dropdown.Item onClick={() => handleLogout(this.props.history)} href='/' text='Logout' />
             </Dropdown.Menu>
@@ -73,27 +72,26 @@ class Navbar extends React.Component {
 
     if (show)
       return(
-        <MobileMenu vertical tabular='left'>
-          <Image
-            style={{ display: 'flex !important', justifyContent: 'center !important'}}
-            src="https://cdn-images-1.medium.com/max/1200/0*dtc87Aa74oYbGyrI.jpg" 
-            alt=""
-          />
-          <Dropdown as={Menu.Item} text='Courses' options={courseOptions} simple item />
+      <Mobile>
+          <Dropdown as={Menu.Item} text='Courses' options={courseOptions} fluid item/>
 
-          <Link as={MenuItemStyle} to='/about'>
-              <Menu.Item
-                id='about'
-                name='about'
-                active={this.props.location.pathname === '/about'}
+        <Link as={Button} to='/about'>
+            <Menu.Item
+              id='about'
+              name='about'
+              active={this.props.location.pathname === '/about'}
+            />
+          </Link>
+            <Dropdown as={Menu.Item} text='Community' options={options} fluid item />
+          <Link to='/ApplicationsForm'>
+            <Menu.Item
+              id='application'
+              name='Apply Now'
+              active={this.props.location.pathname === '/ApplicationsForm'}
               />
-            </Link>
-              <Dropdown as={Menu.Item} text='Community' options={options} simple item />
-            <Link to='/application'>
-              <Icon name='edit' />
-            </Link>
-            { this.rightNavItems() }
-        </MobileMenu>
+          </Link>
+          { this.rightNavItems() }
+      </Mobile>
     ) 
     else {
       return (
@@ -121,16 +119,15 @@ class Navbar extends React.Component {
     ]
 
     return (
-      <div>
+      <>
         <MenuStyles secondary>
           <Link to='/'>
-            <LogoStyle src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142674.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=WtADJjHKLaiVmZh%2BIHmiw%2FjnJPw%3D' />
+              <WebLogoStyle floated='left' src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142674.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=WtADJjHKLaiVmZh%2BIHmiw%2FjnJPw%3D' />
           </Link>
-          
           <MenuWeb position='right'>
             <Dropdown text='Courses' options={courseOptions} simple item />
-            <Link to='/about'>
-              <MenuItem
+            <Link to='/about' style={{ transform: 'translate(0, 1.2em)'}}>
+              <Menu.Item
                 id='about'
                 name='about'
                 active={this.props.location.pathname === '/about'} 
@@ -155,48 +152,68 @@ class Navbar extends React.Component {
             </Link>
           </MenuWeb>
 
-          <MenuMobile secondary position='left'> 
-            <Menu.Menu>
-              <Menu.Item >
-                <ButtonStyle 
-                  floated='right'
-                  icon
-                  onClick={this.toggleClick}
-                  >
-                  <Icon
-                    name='align justify'
-                  >
-                  </Icon>
-                </ButtonStyle>
-              </Menu.Item>
-              { this.handleDropdown() }
-          </Menu.Menu>
+          <MenuMobile inverted floated='right'> 
+              <Menu.Menu>
+                <Menu.Item >
+                  <ButtonStyle2 
+                    icon
+                    onClick={this.toggleClick}
+                    >
+                    <Icon
+                      name='align justify'
+                      >
+                    </Icon>
+                  </ButtonStyle2>
+                </Menu.Item>
+                { this.handleDropdown() }
+            <Link to='/'>
+            { 
+              this.state.show ?
+              <LogoStyle src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142677.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=2xhb01VaI25UViJMvJqZZeMcdyA%3D' />
+              :
+              <LogoStyle src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142674.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=WtADJjHKLaiVmZh%2BIHmiw%2FjnJPw%3D' />
+            }
+            </Link>
+            </Menu.Menu>
           </MenuMobile>
         </MenuStyles>
-      </div>
+      </>
     )
   }
 }
 
-const LogoStyle = styled(Image)`
-  width: 22em
+const WebLogoStyle= styled(Image)`
   height: 5em
+  ${media.phone`
+    display: none !important
+  `}
 `
 
-const MenuStyles = styled(Menu)`
-  position: relative !important
-  z-index: 1 !important
-`
-
-const MenuMobile = styled(Menu.Menu)`
+const LogoStyle = styled(Image)`
   display: none !important
 
   ${media.phone`
     display: flex !important
-    float: right !important
+    width: 75%
+    height: auto
+    z-index: 2
   `}
 `
+const MenuStyles = styled(Menu)`
+  position: relative !important
+  z-index: 1 !important
+`
+const MenuMobile = styled(Menu)`
+  display: none !important
 
+  ${media.phone`
+    display: flex !important
+    background: transparent !important
+    border: none !important
+    box-shadow: none !important
+    width: 100%
+  `}
+`
 const MenuWeb = styled(Menu.Menu)`
   display: flex
   background: transparent !important
@@ -212,11 +229,28 @@ const MenuWebItem = styled(Menu.Item)`
     display: none !important
   `}
 `
-
 const ButtonStyle = styled(Button)`
   margin-right: 1em !important
   margin-left: .5em !important
   transform: translate(0, 1em) !important
+`
+const ButtonStyle2 = styled(Button)`
+  z-index: 2 !important
+`
+const MenuItemStyle = styled(Menu.Item)`
+  width: 100%
+  text-align: left
+`
+
+const Mobile = styled(Menu.Menu)`
+  position: absolute !important
+  background: #53407A
+  font-size: 1.35em !important
+  padding-top: 5em !important
+  padding-left: 1em !important
+  width: 100%
+  opacity: .85
+  height: 25em !important
 `
 
 export class ConnectedNavbar extends React.Component {
@@ -231,17 +265,5 @@ export class ConnectedNavbar extends React.Component {
   }
 }
 
-const MenuItemStyle = styled(Menu.Item)`
-  width: 100%
-  text-align: left
-`
-
-const MobileMenu = styled(Menu)`
-  border: none !important
-  background: transparent !important
-`
-const MenuItem = styled(Menu.Item)`
-  transform: translate(0, 1.2em) !important
-`
 
 export default withRouter(ConnectedNavbar);
