@@ -29,48 +29,49 @@ import SubscribersView from "./components/SubscribersView";
 const App = () => (
   <Fragment>
     <Navbar />
-    <FetchUser>
-      <Switch>
-        <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
-        <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
-        <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/fulltimeutah" component={FullTimeUtah} />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/Community" component={Community} />
-        <Route exact path="/freehousing" component={FreeHousing} />
-        <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
-        <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
-        <Route
-          exact
-          path="/FinancingScholarships"
-          component={FinancingScholarships}
-        />
-        <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
-        <Route exact path="/PartTimeLV" component={PartTimeLV} />
-        <Route exact path="/ContactUs" component={ContactForm} />
-        <Route exact path="/StudentHousing" component={StudentHousing} />
-        <Route
-          exact
-          path="/applications/:id"
-          render={() => <ApplicationsView />}
-        />
-        <Route
-          exact
-          path="/scholarships/:id"
-          render={() => <ScholarshipsView />}
-        />
-        <Route
-          exact
-          path="/subscribers/:id"
-          render={() => <SubscribersView />}
-        />
-        <Route component={NoMatch} />
-      </Switch>
-      <Footer />
-    </FetchUser>
+    <div>
+      <FetchUser>
+        <Switch>
+          <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
+          <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
+          <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/fulltimeutah" component={FullTimeUtah} />
+          <Route exact path="/About" component={About} />
+          <Route exact path="/Community" component={Community} />
+          <Route exact path="/freehousing" component={FreeHousing} />
+          <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
+          <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
+          <Route
+            exact
+            path="/FinancingScholarships"
+            component={FinancingScholarships}
+          />
+          <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
+          <Route exact path="/PartTimeLV" component={PartTimeLV} />
+          <Route exact path="/ContactUs" component={ContactForm} />
+          <Route exact path="/StudentHousing" component={StudentHousing} />
+          <Route
+            exact
+            path="/applications/:id"
+            render={() => <ApplicationsView />}
+          />
+          <Route
+            exact
+            path="/scholarships/:id"
+            render={() => <ScholarshipsView />}
+          />
+          <Route
+            exact
+            path="/subscribers/:id"
+            render={() => <SubscribersView />}
+          />
+          <Route component={NoMatch} />
+        </Switch>
+      </FetchUser>
+    </div>
   </Fragment>
 );
 
