@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(version: 2019_04_09_202148) do
     t.string "location"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "scholarships", force: :cascade do |t|
     t.boolean "part"
     t.string "first_name"
@@ -104,4 +113,5 @@ ActiveRecord::Schema.define(version: 2019_04_09_202148) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "posts", "users"
 end

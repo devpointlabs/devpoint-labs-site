@@ -25,6 +25,8 @@ import Scholarship from "./components/Scholarship";
 import ScholarshipsView from "./components/ScholarshipsView";
 import Subscribers from "./components/Subscribers";
 import SubscribersView from "./components/SubscribersView";
+import Contacts from './components/Contacts'
+import ContactsView from './components/ContactsView'
 
 const App = () => (
   <Fragment>
@@ -35,7 +37,8 @@ const App = () => (
           <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
           <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
-          <Route exact path="/" component={Home} />
+          <ProtectedRoute exact path='/Contacts' component={Contacts} />
+           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
@@ -67,6 +70,10 @@ const App = () => (
             exact
             path="/subscribers/:id"
             render={() => <SubscribersView />}
+          />
+          <Route 
+          exact path='/contacts/:id'
+          render={() => <ContactsView />}
           />
           <Route component={NoMatch} />
         </Switch>
