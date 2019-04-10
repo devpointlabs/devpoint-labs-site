@@ -83,7 +83,7 @@ class Navbar extends React.Component {
             />
           </Link>
             <Dropdown as={Menu.Item} text='Community' options={options} fluid item />
-          <Link to='/application'>
+          <Link to='/ApplicationsForm'>
             <Menu.Item
               id='application'
               name='Apply Now'
