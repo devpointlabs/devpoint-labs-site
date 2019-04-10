@@ -18,8 +18,8 @@ const BackgroundStyles = {
   backgroundRepeat: `no-repeat`,
   backgroundSize: `cover`,
   height: `60em`,
-  transform: `translate(0, -4em)`
-};
+  transform: `translate(0, -5em)`
+}
 
 class Home extends React.Component {
   render() {
