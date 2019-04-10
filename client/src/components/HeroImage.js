@@ -16,8 +16,6 @@ import teamimage from "../assets/images/teamphoto.png";
 const Topimages = () => {
   return (
     <>
-      <br />
-      <br />
       <OvrP>
         <TeamImage src={teamimage} />
         <TagText>DEVPOINT LABS | WEB DEVELOPMENT</TagText>
