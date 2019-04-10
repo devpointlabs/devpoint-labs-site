@@ -25,9 +25,8 @@ class Subscribers extends React.Component {
               <Table.Body>
                 { subscribers.map(   subscriber =>
                 <Table.Row  key={subscriber.id}>
-                  <Link to={`/subscribers/${subscriber.id}`}>{subscriber.email}
+                  {subscriber.email}
                   <Table.Cell></Table.Cell>
-                </Link>
                 </Table.Row>
                )}
               </Table.Body>
@@ -38,3 +37,6 @@ class Subscribers extends React.Component {
 }
 
 export default Subscribers 
+
+
+{/* <Link to={`/subscribers/${subscriber.id}`}> */}
