@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Grid, Segment, Icon } from 'semantic-ui-react'
+import { Button, Grid, Segment, Icon, Container } from 'semantic-ui-react'
 import { Carousel } from 'react-bootstrap'
 import styled from 'styled-components'
 
@@ -141,7 +141,7 @@ const styles = {
   },
 }
 
-const RevStyle = styled.div`
+const RevStyle = styled(Container)`
   @media (max-width: 1440px) {
     height: 19em    
   }
