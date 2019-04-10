@@ -101,6 +101,7 @@ const ButtLink = styled.a`
   color: white;
   ${media.tablet`
     font-size: 1em
+
   `}
   ${media.phone`
     font-size: 1em;
@@ -123,6 +124,14 @@ const TagText = styled.text`
     font-size: 1em
     padding-bottom: 50px
   `}
+  ${media.desktop`
+    font-size: 1em
+    padding-top: 0
+  `}
+  ${media.giant`
+    font-size: 1em
+    padding-top: 0
+  `}
 `;
 
 const TeamMeta = styled.text`
@@ -137,10 +146,20 @@ const TeamMeta = styled.text`
   ${media.tablet`
     font-size: 1em
     line-spacing: 1.5
+    top: 300px
   `}
   ${media.phone`
     font-size: 1em
     line-spacing: 1.5
+    top: 300px
+  `}
+  ${media.desktop`
+    font-size: 55px
+    padding-top: 0
+  `}
+  ${media.giant`
+    font-size: 1.2em
+    padding-top: 0
   `}
 `;
 
@@ -161,6 +180,14 @@ const TeamText = styled.text`
     font-size: 1em
     padding-bottom: 40px
   `}
+  ${media.desktop`
+    font-size: 55px
+    padding-top: 0
+  `}
+  ${media.giant`
+    font-size: 1.5em
+    padding-top: 0
+  `}
 `;
 
 const OvrP = styled.div`
@@ -168,7 +195,9 @@ const OvrP = styled.div`
   background: #141414;
   opacity: 0.9;
   ${media.tablet`
-    font-size: 1em
+  height: 500px;
+  width: auto;
+  opacity: 1
   `}
   ${media.phone`
     height: 500px;
@@ -193,15 +222,9 @@ const ButtonStyle = styled(Button)`
   font-weight: 400;
   position: absolute;
   text-align: center;
-  top: 70%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  ${media.tablet`
-    top: 250px
-  `}
-  ${media.phone`
-    top: 450px
-  `}
 `;
 
 const CardStyle = styled(Card)`
