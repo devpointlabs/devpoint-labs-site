@@ -4,6 +4,7 @@ import { Table, Header, Container, Button, Icon} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Scholarship from './Scholarship'
 import Subscribers from './Subscribers'
+import Contacts from './Contacts'
 
 
 class EmailPage extends React.Component {
@@ -62,6 +63,8 @@ class EmailPage extends React.Component {
               </Table.Body>
             </Table>
          <Scholarship />
+         <br/>
+         <Contacts />
          <br/>
 
          <Subscribers />
