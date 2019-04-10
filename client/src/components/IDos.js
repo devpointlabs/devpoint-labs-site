@@ -11,7 +11,7 @@ class IDos extends React.Component {
         <Grid columns={2}>
 
           <Grid.Row >
-            <Grid.Column mobile={14} tablet={8} computer={8} stackable textAlign='left'
+            <Grid.Column mobile={14} tablet={8} computer={7} stackable textAlign='left'
             >
               <Header style={{ "fontSize": "5.5em" }}>
                 I Do
@@ -22,7 +22,7 @@ class IDos extends React.Component {
             </Header>
             </Grid.Column>
 
-            <Grid.Column mobile={14} tablet={8} computer={8}  stackable textAlign='left'>
+            <Grid.Column mobile={14} tablet={8} computer={9}  stackable textAlign='left'>
               <Header>
                 <br />
                 <div icon>
@@ -49,7 +49,7 @@ class IDos extends React.Component {
 }
 
 const Lin1Style = styled.div`
-    font-size: 2.2em;
+    font-size: 2em;
 
    @media (max-width: 700px) {
     font-size: 1.55em
@@ -59,15 +59,12 @@ const Lin1Style = styled.div`
    }
    @media (max-width: 400px) {
     font-size: 1.4em
-   }
-   @media (max-width: 400px) {
-    font-size: 1.4em
-   }
 
 `
 const Lin2Style = styled.div`
     font-size: 1.5em;
     font-weight: 50;
+    line-height: 1.5;
 
    @media (max-width: 700px) {
     font-size: 1.25em
@@ -83,9 +80,10 @@ const Lin2Style = styled.div`
 
 const GridStyle = styled(Container)`
   ${media2.tablet`
-  padding-left: 10% !important
-  padding-right: 10% !important
-  margin-bottom: 5em 
+  padding-top: 7%;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+  margin-bottom: 5em; 
   `}
 `
 

@@ -2,7 +2,8 @@ import React from "react";
 import axios from "axios";
 import { media } from "../theme/media";
 import styled from "styled-components";
-import { Form, Header, Dropdown, Container } from "semantic-ui-react";
+import Footer from "./Footer";
+import { Form, Header, Dropdown, Container, Select } from "semantic-ui-react";
 
 class ApplicationsForm extends React.Component {
   defaultValues = {
@@ -33,10 +34,7 @@ class ApplicationsForm extends React.Component {
     this.setState({ ...this.state });
   };
 
-  handleChange = e => {
-    const {
-      target: { name, value }
-    } = e;
+  handleChange = (e, { name, value }) => {
     this.setState({ [name]: value });
   };
 
@@ -63,23 +61,25 @@ class ApplicationsForm extends React.Component {
         key: "1",
         text:
           "U of U Professional Education Web Development (May 6th - July 23rd, 2019)",
-        value: "course"
+        value:
+          "U of U Professional Education Web Development (May 6th - July 23rd, 2019)"
       },
       {
         key: "2",
         text:
           "U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)",
-        value: "course"
+        value:
+          "U of U Professional Education Web Devlopment (Aug. 12th - Oct. 25th, 2019)"
       },
       {
         key: "3",
         text: "Part-Time Web Development (May 6th - July 23rd, 2019)",
-        value: "course"
+        value: "Part-Time Web Development (May 6th - July 23rd, 2019)"
       },
       {
         key: "4",
         text: "Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)",
-        value: "course"
+        value: "Part-Time Web Development (Aug. 12th - Oct. 25th, 2019)"
       }
     ];
 
@@ -87,12 +87,12 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Salt Lake City, UT",
-        value: "location"
+        value: "Salt Lake City, UT"
       },
       {
         key: "2",
         text: "Las Vegas, NV",
-        value: "location"
+        value: "Las Vegas, NV"
       }
     ];
 
@@ -100,17 +100,17 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Become A Developer",
-        value: "grad"
+        value: "Become A Developer"
       },
       {
         key: "2",
         text: "Work at an awesome startup",
-        value: "grad"
+        value: "Work at an awesome startup"
       },
       {
         key: "3",
         text: "Not sure",
-        value: "grad"
+        value: "Not sure"
       }
     ];
 
@@ -118,24 +118,26 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "No coding experience, just basic computer skills",
-        value: "experience"
+        value: "No coding experience, just basic computer skills"
       },
       {
         key: "2",
         text: "Some coding experience. Familiar  with HTML and CSS",
-        value: "experience"
+        value: "Some coding experience. Familiar  with HTML and CSS"
       },
       {
         key: "3",
         text:
           "Moderate coding experiece. I know how to launch a Rails app, but I still have a lot to learn",
-        value: "experience"
+        value:
+          "Moderate coding experiece. I know how to launch a Rails app, but I still have a lot to learn"
       },
       {
         key: "4",
         text:
           "Intermerdiate experience. I have built a few apps form start to finish",
-        value: "experience"
+        value:
+          "Intermerdiate experience. I have built a few apps form start to finish"
       }
     ];
 
@@ -143,22 +145,22 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Male",
-        value: "gender"
+        value: "Male"
       },
       {
         key: "2",
         text: "Female",
-        value: "gender"
+        value: "Female"
       },
       {
         key: "3",
         text: "Other",
-        value: "gender"
+        value: "Other"
       },
       {
         key: "4",
         text: "Prefer Not To Answer",
-        value: "gender"
+        value: "Prefer Not To Answer"
       }
     ];
 
@@ -166,184 +168,197 @@ class ApplicationsForm extends React.Component {
       {
         key: "1",
         text: "Facebook",
-        value: "social"
+        value: "Facebook"
       },
       {
         key: "2",
         text: "Twitter",
-        value: "social"
+        value: "Twitter"
       },
       {
         key: "3",
         text: "Bing/Yahoo",
-        value: "social"
+        value: "Bing/Yahoo"
       },
       {
         key: "4",
         text: "Ruby User Report",
-        value: "social"
+        value: "Ruby User Report"
       },
       {
         key: "5",
         text: "Course Report",
-        value: "social"
+        value: "Course Report"
       },
       {
         key: "6",
         text: "Other",
-        value: "social"
+        value: "Other"
       }
     ];
     return (
-      <FormStyle>
-        <Header>
-          <em>
-            <div
-              style={{
-                textAlign: "center",
-                fontSize: "2em",
-                fontWeight: "100"
-              }}
-            >
-              {" "}
-              DevPoint Labs - Full Application{" "}
-            </div>
-          </em>
-          <br />
-          <em>
-            <h4 style={{ textAlign: "center" }}>
-              {" "}
-              Thanks for your Interest in DevPoint Labs! Please fill out the
-              entirety of the application.
-            </h4>
-          </em>
-        </Header>
-        <Form
-          style={{ position: "relative", marginBottom: "5em" }}
-          onSubmit={this.handleSubmit}
-        >
-          <Form.Input
-            label="First Name"
-            name="first_name"
-            placeholder="Name"
-            value={first_name}
-            onChange={this.handleChange}
-            required
-          />
-          <Form.Input
-            label="Last Name"
-            name="last_name"
-            placeholder="Name"
-            value={last_name}
-            onChange={this.handleChange}
-            required
-          />
-          <Form.Input
-            label="Email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={this.handleChange}
-            required
-          />
-          <Form.Input
-            label="Phone Number"
-            name="phone_number"
-            placeholder="Phone Number"
-            value={phone_number}
-            onChange={this.handleChange}
-            required
-          />
-          <Form.Input
-            label="Current City"
-            name="current_city"
-            placeholder="Current City"
-            type="current_city"
-            value={current_city}
-            onChange={this.handleChange}
-            required
-          />
-          <br />
-          <br />
-          <em>
-            <h3>Essay Questions</h3>
-          </em>
-          <Form.Input
-            placeholder="Why Are You Applying To DevPoint Labs?"
-            name="comments"
-            value={comments}
-            onChange={this.handleChange}
-          />
-          <Form.Input
-            placeholder="What Is Your Education background?"
-            name="comments1"
-            value={comments1}
-            onChange={this.handleChange}
-          />
-          <Form.Input
-            placeholder="What Hobbies Do You Have And What Are You Passionate About In Life?"
-            name="comments2"
-            value={comments2}
-            onChange={this.handleChange}
-          />
-          <br />
-          <br />
-          <em>
-            <h3>Please Choose An Option From the Dropdowns</h3>
-          </em>
-          <Dropdown
-            placeholder="Which Course Are You Interested In?"
-            fluid
-            value={course}
-            selection
-            options={options}
+      <>
+        <FormStyle>
+          <Header>
+            <em>
+              <div
+                style={{
+                  textAlign: "center",
+                  fontSize: "2em",
+                  fontWeight: "100"
+                }}
+              >
+                {" "}
+                DevPoint Labs - Full Application{" "}
+              </div>
+            </em>
+            <br />
+            <em>
+              <h4 style={{ textAlign: "center" }}>
+                {" "}
+                Thanks for your Interest in DevPoint Labs! Please fill out the
+                entirety of the application.
+              </h4>
+            </em>
+          </Header>
+          <Form
+            style={{ position: "relative", marginBottom: "5em" }}
+            onSubmit={this.handleSubmit}
+          >
+            <Form.Input
+              label="First Name"
+              name="first_name"
+              placeholder="Name"
+              value={first_name}
+              onChange={this.handleChange}
+              required
             />
-          <br />
-          <Dropdown
-            placeholder="Which Location Are You Interested In?"
-            fluid
-            value={location}
-            selection
-            options={options1}
-          />
-          <br />
-          <Dropdown
-            placeholder="What Do You Want To Do After Graduating Our Course?"
-            fluid
-            value={grad}
-            selection
-            options={options2}
-          />
-          <br />
-          <Dropdown
-            placeholder="What Is Your Coding Background?"
-            fluid
-            value={experience}
-            selection
-            options={options3}
-          />
-          <br />
-          <Dropdown
-            placeholder="What Is Your Gender?"
-            fluid
-            value={gender}
-            selection
-            options={options4}
-            required
-          />
-          <br />
-          <Dropdown
-            placeholder="How Did You Hear About Us?"
-            fluid
-            value={social}
-            selection
-            options={options5}
-            required
-          />
-          <br />
-          <Form.Button color="purple">Submit</Form.Button>
-        </Form>
-      </FormStyle>
+            <Form.Input
+              label="Last Name"
+              name="last_name"
+              placeholder="Name"
+              value={last_name}
+              onChange={this.handleChange}
+              required
+            />
+            <Form.Input
+              label="Email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={this.handleChange}
+              required
+            />
+            <Form.Input
+              label="Phone Number"
+              name="phone_number"
+              placeholder="Phone Number"
+              value={phone_number}
+              onChange={this.handleChange}
+              required
+            />
+            <Form.Input
+              label="Current City"
+              name="current_city"
+              placeholder="Current City"
+              type="current_city"
+              value={current_city}
+              onChange={this.handleChange}
+              required
+            />
+            <br />
+            <br />
+            <em>
+              <h3>Essay Questions</h3>
+            </em>
+            <Form.Input
+              placeholder="Why Are You Applying To DevPoint Labs?"
+              name="comments"
+              value={comments}
+              onChange={this.handleChange}
+            />
+            <Form.Input
+              placeholder="What Is Your Education background?"
+              name="comments1"
+              value={comments1}
+              onChange={this.handleChange}
+            />
+            <Form.Input
+              placeholder="What Hobbies Do You Have And What Are You Passionate About In Life?"
+              name="comments2"
+              value={comments2}
+              onChange={this.handleChange}
+            />
+            <br />
+            <br />
+            <em>
+              <h3>Please Choose An Option From the Dropdowns</h3>
+            </em>
+            <Dropdown
+              placeholder="Which Course Are You Interested In?"
+              fluid
+              selection
+              options={options}
+              onChange={this.handleChange}
+              value={course}
+              name="course"
+            />
+            <br />
+            <Dropdown
+              placeholder="Which Location Are You Interested In?"
+              fluid
+              selection
+              options={options1}
+              onChange={this.handleChange}
+              value={location}
+              name="location"
+            />
+            <br />
+            <Dropdown
+              placeholder="What Do You Want To Do After Graduating Our Course?"
+              fluid
+              selection
+              options={options2}
+              onChange={this.handleChange}
+              value={grad}
+              name="grad"
+            />
+            <br />
+            <Dropdown
+              placeholder="What Is Your Coding Background?"
+              fluid
+              selection
+              options={options3}
+              onChange={this.handleChange}
+              value={experience}
+              name="experience"
+            />
+            <br />
+            <Dropdown
+              placeholder="What Is Your Gender?"
+              fluid
+              selection
+              options={options4}
+              onChange={this.handleChange}
+              value={gender}
+              name="gender"
+            />
+            <br />
+            <Dropdown
+              placeholder="How Did You Hear About Us?"
+              fluid
+              selection
+              options={options5}
+              onChange={this.handleChange}
+              value={social}
+              name="social"
+            />
+            <br />
+            <Form.Button color="purple">Submit</Form.Button>
+          </Form>
+        </FormStyle>
+        <Footer />
+      </>
     );
   }
 }

@@ -27,14 +27,13 @@ class ScholarshipsView extends React.Component {
         return (
             <Container>
                 <br />
-           <Card>
+             <Card>
                <Card.Content>
                    <Card.Header>
                     {first_name}
                     {" "}
                     {last_name}
                     </Card.Header>
-                
                    <br/>
                    { email }
                    <br/>
@@ -47,7 +46,7 @@ class ScholarshipsView extends React.Component {
                     { comments2 }
                     <br/>
                </Card.Content>
-           </Card>
+             </Card>
             </Container>
         )
     }
