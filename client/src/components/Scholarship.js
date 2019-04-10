@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom'
-import { Table, Header } from 'semantic-ui-react'
+import { Table, Header, Icon, Button } from 'semantic-ui-react'
 
 
 
@@ -11,6 +11,14 @@ class Scholarship extends React.Component {
     componentDidMount() {
         axios.get('/api/scholarships')
             .then( res => this.setState({ scholarships: res.data }))
+    }
+
+    handleDelete = (id) => {
+        axios.delete(`/api/scholarships/${id}`)
+            .then( res => {
+                const { scholarships } = this.state
+                this.setState({ scholarships: scholarships.filter( t => t.id !== id )})
+            })
     }
 
     render () {
@@ -38,6 +46,11 @@ class Scholarship extends React.Component {
                     <Table.Cell>{scholarship.email}</Table.Cell>
                     <Table.Cell>{scholarship.phone_number}</Table.Cell>
                     <Table.Cell>{scholarship.course}</Table.Cell>
+                    <Table.Cell>
+                        <Button floated='right' onClick={() => this.handleDelete(scholarship.id)} color='red'>
+                            <Icon name='trash' />
+                        </Button>
+                    </Table.Cell>
                   </Table.Row>
                  )}
                 </Table.Body>
