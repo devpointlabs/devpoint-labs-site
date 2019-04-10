@@ -18,7 +18,7 @@ class ContactForm extends React.Component {
     e.preventDefault();
     const contact = this.state;
     axios.post("/api/contacts", contact).then(res => {
-      this.props.history.push("/");
+      this.props.history.push("/home");
     });
     this.setState({ ...this.state });
   };
