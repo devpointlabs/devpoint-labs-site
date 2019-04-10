@@ -30,6 +30,7 @@ class Api::ApplicationsController < ApplicationController
   end
 
   def destroy
+
     @application.destroy
   end
 
