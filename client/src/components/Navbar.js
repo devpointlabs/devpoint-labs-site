@@ -33,7 +33,8 @@ class Navbar extends React.Component {
             style={{ transform: 'translate(0, 1em)'}}
           >
             <Dropdown.Menu>
-              <Dropdown.Item text='Profile' href='/EmailPage' />
+              <Dropdown.Item text='Profile' href='/Profile' />
+              <Dropdown.Item text='Applicants' href='/EmailPage' />
               <Dropdown.Item onClick={() => handleLogout(this.props.history)} href='/' text='Logout' />
             </Dropdown.Menu>
           </Dropdown>
