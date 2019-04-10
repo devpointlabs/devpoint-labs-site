@@ -1,5 +1,5 @@
 class Api::ScholarshipsController < ApplicationController
-  before_action :set_scholarship, only: [:show, :update, :destroy]
+  before_action :set_scholarship, only: [:show, :update, ]
 
   def index
     render json: Scholarship.all
@@ -21,8 +21,10 @@ class Api::ScholarshipsController < ApplicationController
   end
 
   def destroy
+
+    @scholarship = Scholarship.find(params[:id])  
     @scholarship.destroy
-    render json: { message: "scholarship #{@scholarship.name} was deleted" }
+
   end
 
   private
