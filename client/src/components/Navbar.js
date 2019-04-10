@@ -195,7 +195,6 @@ const LogoStyle = styled(Image)`
   ${media.phone`
     display: flex !important
     width: 75%
-    transform: translate(0, 2em) !important
     height: auto
     z-index: 2
   `}
