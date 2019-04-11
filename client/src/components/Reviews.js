@@ -53,7 +53,7 @@ class Reviews extends React.Component {
                       nothing. It was an awesome experience for me overall. I
                       highly recommend this course!
                     </RevText>
-                    <h3>Usong Cho</h3>
+                    <h3 color="#2d2d2d">Usong Cho</h3>
                     <p>U of U Full-Time Student</p>
                   </div>
                 </Grid.Column>
@@ -109,7 +109,7 @@ class Reviews extends React.Component {
                       href="https://www.coursereport.com/schools/devpoint-labs#/reviews"
                       target="_blank"
                     >
-                      <Button inverted color="blue">
+                      <Button color="grey">
                         See more Reviews
                       </Button>
                     </a>
@@ -130,7 +130,7 @@ const styles = {
     height: "340px",
     fontSize: "16px",
     textAlign: "center",
-    background: "gainsboro",
+    background: "#e4dced",
     fontWeight: "200"
   }
 };
