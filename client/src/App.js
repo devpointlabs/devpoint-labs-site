@@ -6,8 +6,8 @@ import About from "./components/About";
 import Community from "./components/Community";
 import ApplicationsForm from "./components/ApplicationsForm";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Login from "./components/Login";
+import Profile from './components/Profile'
 import Register from "./components/Register";
 import { Switch, Route } from "react-router-dom";
 import FreeHousing from "./components/FreeHousing";
@@ -25,6 +25,8 @@ import Scholarship from "./components/Scholarship";
 import ScholarshipsView from "./components/ScholarshipsView";
 import Subscribers from "./components/Subscribers";
 import SubscribersView from "./components/SubscribersView";
+import Contacts from './components/Contacts'
+import ContactsView from './components/ContactsView'
 
 const App = () => (
   <Fragment>
@@ -35,6 +37,8 @@ const App = () => (
           <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
           <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
+          <ProtectedRoute exact path="/Profile" component={Profile} />
+          <ProtectedRoute exact path='/Contacts' component={Contacts} />
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
@@ -67,6 +71,10 @@ const App = () => (
             exact
             path="/subscribers/:id"
             render={() => <SubscribersView />}
+          />
+          <Route 
+          exact path='/contacts/:id'
+          render={() => <ContactsView />}
           />
           <Route component={NoMatch} />
         </Switch>

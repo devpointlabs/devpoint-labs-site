@@ -27,11 +27,13 @@ class ApplicationsForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const application = this.state;
-    axios.post("/api/applications", application).then(res => {
-      console.log();
-      this.props.history.push("/");
-    });
-    this.setState({ ...this.state });
+    axios.post("/api/applications", application)
+      .then(res => {
+        this.props.history.push("/")
+      })
+      .catch(err => {
+        alert('Please Fill Out All Fields Before Submitting')
+      })
   };
 
   handleChange = (e, { name, value }) => {

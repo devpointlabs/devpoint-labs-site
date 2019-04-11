@@ -10,6 +10,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem "devise_token_auth", "~> 1.0.0"
 gem 'instagram'
 gem 'instagram_api_client'
+gem 'cloudinary'
 
 group :development, :test do
   gem "pry"

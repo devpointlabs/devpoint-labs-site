@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :contacts
     resources :instagrams, only: :index
     resources :subscribers
+    resources :users, only: :update
   end
 
     

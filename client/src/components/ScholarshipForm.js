@@ -11,6 +11,7 @@ class ScholarshipForm extends React.Component {
     email: "",
     phone_number: "",
     current_city: "",
+    course: "",
     comments: "",
     comments1: "",
     comments2: "",
@@ -21,11 +22,13 @@ class ScholarshipForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const scholarship = this.state;
-    axios.post("/api/scholarships", scholarship).then(res => {
-      console.log();
+    axios.post("/api/scholarships", scholarship)
+    .then(res => {
       this.props.history.push("/");
-    });
-    this.setState({ ...this.state });
+    })
+    .catch(err => {
+      alert('Please Fill Out All Fields Before Submitting')
+    })
   };
 
   handleChange = (e, { name, value }) => {
