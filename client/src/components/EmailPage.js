@@ -1,11 +1,8 @@
 import React from 'react'
 import axios from 'axios';
-import Profile from './Profile'
 import { Table, Header, Container, Button, Icon} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import Scholarship from './Scholarship'
-import Subscribers from './Subscribers'
-import Contacts from './Contacts'
+
 
 
 class EmailPage extends React.Component {
@@ -27,7 +24,6 @@ class EmailPage extends React.Component {
       const { applications } = this.state
         return (
         <>
-        <Profile />
         <Container>
             <br/>
           <Header>DevPoint Labs Applications</Header>
@@ -66,12 +62,6 @@ class EmailPage extends React.Component {
                )}
               </Table.Body>
             </Table>
-         <Scholarship />
-         <br/>
-         <Contacts />
-         <br/>
-
-         <Subscribers />
         </Container>
         </>       
         )
