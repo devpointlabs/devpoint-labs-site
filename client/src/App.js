@@ -18,7 +18,7 @@ import PartTimeLV from "./components/PartTimeLV";
 import ContactForm from "./components/ContactForm";
 import FinancingScholarships from "./components/FinancingScholarships";
 import StudentHousing from "./components/StudentHousing";
-import EmailPage from "./components/EmailPage";
+import Applicants from "./components/Applicants";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ApplicationsView from "./components/ApplicationsView";
 import Scholarship from "./components/Scholarship";
@@ -34,7 +34,7 @@ const App = () => (
     <div>
       <FetchUser>
         <Switch>
-          <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
+          <ProtectedRoute exact path="/Applicants" component={Applicants} />
           <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
           <ProtectedRoute exact path="/Profile" component={Profile} />
