@@ -34,7 +34,7 @@ class Scholarship extends React.Component {
               <Table.HeaderCell>Email</Table.HeaderCell>
               <Table.HeaderCell>Phone Number</Table.HeaderCell>
               <Table.HeaderCell>Course</Table.HeaderCell>
-              <Table.HeaderCell>Contacted?</Table.HeaderCell>
+              <Table.HeaderCell>Delete</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -48,7 +48,7 @@ class Scholarship extends React.Component {
                 <Table.Cell>{scholarship.phone_number}</Table.Cell>
                 <Table.Cell>{scholarship.course}</Table.Cell>
                 <Table.Cell>
-                  <Button floated='right' onClick={() => this.handleDelete(scholarship.id)} color='red'>
+                  <Button floated='right' onClick={() => this.handleDelete(scholarship.id)} color='black'>
                     <Icon name='trash' />
                   </Button>
                 </Table.Cell>

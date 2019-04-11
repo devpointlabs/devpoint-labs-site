@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+import Profile from './Profile'
 import { Table, Header, Container, Button, Icon} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Scholarship from './Scholarship'
@@ -26,6 +27,7 @@ class EmailPage extends React.Component {
       const { applications } = this.state
         return (
         <>
+        <Profile />
         <Container>
             <br/>
           <Header>DevPoint Labs Applications</Header>
@@ -38,6 +40,7 @@ class EmailPage extends React.Component {
                   <Table.HeaderCell>Last Name</Table.HeaderCell>
                   <Table.HeaderCell>Email</Table.HeaderCell>
                   <Table.HeaderCell>Phone Number</Table.HeaderCell>
+                  <Table.HeaderCell>Course</Table.HeaderCell>
                   <Table.HeaderCell>Delete</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
@@ -51,12 +54,13 @@ class EmailPage extends React.Component {
                   <Table.Cell>{application.last_name}</Table.Cell>
                   <Table.Cell>{application.email}</Table.Cell>
                   <Table.Cell>{application.phone_number}</Table.Cell>
+                  <Table.Cell>{application.course}</Table.Cell>
                   <Button
                      floated="right"
                      onClick={() => this.handleDelete(application.id)}
-                     color="red"
+                     color="black"
                    >
-                     <Icon name="trash" />
+                     <Icon name="trash" size="small" />
                    </Button>
                 </Table.Row>
                )}
