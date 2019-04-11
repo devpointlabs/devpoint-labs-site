@@ -29,7 +29,7 @@ class Reviews extends React.Component {
 
     return (
       <RevStyle>
-        <Carousel
+        <MeCar
           activeIndex={index}
           direction={direction}
           onSelect={this.handleSelect}
@@ -38,9 +38,9 @@ class Reviews extends React.Component {
             <Segment style={styles.segment}>
               <Grid
                 stackable
+                relaxed="very"
                 columns={2}
                 style={{ textAlign: "center" }}
-                divided
               >
                 <Grid.Column>
                   <div>
@@ -53,6 +53,8 @@ class Reviews extends React.Component {
                       nothing. It was an awesome experience for me overall. I
                       highly recommend this course!
                     </RevText>
+                    <br />
+                    <br />
                     <h3>Usong Cho</h3>
                     <p>U of U Full-Time Student</p>
                   </div>
@@ -68,6 +70,7 @@ class Reviews extends React.Component {
                       and relevant support from the instructors, the TAs as well
                       as the active mentors. I would do it again.
                     </RevText>
+                    <br />
                     <br />
                     <h3>Bryan Holbrook</h3>
                     <p>Co-founder of Forma DS</p>
@@ -98,6 +101,7 @@ class Reviews extends React.Component {
                       tons of hands on experience and mentorship over the course
                       of an intensive 11 weeks.
                     </RevText>
+                    <br />
                     <h3>Dan</h3>
                     <p>Full Stack Software Engineer</p>
                   </div>
@@ -118,7 +122,7 @@ class Reviews extends React.Component {
               </Grid>
             </Segment>
           </Carousel.Item>
-        </Carousel>
+        </MeCar>
       </RevStyle>
     );
   }
@@ -127,13 +131,30 @@ class Reviews extends React.Component {
 const styles = {
   segment: {
     width: "100%",
-    height: "340px",
+    height: "335px",
     fontSize: "16px",
     textAlign: "center",
     background: "gainsboro",
     fontWeight: "200"
   }
 };
+
+const MeCar = styled(Carousel)`
+  height: 100%; 
+  ${media.phone`
+    width: 100%;
+    height: 100%
+    margin: 0
+  `} ${media.tablet`
+    width: 100%;
+    height: 100%
+    margin: 0
+  `} ${media.giant`
+    width: 100%;
+    height: 100%
+    margin: 0
+  `};
+`;
 
 const RevText = styled.p`
   display: block;
@@ -144,24 +165,18 @@ const RevText = styled.p`
     height: 100%
     margin: 0
   `}
+  ${media.tablet`
+    width: 100%;
+    height: 100%
+    margin: 0
+  `}
+  ${media.giant`
+    width: 100%;
+    height: 100%
+    margin: 0
+  `}
 `;
 
-const RevStyle = styled.div`
-  @media (max-width: 1440px) {
-    height: 19em;
-  }
-
-  @media (max-width: 770px) {
-    height: 21em;
-  }
-
-  @media (max-width: 430px) {
-    height: 36em;
-  }
-
-  @media (max-width: 365px) {
-    height: 350px;
-  }
-`;
+const RevStyle = styled.div``;
 
 export default Reviews;
