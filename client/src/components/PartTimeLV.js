@@ -8,10 +8,8 @@ import Footer from "./Footer";
 const PartTimeLV = () => {
   return (
     <>
-      <div>Part time Las Vegas Page</div>
       <Topimages />
       <StudentSched2 />
-      <Housing />
       <Costs />
       <Footer />
     </>

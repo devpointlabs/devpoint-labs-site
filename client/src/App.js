@@ -6,8 +6,8 @@ import About from "./components/About";
 import Community from "./components/Community";
 import ApplicationsForm from "./components/ApplicationsForm";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Login from "./components/Login";
+import Profile from './components/Profile'
 import Register from "./components/Register";
 import { Switch, Route } from "react-router-dom";
 import FreeHousing from "./components/FreeHousing";
@@ -37,8 +37,9 @@ const App = () => (
           <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
           <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
+          <ProtectedRoute exact path="/Profile" component={Profile} />
           <ProtectedRoute exact path='/Contacts' component={Contacts} />
-           <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
