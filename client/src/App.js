@@ -27,6 +27,7 @@ import Subscribers from "./components/Subscribers";
 import SubscribersView from "./components/SubscribersView";
 import Contacts from './components/Contacts'
 import ContactsView from './components/ContactsView'
+import AppNotesForm from './components/AppNotesForm'
 
 const App = () => (
   <Fragment>
@@ -48,6 +49,7 @@ const App = () => (
           <Route exact path="/freehousing" component={FreeHousing} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
+          <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
           <Route
             exact
             path="/FinancingScholarships"
