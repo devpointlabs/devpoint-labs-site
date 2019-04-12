@@ -1,54 +1,22 @@
 import React, { useState, useEffect } from 'react'
-import request from 'superagent'
 import axios from 'axios'
-import { Image, Grid, Segment, Container, Header, Icon } from 'semantic-ui-react'
+import { Image, Grid, Segment, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { useWindowWidth } from '../hooks/useWindowWidth'
+import { useWindowWidth } from '../../hooks/useWindowWidth'
+import MobileInstagram from './MobileInstagram'
 
-// constructor(props) {
-//   super(props);
-//   this.state = {
-//     photos: [],
-//   }
-// }
-
-// componentWillMount() {
-//   this.fetchPhotos()
-// }
-
-// fetchPhotos() {
-//   request
-//     .get('/api/instagrams')
-//     .then((res) => {
-//       this.setState({
-//         photos: res.body.data
-//       })
-//     })
-// }
-
-
-const Instagram = (props) => {
+const Instagram = () => {
   const [photos, setPhotos] = useState([])
   const width = useWindowWidth()
 
-  useEffect( () => {
-    request.get('/api/instagrams')
-      .then( res => {
-        setPhotos(res.data)
+  useEffect(() => {
+    axios
+      .get('/api/instagrams')
+      .then(res => {
+        setPhotos(res.data.data);
       })
   }, [])
-  // const constructor = (props) => {
-  //   fetchPhotos()
-  // }
-
-  // const fetchPhotos = () => {
-  //   request
-  //     .get('/api/instagrams')
-  //     .then( res => {
-  //       setPhotos(res.body.data)
-  //     })
-  // }
 
   const renderPhotos = () => {
     return (
@@ -56,16 +24,19 @@ const Instagram = (props) => {
         <GridStyle>
           <Grid stackable columns={4}>
             <Grid.Row style={styles.row}>
-              {photos.slice(0, 6).map(photo => (
-                <Grid.Column key={photo.id}>
-                <ImgStyle>
-                  <Image src={photo.images.standard_resolution.url} />
-                </ImgStyle>
-                </Grid.Column>
-              ))}
+              {photos.slice(0, 6).map(photo => {
+                return (
+
+                  <Grid.Column key={photo.id}>
+                    <ImgStyle>
+                      <Image src={photo.images.standard_resolution.url} />
+                    </ImgStyle>
+                  </Grid.Column>
+
+                )
+              })}
               <div style={styles.div}>
-              <SegStyle>
-                  {/* <ColStyle> */}
+                <SegStyle>
                   <Grid stackable columns={2} style={{ margin: '1em', }}>
                     <Grid.Column width={10}>
                       <TextStyle>Tagline</TextStyle>
@@ -82,39 +53,31 @@ const Instagram = (props) => {
                       </a>
                     </Grid.Column>
                   </Grid>
-                  {/* </ColStyle> */}
-              </SegStyle>
+                </SegStyle>
               </div>
             </Grid.Row>
           </Grid>
         </GridStyle>
         <LinkStyle>
-        <Link to='/'>
-          <p>Learn More ></p>
-        </Link>
+          <Link to='/'>
+            <p>Learn More ></p>
+          </Link>
         </LinkStyle>
       </Segment>
     )
   }
 
-  const mobilePhotos = () => {
-    return (
-      <>
-      </>
-    )
-  }
-
   return (
     <>
-    { width <= 500 ?
-    <div>
-      { renderPhotos() }
-    </div>
-      :
-      <div>
-        { mobilePhotos() }
-      </div>
-    }
+      {width >= 500 ?
+        <div>
+          {renderPhotos()}
+        </div>
+        :
+        <div>
+          <MobileInstagram />
+        </div>
+      }
     </>
   )
 }
@@ -135,12 +98,6 @@ const LinkStyle = styled.div`
 }
 `
 
-// const ColStyle = styled.div`
-// @media (max-width: 450px) {
-//   margin: 1em
-// }
-// `
-
 const TextStyle = styled.text`
 @media (max-width: 2560px) {
   font-size: 2em
@@ -158,10 +115,6 @@ const TextStyle = styled.text`
   font-size: 0.6em
 }
 `
-
-// @media (max-width: 450px) {
-//   font-size: 0.8em
-// }
 
 const HeaderStyle = styled.text`
 @media (max-width: 2560px) {
@@ -181,10 +134,6 @@ const HeaderStyle = styled.text`
   font-size: 1em
 }
 `
-
-// @media (max-width: 450px) {
-//   font-size: 1.2em
-// }
 
 const SegStyle = styled.div`
 @media (max-width: 2560px) {
@@ -207,20 +156,6 @@ const SegStyle = styled.div`
   height: 11em
 }
 `
-
-// @media (max-width: 450px) {
-//   margin-left: -12em
-//   height: 14em
-// }
-
-// @media (max-width: 380px) {
-//   margin-left: -10em
-// }
-
-// @media (max-width: 320px) {
-//   margin-left: -8.5em
-//   height: 15em
-// }
 
 const ImgStyle = styled.div`
 @media (max-width: 2560px) {
@@ -251,12 +186,6 @@ const GridStyle = styled.div`
     padding-right: 0.5em  
   }
   `
-  
-  // @media (max-width: 450px) {
-  //   padding-top: 1.5em
-  //   padding-left: 1em
-  //   padding-right: 1em  
-  // }
 
 const styles = {
   row: {
