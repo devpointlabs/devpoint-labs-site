@@ -1,11 +1,11 @@
 import React from 'react'
 import axios from 'axios';
-import { Table, Header, Container, Button, Icon} from 'semantic-ui-react'
+import { Table, Header, Container, Button, Icon,} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 
 
-class EmailPage extends React.Component {
+class Applicants extends React.Component {
     state = { applications: [] }
     
     componentDidMount() {
@@ -68,4 +68,4 @@ class EmailPage extends React.Component {
     }
 }
 
-export default EmailPage
+export default Applicants

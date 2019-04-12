@@ -26,7 +26,7 @@ class Contacts extends React.Component {
          <>
             <Container>
                 <Header>People Who need More info</Header>
-                <Table>
+                <Table celled>
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>
@@ -40,6 +40,9 @@ class Contacts extends React.Component {
                             </Table.HeaderCell>
                             <Table.HeaderCell>
                                 Phone
+                            </Table.HeaderCell>
+                            <Table.HeaderCell>
+                                Delete
                             </Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
@@ -61,8 +64,8 @@ class Contacts extends React.Component {
                                             { contact.phone}
                                         </Table.Cell>
                                         <Table.Cell>
-                                            <Button onClick={() => this.handleDelete(contact.id)} color='red' floated='right'>
-                                                <Icon name='trash' />
+                                            <Button onClick={() => this.handleDelete(contact.id)} color='black' floated='right'>
+                                                <Icon name='trash' size='small' />
                                             </Button>
                                         </Table.Cell>
                                 </Table.Row>
