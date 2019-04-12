@@ -1,48 +1,42 @@
-import React from 'react'
-import request from 'superagent'
-import { Image, Grid, Segment, Container, Header, Icon } from 'semantic-ui-react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import { Image, Grid, Segment, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { useWindowWidth } from '../../hooks/useWindowWidth'
+import MobileInstagram from './MobileInstagram'
 
-class Instagram extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      photos: [],
-    }
-  }
+const Instagram = () => {
+  const [photos, setPhotos] = useState([])
+  const width = useWindowWidth()
 
-  componentWillMount() {
-    this.fetchPhotos()
-  }
-
-  fetchPhotos() {
-    request
+  useEffect(() => {
+    axios
       .get('/api/instagrams')
-      .then((res) => {
-        this.setState({
-          photos: res.body.data
-        })
+      .then(res => {
+        setPhotos(res.data.data);
       })
-  }
+  }, [])
 
-  render() {
-    const { photos } = this.state
+  const renderPhotos = () => {
     return (
       <Segment style={{ background: 'gainsboro' }}>
         <GridStyle>
           <Grid stackable columns={4}>
             <Grid.Row style={styles.row}>
-              {photos.slice(0, 6).map(photo => (
-                <Grid.Column key={photo.id}>
-                <ImgStyle>
-                  <Image src={photo.images.standard_resolution.url} />
-                </ImgStyle>
-                </Grid.Column>
-              ))}
+              {photos.slice(0, 6).map(photo => {
+                return (
+
+                  <Grid.Column key={photo.id}>
+                    <ImgStyle>
+                      <Image src={photo.images.standard_resolution.url} />
+                    </ImgStyle>
+                  </Grid.Column>
+
+                )
+              })}
               <div style={styles.div}>
-              <SegStyle>
-                  <ColStyle>
+                <SegStyle>
                   <Grid stackable columns={2} style={{ margin: '1em', }}>
                     <Grid.Column width={10}>
                       <TextStyle>Tagline</TextStyle>
@@ -59,20 +53,33 @@ class Instagram extends React.Component {
                       </a>
                     </Grid.Column>
                   </Grid>
-                  </ColStyle>
-              </SegStyle>
+                </SegStyle>
               </div>
             </Grid.Row>
           </Grid>
         </GridStyle>
         <LinkStyle>
-        <Link to='/'>
-          <p>Learn More ></p>
-        </Link>
+          <Link to='/'>
+            <p>Learn More ></p>
+          </Link>
         </LinkStyle>
       </Segment>
     )
   }
+
+  return (
+    <>
+      {width >= 500 ?
+        <div>
+          {renderPhotos()}
+        </div>
+        :
+        <div>
+          <MobileInstagram />
+        </div>
+      }
+    </>
+  )
 }
 
 const LinkStyle = styled.div`
@@ -88,12 +95,6 @@ const LinkStyle = styled.div`
 
 @media (max-width: 1030px) {
   font-size: 1em
-}
-`
-
-const ColStyle = styled.div`
-@media (max-width: 450px) {
-  margin: 1em
 }
 `
 
@@ -113,10 +114,6 @@ const TextStyle = styled.text`
 @media (max-width: 780px) {
   font-size: 0.6em
 }
-
-@media (max-width: 450px) {
-  font-size: 0.8em
-}
 `
 
 const HeaderStyle = styled.text`
@@ -135,10 +132,6 @@ const HeaderStyle = styled.text`
 
 @media (max-width: 780px) {
   font-size: 1em
-}
-
-@media (max-width: 450px) {
-  font-size: 1.2em
 }
 `
 
@@ -161,20 +154,6 @@ const SegStyle = styled.div`
 
 @media (max-width: 780px) {
   height: 11em
-}
-
-@media (max-width: 450px) {
-  margin-left: -12em
-  height: 14em
-}
-
-@media (max-width: 380px) {
-  margin-left: -10em
-}
-
-@media (max-width: 320px) {
-  margin-left: -8.5em
-  height: 15em
 }
 `
 
@@ -206,23 +185,13 @@ const GridStyle = styled.div`
     padding-left: 3em
     padding-right: 0.5em  
   }
-  
-  @media (max-width: 450px) {
-    padding-top: 1.5em
-    padding-left: 1em
-    padding-right: 1em  
-  }
-`
+  `
 
 const styles = {
   row: {
     display: 'flex',
     flexDirection: 'row-reverse',
   },
-  // p: {
-  //   textAlign: 'center',
-  //   padding: '3.5em',
-  // },
   div: {
     width: '50%',
     height: '50%',
