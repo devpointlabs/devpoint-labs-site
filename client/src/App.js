@@ -18,7 +18,7 @@ import PartTimeLV from "./components/PartTimeLV";
 import ContactForm from "./components/ContactForm";
 import FinancingScholarships from "./components/FinancingScholarships";
 import StudentHousing from "./components/StudentHousing";
-import EmailPage from "./components/EmailPage";
+import Applicants from "./components/Applicants";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ApplicationsView from "./components/ApplicationsView";
 import Scholarship from "./components/Scholarship";
@@ -27,6 +27,7 @@ import Subscribers from "./components/Subscribers";
 import SubscribersView from "./components/SubscribersView";
 import Contacts from './components/Contacts'
 import ContactsView from './components/ContactsView'
+import AppNotesForm from './components/AppNotesForm'
 
 const App = () => (
   <Fragment>
@@ -34,7 +35,7 @@ const App = () => (
     <div>
       <FetchUser>
         <Switch>
-          <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
+          <ProtectedRoute exact path="/Applicants" component={Applicants} />
           <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
           <ProtectedRoute exact path="/Profile" component={Profile} />
@@ -48,6 +49,7 @@ const App = () => (
           <Route exact path="/freehousing" component={FreeHousing} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
+          <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
           <Route
             exact
             path="/FinancingScholarships"
