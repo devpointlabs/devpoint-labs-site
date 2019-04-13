@@ -1,5 +1,5 @@
 import React from "react";
-import Reviews from "./Reviews";
+import Reviews from "./Reviews/Reviews";
 import AboutDPL from "./AboutDPL";
 import DPLExperience from "./DPLExperience";
 import Instagram from "./Instagram/Instagram";
