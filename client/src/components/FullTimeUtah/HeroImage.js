@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Card,
   Button,
   Image,
   Icon
@@ -223,41 +222,5 @@ const ButtonStyle = styled(Button)`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
-
-const CardStyle = styled(Card)`
-    margin: 5em
-    ${media.tablet`
-        padding-left: 10px !important
-        padding-right: 50px !important
-        padding-top: 15px !important
- `}
-    margin: 5em
-    ${media.phone`
-        padding-left: 10px !important
-        padding-right: 4px !important
-        padding-top: 5px !important
- `}
-    `;
-const CardStyle1 = styled(Card)`
-    margin: 5em
-    ${media.tablet`
-        padding-left: 10px !important
-        padding-right: 50px !important
-        padding-top: 15px !important
- `}
-    margin: 5em
-    ${media.phone`
-         padding-right: 9em 
-        padding-top: 15px !important
-        margin-right: 19em 
-        font-size: 11px
- `}
-    `;
-
-const styles = {
-  linkSize: {
-    paddingLeft: "9em"
-  }
-};
 
 export default Topimages;

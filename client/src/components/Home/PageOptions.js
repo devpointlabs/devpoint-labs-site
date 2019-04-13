@@ -30,7 +30,7 @@ const PageOptions = () => (
                 fontSize: "1.2em"
               }}
             >
-              <a href="https://devpointlabs.continue.utah.edu/" target="_blank">
+              <a href="https://devpointlabs.continue.utah.edu/" target="_blank" rel="noopener noreferrer">
                 More Info
               </a>
             </p>

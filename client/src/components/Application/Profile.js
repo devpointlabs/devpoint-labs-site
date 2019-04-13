@@ -63,8 +63,8 @@ class Profile extends React.Component {
   }
   
   editView = () => {
-    const { auth: { user }, } = this.props;
-    const { formValues: { name, email, file } } = this.state;
+    // const { auth: { user }, } = this.props;
+    const { formValues: { name, email, } } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
         <Grid.Column width={4}>

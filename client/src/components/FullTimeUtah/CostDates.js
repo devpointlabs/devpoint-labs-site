@@ -133,11 +133,6 @@ const CardHeader = styled.h1`
   text-align: left
   margin-left: 5%
 `;
-const CardDescription = styled.p`
-  font-size: 18px ${media.phone`
-    text-align: left
- `};
-`;
 const CardButton = styled(Button)`
   
   ${media.phone`

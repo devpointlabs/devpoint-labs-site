@@ -45,10 +45,10 @@ const Instagram = () => {
                       a Visual Guide can be an intermediate step toward.</TextStyle>
                     </Grid.Column>
                     <Grid.Column width={6}>
-                      <a href='https://www.instagram.com/devpointlabs/?hl=en' target='_blank'>
+                      <a href='https://www.instagram.com/devpointlabs/?hl=en' target='_blank' rel="noopener noreferrer">
                         <Icon name='instagram' size='big' style={{ float: 'right' }} />
                       </a>
-                      <a href='https://www.facebook.com/DevPointLabs/' target='_blank'>
+                      <a href='https://www.facebook.com/DevPointLabs/' target='_blank' rel="noopener noreferrer">
                         <Icon name='facebook' size='big' style={{ float: 'right' }} />
                       </a>
                     </Grid.Column>

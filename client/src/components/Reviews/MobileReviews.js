@@ -74,10 +74,11 @@ const MobileReviews = () => {
         <a
           href="https://www.coursereport.com/schools/devpoint-labs#/reviews"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Button color="grey">
             See more Reviews
-                      </Button>
+          </Button>
         </a>
       </div>
     </>

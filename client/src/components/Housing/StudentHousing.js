@@ -140,7 +140,7 @@ const styles = {
     fontSize: "32px",
     font: "Open Sans",
     fontWeight: "80",
-    font: "sans seraf",
+    // font: "sans seraf",
     color: "#8168b1",
     marginTop: "40px",
     marginBottom: "40px"
