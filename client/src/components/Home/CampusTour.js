@@ -16,7 +16,7 @@ const CampusTour = () => (
       </p>
     </Grid.Column>
     <Grid.Column width={2} verticalAlign="middle">
-      <Button inverted color="blue">
+      <Button color="grey">
         Schedule
       </Button>
     </Grid.Column>

@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios';
-import { Table, Button, Icon } from 'semantic-ui-react'
+import { Table, Button, Icon, Header } from 'semantic-ui-react'
 
 
 class Subscribers extends React.Component {
@@ -23,6 +23,8 @@ class Subscribers extends React.Component {
     render() {
         const { subscribers } = this.state
         return (
+            <>
+            <Header>Subscribers</Header>
             <Table celled>
             <Table.Header>
               <Table.Row>
@@ -37,15 +39,15 @@ class Subscribers extends React.Component {
 
                   </Table.Cell>
                   <Table.Cell>
-                      <Button color='red' onClick={() => this.handleDelete(subscriber.id)} floated='right'>
-                        <Icon name='trash' />
+                      <Button color='black' onClick={() => this.handleDelete(subscriber.id)} floated='right'>
+                        <Icon name='trash' size='small' />
                       </Button>
                   </Table.Cell>
                 </Table.Row>
                )}
               </Table.Body>
           </Table>
-
+        </>
         )
     }
 }

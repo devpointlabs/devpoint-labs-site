@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom'
-import { Table, Header, Icon, Button } from 'semantic-ui-react'
+import { Table, Header, Icon, Button, Dropdown } from 'semantic-ui-react'
 
 
 
@@ -52,10 +52,21 @@ class Scholarship extends React.Component {
                     <Icon name='trash' />
                   </Button>
                 </Table.Cell>
+                <Table.Cell>
+                <Dropdown as={Icon} color='black' style={{ transform: 'translate(0, 1em)'}}>
+                        <Dropdown.Menu>
+                            <Dropdown.Item text='Active' />
+                            
+                            <Dropdown.Item text='inactive'/>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Table.Cell>
+               
               </Table.Row>
             )}
           </Table.Body>
         </Table>
+       
       </>
     )
   }

@@ -27,6 +27,8 @@ import Subscribers from "./components/Application/Subscribers";
 import SubscribersView from "./components/Subscribe/SubscribersView";
 import Contacts from './components/Contact/Contacts'
 import ContactsView from './components/Contact/ContactsView'
+import Applicants from './components/Application/Applicants'
+import AppNotesForm from './components/Application/AppNotesForm'
 
 const App = () => (
   <Fragment>
@@ -34,7 +36,7 @@ const App = () => (
     <div>
       <FetchUser>
         <Switch>
-          <ProtectedRoute exact path="/EmailPage" component={EmailPage} />
+          <ProtectedRoute exact path="/Applicants" component={Applicants} />
           <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
           <ProtectedRoute exact path="/Profile" component={Profile} />
@@ -48,6 +50,7 @@ const App = () => (
           <Route exact path="/freehousing" component={FreeHousing} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
+          <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
           <Route
             exact
             path="/FinancingScholarships"
