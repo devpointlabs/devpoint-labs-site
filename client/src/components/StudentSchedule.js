@@ -1,16 +1,21 @@
-import React from 'react'
-import { Grid, Header, Icon, Container } from 'semantic-ui-react'
-import styled from 'styled-components'
-import { media2 } from '../theme/media'
+import React from "react";
+import { Grid, Header, Icon, Container, Image } from "semantic-ui-react";
+import styled from "styled-components";
+import { media2, media } from "../theme/media";
+import UIcon from "../assets/icons/theUIcon.png";
+import SwitchIcon from "../assets/icons/switchicon.png";
+import AtomIcon from "../assets/icons/AtomIcon.png";
+import CompIcon from "../assets/icons/compicon.png";
+import Skyscraper from "../assets/icons/skyscraper.png";
+import Clock from "../assets/icons/clockicon.png";
 
 const StudentSchedule = () => (
   <GridStyle>
-    <Grid style={styles.grid} container>
-
+    <Grid stackable style={styles.grid} container>
       <Grid.Row width={16}>
         <Grid.Column>
-          <Header style={{ fontSize: '3em' }} textAlign='center'>
-            Student Schedule
+          <Header style={{ fontSize: "3em" }} textAlign="center">
+            Student Life
           </Header>
           <br />
         </Grid.Column>
@@ -18,100 +23,86 @@ const StudentSchedule = () => (
 
       <Grid.Row>
         <Grid.Column width={2}>
-          <Icon name='sun' size='big' />
+          <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h3'>
-            Feature One
-          </Header>
+          <Header as="h3">Hackathons</Header>
+          <p>See how much you can accomplish in a day-long coding event.</p>
+        </Grid.Column>
+        <Grid.Column width={2}>
+          <StudentIcons src={Skyscraper} />
+        </Grid.Column>
+        <Grid.Column width={6}>
+          <Header as="h3">Conveniently Downtown</Header>
+          <p>Located in the heart of Downtown, SLC.</p>
+        </Grid.Column>
+      </Grid.Row>
+
+      <Grid.Row>
+        <Grid.Column width={2}>
+          <StudentIcons src={SwitchIcon} />
+        </Grid.Column>
+        <Grid.Column width={6}>
+          <Header as="h3">DPL Nights | Student Activities</Header>
           <p>
-            In such a test, the user perfomrs realistic tasks by interacting 
-            with the paper prototype
+            Unwind from learning during DPL led activities like The Bowling
+            Classic, Tuesday Movie Nights, or some casual meetups.
           </p>
         </Grid.Column>
         <Grid.Column width={2}>
-          <Icon name='sun outline' size='big' />
+          <StudentIcons src={Clock} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h3'>
-            Feature Two
-          </Header>
+          <Header as="h3">Daily Learning Schedule</Header>
           <p>
-            Three techniques of paper prototyping used for usability testing 
-            are comps, wireframes
+            Through a mix of lectures and hands-on labs you’ll gain the
+            technical knowledge.
           </p>
         </Grid.Column>
       </Grid.Row>
 
       <Grid.Row>
         <Grid.Column width={2}>
-          <Icon name='life ring' size='big' />
+          <StudentIcons src={CompIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h3'>
-            Feature Three
-          </Header>
+          <Header as="h3">Advanced Curriculum</Header>
           <p>
-            Rapid prototyping involves a group of designers who each create 
-            a paper prototype
+            Learn the latest web technologies like React.js, Ruby on Rails, and
+            more.
           </p>
         </Grid.Column>
         <Grid.Column width={2}>
-          <Icon name='life ring outline' size='big' />
+          <StudentIcons src={UIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as='h3'>
-            Feature Four
-          </Header>
-          <p>
-            Functionality is similarly unimportant, but in this case are 
-            closer to the final product
-          </p>
-        </Grid.Column>
-      </Grid.Row>
-
-      <Grid.Row>
-        <Grid.Column width={2}>
-          <Icon name='snowflake' size='big' />
-        </Grid.Column>
-        <Grid.Column width={6}>
-          <Header as='h3'>
-            Feature Five
-          </Header>
-          <p>
-            Three techniques of paper prototyping used for usability 
-            testing are comps, wireframes
-          </p>
-        </Grid.Column>
-        <Grid.Column width={2}>
-          <Icon name='asterisk' size='big' />
-        </Grid.Column>
-        <Grid.Column width={6}>
-          <Header as='h3'>
-            Feature Six
-          </Header>
-          <p>
-            In such a test, the user perfomrs realistic tasks by 
-            interacting with the paper prototype
-          </p>
+          <Header as="h3">Earn Your U of U Certificate</Header>
+          <p>Earn Your U of U Certificate</p>
         </Grid.Column>
       </Grid.Row>
     </Grid>
   </GridStyle>
-)
+);
 
 const styles = {
   grid: {
-    paddingTop: '7em',
-    paddingBottom: '7em',
+    paddingTop: "7em",
+    paddingBottom: "7em"
   }
-}
+};
+
+const StudentIcons = styled(Image)`
+  width: 60%;
+  ${media.phone`
+    width: 10%
+  `}
+`;
 
 const GridStyle = styled(Container)`
   ${media2.tablet`
       padding-left: 10% !important
       padding-right: 10% !important
   `}
-`
+`;
 
-export default StudentSchedule
+export default StudentSchedule;

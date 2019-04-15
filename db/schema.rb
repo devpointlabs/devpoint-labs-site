@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_12_213558) do
     t.string "experience"
     t.string "gender"
     t.string "social"
-    t.boolean "active", default: false
+    t.boolean "active"
     t.text "notes"
   end
 
@@ -83,7 +83,11 @@ ActiveRecord::Schema.define(version: 2019_04_12_213558) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
+<<<<<<< HEAD
+    t.boolean "active"
+=======
     t.boolean "active", default: false
+>>>>>>> 84a48c5490edd294fae2f156ad1323d6af1d7d1e
     t.text "notes"
     t.string "course"
   end
@@ -92,7 +96,7 @@ ActiveRecord::Schema.define(version: 2019_04_12_213558) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "active", default: false
+    t.boolean "active"
     t.text "notes"
   end
 
