@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_204527) do
+ActiveRecord::Schema.define(version: 2019_04_12_213558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_12_204527) do
     t.string "experience"
     t.string "gender"
     t.string "social"
-    t.boolean "active"
+    t.boolean "active", default: false
     t.text "notes"
   end
 
@@ -58,6 +58,16 @@ ActiveRecord::Schema.define(version: 2019_04_12_204527) do
     t.datetime "updated_at", null: false
     t.string "course"
     t.string "location"
+    t.text "notes"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "scholarships", force: :cascade do |t|
@@ -73,16 +83,17 @@ ActiveRecord::Schema.define(version: 2019_04_12_204527) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
-    t.boolean "active"
-    t.text "notes"
     t.string "course"
+    t.boolean "active"
+
+    t.text "notes"
   end
 
   create_table "subscribers", force: :cascade do |t|
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "active"
+    t.boolean "active", default: false
     t.text "notes"
   end
 
@@ -116,4 +127,5 @@ ActiveRecord::Schema.define(version: 2019_04_12_204527) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "posts", "users"
 end
