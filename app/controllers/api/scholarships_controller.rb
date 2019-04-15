@@ -20,6 +20,14 @@ class Api::ScholarshipsController < ApplicationController
     end
   end
 
+  def update
+    if @scholarship.update(scholarship_params)
+      render json: @scholarship
+    else
+      render json: { errors: @scholarship.errors.full_messages.join(',') }, status: 422      
+    end
+  end
+
   def destroy
 
     @scholarship = Scholarship.find(params[:id])  
@@ -36,6 +44,7 @@ class Api::ScholarshipsController < ApplicationController
       params.require(:scholarship).permit(
         :first_name, 
         :last_name, 
+        :notes,
         :full, 
         :part, 
         :email, 
