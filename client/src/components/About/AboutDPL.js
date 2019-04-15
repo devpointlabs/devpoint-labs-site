@@ -1,34 +1,52 @@
 import React from "react";
 import { Header, Container } from "semantic-ui-react";
 import styled from "styled-components";
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const AboutDPL = () => (
-  <>
-    <Container style={{ width: "55%" }}>
-      <AbText>ABOUT</AbText>
-      <DevHead as="h1">DevPoint Labs</DevHead>
-      <br />
-      <AbBody>
-        We are a coding bootcamp that started in the summer of 2013. We offer a
-        full-time and part-time web development course including a part-time UX
-        Design class. Our accelerated learning model provides an immersive
-        experience for those looking to learn programming, pivot careers, and
-        become apart of a vibrant developer community.
-      </AbBody>
-      <br />
-      <br />
-      <AbBody>Mission:</AbBody>
-      <AbBody>
-        Students always come first, period. It's our mission to deliver a world
-        class experience while teaching the latest technologies. We strive to
-        improve the quality of life for our students and a better future for our
-        community.
-      </AbBody>
-      <br />
-      <br />
-    </Container>
-  </>
-);
+class AboutDPL extends React.Component {
+  state = { about: {}, }
+
+  componentDidMount() {
+    // const { match: { params: {id }},} = this.props
+    axios.get(`/api/abouts/`)
+      .then(res => {
+        this.setState({ about: res.data })
+      })
+      .catch(err => {
+        console.log(err.response)
+      })
+  }
+
+  render() {
+    const { id, abBody1, abBody2, abBody3 } = this.state.about
+
+    return (
+      <>
+        <Container style={{ width: "55%" }}>
+          <AbText>ABOUT</AbText>
+          <DevHead as="h1">DevPoint Labs</DevHead>
+          <br />
+          <AbBody>
+            {abBody1}
+          </AbBody>
+          <br />
+          <br />
+          <AbBody>
+            <Link to={`/About/${id}/edit`}>
+              {abBody2}
+            </Link>
+          </AbBody>
+          <AbBody>
+            {abBody3}
+          </AbBody>
+          <br />
+          <br />
+        </Container>
+      </>
+    )
+  }
+}
 
 const DevHead = styled(Header)`
   font-size: 38px;

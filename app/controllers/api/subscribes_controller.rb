@@ -10,7 +10,7 @@ class Api::SubcribeController < ApplicationController
   end
 
   def create
-    binding.pry
+    # binding.pry
     subscribe = Subscribe.new(subscribe_params)
     if subscribe.save
       render json: subscribe

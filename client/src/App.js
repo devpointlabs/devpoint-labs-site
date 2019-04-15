@@ -29,6 +29,9 @@ import Contacts from './components/Contact/Contacts'
 import ContactsView from './components/Contact/ContactsView'
 import Applicants from './components/Application/Applicants'
 import AppNotesForm from './components/Application/AppNotesForm'
+import AboutForm from './components/About/AboutForm'
+import AboutDPL from './components/About/AboutDPL'
+import AboutEditForm from './components/About/AboutEditForm'
 
 const App = () => (
   <Fragment>
@@ -51,6 +54,9 @@ const App = () => (
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
           <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
+          <Route exact path="/AboutDPL" component={AboutDPL} />
+          <Route exact path="/AboutForm" component={AboutForm} />
+          <Route exact path="/About/:id/edit" component={AboutEditForm} />
           <Route
             exact
             path="/FinancingScholarships"
@@ -62,7 +68,7 @@ const App = () => (
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route
             exact
-            path="/applications/:id"
+            path="/About/:id"
             render={() => <ApplicationsView />}
           />
           <Route
