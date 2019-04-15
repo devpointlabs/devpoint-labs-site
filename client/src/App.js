@@ -31,6 +31,7 @@ import AppNotesForm from './components/AppNotesForm'
 import ConNotesForm from './components/ConNotesForm'
 import ScholarshipFormNotes from "./components/ScholarshipFormNotes";
 import AppSubmitPage from './components/AppSubmitPage'
+import ContactSubmitPage  from './components/ContactSubmitPage'
 
 
 const App = () => (
@@ -44,6 +45,7 @@ const App = () => (
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
           <ProtectedRoute exact path="/Profile" component={Profile} />
           <ProtectedRoute exact path='/Contacts' component={Contacts} />
+          <Route exact path='/ContactSubmitPage' component={ContactSubmitPage} />
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
