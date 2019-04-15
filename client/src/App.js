@@ -18,7 +18,6 @@ import PartTimeLV from "./components/PartTimeLV/PartTimeLV";
 import ContactForm from "./components/Contact/ContactForm";
 import FinancingScholarships from "./components/Scholarship/FinancingScholarships";
 import StudentHousing from "./components/Housing/StudentHousing";
-import EmailPage from "./components/Application/EmailPage";
 import ProtectedRoute from "./components/MAIN/ProtectedRoute";
 import ApplicationsView from "./components/Application/ApplicationsView";
 import Scholarship from "./components/Scholarship/Scholarship";
@@ -29,9 +28,13 @@ import Contacts from './components/Contact/Contacts'
 import ContactsView from './components/Contact/ContactsView'
 import Applicants from './components/Application/Applicants'
 import AppNotesForm from './components/Application/AppNotesForm'
-import AboutForm from './components/About/AboutForm'
 import AboutDPL from './components/About/AboutDPL'
+import AboutDPLEdit from './components/About/AboutDPLEdit'
+import AboutForm from './components/About/AboutForm'
 import AboutEditForm from './components/About/AboutEditForm'
+import ConNotesForm from './components/ConNotesForm'
+import ScholarshipFormNotes from "./components/ScholarshipFormNotes";
+
 
 const App = () => (
   <Fragment>
@@ -55,8 +58,11 @@ const App = () => (
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
           <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
           <Route exact path="/AboutDPL" component={AboutDPL} />
+          <Route exact path="/AboutDPLEdit" component={AboutDPLEdit} />
           <Route exact path="/AboutForm" component={AboutForm} />
           <Route exact path="/About/:id/edit" component={AboutEditForm} />
+          <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
+          <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
           <Route
             exact
             path="/FinancingScholarships"
@@ -64,7 +70,7 @@ const App = () => (
           />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
-          <Route exact path="/ContactUs" component={ContactForm} />
+          <Route exact path="/ContactForm" component={ContactForm} />
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route
             exact

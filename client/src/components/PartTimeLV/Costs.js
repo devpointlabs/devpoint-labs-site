@@ -1,158 +1,91 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { media } from "../../theme/media";
-import {
-  Header,
-  Container,
-  Grid,
-  Card,
-  Image
-} from "semantic-ui-react";
+import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import { Link } from "react-router-dom"
+import { media } from "../../theme/media"
+import { Header, Container, Grid, Button, Card, Image } from "semantic-ui-react"
+import axios from 'axios'
 
-const CostDates = () => (
-  <>
-    <TextContainer>
-      <Header textAlign="center" style={{ fontSize: "4em" }}>
-        Tuition & Course Dates
-      </Header>
+const CostDates = (props) => {
+  const [cohorts, setCohorts] = useState([])
+
+  useEffect( () => {
+    axios.get("/api/cohorts")
+      .then( res => {
+        setCohorts(res.data)
+      })
+  }, [])
+
+  return (
+    <>
+      <TextContainer>
+        <Header textAlign="center" style={{ fontSize: "4em" }}>
+          Tuition & Course Dates
+        </Header>
+        <br />
+        <BlockText>
+          This non-credit program is offered in partnership with The University of
+          Utah Professional Education. The online application process is handled
+          by DevPoint Labs. Appliocant can expect to receive a call or email from
+          one of our admissions advisors. Please contact The University of Utah's
+          Professional Education department at (801)-587-0139.
+        </BlockText>
+      </TextContainer>
       <br />
-      <BlockText>
-        This non-credit program is offered in partnership with The University of
-        Utah Professional Education. The online application process is handled
-        by DevPoint Labs. Appliocant can expect to receive a call or email from
-        one of our admissions advisors. Please contact The University of Utah's
-        Professional Education department at (801)-587-0139.
-      </BlockText>
-    </TextContainer>
-    <br />
-    <br />
-    <br />
-    <CostContainer>
-      <Grid stackable columns={3}>
-        <Grid.Row>
-          <Grid.Column>
-            <CostCard style={styles.costBox}>
-              <Image src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ" />
-              <br />
+      <br />
+      <br />
+      <CostContainer>
+        <Grid stackable columns={3}>
+          <Grid.Row>
+              {
+                 cohorts.slice(3, 6).map( cohort => {
+                  return(
+                  <Grid.Column item={cohorts} key={cohorts.id}>
+                    <CostCard style={styles.costBox} >
+                      <Image src={cohort.image_url} />
+                      <br />
 
-              <CardHeader>Fall 2019</CardHeader>
-              <CostDes>
-                This is an 11 week program to learn full-stack web development,
-                this is an amazing course.
-              </CostDes>
-              <ul>
-                <CostPoint>
-                  Start Date: August 12th - October 25th, 2019
-                </CostPoint>
-                <CostPoint>Schedule: Mon - Fri: 9:30 AM to 5:30 PM </CostPoint>
-                <CostPoint>Cost: $9,995.00 USD</CostPoint>
-                <CostPoint>Location: Salt Lake City, Utah</CostPoint>
-              </ul>
-              <br />
-              <Grid columns={1}>
-                <Grid.Row>
-                  <Link to="/ApplicationsForm">
-                    <CardButton>Apply Now</CardButton>
-                  </Link>
-                  <span style={{ margin: "10px 30px" }}>Or</span>
-                  <Link
-                    to="/"
-                    style={{
-                      margin: "5px 5px",
-                      fontSize: "20px",
-                      fontStyle: "bold"
-                    }}
-                  >
-                    Learn More
-                  </Link>
-                </Grid.Row>
-              </Grid>
-            </CostCard>
-          </Grid.Column>
-          <Grid.Column>
-            <CostCard style={styles.costBox}>
-              <Image src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ" />
-              <br />
-
-              <CardHeader>Fall 2019</CardHeader>
-              <CostDes>
-                This is an 11 week program to learn full-stack web development,
-                this is an amazing course.
-              </CostDes>
-              <ul>
-                <CostPoint>
-                  Start Date: August 12th - October 25th, 2019
-                </CostPoint>
-                <CostPoint>Schedule: Mon - Fri: 9:30 AM to 5:30 PM </CostPoint>
-                <CostPoint>Cost: $9,995.00 USD</CostPoint>
-                <CostPoint>Location: Salt Lake City, Utah</CostPoint>
-              </ul>
-              <br />
-              <Grid columns={1}>
-                <Grid.Row>
-                  <CardButton href="/ApplicationsForm" primary>
-                    Apply Now
-                  </CardButton>
-                  <span style={{ margin: "10px 30px" }}>Or</span>
-                  <Link
-                    to="/"
-                    style={{
-                      margin: "5px 5px",
-                      fontSize: "20px",
-                      fontStyle: "bold"
-                    }}
-                  >
-                    Learn More
-                  </Link>
-                </Grid.Row>
-              </Grid>
-            </CostCard>
-          </Grid.Column>
-          <Grid.Column>
-            <CostCard style={styles.costBox}>
-              <Image src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ" />
-              <br />
-
-              <CardHeader>Fall 2019</CardHeader>
-              <CostDes>
-                This is an 11 week program to learn full-stack web development,
-                this is an amazing course.
-              </CostDes>
-              <ul>
-                <CostPoint>
-                  Start Date: August 12th - October 25th, 2019
-                </CostPoint>
-                <CostPoint>Schedule: Mon - Fri: 9:30 AM to 5:30 PM </CostPoint>
-                <CostPoint>Cost: $9,995.00 USD</CostPoint>
-                <CostPoint>Location: Salt Lake City, Utah</CostPoint>
-              </ul>
-              <br />
-              <Grid columns={1}>
-                <Grid.Row>
-                  <CardButton href="/ApplicationsForm" primary>
-                    Apply Now
-                  </CardButton>
-                  <span style={{ margin: "10px 30px" }}>Or</span>
-                  <Link
-                    to="/"
-                    style={{
-                      margin: "5px 5px",
-                      fontSize: "20px",
-                      fontStyle: "bold"
-                    }}
-                  >
-                    Learn More
-                  </Link>
-                </Grid.Row>
-              </Grid>
-            </CostCard>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </CostContainer>
-  </>
-);
+                      <CardHeader>{cohort.season}</CardHeader>
+                      <CostDes>
+                        { cohort.description }
+                      </CostDes>
+                      <ul>
+                        <CostPoint>
+                          { cohort.start_date }
+                        </CostPoint>
+                        <CostPoint>{ cohort.schedule }</CostPoint>
+                        <CostPoint>{ cohort.cost }</CostPoint>
+                        <CostPoint>{ cohort.location }</CostPoint>
+                      </ul>
+                      <br />
+                          <Link to="/ApplicationsForm">
+                            <CardButton inverted color='blue'>Apply Now</CardButton>
+                          </Link>
+                          <br />
+                          <h5 style={{ width: '100%' }}>Or</h5>
+                          <br />
+                            <Link
+                              to="/"
+                              style={{
+                              display: 'flex !important',
+                              justifyContent: 'center !important',
+                              marginBottom: '2em',
+                              fontSize: "20px",
+                              fontStyle: "bold",
+                            }}
+                            >
+                            <CardButton inverted color='orange'>Learn More</CardButton>
+                          </Link>
+                    </CostCard>
+                  </Grid.Column>
+                  )
+                })
+              }
+          </Grid.Row>
+        </Grid>
+      </CostContainer>
+    </>
+  )
+}
 
 const styles = {
   costBox: {
@@ -200,14 +133,13 @@ const CardHeader = styled.h1`
   text-align: left
   margin-left: 5%
 `;
-const CardButton = styled.button`
-  width: 120px;
-  padding: 10px;
-  background: #1d8ece;
-  color: white;
-  font-weight: 600;
-  margin-left: 50px;
-  margin-bottom: 40px;
+const CardDescription = styled.p`
+  font-size: 18px ${media.phone`
+    text-align: left
+ `};
+`;
+const CardButton = styled(Button)`
+  
   ${media.phone`
     width: 7.5em
   `};

@@ -17,11 +17,25 @@ class AboutDPL extends React.Component {
       })
   }
 
+  handleDelete = (id) => {
+    axios.delete(`/api/abouts/${id}`)
+      .then(res => {
+        const { abouts } = this.state
+        this.setState({ abouts: abouts.filter(t => t.id !== id) })
+      })
+  }
+
   render() {
     const { abouts } = this.state
 
     return (
       <> 
+      <Link to='/AboutForm'>
+        <Button>
+          <Icon name='add square' />
+          Add Content To About DPL
+        </Button>
+      </Link>
         <Container style={{ width: "55%" }}>
           <AbText>ABOUT</AbText>
           <DevHead as="h1">DevPoint Labs</DevHead>
@@ -41,6 +55,18 @@ class AboutDPL extends React.Component {
           </AbBody>
           <br />
           <br />
+          <Button>
+            <Link to={`/About/${about.id}/edit`} as={Button}>
+              <Icon name='edit' size='small' />
+              Edit Content of About DPL
+            </Link>
+          </Button>
+          <br />
+          <br />
+          <Button onClick={() => this.handleDelete(about.id)}>
+            <Icon name='trash' size='small' />
+            Delete Content of About DPL
+          </Button>
           </div>
       )}
         </Container>

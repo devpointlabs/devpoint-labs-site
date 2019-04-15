@@ -14,15 +14,17 @@ class AboutForm extends React.Component {
   state = { ...this.defaultValues };
 
   handleSubmit = e => {
+    // debugger
     e.preventDefault();
     const about = this.state;
     axios.post("/api/abouts", about)
       .then(res => {
-        this.props.history.push("/")
+        this.props.history.push("/About")
       })
       .catch(err => {
         alert(err)
       })
+      this.setState({ ...this.state })
   };
 
   handleChange = (e, { name, value }) => {
@@ -34,27 +36,38 @@ class AboutForm extends React.Component {
     return (
       <>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Input
+          <textarea
             placeholder='Content1'
             name='abBody1'
             required
             value={abBody1}
             onChange={this.handleChange}
+            rows='5'
           />
-          <Form.Input
+          <br />
+          <br />
+          <textarea
             placeholder='Content2'
             name='abBody2'
             value={abBody2}
             onChange={this.handleChange}
+            rows='5'
           />
-          <Form.Input
+          <br />
+          <br />
+          <textarea
             placeholder='Content3'
             name='abBody3'
             value={abBody3}
             onChange={this.handleChange}
+            rows='5'
           />
+          <br />
+          <br />
           <Form.Button>Submit</Form.Button>
         </Form>
+          <br />
+          <br />
         <Footer />
       </>
     )

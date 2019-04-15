@@ -2,6 +2,7 @@ import React from 'react';
 import { AuthConsumer, } from "../../providers/AuthProvider";
 import { Form, Grid, Image, Container, Divider, Header, Button, Segment } from 'semantic-ui-react';
 import Dropzone from 'react-dropzone'
+import { Link } from 'react-router-dom'
 
 const defaultImage = 'https://d30y9cdsu7xlg0.cloudfront.net/png/15724-200.png';
 
@@ -121,6 +122,11 @@ class Profile extends React.Component {
               <Button onClick={this.toggleEdit}>{editing ? 'Cancel' : 'Edit'}</Button>
           </Grid.Column>
         </Grid>
+          <Link to='/AboutDPLEdit'>
+        <Button>
+          Edit About Page
+        </Button>
+        </Link>
       </Container>
     )
   }

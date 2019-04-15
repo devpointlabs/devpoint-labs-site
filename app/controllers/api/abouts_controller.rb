@@ -11,8 +11,8 @@ class Api::AboutsController < ApplicationController
   end
 
   def create
-    about = About.new(about_params)
-
+    # binding.pry
+    about = About.create(about_params)
     if about.save
       render json: about
     else
