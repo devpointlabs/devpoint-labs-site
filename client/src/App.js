@@ -28,7 +28,9 @@ import SubscribersView from "./components/SubscribersView";
 import Contacts from './components/Contacts'
 import ContactsView from './components/ContactsView'
 import AppNotesForm from './components/AppNotesForm'
+import ConNotesForm from './components/ConNotesForm'
 import ScholarshipFormNotes from "./components/ScholarshipFormNotes";
+
 
 const App = () => (
   <Fragment>
@@ -51,6 +53,7 @@ const App = () => (
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
           <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
+          <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
           <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
           <Route
             exact
@@ -59,7 +62,7 @@ const App = () => (
           />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
-          <Route exact path="/ContactUs" component={ContactForm} />
+          <Route exact path="/ContactForm" component={ContactForm} />
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route
             exact
