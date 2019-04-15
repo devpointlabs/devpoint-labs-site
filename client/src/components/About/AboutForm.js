@@ -14,7 +14,6 @@ class AboutForm extends React.Component {
   state = { ...this.defaultValues };
 
   handleSubmit = e => {
-    // debugger
     e.preventDefault();
     const about = this.state;
     axios.post("/api/abouts", about)
@@ -27,9 +26,10 @@ class AboutForm extends React.Component {
       this.setState({ ...this.state })
   };
 
-  handleChange = (e, { name, value }) => {
-    this.setState({ [name]: value });
-  };
+  handleChange = (e) => {
+    const { target: { name, value } } = e
+    this.setState({ [name]: value })
+    }
 
   render () {
     const { abBody1, abBody2, abBody3} = this.state
