@@ -30,6 +30,7 @@ import ContactsView from './components/ContactsView'
 import AppNotesForm from './components/AppNotesForm'
 import ConNotesForm from './components/ConNotesForm'
 import ScholarshipFormNotes from "./components/ScholarshipFormNotes";
+import AppSubmitPage from './components/AppSubmitPage'
 
 
 const App = () => (
@@ -48,6 +49,7 @@ const App = () => (
           <Route exact path="/register" component={Register} />
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
           <Route exact path="/About" component={About} />
+          <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
           <Route exact path="/Community" component={Community} />
           <Route exact path="/freehousing" component={FreeHousing} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
