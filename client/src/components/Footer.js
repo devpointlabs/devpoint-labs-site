@@ -2,9 +2,10 @@ import React from "react";
 import { Header, Form, Icon, Image } from "semantic-ui-react";
 import styled from "styled-components";
 import SubscribeForm from "./SubscribeForm";
-import icon from "../assets/icons/Beaker-white.png";
+import icon from "../assets/icons/Beaker-white.png"
 
 class Footer extends React.Component {
+
   render() {
     return (
       <footer>
@@ -121,6 +122,15 @@ class Footer extends React.Component {
   }
 }
 
+const colors = {
+  black: `#141414`,
+  darkGrey: `#2d2d2d`,
+  grey: `#757575`,
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  white: `#FFFFFF`
+}
+
 const HeadStyle = styled.h4`
   color: white
   font-size: 12pt
@@ -128,7 +138,7 @@ const HeadStyle = styled.h4`
 
 const AppContainer = styled.div`
   width: 100%;
-  background: #53407A 
+  background-image: linear-gradient(to right, ${colors.black}, ${colors.darkPurp}, ${colors.black}) !important
 
   @media (max-width: 1024px) {
     margin-top: 1950px;
