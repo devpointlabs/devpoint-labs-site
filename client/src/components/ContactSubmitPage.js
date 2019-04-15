@@ -15,7 +15,9 @@ const ContactSubmitPage = () => (
                     You will hear back from us within 24 hours
                 </h3>
             </em>
-                <Button to='/' floated='centered' color='blue'>Home</Button>
+            <Button floated='centered' color='black'>
+                <Link to="/"> Home </Link>
+            </Button>
         </Header>
 
         <Footer />
