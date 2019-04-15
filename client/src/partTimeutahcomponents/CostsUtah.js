@@ -58,7 +58,7 @@ const CostDates = () => (
                   </Link>
                   <span style={{ margin: "10px 30px" }}>Or</span>
                   <Link
-                    to="/"
+                    to="/ContactForm"
                     style={{
                       margin: "5px 5px",
                       fontSize: "20px",
@@ -97,7 +97,7 @@ const CostDates = () => (
                   </CardButton>
                   <span style={{ margin: "10px 30px" }}>Or</span>
                   <Link
-                    to="/"
+                    to="/ContactForm"
                     style={{
                       margin: "5px 5px",
                       fontSize: "20px",
@@ -136,7 +136,7 @@ const CostDates = () => (
                   </CardButton>
                   <span style={{ margin: "10px 30px" }}>Or</span>
                   <Link
-                    to="/"
+                    to="/ContactForm"
                     style={{
                       margin: "5px 5px",
                       fontSize: "20px",
