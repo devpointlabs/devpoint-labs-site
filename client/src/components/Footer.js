@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Form, Icon, Image } from "semantic-ui-react";
 import styled from "styled-components";
 import SubscribeForm from "./SubscribeForm";
-import icon from "../assets/icons/purpbeaker.png";
+import icon from "../assets/icons/Beaker-white.png";
 
 class Footer extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class Footer extends React.Component {
                     style={{
                       fontSize: "14px",
                       fontWeight: "200",
-                      color: "grey"
+                      color: "white"
                     }}
                   >
                     {" "}
@@ -34,22 +34,22 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <h4 class="ui header"> First Column </h4>
+                  <HeadStyle class="ui header"> First Column </HeadStyle>
                   <div class="ui link list">
                     <br />
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link one
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link two
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link three
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link four
                     </a>
@@ -59,22 +59,22 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <h4 class="ui header"> Second Column </h4>
+                  <HeadStyle class="ui header"> Second Column </HeadStyle>
                   <div class="ui link list">
                     <br />
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link one
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link two
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link three
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link four
                     </a>
@@ -84,22 +84,22 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <h4 class="ui header"> Third Column </h4>
+                  <HeadStyle class="ui header"> Third Column </HeadStyle>
                   <div class="ui link list">
                     <br />
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link one
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link two
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link three
                     </a>
-                    <a ref="Link one" class="item">
+                    <a ref="Link one" style={{ color: 'white'}} class="item">
                       {" "}
                       Link four
                     </a>
@@ -109,7 +109,7 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <h4 class="ui header"> Fourth Column </h4>
+                  <HeadStyle style={{ color: 'white'}} class="ui header"> Fourth Column </HeadStyle>
                   <SubscribeForm />
                 </ColumnStyle4>
               </div>
@@ -121,8 +121,14 @@ class Footer extends React.Component {
   }
 }
 
+const HeadStyle = styled.h4`
+  color: white
+  font-size: 12pt
+`
+
 const AppContainer = styled.div`
   width: 100%;
+  background: #53407A 
 
   @media (max-width: 1024px) {
     margin-top: 1950px;
