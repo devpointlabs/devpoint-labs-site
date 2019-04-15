@@ -1,15 +1,23 @@
 import React from 'react'
-import { Header } from 'semantic-ui-react'
+import { Header, Button, Segment } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import  Footer  from './Footer'
 
 const ContactSubmitPage = () => (
     <>
-        <Header as='h2' textAlign='center'>
-            Thank you for contacting us, you we hear back from us within 24hrs
+
+
+        <Header style={{ fontSize: '4em'}} textAlign='center'>
+            Thank you for contacting us 
             <br/>
-                <Link to='/'>Home</Link>
+            <em>
+                <h3 style={{textAlign: 'center'}}>
+                    You will hear back from us within 24 hours
+                </h3>
+            </em>
+                <Button to='/' floated='centered' color='blue'>Home</Button>
         </Header>
+
         <Footer />
     </>
 )
