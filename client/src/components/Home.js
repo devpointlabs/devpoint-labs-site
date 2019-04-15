@@ -5,7 +5,7 @@ import images from "../assets/images/Airplaneshot-1-min.png";
 import styled from "styled-components";
 import PageOptions from "./PageOptions";
 import Landing from "./Landing";
-import Reviews from "./Reviews";
+import Reviews from "./Reviews/Reviews";
 import CoursesSection from "./CoursesSection";
 import CampusTour from "./CampusTour";
 import HomeLogos from "./HomeLogos";

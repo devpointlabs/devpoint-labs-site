@@ -1,8 +1,8 @@
 import React from "react";
-import Reviews from "./Reviews";
+import Reviews from "./Reviews/Reviews";
 import AboutDPL from "./AboutDPL";
 import DPLExperience from "./DPLExperience";
-import Instagram from "./Instagram";
+import Instagram from "./Instagram/Instagram";
 import Footer from "./Footer";
 
 class About extends React.Component {
