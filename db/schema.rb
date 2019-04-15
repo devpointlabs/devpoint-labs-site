@@ -73,9 +73,9 @@ ActiveRecord::Schema.define(version: 2019_04_12_204527) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
+    t.string "course"
     t.boolean "active"
     t.text "notes"
-    t.string "course"
   end
 
   create_table "subscribers", force: :cascade do |t|
