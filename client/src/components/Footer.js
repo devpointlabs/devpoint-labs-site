@@ -128,7 +128,8 @@ const colors = {
   grey: `#757575`,
   darkPurp: `#53407A`,
   purp: `#6E54A3`,
-  white: `#FFFFFF`
+  white: `#FFFFFF`,
+  lightPurp: '#e4dced',
 }
 
 const HeadStyle = styled.h4`
@@ -138,7 +139,7 @@ const HeadStyle = styled.h4`
 
 const AppContainer = styled.div`
   width: 100%;
-  background-image: linear-gradient(to right, ${colors.black}, ${colors.darkPurp}, ${colors.black}) !important
+  background-image: linear-gradient(to left, ${colors.lightPurp}, ${colors.purp}, ${colors.purp}, ${colors.darkPurp}) !important
 
   @media (max-width: 1024px) {
     margin-top: 1950px;
