@@ -30,14 +30,10 @@ class Home extends React.Component {
           <HomeLogos />
         </Container>
         <PageOptions />
-        <Container>
-          <IDos />
-        </Container>
+        <IDos />
         <Reviews />
-        <Container>
-          <CampusTour />
-          <CoursesSection />
-        </Container>
+        <CampusTour />
+        <CoursesSection />
         <Footer />
       </div>
     );
