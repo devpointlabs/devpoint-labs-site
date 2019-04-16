@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { media } from "../theme/media";
 import styled from "styled-components";
 import teamimage from "../assets/images/teamphoto.png";
+import GirlCodes from "../assets/images/girlcodes.jpg";
 import dayinlife from "../assets/images/coderscropped.jpg";
 import blackbeak from "../assets/icons/blackbeaker.png";
 
@@ -19,7 +20,7 @@ const Topimages = () => {
   return (
     <>
       <OvrP>
-        <TeamImage src={teamimage} />
+        <TeamImage src={GirlCodes} />
         <TagText>DEVPOINT LABS | WEB DEVELOPMENT</TagText>
         <TeamText>Full-time Web Development</TeamText>
         <TeamMeta>
