@@ -15,7 +15,7 @@ const StudentSchedule = () => (
       <Grid.Row width={16}>
         <Grid.Column>
           <Header style={{ fontSize: "3em" }} textAlign="center">
-            Student Life
+            Housing Details
           </Header>
           <br />
         </Grid.Column>
@@ -26,15 +26,15 @@ const StudentSchedule = () => (
           <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Hackathons</Header>
-          <p>See how much you can accomplish in a day-long coding event.</p>
+          <Header as="h3">What's Included</Header>
+          <p>Utilities and amenitites including gas, water, internet, kitchenware, furniture, a bed, a washer and dryer</p>
         </Grid.Column>
         <Grid.Column width={2}>
           <StudentIcons src={Skyscraper} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Conveniently Downtown</Header>
-          <p>Located in the heart of Downtown, SLC.</p>
+          <Header as="h3">What's Not Included</Header>
+          <p>Toiletries, bath towels, laundry detergent, and tupperware</p>
         </Grid.Column>
       </Grid.Row>
 
@@ -43,20 +43,18 @@ const StudentSchedule = () => (
           <StudentIcons src={SwitchIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">DPL Nights | Student Activities</Header>
+          <Header as="h3">Rules</Header>
           <p>
-            Unwind from learning during DPL led activities like The Bowling
-            Classic, Tuesday Movie Nights, or some casual meetups.
+            No Pets, No smoking. Pickup after yourself and follow the cleaning schedule
           </p>
         </Grid.Column>
         <Grid.Column width={2}>
           <StudentIcons src={Clock} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Daily Learning Schedule</Header>
+          <Header as="h3">Move In Dates</Header>
           <p>
-            Through a mix of lectures and hands-on labs you’ll gain the
-            technical knowledge.
+            You will be contacted via email regarding move-in dates and availability for your cohort
           </p>
         </Grid.Column>
       </Grid.Row>
@@ -66,18 +64,20 @@ const StudentSchedule = () => (
           <StudentIcons src={CompIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Advanced Curriculum</Header>
+          <Header as="h3">Location</Header>
           <p>
-            Learn the latest web technologies like React.js, Ruby on Rails, and
-            more.
+            The DevHouse is approximately 0.7 miles away from campus or a 14 minute walk
           </p>
         </Grid.Column>
         <Grid.Column width={2}>
           <StudentIcons src={UIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Earn Your U of U Certificate</Header>
-          <p>Earn Your U of U Certificate</p>
+          <Header as="h3">Rent</Header>
+          <p>Shared Dorm-Style: Free for out-of-state full-time and part-time students on a first coem first serve basis. *Background checks will be conducted.
+            <br />
+            Security Deposit: $250($150 non-refundable for application and admin fees)
+          </p>
         </Grid.Column>
       </Grid.Row>
     </Grid>

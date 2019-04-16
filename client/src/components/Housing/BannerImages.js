@@ -1,8 +1,13 @@
 import React from "react";
-import { Image } from "semantic-ui-react";
+import {
+  Button,
+  Image,
+  Icon
+} from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import { media } from "../../theme/media";
 import styled from "styled-components";
-import GirlCodes from "../../assets/images/girlcodes.JPG";
+import teamimage from "../../assets/images/teamphoto.png";
 import dayinlife from "../../assets/images/coderscropped.jpg";
 import blackbeak from "../../assets/icons/blackbeaker.png";
 
@@ -10,12 +15,11 @@ const Topimages = () => {
   return (
     <>
       <OvrP>
-        <TeamImage src={GirlCodes} />
-        <TagText>DEVPOINT LABS | WEB DEVELOPMENT</TagText>
-        <TeamText>Part-time Web Development</TeamText>
+        <TeamImage src={teamimage} />
+        <TagText>DEVPOINT LABS | STUDENT HOUSING</TagText>
+        <TeamText>Free Student Housing</TeamText>
         <TeamMeta>
-          Learn why we're the best at what we do and why we're regarded <br />{" "}
-          as one of the best in the edtech industry today.
+          Fully Furnished free student housing steps away from campus!
         </TeamMeta>
         <ButtonStyle>
           <ButtLink href="/ApplicationsForm">Apply Now</ButtLink>
@@ -23,12 +27,13 @@ const Topimages = () => {
       </OvrP>
       <BannerTwo>
         <BlackBeak src={blackbeak} />
-        <BTHead>DevPoint lab's 12 week</BTHead>
+        <BTHead>Student Housing at No Cost.</BTHead>
         <BTFont>
-          More than just code. Whether you’re a local or coming from
-          out-of-state <br /> we blend students into a vibrant developer
-          community <br />
-          building life long friendships.
+          At DevPoint Labs our goal has been to be the most accessible school in
+          <br/>
+          the country. With free housing included, you can focus on achieving your
+          <br/>
+          goals and getting ready for the industry.
         </BTFont>
       </BannerTwo>
       <OvrP>
@@ -235,7 +240,6 @@ const OvrP = styled.div`
   `}
   ${media.phone`
     position: relative;
-    background: #6E54A3;
     width: auto;
     opacity: 1
     height: 500px
@@ -271,15 +275,5 @@ const ButtonStyle = styled.div`
     width: 30%;
   `}
 `;
-
-const colors = {
-  black: `#141414`,
-  darkGrey: `#2d2d2d`,
-  grey: `#757575`,
-  darkPurp: `#53407A`,
-  purp: `#6E54A3`,
-  white: `#FFFFFF`,
-  lightPurp: "#e4dced"
-};
 
 export default Topimages;
