@@ -2,7 +2,8 @@ import React from "react";
 import {
   Button,
   Image,
-  Icon
+  Icon, 
+  Container,
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { media } from "../../theme/media";
@@ -25,8 +26,8 @@ const Topimages = () => {
           <ButtLink href="/ApplicationsForm">Apply Now</ButtLink>
         </ButtonStyle>
       </OvrP>
+      <Container>
       <BannerTwo>
-        <BlackBeak src={blackbeak} />
         <BTHead>Student Housing at No Cost.</BTHead>
         <BTFont>
           At DevPoint Labs our goal has been to be the most accessible school in
@@ -36,6 +37,7 @@ const Topimages = () => {
           goals and getting ready for the industry.
         </BTFont>
       </BannerTwo>
+      </Container>
       <OvrP>
         <TeamImage src={dayinlife} />
         <BanHead>
@@ -125,7 +127,7 @@ const BTFont = styled.p`
 `;
 
 const BTHead = styled.p`
-  font-size: 34px;
+  font-size: 60px;
   font-weight: 600;
 `;
 
@@ -134,7 +136,7 @@ const BannerTwo = styled.div`
   display: flex;
   flex-direction: column;
   padding: 70px;
-  text-align: center;
+  text-align: left;
   ${media.phone`
     margin-bottom: 200px
   `}
