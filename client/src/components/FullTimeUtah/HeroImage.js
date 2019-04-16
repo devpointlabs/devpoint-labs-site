@@ -1,9 +1,7 @@
 import React from "react";
-import { Button, Image, Icon } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Image } from "semantic-ui-react";
 import { media } from "../../theme/media";
 import styled from "styled-components";
-import teamimage from "../../assets/images/teamphoto.png";
 import GirlCodes from "../../assets/images/girlcodes.JPG";
 import dayinlife from "../../assets/images/coderscropped.jpg";
 import blackbeak from "../../assets/icons/blackbeaker.png";
@@ -237,6 +235,7 @@ const OvrP = styled.div`
   `}
   ${media.phone`
     position: relative;
+    background: #6E54A3;
     width: auto;
     opacity: 1
     height: 500px
