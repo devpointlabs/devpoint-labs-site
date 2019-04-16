@@ -1,37 +1,41 @@
 import React, { Fragment } from "react";
-import Home from "./components/Home";
-import NoMatch from "./components/NoMatch";
-import FullTimeUtah from "./components/FullTimeUtah";
-import About from "./components/About";
+import Home from "./components/Home/Home";
+import NoMatch from "./components/MAIN/NoMatch";
+import FullTimeUtah from "./components/FullTimeUtah/FullTimeUtah";
+import About from "./components/About/About";
 import Community from "./components/Community";
-import ApplicationsForm from "./components/ApplicationsForm";
-import Navbar from "./components/Navbar";
-import Login from "./components/Login";
-import Profile from './components/Profile'
-import Register from "./components/Register";
+import ApplicationsForm from "./components/Application/ApplicationsForm";
+import Navbar from "./components/MAIN/Navbar";
+import Login from "./components/MAIN/Login";
+import Profile from './components/Application/Profile'
+import Register from "./components/MAIN/Register";
 import { Switch, Route } from "react-router-dom";
-import FreeHousing from "./components/FreeHousing";
-import FetchUser from "./components/FetchUser";
-import ScholarshipForm from "./components/ScholarshipForm";
-import PartTimeUtah from "./components/PartTimeUtah";
-import PartTimeLV from "./components/PartTimeLV";
-import ContactForm from "./components/ContactForm";
-import FinancingScholarships from "./components/FinancingScholarships";
-import StudentHousing from "./components/StudentHousing";
-import Applicants from "./components/Applicants";
-import ProtectedRoute from "./components/ProtectedRoute";
-import ApplicationsView from "./components/ApplicationsView";
-import Scholarship from "./components/Scholarship";
-import ScholarshipsView from "./components/ScholarshipsView";
-import Subscribers from "./components/Subscribers";
-import SubscribersView from "./components/SubscribersView";
-import Contacts from './components/Contacts'
-import ContactsView from './components/ContactsView'
-import AppNotesForm from './components/AppNotesForm'
-import ConNotesForm from './components/ConNotesForm'
-import ScholarshipFormNotes from "./components/ScholarshipFormNotes";
-import AppSubmitPage from './components/AppSubmitPage'
-import ContactSubmitPage  from './components/ContactSubmitPage'
+import FreeHousing from "./components/Housing/FreeHousing";
+import FetchUser from "./components/MAIN/FetchUser";
+import ScholarshipForm from "./components/Scholarship/ScholarshipForm";
+import PartTimeUtah from "./components/PartTimeUtah/PartTimeUtah";
+import PartTimeLV from "./components/PartTimeLV/PartTimeLV";
+import ContactForm from "./components/Contact/ContactForm";
+import FinancingScholarships from "./components/Scholarship/FinancingScholarships";
+import StudentHousing from "./components/Housing/StudentHousing";
+import ProtectedRoute from "./components/MAIN/ProtectedRoute";
+import ApplicationsView from "./components/Application/ApplicationsView";
+import Scholarship from "./components/Scholarship/Scholarship";
+import ScholarshipsView from "./components/Scholarship/ScholarshipsView";
+import Subscribers from "./components/Application/Subscribers";
+import SubscribersView from "./components/Subscribe/SubscribersView";
+import Contacts from './components/Contact/Contacts'
+import ContactsView from './components/Contact/ContactsView'
+import Applicants from './components/Application/Applicants'
+import AppNotesForm from './components/Application/AppNotesForm'
+import AboutDPL from './components/About/AboutDPL'
+import AboutDPLEdit from './components/About/AboutDPLEdit'
+import AboutForm from './components/About/AboutForm'
+import AboutEditForm from './components/About/AboutEditForm'
+import ConNotesForm from './components/Contact/ConNotesForm'
+import ScholarshipFormNotes from "./components/Scholarship/ScholarshipFormNotes";
+import AppSubmitPage from './components/Application/AppSubmitPage'
+import ContactSubmitPage  from './components/Contact/ContactSubmitPage'
 
 
 const App = () => (
@@ -57,6 +61,10 @@ const App = () => (
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
           <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
+          <Route exact path="/AboutDPL" component={AboutDPL} />
+          <ProtectedRoute exact path="/AboutDPLEdit" component={AboutDPLEdit} />
+          <ProtectedRoute exact path="/AboutForm" component={AboutForm} />
+          <ProtectedRoute exact path="/About/:id/edit" component={AboutEditForm} />
           <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
           <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
           <Route
@@ -70,7 +78,7 @@ const App = () => (
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route
             exact
-            path="/applications/:id"
+            path="/About/:id"
             render={() => <ApplicationsView />}
           />
           <Route
