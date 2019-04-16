@@ -6,7 +6,6 @@ const PageOptions = () => (
   <>
     <div style={{ background: "#f5f5f5", padding: "50px" }}>
       <Grid
-        container
         columns={3}
         stackable
         class="ui equal width grid"
@@ -52,13 +51,11 @@ const PageOptions = () => (
                 fontSize: "1.2em"
               }}
             >
-              <br />
-
               <Link to="/FinancingScholarships">More Info</Link>
             </p>
           </Grid.Column>
           <Grid.Column>
-            <Icon name="home" size="big" style={{ marginLeft: "47%" }} />
+            <Icon name="home" size="big" style={{ marginLeft: "47%", transform: 'translate(0, .25em)' }} />
             <Header as="h2" textAlign="center" style={{ marginLeft: "10px" }}>
               Free Student Housing
             </Header>
@@ -73,9 +70,7 @@ const PageOptions = () => (
                 fontSize: "1.2em"
               }}
             >
-              <br />
-              <br />
-
+            <br/>
               <Link to="/StudentHousing">More Info</Link>
             </p>
           </Grid.Column>

@@ -17,7 +17,7 @@ const Reviews = () => {
 
   const renderReviews = () => {
     return (
-      <SegStyle style={{ background: `linear-gradient(to bottom, ${colors.darkGrey}, ${colors.black})`, color: `${colors.white}` }}>
+      <SegStyle style={{ background: `${colors.white}`, color: `${colors.darkPurp}`, boxShadow: `1em 1em 3em ${colors.darkGrey}` }}>
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -34,7 +34,7 @@ const Reviews = () => {
                   <Icon as={IconStyle} name="user circle outline" size="big" />
                   <br />
                   <br />
-                  <RightText style={{ color: `${colors.lightPurp}`}}>
+                  <RightText style={{ color: `${colors.purp}`}}>
                     This course is difficult but rewarding if your willing to
                     put in the effort and time. Instructor and the staff is
                     awesome but if you dont give it your all that all means
@@ -52,7 +52,7 @@ const Reviews = () => {
                   <Icon as={IconStyle} name="user circle outline" size="big" />
                   <br />
                   <br />
-                  <LeftText style={{ color: `${colors.lightPurp}`}}>
+                  <LeftText style={{ color: `${colors.purp}`}}>
                     It was incredibly challenging and satisfying. The
                     curriculum was difficult but there was always consistent
                     and relevant support from the instructors, the TAs as well
@@ -79,7 +79,7 @@ const Reviews = () => {
                   <Icon as={IconStyle} name="user circle outline" size="big" />
                   <br />
                   <br />
-                  <RightText style={{ color: `${colors.lightPurp}`}}>
+                  <RightText style={{ color: `${colors.purp}`}}>
                     I graduated from DevPoint Labs in January '18, and just
                     over a year later it's proven to be one of the best
                     decisions I have ever made in my career. The DPL fulltime
@@ -139,8 +139,7 @@ const colors = {
 }
 
 const IconStyle = styled(Icon)`
-  color: ${colors.purp}
-  opacity: .6 !important
+  color: ${colors.darkPurp}
 `
 
 const ColStyle = styled.div`
