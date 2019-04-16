@@ -37,7 +37,7 @@ const CostDates = (props) => {
         <Grid stackable columns={3}>
           <Grid.Row>
               {
-                 cohorts.slice(6, 9).map( cohort => {
+                 cohorts.slice(3, 6).map( cohort => {
                   return(
                   <Grid.Column item={cohorts} key={cohorts.id}>
                     <CostCard style={styles.costBox} >

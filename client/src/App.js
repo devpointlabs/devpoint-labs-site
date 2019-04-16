@@ -15,6 +15,8 @@ import FetchUser from "./components/FetchUser";
 import ScholarshipForm from "./components/ScholarshipForm";
 import PartTimeUtah from "./components/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV";
+import EditCourses from './components/EditCourses';
+import CourseForm from './components/CourseForm';
 import ContactForm from "./components/ContactForm";
 import FinancingScholarships from "./components/FinancingScholarships";
 import StudentHousing from "./components/StudentHousing";
@@ -47,6 +49,8 @@ const App = () => (
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
+          <Route exact path="/editCourses" component={EditCourses} />
+          <Route exact path="/Cohorts/:id/edit" component={CourseForm} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Community" component={Community} />
           <Route exact path="/freehousing" component={FreeHousing} />

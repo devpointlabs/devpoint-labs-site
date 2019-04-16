@@ -2,22 +2,27 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { media } from "../theme/media"
+import CourseForm from "./CourseForm"
 import { Header, Container, Grid, Button, Card, Image } from "semantic-ui-react"
 import axios from 'axios'
 
 const CostDates = (props) => {
   const [cohorts, setCohorts] = useState([])
 
-  useEffect( () => {
-    axios.get("/api/cohorts")
-      .then( res => {
+  useEffect(() => {
+    axios.get(`/api/cohorts/`)
+      .then(res => {
         setCohorts(res.data)
       })
   }, [])
 
+
+
+
+
   return (
     <>
-      <TextContainer>
+      {/* <TextContainer>
         <Header textAlign="center" style={{ fontSize: "4em" }}>
           Tuition & Course Dates
         </Header>
@@ -32,54 +37,55 @@ const CostDates = (props) => {
       </TextContainer>
       <br />
       <br />
-      <br />
+      <br /> */}
       <CostContainer>
         <Grid stackable columns={3}>
           <Grid.Row>
-              {
-                 cohorts.slice(6, 9).map( cohort => {
-                  return(
-                  <Grid.Column item={cohorts} key={cohorts.id}>
+            {
+              cohorts.map(cohort => {
+                return (
+                  <Grid.Column item={cohorts} key={cohort.id}>
                     <CostCard style={styles.costBox} >
                       <Image src={cohort.image_url} />
                       <br />
 
                       <CardHeader>{cohort.season}</CardHeader>
                       <CostDes>
-                        { cohort.description }
+                        {cohort.description}
                       </CostDes>
                       <ul>
                         <CostPoint>
-                          { cohort.start_date }
+                          {cohort.start_date}
                         </CostPoint>
-                        <CostPoint>{ cohort.schedule }</CostPoint>
-                        <CostPoint>{ cohort.cost }</CostPoint>
-                        <CostPoint>{ cohort.location }</CostPoint>
+                        <CostPoint>{cohort.schedule}</CostPoint>
+                        <CostPoint>{cohort.cost}</CostPoint>
+                        <CostPoint>{cohort.location}</CostPoint>
                       </ul>
                       <br />
-                          <Link to="/ApplicationsForm">
-                            <CardButton inverted color='blue'>Apply Now</CardButton>
-                          </Link>
-                          <br />
-                          <h5 style={{ width: '100%' }}>Or</h5>
-                          <br />
-                            <Link
-                              to="/"
-                              style={{
-                              display: 'flex !important',
-                              justifyContent: 'center !important',
-                              marginBottom: '2em',
-                              fontSize: "20px",
-                              fontStyle: "bold",
-                            }}
-                            >
-                            <CardButton inverted color='orange'>Learn More</CardButton>
-                          </Link>
+                      <Link to="/ApplicationsForm">
+                        <CardButton inverted color='blue'>Apply Now</CardButton>
+                      </Link>
+                      <br />
+                      <h5 style={{ width: '100%' }}>Or</h5>
+                      <br />
+                      <Link
+                        to="/"
+                        style={{
+                          display: 'flex !important',
+                          justifyContent: 'center !important',
+                          marginBottom: '2em',
+                          fontSize: "20px",
+                          fontStyle: "bold",
+                        }}
+                      >
+                        <CardButton inverted color='orange'>Learn More</CardButton>
+                      </Link>
                     </CostCard>
+                    <Button ><Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
                   </Grid.Column>
-                  )
-                })
-              }
+                )
+              })
+            }
           </Grid.Row>
         </Grid>
       </CostContainer>
