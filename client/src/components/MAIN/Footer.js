@@ -139,7 +139,7 @@ const HeadStyle = styled.h4`
 
 const AppContainer = styled.div`
   width: 100%;
-  background-image: linear-gradient(to left, ${colors.lightPurp}, ${colors.purp}, ${colors.purp}, ${colors.darkPurp}) !important
+  background-image: linear-gradient(to left, ${colors.purp}, ${colors.darkPurp}) !important
 
   @media (max-width: 1024px) {
     margin-top: 1950px;
