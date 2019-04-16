@@ -29,7 +29,7 @@ class ApplicationsForm extends React.Component {
     const application = this.state;
     axios.post("/api/applications", application)
       .then(res => {
-        this.props.history.push("/")
+        this.props.history.push("/AppSubmitPage")
       })
       .catch(err => {
         alert('Please Fill Out All Fields Before Submitting')

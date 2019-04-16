@@ -17,7 +17,7 @@ const Reviews = () => {
 
   const renderReviews = () => {
     return (
-      <SegStyle style={{ background: "#e4dced" }}>
+      <SegStyle style={{ background: `linear-gradient(to bottom, ${colors.darkGrey}, ${colors.black})`, color: `${colors.white}` }}>
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -31,10 +31,10 @@ const Reviews = () => {
             >
               <Grid.Column>
                 <ColStyle>
-                  <Icon name="user circle outline" size="big" />
+                  <Icon as={IconStyle} name="user circle outline" size="big" />
                   <br />
                   <br />
-                  <RightText>
+                  <RightText style={{ color: `${colors.lightPurp}`}}>
                     This course is difficult but rewarding if your willing to
                     put in the effort and time. Instructor and the staff is
                     awesome but if you dont give it your all that all means
@@ -42,17 +42,17 @@ const Reviews = () => {
                     highly recommend this course!
                     </RightText>
                   <br />
-                  <h3 color="#2d2d2d">Usong Cho</h3>
-                  <p>U of U Full-Time Student</p>
+                  <h3>Usong Cho</h3>
+                  <p style={{ color: `${colors.purp}`, opacity: '.6'}}>U of U Full-Time Student</p>
                 </ColStyle>
               </Grid.Column>
 
               <Grid.Column>
                 <ColStyle>
-                  <Icon name="user circle outline" size="big" />
+                  <Icon as={IconStyle} name="user circle outline" size="big" />
                   <br />
                   <br />
-                  <LeftText>
+                  <LeftText style={{ color: `${colors.lightPurp}`}}>
                     It was incredibly challenging and satisfying. The
                     curriculum was difficult but there was always consistent
                     and relevant support from the instructors, the TAs as well
@@ -60,7 +60,7 @@ const Reviews = () => {
                     </LeftText>
                   <br />
                   <h3>Bryan Holbrook</h3>
-                  <p>Co-founder of Forma DS</p>
+                  <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Co-founder of Forma DS</p>
                 </ColStyle>
               </Grid.Column>
             </Grid>
@@ -76,10 +76,10 @@ const Reviews = () => {
             >
               <Grid.Column>
                 <ColStyle>
-                  <Icon name="user circle outline" size="big" />
+                  <Icon as={IconStyle} name="user circle outline" size="big" />
                   <br />
                   <br />
-                  <RightText>
+                  <RightText style={{ color: `${colors.lightPurp}`}}>
                     I graduated from DevPoint Labs in January '18, and just
                     over a year later it's proven to be one of the best
                     decisions I have ever made in my career. The DPL fulltime
@@ -89,7 +89,7 @@ const Reviews = () => {
                     </RightText>
                   <br />
                   <h3>Dan</h3>
-                  <p>Full Stack Software Engineer</p>
+                  <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Full Stack Software Engineer</p>
                 </ColStyle>
               </Grid.Column>
 
@@ -127,6 +127,21 @@ const Reviews = () => {
     </>
   )
 }
+
+const colors = {
+  black: `#141414`,
+  darkGrey: `#2d2d2d`,
+  grey: `#757575`,
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  white: `#FFFFFF`,
+  lightPurp: '#e4dced',
+}
+
+const IconStyle = styled(Icon)`
+  color: ${colors.purp}
+  opacity: .6 !important
+`
 
 const ColStyle = styled.div`
   @media (max-width: 2600px) {

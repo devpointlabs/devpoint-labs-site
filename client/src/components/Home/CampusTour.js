@@ -1,40 +1,48 @@
 import React from "react";
-import { Grid, Button } from "semantic-ui-react";
-import styled from 'styled-components'
+import { Grid, Button, Container } from "semantic-ui-react";
 
 const CampusTour = () => (
-  <GridStyle>
-  <Grid stackable>
-    <Grid.Column width={5}>
-      <h4>Want to come by for a campus tour</h4>
-    </Grid.Column>
-    <Grid.Column width={9}>
-      <p allowFontScaling={false}>
-        If you call Utah home or are visiting Salt Lake City, schedule a campus
-        tour with one of our admissions directors to meet the staff, current
-        students and classroom.
-      </p>
-    </Grid.Column>
-    <Grid.Column width={2} verticalAlign="middle">
-      <Button color="grey">
-        Schedule
-      </Button>
-    </Grid.Column>
-  </Grid>
-  </GridStyle>
+  <div style={{backgroundImage: `linear-gradient(to right, ${colors.black}, ${colors.darkPurp}, ${colors.black})`}}>
+    <Container>
+      <Grid style={styles.grid} stackable>
+        <Grid.Column width={5}>
+          <h4 style={{color: `${colors.white}`}}>Want to come by for a campus tour? </h4>
+        </Grid.Column>
+        <Grid.Column width={9}>
+          <p style={{color: `${colors.white}`}} allowFontScaling={false}>
+            If you call Utah home or are visiting Salt Lake City, schedule a campus
+            tour with one of our admissions directors to meet the staff, current
+            students and classroom.
+          </p>
+        </Grid.Column>
+        <Grid.Column width={2} verticalAlign="middle">
+          <Button inverted color="blue">
+            Schedule
+          </Button>
+        </Grid.Column>
+      </Grid>
+    </Container>
+  </div>
 );
 
-const GridStyle = styled.div`
-    padding-top: 5em
-    padding-bottom: 5em
-    padding-left: 10%
-    padding-right: 10%
+const colors = {
+  black: `#141414`,
+  darkGrey: `#2d2d2d`,
+  grey: `#757575`,
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  white: `#FFFFFF`
+}
 
-    @media (max-width: 450px) {
-      padding-top: 3em
-      padding-bottom: 3em
-      padding-left: 0.5em
-      padding-right: 0.5em
-    }
-`
+const styles = {
+  grid: {
+    paddingTop: "5em",
+    paddingBottom: "5em",
+    paddingLeft: "10%",
+    paddingRight: "10%"
+  }
+};
+
+
+
 export default CampusTour;

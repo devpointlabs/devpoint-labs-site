@@ -82,7 +82,15 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
+<<<<<<< HEAD
     t.boolean "active"
+=======
+<<<<<<< HEAD
+    t.boolean "active"
+=======
+    t.boolean "active", default: false
+>>>>>>> 84a48c5490edd294fae2f156ad1323d6af1d7d1e
+>>>>>>> d00be5d867b0c1578a27bd7e58e98f3ede20a66f
     t.text "notes"
     t.string "course"
   end

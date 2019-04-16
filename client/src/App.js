@@ -32,8 +32,10 @@ import AboutDPL from './components/About/AboutDPL'
 import AboutDPLEdit from './components/About/AboutDPLEdit'
 import AboutForm from './components/About/AboutForm'
 import AboutEditForm from './components/About/AboutEditForm'
-import ConNotesForm from './components/ConNotesForm'
-import ScholarshipFormNotes from "./components/ScholarshipFormNotes";
+import ConNotesForm from './components/Contact/ConNotesForm'
+import ScholarshipFormNotes from "./components/Scholarship/ScholarshipFormNotes";
+import AppSubmitPage from './components/Application/AppSubmitPage'
+import ContactSubmitPage  from './components/Contact/ContactSubmitPage'
 
 
 const App = () => (
@@ -47,20 +49,22 @@ const App = () => (
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
           <ProtectedRoute exact path="/Profile" component={Profile} />
           <ProtectedRoute exact path='/Contacts' component={Contacts} />
+          <Route exact path='/ContactSubmitPage' component={ContactSubmitPage} />
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
           <Route exact path="/About" component={About} />
+          <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
           <Route exact path="/Community" component={Community} />
           <Route exact path="/freehousing" component={FreeHousing} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
           <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
           <Route exact path="/AboutDPL" component={AboutDPL} />
-          <Route exact path="/AboutDPLEdit" component={AboutDPLEdit} />
-          <Route exact path="/AboutForm" component={AboutForm} />
-          <Route exact path="/About/:id/edit" component={AboutEditForm} />
+          <ProtectedRoute exact path="/AboutDPLEdit" component={AboutDPLEdit} />
+          <ProtectedRoute exact path="/AboutForm" component={AboutForm} />
+          <ProtectedRoute exact path="/About/:id/edit" component={AboutEditForm} />
           <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
           <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
           <Route

@@ -24,7 +24,7 @@ class ScholarshipForm extends React.Component {
     const scholarship = this.state;
     axios.post("/api/scholarships", scholarship)
     .then(res => {
-      this.props.history.push("/");
+      this.props.history.push("/AppSubmitPage");
     })
     .catch(err => {
       alert('Please Fill Out All Fields Before Submitting')

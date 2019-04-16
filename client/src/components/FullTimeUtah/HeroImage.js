@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { media } from "../../theme/media";
 import styled from "styled-components";
 import teamimage from "../../assets/images/teamphoto.png";
+import dayinlife from "../../assets/images/coderscropped.jpg";
+import blackbeak from "../../assets/icons/blackbeaker.png";
 
 const Topimages = () => {
   return (
@@ -15,17 +17,17 @@ const Topimages = () => {
       <OvrP>
         <TeamImage src={teamimage} />
         <TagText>DEVPOINT LABS | WEB DEVELOPMENT</TagText>
-        <TeamText>Part-time Web Development</TeamText>
+        <TeamText>Full-time Web Development</TeamText>
         <TeamMeta>
           Learn why we're the best at what we do and why we're regarded <br />{" "}
           as one of the best in the edtech industry today.
         </TeamMeta>
-        <ButtonStyle primary size="big">
+        <ButtonStyle>
           <ButtLink href="/ApplicationsForm">Apply Now</ButtLink>
         </ButtonStyle>
       </OvrP>
       <BannerTwo>
-        <Icon name="radio" size="huge" />
+        <BlackBeak src={blackbeak} />
         <BTHead>DevPoint lab's 11 week</BTHead>
         <BTFont>
           More than just code. Whether you’re a local or coming from
@@ -34,45 +36,90 @@ const Topimages = () => {
           building life long friendships.
         </BTFont>
       </BannerTwo>
-      <BECont>
-        <BEHead>
+      <OvrP>
+        <TeamImage src={dayinlife} />
+        <BanHead>
           A Day in the life at <br /> DevPoint Labs
-        </BEHead>
-        <Link
-          to="/ApplicationsForm"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            fontSize: "16px",
-            fontWeight: "600"
-          }}
-        >
-          Apply Now >
-        </Link>
-      </BECont>
+        </BanHead>
+        <BanLink>
+          <MELink href="/Community">Learn About Us ></MELink>
+        </BanLink>
+      </OvrP>
     </>
   );
 };
 
-const BECont = styled.div`
-  background: #26abff;
-  opacity: 0.8;
-  height: 580px;
-  padding-left: 100px;
-  padding-top: 100px;
+const BlackBeak = styled(Image)`
+  position: absolute;
+  width: 50px;
+  align-self: center;
   ${media.phone`
-    margin: auto
+  width: 50px
+  `} ${media.tablet`
+  position: relative;
+  `};
+`;
+
+const MELink = styled.a`
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  &:hover {
+    text-decoration: none;
+    color: #53407a;
+  }
+`;
+
+const BanLink = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  z-index: 0;
+  top: 45%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  ${media.tablet`
+    font-size: 2em
+    margin-left: 90px
+  `}
+  ${media.phone`
+    font-size: 2em
+    margin-left: 90px
+    margin-top: 100px
+  `}
+  ${media.giant`
+    font-size: 2em
+    padding-top: 0
   `}
 `;
 
-const BEHead = styled.p`
+const BanHead = styled.text`
   font-size: 42px;
   font-weight: 600;
   color: white;
+  position: absolute;
+  z-index: 0;
+  top: 32%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  ${media.tablet`
+    font-size: 2em
+    margin-left: 90px
+  `}
+  ${media.phone`
+    font-size: 2em
+    margin-left: 90px
+  `}
+  ${media.giant`
+    font-size: 2em
+    padding-top: 0
+  `}
 `;
 
 const BTFont = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 200;
   line-height: 1.5;
 `;
@@ -84,7 +131,8 @@ const BTHead = styled.p`
 
 const BannerTwo = styled.div`
   height: 350px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 70px;
   text-align: center;
   ${media.phone`
@@ -95,13 +143,17 @@ const BannerTwo = styled.div`
 const ButtLink = styled.a`
   text-decoration: none;
   color: white;
+  font-size: 20px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: none;
+    color: #141414;
+  }
   ${media.tablet`
     font-size: 1em
-
-  `}
-  ${media.phone`
+  `} ${media.phone`
     font-size: 1em;
-  `}
+  `};
 `;
 
 const TagText = styled.text`
@@ -139,19 +191,15 @@ const TeamMeta = styled.text`
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  ${media.tablet`
-    font-size: 1em
-    line-spacing: 1.5
-    top: 300px
-  `}
   ${media.phone`
-    font-size: 1em
-    line-spacing: 1.5
-    top: 300px
+    font-size: 2px
+    margin-top: 70px
+    width: 100%
   `}
-  ${media.desktop`
-    font-size: 55px
-    padding-top: 0
+  ${media.tablet`
+    position: absolute;
+    top: 60%
+    font-size: 18px !important;
   `}
   ${media.giant`
     font-size: 1.2em
@@ -169,35 +217,32 @@ const TeamText = styled.text`
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  ${media.tablet`
-    font-size: 1em
-  `}
   ${media.phone`
-    font-size: 1em
-    padding-bottom: 40px
+    font-size: 28px !important
+    margin-top: 30px
   `}
-  ${media.desktop`
-    font-size: 55px
-    padding-top: 0
+  ${media.tablet`
+    font-size: 30px
   `}
   ${media.giant`
-    font-size: 1.5em
-    padding-top: 0
+    font-size: 30px
   `}
 `;
 
 const OvrP = styled.div`
   position: relative;
-  background: #141414;
+  background-image: linear-gradient(grey, black);
   opacity: 0.9;
   ${media.tablet`
-  height: 500px;
+  position: relative;
   width: auto;
-  opacity: 1
+  opacity: 0.9
   `}
   ${media.phone`
-    height: 500px;
+    position: relative;
     width: auto;
+    opacity: 1
+    height: 500px
   `}
 `;
 
@@ -208,19 +253,27 @@ const TeamImage = styled(Image)`
   opacity: .3;
   z-index: -1;
   ${media.phone`
-    position: relative
-    display: none;
   `}
 `;
 
-const ButtonStyle = styled(Button)`
-  color: white;
+const ButtonStyle = styled.div`
+  width: 15%;
+  border-radius: 3%
+  padding: 10px;
+  background-color: #53407a;
   font-weight: 400;
   position: absolute;
   text-align: center;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0.2em 0.2em 0.4em #141414;
+  ${media.phone`
+    width: 200px;
+  `}
+  ${media.tablet`
+    width: 30%;
+  `}
 `;
 
 export default Topimages;
