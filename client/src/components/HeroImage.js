@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { media } from "../theme/media";
 import styled from "styled-components";
 import teamimage from "../assets/images/teamphoto.png";
-import GirlCodes from "../assets/images/girlcodes.jpg";
+import GirlCodes from "../assets/images/girlcodes.JPG";
 import dayinlife from "../assets/images/coderscropped.jpg";
 import blackbeak from "../assets/icons/blackbeaker.png";
 
