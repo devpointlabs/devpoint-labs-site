@@ -4,6 +4,7 @@ import { Menu, Dropdown, Icon, Button, Image, MenuHeader } from 'semantic-ui-rea
 import { Link, withRouter, } from 'react-router-dom'
 import styled from 'styled-components'
 import { media } from '../theme/media'
+import blackLogo from '../assets/icons/dpllogo.png'
 
 
 class Navbar extends React.Component {
@@ -126,7 +127,7 @@ class Navbar extends React.Component {
       <>
         <MenuStyles secondary>
           <Link to='/'>
-              <WebLogoStyle floated='left' src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142674.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=WtADJjHKLaiVmZh%2BIHmiw%2FjnJPw%3D' />
+              <WebLogoStyle floated='left' src={blackLogo} />
           </Link>
           <MenuWeb position='right'>
             <Dropdown text='Courses' options={courseOptions} simple item />
@@ -186,8 +187,18 @@ class Navbar extends React.Component {
   }
 }
 
+const colors = {
+  black: `#141414`,
+  darkGrey: `#2d2d2d`,
+  grey: `#757575`,
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  white: `#FFFFFF`
+}
+
 const WebLogoStyle= styled(Image)`
   height: 5em
+
   ${media.phone`
     display: none !important
   `}
