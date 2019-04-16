@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_213558) do
+ActiveRecord::Schema.define(version: 2019_04_15_214759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abouts", force: :cascade do |t|
+    t.text "abBody1"
+    t.text "abBody2"
+    t.text "abBody3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "applications", force: :cascade do |t|
     t.string "first_name"
@@ -61,15 +69,6 @@ ActiveRecord::Schema.define(version: 2019_04_12_213558) do
     t.text "notes"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "body"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
   create_table "scholarships", force: :cascade do |t|
     t.boolean "part"
     t.string "first_name"
@@ -86,8 +85,12 @@ ActiveRecord::Schema.define(version: 2019_04_12_213558) do
 <<<<<<< HEAD
     t.boolean "active"
 =======
+<<<<<<< HEAD
+    t.boolean "active"
+=======
     t.boolean "active", default: false
 >>>>>>> 84a48c5490edd294fae2f156ad1323d6af1d7d1e
+>>>>>>> d00be5d867b0c1578a27bd7e58e98f3ede20a66f
     t.text "notes"
     t.string "course"
   end
@@ -130,5 +133,4 @@ ActiveRecord::Schema.define(version: 2019_04_12_213558) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
-  add_foreign_key "posts", "users"
 end

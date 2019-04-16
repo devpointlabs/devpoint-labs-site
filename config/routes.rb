@@ -9,8 +9,9 @@ Rails.application.routes.draw do
     resources :subscribers
     resources :users, only: :update
     resources :cohorts
-
+    resources :abouts
   end
+
   get '*other', to: 'static#index'
     
   
