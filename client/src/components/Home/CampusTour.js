@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Button, Container } from "semantic-ui-react";
 
 const CampusTour = () => (
-  <div style={{backgroundImage: `linear-gradient(to right, ${colors.black}, ${colors.darkPurp}, ${colors.black})`}}>
+  <div style={{backgroundImage: `linear-gradient(to left, ${colors.lightPurp}, ${colors.purp}, ${colors.purp}, ${colors.darkPurp})`}}>
     <Container>
       <Grid style={styles.grid} stackable>
         <Grid.Column width={5}>
@@ -31,7 +31,8 @@ const colors = {
   grey: `#757575`,
   darkPurp: `#53407A`,
   purp: `#6E54A3`,
-  white: `#FFFFFF`
+  white: `#FFFFFF`,
+  lightPurp: '#e4dced',
 }
 
 const styles = {

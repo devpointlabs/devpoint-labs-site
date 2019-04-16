@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 const CoursesSection = () => {
   return (
-    <div style={{backgroundImage: `linear-gradient(to right, ${colors.black}, ${colors.darkPurp}, ${colors.black})`}}>
+    <div style={{backgroundImage: `linear-gradient(to left, ${colors.lightPurp}, ${colors.purp}, ${colors.purp}, ${colors.darkPurp})`}}>
       <Container>
         <Grid columns={2}>
             <Grid.Column mobile={16} tablet={8} computer={8}>
@@ -93,7 +93,8 @@ const colors = {
   grey: `#757575`,
   darkPurp: `#53407A`,
   purp: `#6E54A3`,
-  white: `#FFFFFF`
+  white: `#FFFFFF`,
+  lightPurp: '#e4dced',
 }
 
 const styles = {
