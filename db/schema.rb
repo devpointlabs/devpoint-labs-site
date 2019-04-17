@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.string "experience"
     t.string "gender"
     t.string "social"
-    t.boolean "active"
+    t.boolean "active", default: false
     t.text "notes"
   end
 
@@ -69,6 +69,15 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.text "notes"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "scholarships", force: :cascade do |t|
     t.boolean "part"
     t.string "first_name"
@@ -82,15 +91,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
-<<<<<<< HEAD
-    t.boolean "active"
-=======
-<<<<<<< HEAD
-    t.boolean "active"
-=======
     t.boolean "active", default: false
->>>>>>> 84a48c5490edd294fae2f156ad1323d6af1d7d1e
->>>>>>> d00be5d867b0c1578a27bd7e58e98f3ede20a66f
     t.text "notes"
     t.string "course"
   end
@@ -99,7 +100,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "active"
+    t.boolean "active", default: false
     t.text "notes"
   end
 
@@ -133,4 +134,5 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "posts", "users"
 end

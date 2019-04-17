@@ -20,7 +20,7 @@ class ContactForm extends React.Component {
     axios.post("/api/contacts", contact).then(res => {
       this.props.history.push("/ContactSubmitPage");
     });
-    this.setState({ ...this.state });
+    // this.setState({ ...this.state });
   };
 
   handleChange = e => {
