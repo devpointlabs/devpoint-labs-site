@@ -20,10 +20,13 @@ class DPLScholarships extends React.Component {
           <HeaderStyle>About</HeaderStyle>
           <br />
           <br />
-          <ContentStyle>We're exicted to offer two scholarships for our Full-Time ProEd Web Development
-             and Part-Time Web Development Courses. We will be awarding 50% off tuition for
-             both scholarship recipients. We are looking for individuals who demonstrate
-             a passion for...</ContentStyle>
+          <ContentStyle>
+            We're excited to offer two scholarships for our Full-Time ProEd Web Development and 
+            Part-Time Web Development classes. We will be awarding 50% off tuition for a Women in 
+            Tech and also a Diversity in Tech Scholarship. We're looking for individuals who 
+            demonstrate grit, have a passion for learning, and empathy. Previous coding experience 
+            is not required, however they're expected to complete all prep work before day one of class.
+          </ContentStyle>
         </SegStyle>
         <div style={{ textAlign: 'center' }}>
           <br />
@@ -32,39 +35,53 @@ class DPLScholarships extends React.Component {
         <GridStyle>
           <Grid stackable columns={6}>
             <Grid.Column width={1}>
-              <Icon name='server' size='big' />
+              <Icon name='server' size='large' />
             </Grid.Column>
             <Grid.Column width={4}>
-              <Header as='h2'>Electrical engineering</Header>
+              <HdStyle>Apply</HdStyle>
               <RowStyle>
-              <p>In technology research, a technology demonstrator is a prototype serving
-               as proof-of-concept and demonstration model for a new technology</p>
+              <p>
+                Send in a full application for the prospective class: Full-Time Web Development 
+                or Part-Time Web Development.
+              </p>
               </RowStyle>
-              <Link>First Link ></Link>
+              <Link to='/ScholarshipForm'>Scholarship Application ></Link>
             </Grid.Column>
             <Grid.Column width={1}>
-              <Icon name='th' size='big' />
+              <Icon name='th' size='large' />
             </Grid.Column>
             <Grid.Column width={4}>
-              <Header as='h2'>Computer programming</Header>
+              <HdStyle>Essay & Recommendation</HdStyle>
               <RowStyle>
-              <p>Often the end users may not be able to provide a complete set of application
-                 objectives, detailed input, processing, or output requirements in the
-               initial stage</p>
+              <p>
+                Fill out the essay questions in the scholarship application. Tell us why you're the best 
+                candidate. Next send your recommendation letter from either a school official, employer, 
+                teacher, or member of a community organization to contact@devpointlabs.com
+              </p>
               </RowStyle>
-              <Link>Second Link ></Link>
+              <Link to='/ScholarshipForm'>Scholarship Application ></Link>              
             </Grid.Column>
             <Grid.Column width={1}>
-              <Icon name='database' size='big' />
+              <Icon name='database' size='large' />
             </Grid.Column>
             <Grid.Column width={4}>
-              <Header as='h2'>Data prototyping</Header>
+              <HdStyle>Follow Us</HdStyle>
               <RowStyle>
-              <p>In large development projects, a testbed is a platform and prototype
-                 development environment for rigorous experimentation and testing of new
-               technologies</p>
+              <p>
+                Like our Facebook page and follow us on Twitter and Instagram! This is required.
+              </p>
               </RowStyle>
-              <Link>Third Link ></Link>
+              <div>
+              <a href='https://www.facebook.com/DevPointLabs/' target='_blank' rel="noopener noreferrer">
+                <Icon name='facebook' size='big' />
+              </a>
+              <a href='https://twitter.com/devpointlabs' target='_blank' rel="noopener noreferrer">
+                <Icon name='twitter' size='big' />
+              </a>
+              <a href='https://www.instagram.com/devpointlabs/?hl=en' target='_blank' rel="noopener noreferrer">
+                <Icon name='instagram' size='big' />
+              </a>
+              </div>
             </Grid.Column>
           </Grid>
         </GridStyle>
@@ -76,24 +93,18 @@ class DPLScholarships extends React.Component {
               </Header>
               <RowStyle2>
               <p>
-                <Icon name='check circle outline' />
-                The range of functions available
-              </p>
-              <p>
-                <Icon name='check circle outline' />
-                The effect of different scenarios on the display
-              </p>
-              <p>
-                <Icon name='check circle outline' />
-                The relative priorities of the information
-              </p>
-              <p>
-                <Icon name='check circle outline' />
-                Researching about the target audience
+                From the mid 1800's to 1945 women played a significant role in conceptualizing and 
+                developing the computer programming field. Grace Hopper, who served in the Navy, 
+                had a breakthrough and built COBOL, the first programming language to use words 
+                rather than numbers. It wasn't until the 1980's that women majoring in Computer Science 
+                started to decline. We would like to change that. This scholarship is in place to promote 
+                more women in computer programming.
               </p>
               </RowStyle2>
               <BtnStyle>
-              <Button>Button</Button>
+              <Button>
+                <Link to='/ScholarshipForm'>Apply</Link>
+              </Button>
               </BtnStyle>
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={7}>
@@ -102,24 +113,17 @@ class DPLScholarships extends React.Component {
               </Header>
               <RowStyle2>
               <p>
-                <Icon name='check circle outline' />
-                Understanding the company's business goals
-              </p>
-              <p>
-                <Icon name='check circle outline' />
-                Understanding the company's business goals                
-              </p>
-              <p>
-                <Icon name='check circle outline' />
-                Collecting information about the problem
-              </p>
-              <p>
-                <Icon name='check circle outline' />
-                User-Flow diagrams and navigation maps
+                We believe it's important to support all groups in pursuing a career in tech. 
+                With diversity in the workplace we can truly empathize, create, and solve problems for 
+                the people we are building products for. We define diversity as all the ways in which 
+                we differ. These dimensions include, but are limited to: age, gender, race, sexual orientation, 
+                religion, income, mental/physical abilities, ethnic heritage, education, or military experience.
               </p>
               </RowStyle2>
               <BtnStyle>
-              <Button>Button</Button>
+              <Button>
+                <Link to='/ScholarshipForm'>Apply</Link>
+              </Button>
               </BtnStyle>
             </Grid.Column>
           </Grid>
@@ -131,40 +135,68 @@ class DPLScholarships extends React.Component {
 }
 
 const RowStyle2 = styled.div`
-  height: 10em
+  height: 13em
+  font-size: 16px
+  font-weight: 200
 ${media.giant`
   margin-top: 2.5em
+  height: 16em
+`}
+${media.tablet`
+  height: 14em
+  font-size: 14px
+`}
+${media.phone`
+  height: 13em
+`}
+${media.smPhone`
+  height: 14em
 `}
 ${media.xsPhone`
-  height: 12em
+  height: 18em
 `}
 `
 
 const RowStyle = styled.div`
-  height: 7em
+  height: 11.5em
+  font-size: 16px
+  font-weight: 200
 ${media.giant`
-  height: 10em
+  height: 12.5em
 `}
 ${media.tablet`
-  height: 13em
+  height: 15em
+  font-size: 14px
 `}
 ${media.phone`
-  height: 5em
-`}
-${media.smPhone`
-  height: 5.5em
-`}
-${media.xsPhone`
   height: 7em
 `}
+${media.smPhone`
+  height: 8em
+`}
+${media.xsPhone`
+  height: 9.5em
+`}
+`
+
+const HdStyle = styled.div`
+  font-size: 26px
+  font-weight: 600
+  height: 3em
+  ${media.giant`
+  height: 3em
+  `}
+  ${media.tablet`
+  font-size: 20px
+  `}
+  ${media.phone`
+  height: 1.5em
+  `}
 `
 
 const BtnStyle = styled.div`
 float: right
-width: 80%
-  ${media.giant`
-    width: 70%
-  `}
+width: 70%
 `
 
 const GridStyle2 = styled.div`
@@ -179,26 +211,33 @@ const GridStyle2 = styled.div`
   padding-left: 8em
   `}
   ${media.tablet`
-  width: 100%
-  padding-left: 3em
+  width: 90%
+  padding-left: 2em
   margin-top: 2em
   margin-bottom: 2em
   `}
-  ${media.smPhone`
-  padding-left: 2em  
+  ${media.phone`
+  padding-left: 1em  
   `}
 `
 
 const GridStyle = styled.div`
   width: 80%
-  margin-left: auto
-  margin-right: auto
-  margin-top: 3em
-  margin-bottom: 4em
-  ${media.tablet`
-  width: 90%
+  margin-left: 13em
   margin-top: 2em
+  margin-bottom: 4em
+  ${media.giant`
+  width: 100%
+  margin-left: 2em
+  `}
+  ${media.tablet`
   margin-bottom: 2em
+  `}
+  ${media.phone`
+  width: 90%
+  `}
+  ${media.smPhone`
+  margin-left: 1em
   `}
 `
 
@@ -230,7 +269,7 @@ const ContentStyle = styled.div`
 const HeaderStyle = styled.text`
   font-size: 3em
   font-weight: 600
-  ${media.phone`
+  ${media.tablet`
   font-size: 2em
   `}
 `

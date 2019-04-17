@@ -29,6 +29,7 @@ class AboutDPL extends React.Component {
     const { abouts } = this.state;
 
     return (
+<<<<<<< HEAD
       <>
         <Link to="/AboutForm">
           <Button>
@@ -36,10 +37,20 @@ class AboutDPL extends React.Component {
             Add Content To About DPL
           </Button>
         </Link>
+=======
+      <> 
+      <Link to='/AboutForm'>
+        <Button>
+          <Icon name='add square' />
+          Add Content To About DPL
+        </Button>
+      </Link>
+>>>>>>> bf5531c1e701e0d5ec826cbc8ad7259724181102
         <Container style={{ width: "55%" }}>
           <AbText>ABOUT</AbText>
           <DevHead as="h1">DevPoint Labs</DevHead>
           <br />
+<<<<<<< HEAD
           {abouts.map(about => (
             <div key={about.id}>
               <AbBody>{about.abBody1}</AbBody>
@@ -63,6 +74,37 @@ class AboutDPL extends React.Component {
               </Button>
             </div>
           ))}
+=======
+      {abouts.map(about =>
+          <div key={about.id}>
+          <AbBody>
+            {about.abBody1}
+          </AbBody>
+          <br />
+          <br />
+          <AbBody>
+            {about.abBody2}
+          </AbBody>
+          <AbBody>
+            {about.abBody3}
+          </AbBody>
+          <br />
+          <br />
+          <Button>
+            <Link to={`/About/${about.id}/edit`} as={Button}>
+              <Icon name='edit' size='small' />
+              Edit Content of About DPL
+            </Link>
+          </Button>
+          <br />
+          <br />
+          <Button onClick={() => this.handleDelete(about.id)}>
+            <Icon name='trash' size='small' />
+            Delete Content of About DPL
+          </Button>
+          </div>
+      )}
+>>>>>>> bf5531c1e701e0d5ec826cbc8ad7259724181102
         </Container>
       </>
     );
