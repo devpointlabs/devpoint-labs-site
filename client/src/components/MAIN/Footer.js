@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SubscribeForm from "../Subscribe/SubscribeForm";
 import { media } from "../../theme/media";
 import icon from "../../assets/icons/Beaker-white.png";
+import { Link } from 'react-router-dom'
 
 class Footer extends React.Component {
   render() {
@@ -31,34 +32,30 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <HeadStyle class="ui header"> First Column </HeadStyle>
+                  <HeadStyle class="ui header"> Courses </HeadStyle>
                   <div class="ui link list">
-                    <br />
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                  
+                    <Link to='./FullTimeUtah' style={{ color: "white" }} class="item">
                       {" "}
-                      Link one
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                      Full Time Utah
+                    </Link>
+                    <Link to='./PartTimeUtah' style={{ color: "white" }} class="item">
                       {" "}
-                      Link two
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                      Part Time Utah
+                    </Link>
+                    <Link to='./PartTimeLV' style={{ color: "white" }} class="item">
                       {" "}
-                      Link three
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
-                      {" "}
-                      Link four
-                    </a>
+                      Part Time Las Vegas
+                    </Link>
+                  
                   </div>
                 </ColumnStyle1>
                 <ColumnStyle2
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <HeadStyle class="ui header"> Second Column </HeadStyle>
+                  <HeadStyle class="ui header"> About </HeadStyle>
                   <div class="ui link list">
-                    <br />
                     <a ref="Link one" style={{ color: "white" }} class="item">
                       {" "}
                       Link one
@@ -81,24 +78,19 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <HeadStyle class="ui header"> Third Column </HeadStyle>
+                  <HeadStyle class="ui header"> Community </HeadStyle>
                   <div class="ui link list">
-                    <br />
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                    <a href="https://www.meetup.com/devpoint-labs/" style={{ color: "white" }} class="item">
                       {" "}
-                      Link one
+                      Events
                     </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                    <a href="https://devpointlabs.tumblr.com/" style={{ color: "white" }} class="item">
                       {" "}
-                      Link two
+                      Blog
                     </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                    <a href="https://devpointlabs.bigcartel.com/" style={{ color: "white" }} class="item">
                       {" "}
-                      Link three
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
-                      {" "}
-                      Link four
+                      Shop
                     </a>
                   </div>
                 </ColumnStyle3>
