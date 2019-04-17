@@ -56,22 +56,18 @@ class Footer extends React.Component {
                 >
                   <HeadStyle class="ui header"> About </HeadStyle>
                   <div class="ui link list">
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                    <Link to='./About' style={{ color: "white" }} class="item">
                       {" "}
-                      Link one
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                      DevPoint
+                    </Link>
+                    <Link to='./ApplicationsForm' style={{ color: "white" }} class="item">
                       {" "}
-                      Link two
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                      Apply Now
+                    </Link>
+                    <Link to='./DPLScholarships' style={{ color: "white" }} class="item">
                       {" "}
-                      Link three
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
-                      {" "}
-                      Link four
-                    </a>
+                      Scholarships
+                    </Link>
                   </div>
                 </ColumnStyle2>
                 <ColumnStyle3
