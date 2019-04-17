@@ -14,7 +14,7 @@ const MobileReviews = () => {
 
   return (
     <>
-      <SegStyle style={{ background: "#e4dced" }}>
+      <SegStyle style={{ background: `linear-gradient(to bottom, ${colors.darkGrey}, ${colors.black})`, color: `${colors.white}` }}>
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -22,10 +22,10 @@ const MobileReviews = () => {
         >
           <Carousel.Item>
             <RevStyle>
-              <Icon name="user circle outline" size="big" />
+              <Icon as={IconStyle} name="user circle outline" size="big" />
               <br />
               <br />
-              <p>
+              <p style={{ color: `${colors.lightPurp}`}}>
                 This course is difficult but rewarding if your willing to
                 put in the effort and time. Instructor and the staff is
                 awesome but if you dont give it your all that all means
@@ -33,30 +33,30 @@ const MobileReviews = () => {
                 highly recommend this course!
                     </p>
               <h3 color="#2d2d2d">Usong Cho</h3>
-              <p>U of U Full-Time Student</p>
+              <p style={{ color: `${colors.purp}`, opacity: '.6'}}>U of U Full-Time Student</p>
             </RevStyle>
           </Carousel.Item>
           <Carousel.Item>
             <RevStyle>
-              <Icon name="user circle outline" size="big" />
+              <Icon as={IconStyle} name="user circle outline" size="big" />
               <br />
               <br />
-              <p>
+              <p style={{ color: `${colors.lightPurp}`}}>
                 It was incredibly challenging and satisfying. The
                 curriculum was difficult but there was always consistent
                 and relevant support from the instructors, the TAs as well
                 as the active mentors. I would do it again.
                     </p>
               <h3>Bryan Holbrook</h3>
-              <p>Co-founder of Forma DS</p>
+              <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Co-founder of Forma DS</p>
             </RevStyle>
           </Carousel.Item>
           <Carousel.Item>
             <RevStyle>
-              <Icon name="user circle outline" size="big" />
+              <Icon as={IconStyle} name="user circle outline" size="big" />
               <br />
               <br />
-              <p>
+              <p style={{ color: `${colors.lightPurp}`}}>
                 I graduated from DevPoint Labs in January '18, and just
                 over a year later it's proven to be one of the best
                 decisions I have ever made in my career. The DPL fulltime
@@ -65,31 +65,47 @@ const MobileReviews = () => {
                 of an intensive 11 weeks.
                     </p>
               <h3>Dan</h3>
-              <p>Full Stack Software Engineer</p>
+              <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Full Stack Software Engineer</p>
             </RevStyle>
           </Carousel.Item>
         </Carousel>
-      </SegStyle>
       <div style={{ textAlign: 'center' }}>
         <a
           href="https://www.coursereport.com/schools/devpoint-labs#/reviews"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Button color="grey">
             See more Reviews
-                      </Button>
+          </Button>
         </a>
       </div>
+      </SegStyle>
     </>
   )
 }
+
+const colors = {
+  black: `#141414`,
+  darkGrey: `#2d2d2d`,
+  grey: `#757575`,
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  white: `#FFFFFF`,
+  lightPurp: '#e4dced',
+}
+
+const IconStyle = styled(Icon)`
+  color: ${colors.purp}
+  opacity: .6 !important
+`
 
 const SegStyle = styled(Segment)`
   width: 100%
   font-size: 16px
   text-align: center
   font-weight: 200
-  height: 22em
+  height: 26em
 `
 const RevStyle = styled.div`
   height: 21em

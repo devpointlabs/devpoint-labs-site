@@ -1,116 +1,130 @@
-import React, { useState, useEffect, } from "react";
+import React from "react";
 import axios from "axios";
 import { Form, } from "semantic-ui-react";
 
-const CourseForm = (props) => {
-  const [imageUrl, setImageUrl] = useState("");
-  const [description, setDescription] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [schedule, setSchedule] = useState("");
-  const [cost, setCost] = useState("");
-  const [location, setLocation] = useState("");
-  const [season, setSeason] = useState("");
-  const [cohorts, setCohorts] = useState([]);
+class CourseForm extends React.Component {
+  defaultValues = {
+    image_url: "",
+    season: "",
+    description: "",
+    start_date: "",
+    schedule: "",
+    cost: "",
+    location: "",
+  }
+  state = { ...this.defaultValues }
 
-  const handleImageUrlChange = (e) => {
-    setImageUrl(e.target.value);
-  }
-  const handleSeasonChange = (e) => {
-    setSeason(e.target.value);
-  }
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
-  }
-  const handleStartDateChange = (e) => {
-    setStartDate(e.target.value);
-  }
-  const handleScheduleChange = (e) => {
-    setSchedule(e.target.value);
-  }
-  const handleCostChange = (e) => {
-    setCost(e.target.value);
-  }
-  const handleLocationChange = (e) => {
-    setLocation(e.target.value);
-  }
-
-  useEffect( () => {
-    axios.get(`/api/cohorts/`)
-      .then( res => setCohorts(res.data) )
-  }, [])
-
-  const handleSubmit = (e) => {
+  componentDidMount() {
+    const { match: { params: { id } } } = this.props
+    if (id)
+    axios.get(`/api/cohorts/${id}`)
+        .then(res => {
+            this.setState({ 
+              image_url: res.data.image_url, 
+              season: res.data.season,
+              description: res.data.description,
+              start_date: res.data.start_date,
+              schedule: res.data.schedule,
+              cost: res.data.cost,
+              location: res.data.location,
+            })
+        })
+        .catch(err => {
+            console.log(err.response)
+        })
+}  
+  
+  
+  handleSubmit = e => {
     e.preventDefault();
-    axios.post("/api/cohorts", { imageUrl, season, description, startDate, schedule, cost, location, })
-      .then( res => {
-      })
+    const cohort = this.state
+    const { match: { params: {id } }, history: { push } } = this.props
+    if (id) {
+    axios.put(`/api/cohorts/${id}`, cohort)
+      .then( res => push(`/EditCourses`))
+    }
   }
 
-return (
-    <>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group widths="equal">
-          <Form.Input
-            label="ImageUrl"
-            placeholder="ImageUrl"
-            name="imageUrl"
-            required
-            onChange={handleImageUrlChange}
-            value={imageUrl}
-          />
-          <Form.Input
-            label="Season"
-            placeholder="Season"
-            name="season"
-            required
-            onChange={handleSeasonChange}
-            value={season}
-          />
-          <Form.Input
-            label="Description"
-            placeholder="Description"
-            name="description"
-            required
-            onChange={handleDescriptionChange}
-            value={description}
-          />
-          <Form.Input
-            label="StartDate"
-            placeholder="StartDate"
-            name="startDate"
-            required
-            onChange={handleStartDateChange}
-            value={startDate}
-          />
-          <Form.Input
-            label="Schedule"
-            placeholder="Schedule"
-            name="schedule"
-            required
-            onChange={handleScheduleChange}
-            value={schedule}
-          />
-          <Form.Input
-            label="Cost"
-            placeholder="Cost"
-            name="cost"
-            required
-            onChange={handleCostChange}
-            value={cost}
-          />
-          <Form.Input
-            label="Location"
-            placeholder="Location"
-            name="location"
-            required
-            onChange={handleLocationChange}
-            value={location}
-          />
-        </Form.Group>
-        <Form.Button>Submit</Form.Button>
-      </Form>
-    </>
-  )
+  handleChange = e => {
+    const { target: { name, value } } = e;
+    this.setState({ [name]: value });
+  };
+
+  render() {
+    const {
+      image_url,
+      season,
+      description,
+      start_date,
+      schedule,
+      cost,
+      location
+      } = this.state
+    return (
+      <>
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group widths="equal">
+            <Form.Input
+              label="Image_url"
+              placeholder="Image_url"
+              name="image_url"
+              onChange={this.handleChange}
+              value={image_url}
+            />
+            <Form.Input
+              label="Season"
+              placeholder="Season"
+              name="season"
+              required
+              onChange={this.handleChange}
+              value={season}
+            />
+            <Form.Input
+              label="Description"
+              placeholder="Description"
+              name="description"
+              required
+              onChange={this.handleChange}
+              value={description}
+            />
+            <Form.Input
+              label="Start_date"
+              placeholder="Start_date"
+              name="start_date"
+              required
+              onChange={this.handleChange}
+              value={start_date}
+            />
+            <Form.Input
+              label="Schedule"
+              placeholder="Schedule"
+              name="schedule"
+              required
+              onChange={this.handleChange}
+              value={schedule}
+            />
+            <Form.Input
+              label="Cost"
+              placeholder="Cost"
+              name="cost"
+              required
+              onChange={this.handleChange}
+              value={cost}
+            />
+            <Form.Input
+              label="Location"
+              placeholder="Location"
+              name="location"
+              required
+              onChange={this.handleChange}
+              value={location}
+            />
+          </Form.Group>
+          <Form.Button>Submit</Form.Button>
+        </Form>
+      </>
+    )
+  }
 }
 
 export default CourseForm;
