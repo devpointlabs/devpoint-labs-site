@@ -65,7 +65,7 @@ const App = () => (
           <Route exact path="/Community" component={Community} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
-          <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
+          <ProtectedRoute exact path="/Applications/:id/edit" component={AppNotesForm} />
           <Route exact path="/AboutDPL" component={AboutDPL} />
           <ProtectedRoute exact path="/AboutDPLEdit" component={AboutDPLEdit} />
           <ProtectedRoute exact path="/AboutForm" component={AboutForm} />
@@ -78,26 +78,24 @@ const App = () => (
           <Route exact path="/DPLScholarships" component={DPLScholarships} />
           <Route
             exact
-            path="/Scholarships/:id/edit"
-            component={ScholarshipFormNotes}
+            path="/applications/:id"
+            render={() => <ApplicationsView />}
           />
-          <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
-          <Route exact path="/PartTimeLV" component={PartTimeLV} />
-          <Route exact path="/ContactUs" component={ContactForm} />
-          <Route exact path="/StudentHousing" component={StudentHousing} />
-          <Route exact path="/About/:id" render={() => <ApplicationsView />} />
-          <Route
+          <ProtectedRoute
             exact
             path="/scholarships/:id"
             render={() => <ScholarshipsView />}
           />
-          <Route
+          <ProtectedRoute
             exact
             path="/subscribers/:id"
             render={() => <SubscribersView />}
           />
-          <Route exact path="/contacts/:id" render={() => <ContactsView />} />
-          <Route component={NoMatch} />
+          <ProtectedRoute 
+          exact path='/contacts/:id'
+          render={() => <ContactsView />}
+          />
+          <ProtectedRoute component={NoMatch} />
         </Switch>
       </FetchUser>
     </div>
