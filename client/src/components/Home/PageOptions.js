@@ -87,7 +87,7 @@ class PageOptions extends React.Component {
                 onMouseEnter={this.handleBackground1} 
                 onMouseLeave={() => this.handleLeave()} 
                 style={ 
-                  (bG == 0) ? {
+                  (bG === 0) ? {
                     backgroundImage: `linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(${bGPic})`,
                     backgroundSize: 'cover', 
                     backgroundRepeat: 'no-repeat', 
@@ -137,7 +137,7 @@ class PageOptions extends React.Component {
               onMouseEnter={this.handleBackground2} 
               onMouseLeave={() => this.handleLeave()} 
               style={
-                (bG == 0) ? {
+                (bG === 0) ? {
                   backgroundImage: `linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${ScholarshipPic})`,
                   height: '30em', 
                   paddingRight: '3%', 
@@ -180,7 +180,7 @@ class PageOptions extends React.Component {
               onMouseEnter={this.handleBackground3} 
               onMouseLeave={() => this.handleLeave()} 
               style={
-                (bG == 0) ? {
+                (bG === 0) ? {
                   backgroundImage: `linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${StudentHousingPic})`, 
                   height: '30em', 
                   opacity: '.95'
