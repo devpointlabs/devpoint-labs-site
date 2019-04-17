@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_214759) do
+ActiveRecord::Schema.define(version: 2019_04_17_215550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,15 +69,6 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.text "notes"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "body"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
   create_table "scholarships", force: :cascade do |t|
     t.boolean "part"
     t.string "first_name"
@@ -91,7 +82,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
-    t.boolean "active"
+    t.boolean "active", default: false
     t.text "notes"
     t.string "course"
   end
@@ -134,5 +125,4 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
-  add_foreign_key "posts", "users"
 end
