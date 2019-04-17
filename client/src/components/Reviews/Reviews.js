@@ -17,7 +17,7 @@ const Reviews = () => {
 
   const renderReviews = () => {
     return (
-      <SegStyle style={{ background: `${colors.white}`, color: `${colors.darkPurp}`, boxShadow: `1em 1em 3em ${colors.darkGrey}` }}>
+      <SegStyle style={{ background: `${colors.white}`, color: `${colors.darkPurp}`, boxShadow: `0em .5em 1em ${colors.darkGrey}` }}>
         <Carousel
           activeIndex={index}
           direction={direction}
