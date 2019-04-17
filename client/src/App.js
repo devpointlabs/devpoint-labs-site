@@ -10,6 +10,8 @@ import Login from "./components/MAIN/Login";
 import Profile from "./components/Application/Profile";
 import Register from "./components/MAIN/Register";
 import { Switch, Route } from "react-router-dom";
+import EditCourses from './components/EditCourses';
+import CourseForm from './components/CourseForm';
 import FetchUser from "./components/MAIN/FetchUser";
 import ScholarshipForm from "./components/Scholarship/ScholarshipForm";
 import PartTimeUtah from "./components/PartTimeUtah/PartTimeUtah";
@@ -56,6 +58,8 @@ const App = () => (
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
+          <Route exact path="/editCourses" component={EditCourses} />
+          <Route exact path="/Cohorts/:id/edit" component={CourseForm} />
           <Route exact path="/About" component={About} />
           <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
           <Route exact path="/Community" component={Community} />
