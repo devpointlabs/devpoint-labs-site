@@ -18,7 +18,8 @@ class StudentHousing extends React.Component {
       <>
       <BannerImages />
       <HousingDetails />
-        </>
+      <Footer />
+       </>
     
     );
   }

@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_214759) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
-    t.boolean "active", default: false
+    t.boolean "active"
     t.text "notes"
     t.string "course"
   end

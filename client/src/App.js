@@ -10,13 +10,11 @@ import Login from "./components/MAIN/Login";
 import Profile from './components/Application/Profile'
 import Register from "./components/MAIN/Register";
 import { Switch, Route } from "react-router-dom";
-import FreeHousing from "./components/Housing/FreeHousing";
 import FetchUser from "./components/MAIN/FetchUser";
 import ScholarshipForm from "./components/Scholarship/ScholarshipForm";
 import PartTimeUtah from "./components/PartTimeUtah/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV/PartTimeLV";
 import ContactForm from "./components/Contact/ContactForm";
-import FinancingScholarships from "./components/Scholarship/FinancingScholarships";
 import StudentHousing from "./components/Housing/StudentHousing";
 import ProtectedRoute from "./components/MAIN/ProtectedRoute";
 import ApplicationsView from "./components/Application/ApplicationsView";
@@ -36,6 +34,7 @@ import ConNotesForm from './components/Contact/ConNotesForm'
 import ScholarshipFormNotes from "./components/Scholarship/ScholarshipFormNotes";
 import AppSubmitPage from './components/Application/AppSubmitPage'
 import ContactSubmitPage  from './components/Contact/ContactSubmitPage'
+import DPLScholarships from './components/Scholarship/DPLScholarships'
 
 
 const App = () => (
@@ -57,45 +56,40 @@ const App = () => (
           <Route exact path="/About" component={About} />
           <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
           <Route exact path="/Community" component={Community} />
-          <Route exact path="/freehousing" component={FreeHousing} />
           <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
           <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
-          <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
+          <ProtectedRoute exact path="/Applications/:id/edit" component={AppNotesForm} />
           <Route exact path="/AboutDPL" component={AboutDPL} />
           <ProtectedRoute exact path="/AboutDPLEdit" component={AboutDPLEdit} />
           <ProtectedRoute exact path="/AboutForm" component={AboutForm} />
           <ProtectedRoute exact path="/About/:id/edit" component={AboutEditForm} />
           <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
+          <Route exact path="/DPLScholarships" component={DPLScholarships} />
           <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
-          <Route
-            exact
-            path="/FinancingScholarships"
-            component={FinancingScholarships}
-          />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
           <Route exact path="/ContactForm" component={ContactForm} />
           <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route
             exact
-            path="/About/:id"
+            path="/applications/:id"
             render={() => <ApplicationsView />}
           />
-          <Route
+          <ProtectedRoute
             exact
             path="/scholarships/:id"
             render={() => <ScholarshipsView />}
           />
-          <Route
+          <ProtectedRoute
             exact
             path="/subscribers/:id"
             render={() => <SubscribersView />}
           />
-          <Route 
+          <ProtectedRoute 
           exact path='/contacts/:id'
           render={() => <ContactsView />}
           />
-          <Route component={NoMatch} />
+          <ProtectedRoute component={NoMatch} />
         </Switch>
       </FetchUser>
     </div>
