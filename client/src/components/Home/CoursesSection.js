@@ -100,7 +100,7 @@ const colors = {
 const styles = {
   rCardSize: {
     width: "100%",
-    height: "29.3em",
+    height: "29.5em",
     paddingTop: "15em"
   },
 

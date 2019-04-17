@@ -70,49 +70,54 @@ class App extends React.Component {
               <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
               <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
               <ProtectedRoute exact path="/Profile" component={Profile} />
-              <ProtectedRoute exact path='/Contacts' component={Contacts} />
-              <Route exact path='/ContactSubmitPage' component={ContactSubmitPage} />
+              <ProtectedRoute exact path="/Contacts" component={Contacts} />
+              <Route
+                exact
+                path="/ContactSubmitPage"
+                component={ContactSubmitPage}
+              />
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/fulltimeutah" component={FullTimeUtah} />
+              <Route exact path="/editCourses" component={EditCourses} />
+              <Route exact path="/Cohorts/:id/edit" component={CourseForm} />
               <Route exact path="/About" component={About} />
               <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
               <Route exact path="/Community" component={Community} />
               <Route exact path="/ScholarshipForm" component={ScholarshipForm} />
               <Route exact path="/ApplicationsForm" component={ApplicationsForm} />
-              <Route exact path="/Applications/:id/edit" component={AppNotesForm} />
+              <ProtectedRoute exact path="/Applications/:id/edit" component={AppNotesForm} />
               <Route exact path="/AboutDPL" component={AboutDPL} />
               <ProtectedRoute exact path="/AboutDPLEdit" component={AboutDPLEdit} />
               <ProtectedRoute exact path="/AboutForm" component={AboutForm} />
-              <ProtectedRoute exact path="/About/:id/edit" component={AboutEditForm} />
+              <ProtectedRoute
+                exact
+                path="/About/:id/edit"
+                component={AboutEditForm}
+              />
               <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
               <Route exact path="/DPLScholarships" component={DPLScholarships} />
-              <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
-              <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
-              <Route exact path="/PartTimeLV" component={PartTimeLV} />
-              <Route exact path="/ContactForm" component={ContactForm} />
-              <Route exact path="/StudentHousing" component={StudentHousing} />
               <Route
                 exact
-                path="/About/:id"
+                path="/applications/:id"
                 render={() => <ApplicationsView />}
               />
-              <Route
+              <ProtectedRoute
                 exact
                 path="/scholarships/:id"
                 render={() => <ScholarshipsView />}
               />
-              <Route
+              <ProtectedRoute
                 exact
                 path="/subscribers/:id"
                 render={() => <SubscribersView />}
               />
-              <Route
+              <ProtectedRoute
                 exact path='/contacts/:id'
                 render={() => <ContactsView />}
               />
-              <Route component={NoMatch} />
+              <ProtectedRoute component={NoMatch} />
             </Switch>
           </FetchUser>
         </div>
@@ -120,6 +125,5 @@ class App extends React.Component {
     );
   }
 }
-
 
 export default App;
