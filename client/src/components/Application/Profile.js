@@ -1,6 +1,7 @@
 import React from 'react';
 import { AuthConsumer, } from "../../providers/AuthProvider";
 import { Form, Grid, Image, Container, Divider, Header, Button, Segment } from 'semantic-ui-react';
+import styled from 'styled-components'
 import Dropzone from 'react-dropzone'
 import { Link } from 'react-router-dom'
 
@@ -122,6 +123,7 @@ class Profile extends React.Component {
               <Button onClick={this.toggleEdit}>{editing ? 'Cancel' : 'Edit'}</Button>
           </Grid.Column>
         </Grid>
+        <ButtonStyle href="/EditCourses">Update Courses</ButtonStyle>
           <Link to='/AboutDPLEdit'>
         <Button>
           Edit About Page
@@ -152,5 +154,15 @@ const styles = {
     padding: "10px",
   },
 }
+
+const ButtonStyle = styled(Button)`
+  color: white;
+  font-weight: 400;
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 export default ConnectedProfile;

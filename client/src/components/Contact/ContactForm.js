@@ -1,8 +1,9 @@
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
+import Footer from "../../components/MAIN/Footer";
 import { media } from "../../theme/media";
-import { Header, Form, Dropdown, Container } from "semantic-ui-react";
+import { Header, Form, Dropdown, Container, Button } from "semantic-ui-react";
 
 class ContactForm extends React.Component {
   defaultValues = {
@@ -70,83 +71,127 @@ class ContactForm extends React.Component {
       }
     ];
     return (
-      <FormStyle>
-        <br />
-        <Header as="h1" textAlign="center">
-          {" "}
-          DevPoint Labs - Basic Application{" "}
-        </Header>
-        <Header as="h3">
-          Thanks for your interest in DevPoint Labs! Filling out this
-          application helps us learn a little bit about you and what course
+      <>
+        <FormStyle>
           <br />
-          you're interested in. We'll get in touch with you to answer any
-          questions you might have!
-        </Header>
-        <Form
-          style={{ position: "relative", marginBottom: "15em" }}
-          onSubmit={this.handleSubmit}
-        >
-          <Form.Input
-            label="First Name"
-            name="firstname"
-            placeholder="First Name"
-            value={firstname}
-            onChange={this.handleChange}
-            required
-          />
-          <Form.Input
-            label="Last Name"
-            name="lastname"
-            placeholder="Last Name"
-            value={lastname}
-            onChange={this.handleChange}
-            required
-          />
-          <Form.Input
-            label="Email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={this.handleChange}
-            required
-          />
-          <Form.Input
-            label="Phone Number"
-            name="phone"
-            placeholder="Phone Number"
-            value={phone}
-            onChange={this.handleChange}
-            required
-          />
-          <Dropdown
-            placeholder="Which course are you interested in?"
-            fluid
-            value={course}
-            selection
-            options={options}
-          />
-          <br />
-          <Dropdown
-            placeholder="What location are you looking at?"
-            fluid
-            value={location}
-            selection
-            options={locOpts}
-          />
-          <Form.Input
-            label="Questions?"
-            name="comments"
-            placeholder="What would you like to know..."
-            value={comments}
-            onChange={this.handleChange}
-          />
-          <Form.Button onClick={this.handleSubmit}>Submit</Form.Button>
-        </Form>
-      </FormStyle>
+          <div
+            style={{
+              textAlign: "center",
+              fontSize: "2em",
+              fontWeight: "100",
+              lineHeight: "1.5"
+            }}
+          >
+            DevPoint Labs - Basic Application{" "}
+          </div>
+          <h4 textAlign="center">
+            Thanks for your interest in DevPoint Labs! Filling out this
+            application helps us learn a little bit about you and what course
+            <br />
+            you're interested in. We'll get in touch with you to answer any
+            questions you might have!
+          </h4>
+          <Form
+            style={{ position: "relative", marginBottom: "15em" }}
+            onSubmit={this.handleSubmit}
+          >
+            <Form.Input
+              label="First Name"
+              name="firstname"
+              placeholder="First Name"
+              value={firstname}
+              onChange={this.handleChange}
+              required
+            />
+            <Form.Input
+              label="Last Name"
+              name="lastname"
+              placeholder="Last Name"
+              value={lastname}
+              onChange={this.handleChange}
+              required
+            />
+            <Form.Input
+              label="Email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={this.handleChange}
+              required
+            />
+            <Form.Input
+              label="Phone Number"
+              name="phone"
+              placeholder="Phone Number"
+              value={phone}
+              onChange={this.handleChange}
+              required
+            />
+            <Dropdown
+              placeholder="Which course are you interested in?"
+              fluid
+              value={course}
+              selection
+              options={options}
+            />
+            <br />
+            <Dropdown
+              placeholder="What location are you looking at?"
+              fluid
+              value={location}
+              selection
+              options={locOpts}
+            />
+            <Form.Input
+              label="Questions?"
+              name="comments"
+              placeholder="What would you like to know..."
+              value={comments}
+              onChange={this.handleChange}
+            />
+            <ButtonStyle>
+              <ButtLink onClick={this.handleSubmit} href="/AppSubmitPage">
+                Submit
+              </ButtLink>
+            </ButtonStyle>
+          </Form>
+        </FormStyle>
+        <Footer />
+      </>
     );
   }
 }
+
+const ButtonStyle = styled.div`
+  border-radius: 3%
+  padding: 10px;
+  background-color: #53407a;
+  font-weight: 400;
+  position: absolute;
+  text-align: center;
+  ${media.phone`
+    width: 500px;
+  `}
+  ${media.tablet`
+    width: 35%;
+  `}
+`;
+
+const ButtLink = styled.a`
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: none;
+    color: #141414;
+  }
+  ${media.tablet`
+    font-size: 1em
+  `} ${media.phone`
+    font-size: 1em;
+  `};
+`;
 
 const FormStyle = styled(Container)`
   margin: 5em ${media.phone`
