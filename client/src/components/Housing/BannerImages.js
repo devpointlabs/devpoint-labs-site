@@ -1,8 +1,14 @@
 import React from "react";
-import { Image } from "semantic-ui-react";
+import {
+  Button,
+  Image,
+  Icon, 
+  Container,
+} from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import { media } from "../../theme/media";
 import styled from "styled-components";
-import GirlCodes from "../../assets/images/girlcodes.JPG";
+import teamimage from "../../assets/images/teamphoto.png";
 import dayinlife from "../../assets/images/coderscropped.jpg";
 import blackbeak from "../../assets/icons/blackbeaker.png";
 
@@ -10,27 +16,28 @@ const Topimages = () => {
   return (
     <>
       <OvrP>
-        <TeamImage src={GirlCodes} />
-        <TagText>DEVPOINT LABS | WEB DEVELOPMENT</TagText>
-        <TeamText>Part-time Web Development</TeamText>
+        <TeamImage src={teamimage} />
+        <TagText>DEVPOINT LABS | STUDENT HOUSING</TagText>
+        <TeamText>Free Student Housing</TeamText>
         <TeamMeta>
-          Learn why we're the best at what we do and why we're regarded <br />{" "}
-          as one of the best in the edtech industry today.
+          Fully Furnished free student housing steps away from campus!
         </TeamMeta>
         <ButtonStyle>
           <ButtLink href="/ApplicationsForm">Apply Now</ButtLink>
         </ButtonStyle>
       </OvrP>
+      <Container>
       <BannerTwo>
-        <BlackBeak src={blackbeak} />
-        <BTHead>DevPoint lab's 12 week</BTHead>
+        <BTHead>Student Housing at No Cost.</BTHead>
         <BTFont>
-          More than just code. Whether you’re a local or coming from
-          out-of-state <br /> we blend students into a vibrant developer
-          community <br />
-          building life long friendships.
+          At DevPoint Labs our goal has been to be the most accessible school in
+          <br/>
+          the country. With free housing included, you can focus on achieving your
+          <br/>
+          goals and getting ready for the industry.
         </BTFont>
       </BannerTwo>
+      </Container>
       <OvrP>
         <TeamImage src={dayinlife} />
         <BanHead>
@@ -120,7 +127,7 @@ const BTFont = styled.p`
 `;
 
 const BTHead = styled.p`
-  font-size: 34px;
+  font-size: 60px;
   font-weight: 600;
 `;
 
@@ -129,7 +136,7 @@ const BannerTwo = styled.div`
   display: flex;
   flex-direction: column;
   padding: 70px;
-  text-align: center;
+  text-align: left;
   ${media.phone`
     margin-bottom: 200px
   `}
@@ -235,7 +242,6 @@ const OvrP = styled.div`
   `}
   ${media.phone`
     position: relative;
-    background: #6E54A3;
     width: auto;
     opacity: 1
     height: 500px
@@ -271,15 +277,5 @@ const ButtonStyle = styled.div`
     width: 30%;
   `}
 `;
-
-const colors = {
-  black: `#141414`,
-  darkGrey: `#2d2d2d`,
-  grey: `#757575`,
-  darkPurp: `#53407A`,
-  purp: `#6E54A3`,
-  white: `#FFFFFF`,
-  lightPurp: "#e4dced"
-};
 
 export default Topimages;
