@@ -16,7 +16,6 @@ import ScholarshipForm from "./components/Scholarship/ScholarshipForm";
 import PartTimeUtah from "./components/PartTimeUtah/PartTimeUtah";
 import PartTimeLV from "./components/PartTimeLV/PartTimeLV";
 import ContactForm from "./components/Contact/ContactForm";
-import FinancingScholarships from "./components/Scholarship/FinancingScholarships";
 import StudentHousing from "./components/Housing/StudentHousing";
 import ProtectedRoute from "./components/MAIN/ProtectedRoute";
 import ApplicationsView from "./components/Application/ApplicationsView";
@@ -36,6 +35,7 @@ import ConNotesForm from './components/Contact/ConNotesForm'
 import ScholarshipFormNotes from "./components/Scholarship/ScholarshipFormNotes";
 import AppSubmitPage from './components/Application/AppSubmitPage'
 import ContactSubmitPage  from './components/Contact/ContactSubmitPage'
+import DPLScholarships from './components/Scholarship/DPLScholarships'
 
 
 const App = () => (
@@ -66,12 +66,8 @@ const App = () => (
           <ProtectedRoute exact path="/AboutForm" component={AboutForm} />
           <ProtectedRoute exact path="/About/:id/edit" component={AboutEditForm} />
           <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
+          <Route exact path="/DPLScholarships" component={DPLScholarships} />
           <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
-          <Route
-            exact
-            path="/FinancingScholarships"
-            component={FinancingScholarships}
-          />
           <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
           <Route exact path="/PartTimeLV" component={PartTimeLV} />
           <Route exact path="/ContactForm" component={ContactForm} />

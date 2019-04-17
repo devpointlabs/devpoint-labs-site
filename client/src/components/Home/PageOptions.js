@@ -54,7 +54,7 @@ const PageOptions = () => (
             >
               <br />
 
-              <Link to="/FinancingScholarships">More Info</Link>
+              <Link to="/DPLScholarships">More Info</Link>
             </p>
           </Grid.Column>
           <Grid.Column>
