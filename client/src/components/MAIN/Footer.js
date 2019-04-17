@@ -68,6 +68,11 @@ class Footer extends React.Component {
                       {" "}
                       Scholarships
                     </Link>
+                    <Link to='./ContactUs' style={{ color: "white" }} class="item">
+                      {" "}
+                      Contact Us
+                    </Link>
+
                   </div>
                 </ColumnStyle2>
                 <ColumnStyle3
