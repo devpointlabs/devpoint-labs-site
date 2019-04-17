@@ -35,4 +35,4 @@ export const media2 = Object.keys(sizes).reduce((finalMedia, size) => {
   };
 }, {});
 
-export default media
+// export default media
