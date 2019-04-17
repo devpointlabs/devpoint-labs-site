@@ -35,7 +35,7 @@ const HomeLogos = () => (
 const LogoGrid = styled(Grid)`
   width: 100%;
   opacity: .3 !important
-  padding-bottom: 8em !important
+  padding-bottom: 7em !important
   ${media.phone`
     visibility: hidden
   `};
