@@ -30,12 +30,12 @@ class AboutDPL extends React.Component {
 
     return (
       <> 
-      <Link to='/AboutForm'>
+      {/* <Link to='/AboutForm'>
         <Button>
           <Icon name='add square' />
           Add Content To About DPL
         </Button>
-      </Link>
+      </Link> */}
         <Container style={{ width: "55%" }}>
           <AbText>ABOUT</AbText>
           <DevHead as="h1">DevPoint Labs</DevHead>
@@ -63,10 +63,10 @@ class AboutDPL extends React.Component {
           </Button>
           <br />
           <br />
-          <Button onClick={() => this.handleDelete(about.id)}>
+          {/* <Button onClick={() => this.handleDelete(about.id)}>
             <Icon name='trash' size='small' />
             Delete Content of About DPL
-          </Button>
+          </Button> */}
           </div>
       )}
         </Container>

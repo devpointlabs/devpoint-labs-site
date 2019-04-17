@@ -1,8 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import { Form } from 'semantic-ui-react'
-import Footer from '../MAIN/Footer'
-// import { AuthConsumer } from '../../providers/AuthProvider'
 
 class AboutForm extends React.Component {
   defaultValues = {
@@ -66,23 +64,9 @@ class AboutForm extends React.Component {
           <br />
           <Form.Button>Submit</Form.Button>
         </Form>
-          <br />
-          <br />
-        <Footer />
       </>
     )
   }
 }
-
-// const ConnectedAboutForm = (props) => (
-//   <AuthConsumer>
-//     { auth => (
-//       <AboutForm
-//         { ...props }
-//         auth={auth}
-//       />
-//     )}
-//   </AuthConsumer>
-// )
 
 export default AboutForm
