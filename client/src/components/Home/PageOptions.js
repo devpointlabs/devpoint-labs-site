@@ -1,7 +1,8 @@
 import React from "react";
 import { Grid, Header, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import ScholarshipPic from '../../assets/images/applying-on-computer-min.jpg'
+import bGPic from '../../assets/images/UPic-min.png'
+import ScholarshipPic from '../../assets/images/applying-min.png'
 import StudentHousingPic from '../../assets/images/studenthousing-min.jpg'
 import styled from 'styled-components'
 import media from '../../theme/media'
@@ -40,40 +41,41 @@ class PageOptions extends React.Component {
           columns={3}
           stackable
           class="ui equal width grid"
+          style={{ boxShadow: `0 1em 1em ${colors.darkGrey}`}}
         >
         {(() => {
           switch(bG) {
             case 1:
               return <div style={{
-                        background: `linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.finearts.utah.edu/media/k2/items/cache/184b7cb84d7b456c96a0bdfbbeaa5f14_XL.jpg)`, 
+                        background: `linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(${bGPic})`, 
                         backgroundSize: 'cover', 
-                        backgroundRepeat: 'no-repeat', 
+                        backgroundRepeat: 'no-repeat !important', 
                         height: `30em`, 
                         width: '100%', 
                         position: 'absolute', 
-                        transform: 'translate(0, 1em)'
+                        transform: 'translate(1em, 1em)'
                       }}>
                       </div>  
             case 2:
               return <div style={{
-                        background: `linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(${ScholarshipPic})`, 
+                        background: `linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(${ScholarshipPic})`, 
                         backgroundSize: 'cover', 
-                        backgroundRepeat: 'no-repeat', 
+                        backgroundRepeat: 'no-repeat !important', 
                         height: `30em`, 
                         width: '100%', 
                         position: 'absolute', 
-                        transform: 'translate(0, 1em)'
+                        transform: 'translate(1em, 1em)'
                       }}>
                       </div>  
             case 3:
               return <div style={{
-                        background: `linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(${StudentHousingPic})`, 
+                        background: `linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(${StudentHousingPic})`, 
                         backgroundSize: 'cover', 
-                        backgroundRepeat: 'no-repeat', 
+                        backgroundRepeat: 'no-repeat !important', 
                         height: `30em`, 
                         width: '100%', 
                         position: 'absolute', 
-                        transform: 'translate(0, 1em)'
+                        transform: 'translate(1em, 1em)'
                       }}>
                       </div>  
             default:
@@ -86,9 +88,8 @@ class PageOptions extends React.Component {
                 onMouseLeave={() => this.handleLeave()} 
                 style={ 
                   (bG == 0) ? {
-                    backgroundImage: 'linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://www.finearts.utah.edu/media/k2/items/cache/184b7cb84d7b456c96a0bdfbbeaa5f14_XL.jpg)',
+                    backgroundImage: `linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(${bGPic})`,
                     backgroundSize: 'cover', 
-                    backgroundPosition: 'left', 
                     backgroundRepeat: 'no-repeat', 
                     height: '30em', 
                     paddingLeft: '4%', 
@@ -138,7 +139,6 @@ class PageOptions extends React.Component {
               style={
                 (bG == 0) ? {
                   backgroundImage: `linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${ScholarshipPic})`,
-                  backgroundPosition: 'center',
                   height: '30em', 
                   paddingRight: '3%', 
                   paddingLeft: '2.5%', 
