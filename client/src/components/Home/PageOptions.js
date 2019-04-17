@@ -5,7 +5,7 @@ import bGPic from '../../assets/images/UPic-min.png'
 import ScholarshipPic from '../../assets/images/applying-min.png'
 import StudentHousingPic from '../../assets/images/studenthousing-min.jpg'
 import styled from 'styled-components'
-import media from '../../theme/media'
+import { media } from '../../theme/media'
 
 class PageOptions extends React.Component {
   state = {
