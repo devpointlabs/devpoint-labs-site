@@ -7,7 +7,7 @@ import Community from "./components/Community";
 import ApplicationsForm from "./components/Application/ApplicationsForm";
 import Navbar from "./components/MAIN/Navbar";
 import Login from "./components/MAIN/Login";
-import Profile from './components/Application/Profile'
+import Profile from "./components/Application/Profile";
 import Register from "./components/MAIN/Register";
 import { Switch, Route } from "react-router-dom";
 import FetchUser from "./components/MAIN/FetchUser";
@@ -22,20 +22,19 @@ import Scholarship from "./components/Scholarship/Scholarship";
 import ScholarshipsView from "./components/Scholarship/ScholarshipsView";
 import Subscribers from "./components/Application/Subscribers";
 import SubscribersView from "./components/Subscribe/SubscribersView";
-import Contacts from './components/Contact/Contacts'
-import ContactsView from './components/Contact/ContactsView'
-import Applicants from './components/Application/Applicants'
-import AppNotesForm from './components/Application/AppNotesForm'
-import AboutDPL from './components/About/AboutDPL'
-import AboutDPLEdit from './components/About/AboutDPLEdit'
-import AboutForm from './components/About/AboutForm'
-import AboutEditForm from './components/About/AboutEditForm'
-import ConNotesForm from './components/Contact/ConNotesForm'
+import Contacts from "./components/Contact/Contacts";
+import ContactsView from "./components/Contact/ContactsView";
+import Applicants from "./components/Application/Applicants";
+import AppNotesForm from "./components/Application/AppNotesForm";
+import AboutDPL from "./components/About/AboutDPL";
+import AboutDPLEdit from "./components/About/AboutDPLEdit";
+import AboutForm from "./components/About/AboutForm";
+import AboutEditForm from "./components/About/AboutEditForm";
+import ConNotesForm from "./components/Contact/ConNotesForm";
 import ScholarshipFormNotes from "./components/Scholarship/ScholarshipFormNotes";
-import AppSubmitPage from './components/Application/AppSubmitPage'
-import ContactSubmitPage  from './components/Contact/ContactSubmitPage'
-import DPLScholarships from './components/Scholarship/DPLScholarships'
-
+import AppSubmitPage from "./components/Application/AppSubmitPage";
+import ContactSubmitPage from "./components/Contact/ContactSubmitPage";
+import DPLScholarships from "./components/Scholarship/DPLScholarships";
 
 const App = () => (
   <Fragment>
@@ -47,8 +46,12 @@ const App = () => (
           <ProtectedRoute exact path="/Scholarship" component={Scholarship} />
           <ProtectedRoute exact path="/Subscribers" component={Subscribers} />
           <ProtectedRoute exact path="/Profile" component={Profile} />
-          <ProtectedRoute exact path='/Contacts' component={Contacts} />
-          <Route exact path='/ContactSubmitPage' component={ContactSubmitPage} />
+          <ProtectedRoute exact path="/Contacts" component={Contacts} />
+          <Route
+            exact
+            path="/ContactSubmitPage"
+            component={ContactSubmitPage}
+          />
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
@@ -62,19 +65,23 @@ const App = () => (
           <Route exact path="/AboutDPL" component={AboutDPL} />
           <ProtectedRoute exact path="/AboutDPLEdit" component={AboutDPLEdit} />
           <ProtectedRoute exact path="/AboutForm" component={AboutForm} />
-          <ProtectedRoute exact path="/About/:id/edit" component={AboutEditForm} />
+          <ProtectedRoute
+            exact
+            path="/About/:id/edit"
+            component={AboutEditForm}
+          />
           <Route exact path="/Contacts/:id/edit" component={ConNotesForm} />
           <Route exact path="/DPLScholarships" component={DPLScholarships} />
-          <Route exact path="/Scholarships/:id/edit" component={ScholarshipFormNotes} />
-          <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
-          <Route exact path="/PartTimeLV" component={PartTimeLV} />
-          <Route exact path="/ContactForm" component={ContactForm} />
-          <Route exact path="/StudentHousing" component={StudentHousing} />
           <Route
             exact
-            path="/About/:id"
-            render={() => <ApplicationsView />}
+            path="/Scholarships/:id/edit"
+            component={ScholarshipFormNotes}
           />
+          <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
+          <Route exact path="/PartTimeLV" component={PartTimeLV} />
+          <Route exact path="/ContactUs" component={ContactForm} />
+          <Route exact path="/StudentHousing" component={StudentHousing} />
+          <Route exact path="/About/:id" render={() => <ApplicationsView />} />
           <Route
             exact
             path="/scholarships/:id"
@@ -85,10 +92,7 @@ const App = () => (
             path="/subscribers/:id"
             render={() => <SubscribersView />}
           />
-          <Route 
-          exact path='/contacts/:id'
-          render={() => <ContactsView />}
-          />
+          <Route exact path="/contacts/:id" render={() => <ContactsView />} />
           <Route component={NoMatch} />
         </Switch>
       </FetchUser>
