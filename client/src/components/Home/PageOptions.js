@@ -169,7 +169,7 @@ class PageOptions extends React.Component {
                           fontSize: "1.2em"
                         }}
                       >
-                        <Link to="/FinancingScholarships">More Info</Link>
+                        <Link to="/DPLScholarships">More Info</Link>
                       </p>
                     </>
                     :
