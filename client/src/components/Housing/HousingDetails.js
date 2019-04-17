@@ -14,7 +14,7 @@ const StudentSchedule = () => (
     <Grid stackable style={styles.grid} container>
       <Grid.Row width={16}>
         <Grid.Column>
-          <Header style={{ fontSize: "3em" }} textAlign="center">
+          <Header style={{ fontSize: "4em" }} textAlign="center">
             Housing Details
           </Header>
           <br />
@@ -22,37 +22,39 @@ const StudentSchedule = () => (
       </Grid.Row>
 
       <Grid.Row>
+      <Grid.Column width={2}>
+          <StudentIcons src={AtomIcon} />
+        </Grid.Column>
+        <Grid.Column width={6}>
+          <Header as="h1">What's Included</Header>
+          <p>Utilities and amenitites including gas, water, internet, kitchenware, furniture, a bed, a washer and dryer</p>
+        </Grid.Column>
+
         <Grid.Column width={2}>
           <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">What's Included</Header>
-          <p>Utilities and amenitites including gas, water, internet, kitchenware, furniture, a bed, a washer and dryer</p>
-        </Grid.Column>
-        <Grid.Column width={2}>
-          <StudentIcons src={Skyscraper} />
-        </Grid.Column>
-        <Grid.Column width={6}>
-          <Header as="h3">What's Not Included</Header>
+          <Header as="h1">What's Not Included</Header>
           <p>Toiletries, bath towels, laundry detergent, and tupperware</p>
         </Grid.Column>
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column width={2}>
-          <StudentIcons src={SwitchIcon} />
+      <Grid.Column width={2}>
+          <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Rules</Header>
+          <Header as="h1">Rules</Header>
           <p>
             No Pets, No smoking. Pickup after yourself and follow the cleaning schedule
           </p>
         </Grid.Column>
+
         <Grid.Column width={2}>
-          <StudentIcons src={Clock} />
+          <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Move In Dates</Header>
+          <Header as="h1">Move In Dates</Header>
           <p>
             You will be contacted via email regarding move-in dates and availability for your cohort
           </p>
@@ -60,21 +62,22 @@ const StudentSchedule = () => (
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column width={2}>
-          <StudentIcons src={CompIcon} />
+      <Grid.Column width={2}>
+          <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Location</Header>
+          <Header as="h1">Location</Header>
           <p>
             The DevHouse is approximately 0.7 miles away from campus or a 14 minute walk
           </p>
         </Grid.Column>
+
         <Grid.Column width={2}>
-          <StudentIcons src={UIcon} />
+          <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Rent</Header>
-          <p>Shared Dorm-Style: Free for out-of-state full-time and part-time students on a first coem first serve basis. *Background checks will be conducted.
+          <Header as="h1">Rent</Header>
+          <p>Free for out-of-state full-time and part-time students on a first coem first serve basis. *Background checks will be conducted.
             <br />
             Security Deposit: $250($150 non-refundable for application and admin fees)
           </p>
@@ -100,8 +103,8 @@ const StudentIcons = styled(Image)`
 
 const GridStyle = styled(Container)`
   ${media2.tablet`
-      padding-left: 10% !important
-      padding-right: 10% !important
+      padding-left: 5% !important
+      padding-right: 5% !important
   `}
 `;
 

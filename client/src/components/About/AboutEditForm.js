@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import Footer from '../MAIN/Footer'
 import { Form } from 'semantic-ui-react'
 
 class AboutEditForm extends React.Component {
@@ -82,9 +81,6 @@ this.setState({ [name]: value })
           <br />
           <Form.Button>Submit</Form.Button>
         </Form>
-          <br />
-          <br />
-        <Footer />
       </>
     )
   }
