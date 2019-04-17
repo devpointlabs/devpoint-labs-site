@@ -3,7 +3,7 @@ import axios from "axios";
 import { media } from "../../theme/media";
 import styled from "styled-components";
 import Footer from "../MAIN/Footer";
-import { Form, Header, Dropdown, Container, } from "semantic-ui-react";
+import { Form, Header, Dropdown, Container } from "semantic-ui-react";
 
 class ApplicationsForm extends React.Component {
   defaultValues = {
@@ -27,13 +27,14 @@ class ApplicationsForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const application = this.state;
-    axios.post("/api/applications", application)
+    axios
+      .post("/api/applications", application)
       .then(res => {
-        this.props.history.push("/AppSubmitPage")
+        this.props.history.push("/AppSubmitPage");
       })
       .catch(err => {
-        alert('Please Fill Out All Fields Before Submitting')
-      })
+        alert("Please Fill Out All Fields Before Submitting");
+      });
   };
 
   handleChange = (e, { name, value }) => {
@@ -201,28 +202,23 @@ class ApplicationsForm extends React.Component {
     return (
       <>
         <FormStyle>
-          <Header>
-            <em>
-              <div
-                style={{
-                  textAlign: "center",
-                  fontSize: "2em",
-                  fontWeight: "100"
-                }}
-              >
-                {" "}
-                DevPoint Labs - Full Application{" "}
-              </div>
-            </em>
-            <br />
-            <em>
-              <h4 style={{ textAlign: "center" }}>
-                {" "}
-                Thanks for your Interest in DevPoint Labs! Please fill out the
-                entirety of the application.
-              </h4>
-            </em>
-          </Header>
+          <div
+            style={{
+              textAlign: "center",
+              fontSize: "2em",
+              fontWeight: "100",
+              lineHeight: "1.5"
+            }}
+          >
+            {" "}
+            DevPoint Labs - Full Application{" "}
+          </div>
+          <br />
+          <h4 style={{ textAlign: "center" }}>
+            {" "}
+            Thanks for your Interest in DevPoint Labs! Please fill out the
+            entirety of the application.
+          </h4>
           <Form
             style={{ position: "relative", marginBottom: "5em" }}
             onSubmit={this.handleSubmit}
@@ -356,7 +352,11 @@ class ApplicationsForm extends React.Component {
               name="social"
             />
             <br />
-            <Form.Button color="purple">Submit</Form.Button>
+            <ButtonStyle>
+              <ButtLink onClick={this.handleSubmit} href="/AppSubmitPage">
+                Submit
+              </ButtLink>
+            </ButtonStyle>
           </Form>
         </FormStyle>
         <Footer />
@@ -364,6 +364,37 @@ class ApplicationsForm extends React.Component {
     );
   }
 }
+
+const ButtonStyle = styled.div`
+  border-radius: 3%
+  padding: 10px;
+  background-color: #53407a;
+  font-weight: 400;
+  position: absolute;
+  text-align: center;
+  ${media.phone`
+    width: 500px;
+  `}
+  ${media.tablet`
+    width: 35%;
+  `}
+`;
+
+const ButtLink = styled.a`
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: none;
+    color: #141414;
+  }
+  ${media.tablet`
+    font-size: 1em
+  `} ${media.phone`
+    font-size: 1em;
+  `};
+`;
 
 const FormStyle = styled(Container)`
   margin: 5em ${media.tablet`

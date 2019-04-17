@@ -7,9 +7,11 @@ import Community from "./components/Community";
 import ApplicationsForm from "./components/Application/ApplicationsForm";
 import Navbar from "./components/MAIN/Navbar";
 import Login from "./components/MAIN/Login";
-import Profile from './components/Application/Profile'
+import Profile from "./components/Application/Profile";
 import Register from "./components/MAIN/Register";
 import { Switch, Route } from "react-router-dom";
+import EditCourses from './components/EditCourses';
+import CourseForm from './components/CourseForm';
 import FetchUser from "./components/MAIN/FetchUser";
 import ScholarshipForm from "./components/Scholarship/ScholarshipForm";
 import PartTimeUtah from "./components/PartTimeUtah/PartTimeUtah";
@@ -22,21 +24,19 @@ import Scholarship from "./components/Scholarship/Scholarship";
 import ScholarshipsView from "./components/Scholarship/ScholarshipsView";
 import Subscribers from "./components/Application/Subscribers";
 import SubscribersView from "./components/Subscribe/SubscribersView";
-import Contacts from './components/Contact/Contacts'
-import ContactsView from './components/Contact/ContactsView'
-import Applicants from './components/Application/Applicants'
-import AppNotesForm from './components/Application/AppNotesForm'
-import AboutDPL from './components/About/AboutDPL'
-import AboutDPLEdit from './components/About/AboutDPLEdit'
-import AboutForm from './components/About/AboutForm'
-import AboutEditForm from './components/About/AboutEditForm'
-import ConNotesForm from './components/Contact/ConNotesForm'
+import Contacts from "./components/Contact/Contacts";
+import ContactsView from "./components/Contact/ContactsView";
+import Applicants from "./components/Application/Applicants";
+import AppNotesForm from "./components/Application/AppNotesForm";
+import AboutDPL from "./components/About/AboutDPL";
+import AboutDPLEdit from "./components/About/AboutDPLEdit";
+import AboutForm from "./components/About/AboutForm";
+import AboutEditForm from "./components/About/AboutEditForm";
+import ConNotesForm from "./components/Contact/ConNotesForm";
 import ScholarshipFormNotes from "./components/Scholarship/ScholarshipFormNotes";
 import AppSubmitPage from './components/Application/AppSubmitPage'
 import ContactSubmitPage from './components/Contact/ContactSubmitPage'
 import DPLScholarships from './components/Scholarship/DPLScholarships'
-import LoadingLogo from './components/LoadingPage/LoadingLogo'
-
 
 class App extends React.Component {
 
@@ -93,7 +93,6 @@ class App extends React.Component {
               <Route exact path="/PartTimeLV" component={PartTimeLV} />
               <Route exact path="/ContactForm" component={ContactForm} />
               <Route exact path="/StudentHousing" component={StudentHousing} />
-              <Route exact path="/LoadingLogo" component={LoadingLogo} />
               <Route
                 exact
                 path="/About/:id"
