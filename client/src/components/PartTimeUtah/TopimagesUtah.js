@@ -4,6 +4,7 @@ import { media } from "../../theme/media";
 import styled from "styled-components";
 import GirlCodes from "../../assets/images/guysCode.jpg";
 import dayinlife from "../../assets/images/coderscropped.jpg";
+import LDCode from "../../assets/images/LDCode.jpg";
 import blackbeak from "../../assets/icons/blackbeaker.png";
 
 const Topimages = () => {
@@ -32,7 +33,7 @@ const Topimages = () => {
         </BTFont>
       </BannerTwo>
       <OvrP>
-        <TeamImage src={dayinlife} />
+        <TeamImage src={LDCode} />
         <BanHead>
           A Day in the life at <br /> DevPoint Labs
         </BanHead>
