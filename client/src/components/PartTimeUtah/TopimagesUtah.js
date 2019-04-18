@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "semantic-ui-react";
 import { media } from "../../theme/media";
 import styled from "styled-components";
-import GirlCodes from "../../assets/images/girlcodes.JPG";
+import GirlCodes from "../../assets/images/guysCode.jpg";
 import dayinlife from "../../assets/images/coderscropped.jpg";
 import blackbeak from "../../assets/icons/blackbeaker.png";
 
