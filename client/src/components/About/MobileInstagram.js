@@ -35,6 +35,11 @@ const MobileInstagram = () => {
         activeIndex={index}
         direction={direction}
         onSelect={handleSelect}
+        style={{ 
+          marginLeft: '2em',
+          marginRight: '2em',
+          paddingTop: '2em'
+        }}>
       >
         {photos.slice(0, 6).map(photo => (
           <Carousel.Item>
@@ -47,7 +52,9 @@ const MobileInstagram = () => {
       <Segment 
         style={{ 
           background: `${colors.lightPurp}`, 
-          boxShadow: '2px 3px 8px'
+          boxShadow: '2px 3px 8px',
+          marginLeft: '1em',
+          marginRight: '1em',
         }}>
         <TextStyle>Tagline</TextStyle>
         <HeaderStyle as='h1'>You're in good company</HeaderStyle>
