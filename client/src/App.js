@@ -60,6 +60,7 @@ const App = () => (
           <Route exact path="/fulltimeutah" component={FullTimeUtah} />
           <Route exact path="/editCourses" component={EditCourses} />
           <Route exact path="/Cohorts/:id/edit" component={CourseForm} />
+          <Route exact path="/Cohorts" component={CourseForm} />
           <Route exact path="/About" component={About} />
           <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
           <Route exact path="/Community" component={Community} />
