@@ -153,59 +153,6 @@ class EditCourses extends React.Component {
                   <CostCard style={styles.costBox} >
                     <Image src={cohort.image_url} />
                     <br />
-
-                    <CardHeader>{cohort.season}</CardHeader>
-                    <CostDes>
-                      {cohort.description}
-                    </CostDes>
-                    <ul>
-                      <CostPoint>
-                        {cohort.start_date}
-                      </CostPoint>
-                      <CostPoint>{cohort.schedule}</CostPoint>
-                      <CostPoint>{cohort.cost}</CostPoint>
-                      <CostPoint>{cohort.location}</CostPoint>
-                    </ul>
-                    <br />
-                    <Link to="/ApplicationsForm">
-                      <CardButton inverted color='blue'>Apply Now</CardButton>
-                    </Link>
-                    <br />
-                    <h5 style={{ width: '100%' }}>Or</h5>
-                    <br />
-                    <Link
-                      to="/"
-                      style={{
-                        display: 'flex !important',
-                        justifyContent: 'center !important',
-                        marginBottom: '2em',
-                        fontSize: "20px",
-                        fontStyle: "bold",
-                      }}
-                    >
-                      <CardButton inverted color='orange'>Learn More</CardButton>
-                    </Link>
-                  </CostCard>
-                  <Button >
-                    <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
-                  {/* <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
-                      </Button> */}
-                </Grid.Column>
-              )
-            })
-            }
-          </Grid.Row>
-        </Grid>
-        <Header centered>All Courses</Header>
-        <Grid stackable columns={3}>
-          <Grid.Row>
-            {cohorts.sort((a, b) => a.id - b.id).map(cohort => {
-              return (
-                <Grid.Column item={cohorts} key={cohort.id}>
-                  <CostCard style={styles.costBox} >
-                    <Image src={cohort.image_url} />
-                    <br />
-
                     <CardHeader>{cohort.season}</CardHeader>
                     <CostDes>
                       {cohort.description}
