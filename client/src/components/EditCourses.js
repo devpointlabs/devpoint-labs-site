@@ -84,8 +84,7 @@ class EditCourses extends React.Component {
                     </CostCard>
                     <Button >
                       <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
-                    <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
-                    </Button>
+                    <Button onClick={() => this.handleDelete(cohort.id)} color='black'>Delete</Button>
                   </Grid.Column>
                 )
               })
@@ -136,8 +135,7 @@ class EditCourses extends React.Component {
                     </CostCard>
                     <Button >
                       <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
-                    <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
-                    </Button>
+                    <Button onClick={() => this.handleDelete(cohort.id)} color='black'>Delete</Button>
                   </Grid.Column>
                 )
               })
