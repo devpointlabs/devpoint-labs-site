@@ -11,9 +11,7 @@ const CoursesSection = () => {
   return (
     <div
       style={{
-        backgroundImage: `linear-gradient(to left, ${colors.purp}, ${
-          colors.darkPurp
-        })`
+        backgroundImage: `linear-gradient(to left, ${colors.purp}, ${colors.darkPurp})`
       }}
     >
       <Container>
