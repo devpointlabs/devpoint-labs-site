@@ -2,7 +2,8 @@ import React from "react";
 import { Header, Container, Button, Icon } from "semantic-ui-react";
 import styled from "styled-components";
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import wallpaper from '../../assets/images/qbkls.png'
+import { media } from '../../theme/media'
 
 class AboutDPL extends React.Component {
   state = { abouts: [], }
@@ -21,8 +22,8 @@ class AboutDPL extends React.Component {
     const { abouts } = this.state
 
     return (
-      <> 
-        <Container style={{ width: "55%" }}>
+      <div style={{ background: `url(${wallpaper})`}}> 
+        <Container style={{ width: "55%", }}>
           <AbText>ABOUT</AbText>
           <DevHead as="h1">DevPoint Labs</DevHead>
           <br />
@@ -31,7 +32,6 @@ class AboutDPL extends React.Component {
           <AbBody>
             {about.abBody1}
           </AbBody>
-          <br />
           <br />
           <AbBody>
             {about.abBody2}
@@ -44,7 +44,7 @@ class AboutDPL extends React.Component {
           </div>
       )}
         </Container>
-      </>
+      </div>
     )
   }
 }
@@ -73,6 +73,9 @@ const AbBody = styled.p`
   width: 100%;
   text-align: center;
   line-height: 2
+  ${media.phone`
+    font-size: 14px
+  `}
 `;
 
 export default AboutDPL;

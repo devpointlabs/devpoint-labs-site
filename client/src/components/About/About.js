@@ -9,12 +9,7 @@ class About extends React.Component {
     return (
       <>
         <AboutDPL />
-        <br />
         <Reviews />
-        <br />
-        <br />
-        <br />
-        <br />
         <Instagram />
         <Footer />
       </>

@@ -24,7 +24,13 @@ const MobileInstagram = () => {
   }
 
   return (
-    <>
+    <div 
+      style={{
+        backgroundImage: `linear-gradient(to left, ${colors.purp}, ${
+          colors.darkPurp
+        })`
+      }}
+    >
       <Carousel
         activeIndex={index}
         direction={direction}
@@ -38,24 +44,34 @@ const MobileInstagram = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-      <Segment style={{ background: 'lightblue' }}>
+      <Segment 
+        style={{ 
+          background: `${colors.lightPurp}`, 
+          boxShadow: '2px 3px 8px'
+        }}>
         <TextStyle>Tagline</TextStyle>
         <HeaderStyle as='h1'>You're in good company</HeaderStyle>
         <TextStyle>When applied to building block a website or similar work product,
                       a Visual Guide can be an intermediate step toward.</TextStyle>
         <br />
         <a href='https://www.instagram.com/devpointlabs/?hl=en' target='_blank' rel="noopener noreferrer">
-          <Icon name='instagram' size='big' style={{ float: 'right' }} />
+          <Icon name='instagram' size='big' style={{ float: 'right', color: `${colors.darkPurp}` }} />
         </a>
         <a href='https://www.facebook.com/DevPointLabs/' target='_blank' rel="noopener noreferrer">
-          <Icon name='facebook' size='big' style={{ float: 'right' }} />
+          <Icon name='facebook' size='big' style={{ float: 'right', color: `${colors.darkPurp}` }} />
         </a>
         <Link to='/'>
-          <p>Learn More ></p>
+          <p style={{ color: `${colors.darkPurp}` }}>Learn More ></p>
         </Link>
       </Segment>
-    </>
+    </div>
   )
+}
+
+const colors = {
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  lightPurp: "#e4dced"
 }
 
 const TextStyle = styled.div`
