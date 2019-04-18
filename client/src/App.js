@@ -95,6 +95,7 @@ class App extends React.Component {
               <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
               <Route exact path="/Community" component={Community} />
               <Route exact path="/ContactUs" component={ContactForm} />
+              <Route exact path="/StudentHousing" component={StudentHousing} />
               <Route
                 exact
                 path="/ScholarshipForm"
