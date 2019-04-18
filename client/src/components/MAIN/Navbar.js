@@ -48,7 +48,11 @@ class Navbar extends React.Component {
     } else {
       return (
         <>
-          <Link to="/login" style={{ transform: "translate(0, 1em)" }}>
+          <Link 
+            to="/login" 
+            style={{ transform: "translate(0, 1em)" }}
+            onClick={this.toggleClick}
+            >
             <Menu.Item
               as={Button}
               inverted
@@ -56,12 +60,15 @@ class Navbar extends React.Component {
               id="login"
               name="login"
               active={location.pathname === "/login"}
+              
             />
           </Link>
         </>
       );
     }
   };
+
+  
 
   rightNavItems = () => {
     const {
@@ -98,7 +105,10 @@ class Navbar extends React.Component {
     } else {
       return (
         <>
-          <Link to="/login" style={{ transform: "translate(0, 1em)" }}>
+          <Link 
+            to="/login" 
+            style={{ transform: "translate(0, 1em)" }}
+            >
             <Menu.Item
               as={Button}
               inverted
@@ -213,7 +223,10 @@ class Navbar extends React.Component {
             fluid
             item
           />
-          <Link to="/ApplicationsForm">
+          <Link 
+            to="/ApplicationsForm"
+            onClick={this.toggleClick}
+            >
             <Menu.Item
               id="application"
               name="Apply Now"
