@@ -35,7 +35,7 @@ const Reviews = () => {
                   <br />
                   <br />
                   <RightText style={{ color: `${colors.purp}`}}>
-                    This course is difficult but rewarding if your willing to
+                    This course is difficult but rewarding if you're willing to
                     put in the effort and time. Instructor and the staff is
                     awesome but if you dont give it your all that all means
                     nothing. It was an awesome experience for me overall. I
