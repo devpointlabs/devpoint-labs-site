@@ -91,6 +91,7 @@ class App extends React.Component {
               <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
               <Route exact path="/editCourses" component={EditCourses} />
               <Route exact path="/Cohorts/:id/edit" component={CourseForm} />
+              <Route exact path="/Cohorts" component={CourseForm} />
               <Route exact path="/About" component={About} />
               <Route exact path="/AppSubmitPage" component={AppSubmitPage} />
               <Route exact path="/Community" component={Community} />

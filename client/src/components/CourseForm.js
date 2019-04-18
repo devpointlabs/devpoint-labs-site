@@ -4,6 +4,7 @@ import { Form, } from "semantic-ui-react";
 
 class CourseForm extends React.Component {
   defaultValues = {
+    id: "",
     image_url: "",
     season: "",
     description: "",
@@ -20,6 +21,7 @@ class CourseForm extends React.Component {
     axios.get(`/api/cohorts/${id}`)
         .then(res => {
             this.setState({ 
+              id: res.data.id,
               image_url: res.data.image_url, 
               season: res.data.season,
               description: res.data.description,
@@ -41,7 +43,10 @@ class CourseForm extends React.Component {
     const { match: { params: {id } }, history: { push } } = this.props
     if (id) {
     axios.put(`/api/cohorts/${id}`, cohort)
-      .then( res => push(`/EditCourses`))
+      .then( res => push(`/EditCourses/${id}`))
+    } else {
+      axios.post(`/api/cohorts`, cohort)
+        .then (res => push(`/EditCourses`))
     }
   }
 
@@ -52,6 +57,7 @@ class CourseForm extends React.Component {
 
   render() {
     const {
+      id,
       image_url,
       season,
       description,
@@ -64,6 +70,13 @@ class CourseForm extends React.Component {
       <>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group widths="equal">
+            <Form.Input
+              label="Id"
+              placeholder="Id"
+              name="id"
+              onChange={this.handleChange}
+              value={id}
+            />
             <Form.Input
               label="Image_url"
               placeholder="Image_url"
