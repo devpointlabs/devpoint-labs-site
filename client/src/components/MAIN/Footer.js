@@ -25,7 +25,7 @@ class Footer extends React.Component {
                   >
                     {" "}
                     All rights reserved.
-                    <br /> ©2019 FP Studio
+                    <br /> ©2019 DevPoint Labs
                   </p>
                 </LogoCon>
                 <ColumnStyle1
@@ -56,22 +56,23 @@ class Footer extends React.Component {
                 >
                   <HeadStyle class="ui header"> About </HeadStyle>
                   <div class="ui link list">
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                    <Link to='./About' style={{ color: "white" }} class="item">
                       {" "}
-                      Link one
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                      DevPoint
+                    </Link>
+                    <Link to='./ApplicationsForm' style={{ color: "white" }} class="item">
                       {" "}
-                      Link two
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                      Apply Now
+                    </Link>
+                    <Link to='./DPLScholarships' style={{ color: "white" }} class="item">
                       {" "}
-                      Link three
-                    </a>
-                    <a ref="Link one" style={{ color: "white" }} class="item">
+                      Scholarships
+                    </Link>
+                    <Link to='./ContactUs' style={{ color: "white" }} class="item">
                       {" "}
-                      Link four
-                    </a>
+                      Contact Us
+                    </Link>
+
                   </div>
                 </ColumnStyle2>
                 <ColumnStyle3
@@ -100,7 +101,7 @@ class Footer extends React.Component {
                 >
                   <HeadStyle style={{ color: "white" }} class="ui header">
                     {" "}
-                    Fourth Column{" "}
+                    {" "}
                   </HeadStyle>
                   <SubscribeForm />
                 </ColumnStyle4>
