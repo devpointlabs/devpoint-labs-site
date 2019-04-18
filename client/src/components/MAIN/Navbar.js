@@ -78,7 +78,10 @@ class Navbar extends React.Component {
           size="large"
           style={{ transform: "translate(0, 1em)" }}
         >
-          <Dropdown.Menu>
+          <Dropdown.Menu
+            direction="left"
+            style={{ transform: 'translate(0, 1em)'}}
+          >
             <Dropdown.Item text="Dashboard" href="/Profile" />
             <Dropdown.Item text="Applicants" href="/Applicants" />
             <Dropdown.Item text="Contacts" href="/Contacts" />
