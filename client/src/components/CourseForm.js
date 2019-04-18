@@ -43,7 +43,7 @@ class CourseForm extends React.Component {
     const { match: { params: {id } }, history: { push } } = this.props
     if (id) {
     axios.put(`/api/cohorts/${id}`, cohort)
-      .then( res => push(`/EditCourses/${id}`))
+      .then( res => push(`/EditCourses`))
     } else {
       axios.post(`/api/cohorts`, cohort)
         .then (res => push(`/EditCourses`))
