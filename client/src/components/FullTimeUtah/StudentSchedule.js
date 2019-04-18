@@ -11,7 +11,7 @@ import Clock from "../../assets/icons/clockicon.png";
 
 const StudentSchedule = () => (
   <GridStyle>
-    <Grid stackable style={styles.grid} container>
+    <Grid stackable style={styles.grid}>
       <Grid.Row width={16}>
         <Grid.Column>
           <Header style={{ fontSize: "3em" }} textAlign="center">
@@ -91,6 +91,16 @@ const styles = {
   }
 };
 
+const colors = {
+  black: `#141414`,
+  darkGrey: `#2d2d2d`,
+  grey: `#757575`,
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  white: `#FFFFFF`,
+  lightPurp: "#e4dced"
+};
+
 const StudentIcons = styled(Image)`
   width: 60%;
   ${media.phone`
@@ -102,7 +112,7 @@ const GridStyle = styled(Container)`
   ${media2.tablet`
       padding-left: 10% !important
       padding-right: 10% !important
-  `}
+  `};
 `;
 
 export default StudentSchedule;
