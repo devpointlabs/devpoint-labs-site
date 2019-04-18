@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Image, Grid, Segment, Icon } from 'semantic-ui-react'
+import { Image, Grid, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useWindowWidth } from '../../hooks/useWindowWidth'
@@ -20,7 +20,13 @@ const Instagram = () => {
 
   const renderPhotos = () => {
     return (
-      <Segment style={{ background: 'gainsboro' }}>
+      <div 
+        style={{
+          backgroundImage: `linear-gradient(to left, ${colors.purp}, ${
+            colors.darkPurp
+          })`
+        }}
+      >
         <GridStyle>
           <Grid stackable columns={4}>
             <Grid.Row style={styles.row}>
@@ -46,10 +52,10 @@ const Instagram = () => {
                     </Grid.Column>
                     <Grid.Column width={6}>
                       <a href='https://www.instagram.com/devpointlabs/?hl=en' target='_blank' rel="noopener noreferrer">
-                        <Icon name='instagram' size='big' style={{ float: 'right' }} />
+                        <Icon name='instagram' size='big' style={{ float: 'right', color: `${colors.darkPurp}` }} />
                       </a>
                       <a href='https://www.facebook.com/DevPointLabs/' target='_blank' rel="noopener noreferrer">
-                        <Icon name='facebook' size='big' style={{ float: 'right' }} />
+                        <Icon name='facebook' size='big' style={{ float: 'right', color: `${colors.darkPurp}` }} />
                       </a>
                     </Grid.Column>
                   </Grid>
@@ -60,10 +66,10 @@ const Instagram = () => {
         </GridStyle>
         <LinkStyle>
           <Link to='/'>
-            <p>Learn More ></p>
+            <p style={{ color: 'white', fontSize: '16px' }}>Learn More ></p>
           </Link>
         </LinkStyle>
-      </Segment>
+      </div>
     )
   }
 
@@ -80,6 +86,12 @@ const Instagram = () => {
       }
     </>
   )
+}
+
+const colors = {
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  lightPurp: "#e4dced"
 }
 
 const LinkStyle = styled.div`
@@ -136,8 +148,9 @@ const HeaderStyle = styled.text`
 `
 
 const SegStyle = styled.div`
+box-shadow: 2px 3px 8px;
 @media (max-width: 2560px) {
-  background: lightblue
+  background: ${colors.lightPurp}
   margin-top: 2em
   margin-left: 1em
   margin-right: 1em
@@ -158,6 +171,7 @@ const SegStyle = styled.div`
 `
 
 const ImgStyle = styled.div`
+box-shadow: 2px 3px 8px;
 @media (max-width: 2560px) {
   margin-top: 2em
 }
