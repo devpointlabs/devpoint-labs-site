@@ -19,6 +19,50 @@ class Navbar extends React.Component {
     });
   }
 
+  mobileNavItems = () => {
+    const {
+      auth: { user, handleLogout },
+      location
+    } = this.props;
+
+    if (user) {
+      return (
+        <Dropdown
+          text="Profile"
+          as={Menu.Item}
+        >
+          <Dropdown.Menu>
+            <Dropdown.Item text="Dashboard" href="/Profile" />
+            <Dropdown.Item text="Applicants" href="/Applicants" />
+            <Dropdown.Item text="Contacts" href="/Contacts" />
+            <Dropdown.Item text="Subscribers" href="/Subscribers" />
+            <Dropdown.Item text="Scholarships" href="/Scholarship" />
+            <Dropdown.Item
+              onClick={() => handleLogout(this.props.history)}
+              href="/"
+              text="Logout"
+            />
+          </Dropdown.Menu>
+        </Dropdown>
+      );
+    } else {
+      return (
+        <>
+          <Link to="/login" style={{ transform: "translate(0, 1em)" }}>
+            <Menu.Item
+              as={Button}
+              inverted
+              color="black"
+              id="login"
+              name="login"
+              active={location.pathname === "/login"}
+            />
+          </Link>
+        </>
+      );
+    }
+  };
+
   rightNavItems = () => {
     const {
       auth: { user, handleLogout },
@@ -34,7 +78,10 @@ class Navbar extends React.Component {
           size="large"
           style={{ transform: "translate(0, 1em)" }}
         >
-          <Dropdown.Menu>
+          <Dropdown.Menu
+            direction="left"
+            style={{ transform: 'translate(0, 1em)'}}
+          >
             <Dropdown.Item text="Dashboard" href="/Profile" />
             <Dropdown.Item text="Applicants" href="/Applicants" />
             <Dropdown.Item text="Contacts" href="/Contacts" />
@@ -114,6 +161,34 @@ class Navbar extends React.Component {
       }
     ];
 
+    const aboutOptions = [
+      {
+        key: 1,
+        text: "About DevPoint Labs",
+        value: 1,
+        href: "/About"
+      },
+      {
+        key: 2,
+        text: "Tuition & Financing",
+        value: 2,
+        href: "/ApplicationsForm"
+      },
+      {
+        key: 3,
+        text: "DPL Scholarships",
+        value: 3,
+        href: "/DPLScholarships"
+      },
+      {
+        key: 3,
+        text: "Contact",
+        value: 3,
+        href: "./ContactUs"
+      }
+    ];
+
+
     if (show)
       return (
         <Mobile>
@@ -125,13 +200,12 @@ class Navbar extends React.Component {
             item
           />
 
-          <Link as={Button} to="/about">
-            <Menu.Item
-              id="about"
-              name="about"
-              active={this.props.location.pathname === "/about"}
-            />
-          </Link>
+          <Dropdown 
+            as={Menu.Item}
+            text="About" 
+            options={aboutOptions} 
+            fluid
+            item />
           <Dropdown
             as={Menu.Item}
             text="Community"
@@ -146,7 +220,7 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === "/ApplicationsForm"}
             />
           </Link>
-          {this.rightNavItems()}
+          {this.mobileNavItems()}
         </Mobile>
       );
     else {
@@ -204,6 +278,33 @@ class Navbar extends React.Component {
       }
     ];
 
+    const aboutOptions = [
+      {
+        key: 1,
+        text: "About DevPoint Labs",
+        value: 1,
+        href: "/About"
+      },
+      {
+        key: 2,
+        text: "Tuition & Financing",
+        value: 2,
+        href: "/ApplicationsForm"
+      },
+      {
+        key: 3,
+        text: "DPL Scholarships",
+        value: 3,
+        href: "/DPLScholarships"
+      },
+      {
+        key: 3,
+        text: "Contact",
+        value: 3,
+        href: "/ContactUs"
+      }
+    ];
+
     return (
       <>
         <MenuStyles secondary>
@@ -212,13 +313,7 @@ class Navbar extends React.Component {
           </Link>
           <MenuWeb position="right">
             <Dropdown text="Courses" options={courseOptions} simple item />
-            <Link to="/about" style={{ transform: "translate(0, 1.2em)" }}>
-              <Menu.Item
-                id="about"
-                name="about"
-                active={this.props.location.pathname === "/about"}
-              />
-            </Link>
+            <Dropdown text="About" options={aboutOptions} simple item />
             <Dropdown text="Community" options={options} simple item />
             {this.rightNavItems()}
             <Link to="/ApplicationsForm">
