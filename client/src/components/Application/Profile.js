@@ -120,10 +120,10 @@ class Profile extends React.Component {
         <Grid>
           <Grid.Column textAlign="center">
             { editing ? this.editView() : this.profileView()}
-              <Button onClick={this.toggleEdit}>{editing ? 'Cancel' : 'Edit'}</Button>
+              <Button onClick={this.toggleEdit}>{editing ? 'Cancel' : 'Edit Profile'}</Button>
           </Grid.Column>
         </Grid>
-        <ButtonStyle href="/EditCourses">Update Courses</ButtonStyle>
+        <Button href="/EditCourses">Update Courses</Button>
           <Link to='/AboutDPLEdit'>
         <Button>
           Edit About Page

@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_215550) do
     t.string "experience"
     t.string "gender"
     t.string "social"
-    t.boolean "active", default: false
+    t.boolean "active"
     t.text "notes"
   end
 
@@ -82,16 +82,16 @@ ActiveRecord::Schema.define(version: 2019_04_17_215550) do
     t.string "comments2"
     t.string "comments3"
     t.string "current_city"
-    t.boolean "active", default: false
-    t.text "notes"
     t.string "course"
+    t.boolean "active"
+    t.text "notes"
   end
 
   create_table "subscribers", force: :cascade do |t|
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "active", default: false
+    t.boolean "active"
     t.text "notes"
   end
 
