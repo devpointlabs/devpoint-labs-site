@@ -11,6 +11,7 @@ import styled from "styled-components";
 import teamimage from "../../assets/images/teamphoto.png";
 import dayinlife from "../../assets/images/coderscropped.jpg";
 import blackbeak from "../../assets/icons/blackbeaker.png";
+import housingpic from "../../assets/images/housingpic.jpg";
 
 const Topimages = () => {
   return (
@@ -39,13 +40,13 @@ const Topimages = () => {
       </BannerTwo>
       </Container>
       <OvrP>
-        <TeamImage src={dayinlife} />
-        <BanHead>
+        <TeamImage src={housingpic} />
+        {/* <BanHead>
           A Day in the life at <br /> DevPoint Labs
         </BanHead>
         <BanLink>
-          <MELink href="/Community">Learn About Us ></MELink>
-        </BanLink>
+          <MELink href="/About">Learn About Us ></MELink>
+        </BanLink> */}
       </OvrP>
     </>
   );
