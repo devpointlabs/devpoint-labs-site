@@ -32,7 +32,7 @@ const colors = {
   purp: `#6E54A3`,
   white: `#FFFFFF`,
   lightPurp: "#e4dced",
-  blue: `#B2DBF1`
+  blue: `#6befd9`
 };
 
 export default Landing

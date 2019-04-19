@@ -38,7 +38,7 @@ const colors = {
   darkPurp: `#53407A`,
   purp: `#6E54A3`,
   white: `#FFFFFF`,
-  blue: `#B2DBF1`
+  blue: `#6befd9`
 };
 
 const styles = {
