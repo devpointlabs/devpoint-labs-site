@@ -56,10 +56,6 @@ class Footer extends React.Component {
                 >
                   <HeadStyle class="ui header"> About </HeadStyle>
                   <div class="ui link list">
-                    <Link to='./About' style={{ color: "white" }} class="item">
-                      {" "}
-                      DevPoint
-                    </Link>
                     <Link to='./ApplicationsForm' style={{ color: "white" }} class="item">
                       {" "}
                       Apply Now
@@ -130,7 +126,7 @@ const HeadStyle = styled.h4`
 `;
 
 const LogoCon = styled.div`
-  padding-top: 90px;
+  padding-top: 70px;
   ${media.phone`
     margin-top: 30px
     margin-left: 50px
@@ -152,7 +148,7 @@ const AppContainer = styled.div`
 
 const ColumnStyle1 = styled.div`
   margin-left: 3em;
-  margin-right: 7em;
+  margin-right: 5em;
   margin-top: 5em;
   margin-bottom: 6em;
   ${media.desktop`
@@ -171,7 +167,7 @@ const ColumnStyle1 = styled.div`
 `;
 const ColumnStyle2 = styled.div`
   margin-left: 1em;
-  margin-right: 7em;
+  margin-right: 5em;
   margin-top: 5em;
   margin-bottom: 6em;
   ${media.desktop`
@@ -209,7 +205,7 @@ const ColumnStyle3 = styled.div`
   `;
 
 const ColumnStyle4 = styled.div`
-  margin-left: 7em;
+  margin-left: 5em;
   margin-top: 5em;
   margin-bottom: 6em;
   ${media.desktop`
