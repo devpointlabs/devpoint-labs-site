@@ -180,9 +180,9 @@ class Navbar extends React.Component {
       },
       {
         key: 2,
-        text: "Tuition & Financing",
+        text: "Student Housing",
         value: 2,
-        href: "/ApplicationsForm"
+        href: "/StudentHousing"
       },
       {
         key: 3,
@@ -300,9 +300,9 @@ class Navbar extends React.Component {
       },
       {
         key: 2,
-        text: "Tuition & Financing",
+        text: "Student Housing",
         value: 2,
-        href: "/ApplicationsForm"
+        href: "/StudentHousing"
       },
       {
         key: 3,
@@ -353,7 +353,9 @@ class Navbar extends React.Component {
               {this.handleDropdown()}
               <Link to="/">
                 {this.state.show ? (
-                  <LogoStyle src="https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142677.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=2xhb01VaI25UViJMvJqZZeMcdyA%3D" />
+                  <Link to="/" onClick={this.toggleClick}>
+                    <LogoStyle src="https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142677.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=2xhb01VaI25UViJMvJqZZeMcdyA%3D" />
+                  </Link>
                 ) : (
                   <LogoStyle src="https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142674.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=WtADJjHKLaiVmZh%2BIHmiw%2FjnJPw%3D" />
                 )}

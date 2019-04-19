@@ -24,7 +24,7 @@ const Topimages = () => {
       </OvrP>
       <BannerTwo>
         <BlackBeak src={blackbeak} />
-        <BTHead>DevPoint lab's 12 week</BTHead>
+        <BTHead>DevPoint lab's 11 week</BTHead>
         <BTFont>
           More than just code. Whether you’re a local or coming from
           out-of-state <br /> we blend students into a vibrant developer
@@ -227,7 +227,7 @@ const TeamText = styled.text`
 
 const OvrP = styled.div`
   position: relative;
-  background-image: linear-gradient(grey, black);
+  background-image: linear-gradient(black, black);
   opacity: 0.9;
   ${media.tablet`
   position: relative;
@@ -236,9 +236,9 @@ const OvrP = styled.div`
   `}
   ${media.phone`
     position: relative;
-    background: #6E54A3;
+    background-image: linear-gradient(black, black);
     width: auto;
-    opacity: 1
+    opacity: 0.9
     height: 500px
   `}
 `;
@@ -247,9 +247,11 @@ const TeamImage = styled(Image)`
   position: absolute
   width: 100%;
   height: auto;
-  opacity: .3;
+  opacity: .2;
   z-index: -1;
   ${media.phone`
+    width: 900px
+    height: 500px
   `}
 `;
 

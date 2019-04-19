@@ -31,6 +31,10 @@ class PageOptions extends React.Component {
     this.setState({ bG: 0})
   }
 
+  stopClick = () => {
+    this.setState({ bG: 0})
+  }
+
   render() {
     const { bG } = this.state
 
@@ -83,6 +87,7 @@ class PageOptions extends React.Component {
         })()}
           <Grid.Row style={{ display: 'flex', alignItems: 'center'}}>
               <Grid.Column 
+                onClick={() => this.stopClick()}
                 onMouseEnter={this.handleBackground1} 
                 onMouseLeave={() => this.handleLeave()} 
                 style={ 
@@ -123,7 +128,7 @@ class PageOptions extends React.Component {
                           fontSize: "1.2em"
                         }}
                         >
-                        <a href="https://devpointlabs.continue.utah.edu/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://devpointlabs.continue.utah.edu/" target="_blank" rel="noopener noreferrer" style={{ color: `${colors.blue}`}}>
                           More Info
                         </a>
                       </p>
@@ -133,6 +138,7 @@ class PageOptions extends React.Component {
                   }
               </Grid.Column>
             <Grid.Column 
+              onClick={() => this.stopClick()}
               onMouseEnter={this.handleBackground2} 
               onMouseLeave={() => this.handleLeave()} 
               style={
@@ -168,7 +174,7 @@ class PageOptions extends React.Component {
                           fontSize: "1.2em"
                         }}
                       >
-                        <Link to="/DPLScholarships">More Info</Link>
+                        <Link to="/DPLScholarships" style={{ color: `${colors.blue}`}}>More Info</Link>
                       </p>
                     </>
                     :
@@ -176,6 +182,7 @@ class PageOptions extends React.Component {
                   }
             </Grid.Column>
             <Grid.Column 
+              onClick={() => this.stopClick()}
               onMouseEnter={this.handleBackground3} 
               onMouseLeave={() => this.handleLeave()} 
               style={
@@ -207,7 +214,7 @@ class PageOptions extends React.Component {
                         fontSize: "1.2em"
                       }}
                     >
-                      <Link to="/StudentHousing">More Info</Link>
+                      <Link to="/StudentHousing" style={{ color: `${colors.blue}`}}>More Info</Link>
                     </p>
                   </>
                   :
@@ -227,7 +234,8 @@ const colors = {
   grey: `#757575`,
   darkPurp: `#53407A`,
   purp: `#6E54A3`,
-  white: `#FFFFFF`
+  white: `#FFFFFF`,
+  blue: `#B2DBF1`
 }
 
 const OvrP = styled.div`

@@ -4,9 +4,7 @@ import { Grid, Button, Container } from "semantic-ui-react";
 const CampusTour = () => (
   <div
     style={{
-      backgroundImage: `linear-gradient(to left, ${colors.purp}, ${
-        colors.darkPurp
-      })`
+      backgroundImage: `linear-gradient(to left, ${colors.purp}, ${colors.darkPurp})`
     }}
   >
     <Container>
@@ -24,7 +22,7 @@ const CampusTour = () => (
           </p>
         </Grid.Column>
         <Grid.Column width={2} verticalAlign="middle">
-          <Button inverted color="white" href="/ContactUs">
+          <Button inverted href="/ContactUs" style={{ color: `${colors.blue}`}}>
             Schedule
           </Button>
         </Grid.Column>
@@ -40,7 +38,7 @@ const colors = {
   darkPurp: `#53407A`,
   purp: `#6E54A3`,
   white: `#FFFFFF`,
-  lightPurp: "#e4dced"
+  blue: `#B2DBF1`
 };
 
 const styles = {

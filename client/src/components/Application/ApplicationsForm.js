@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Footer from "../MAIN/Footer";
 import wallpaper from '../../assets/images/qbkls.png'
 import { Form, Header, Dropdown, Container } from "semantic-ui-react";
+import wallpaper from '../../assets/images/qbkls.png'
 
 class ApplicationsForm extends React.Component {
   defaultValues = {
@@ -216,11 +217,12 @@ class ApplicationsForm extends React.Component {
             DevPoint Labs - Full Application{" "}
           </div>
           <br />
-          <h4 style={{ textAlign: "center" }}>
+          <h4 style={{ textAlign: "justify" }}>
             {" "}
             Thanks for your Interest in DevPoint Labs! Please fill out the
             entirety of the application.
           </h4>
+          <br />
           <Form
             style={{ position: "relative", marginBottom: "5em" }}
             onSubmit={this.handleSubmit}
@@ -363,7 +365,7 @@ class ApplicationsForm extends React.Component {
         </FormStyle>
         </div>
         <Footer />
-      </>
+      </div>
     );
   }
 }
@@ -372,40 +374,31 @@ const ButtonStyle = styled.div`
   border-radius: 3%
   padding: 10px;
   background-color: #53407a;
-  font-weight: 400;
   position: absolute;
   text-align: center;
-  ${media.phone`
-    width: 500px;
-  `}
-  ${media.tablet`
-    width: 35%;
-  `}
-`;
+  `;
 
 const ButtLink = styled.a`
   text-decoration: none;
   color: white;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 400;
   &:hover {
     text-decoration: none;
     color: #141414;
   }
   ${media.tablet`
     font-size: 1em
-  `} ${media.phone`
-    font-size: 1em;
-  `};
+  `} 
 `;
 
 const FormStyle = styled(Container)`
   margin: 5em ${media.tablet`
-    padding-left: 10px !important
-    padding-right:80px !important
+    padding-left: 50px !important
+    padding-right:50px !important
     padding-top: 15px !important
   `} ${media.phone`
-    padding-left: 40px !important
+    padding-left: 10px !important
     padding-right: 10px !important
     padding-top: 15px !important
   `};
