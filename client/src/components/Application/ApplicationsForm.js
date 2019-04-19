@@ -3,6 +3,7 @@ import axios from "axios";
 import { media } from "../../theme/media";
 import styled from "styled-components";
 import Footer from "../MAIN/Footer";
+import wallpaper from '../../assets/images/qbkls.png'
 import { Form, Header, Dropdown, Container } from "semantic-ui-react";
 import wallpaper from '../../assets/images/qbkls.png'
 
@@ -201,7 +202,8 @@ class ApplicationsForm extends React.Component {
       }
     ];
     return (
-      <div style={{ padding: '1px', background: `url(${wallpaper})` }}>
+      <>
+         <div style={{ background: `url(${wallpaper})`, positon: "ab"}}> 
         <FormStyle>
           <div
             style={{
@@ -361,6 +363,7 @@ class ApplicationsForm extends React.Component {
             </ButtonStyle>
           </Form>
         </FormStyle>
+        </div>
         <Footer />
       </div>
     );
