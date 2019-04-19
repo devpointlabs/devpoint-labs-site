@@ -217,7 +217,7 @@ const FullHead = styled.text`
 
 const PTUImage = styled(Image)`
   position: absolute;
-  opacity: 0.5
+  opacity: 0.4
   z-index: -1;
   ${media.giant`
   height: 178px
@@ -229,7 +229,7 @@ const PTUImage = styled(Image)`
 `;
 const FTUImage = styled(Image)`
   position: absolute;
-  opacity: 0.4
+  opacity: 0.2
   z-index: -1;
   height: 378px
   ${media.phone`
@@ -241,7 +241,7 @@ const FTUImage = styled(Image)`
 const OvrP = styled.div`
   position: relative;
   background-image: linear-gradient(black, black);
-  opacity: 0.9;
+  opacity: 0.8;
   box-shadow: 2px 3px 8px;
   ${media.tablet`
   position: relative;
