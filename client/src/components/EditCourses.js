@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { media } from "../theme/media"
+import WinterTree from "./../assets/images/wintertree.jpg";
 import { Header, Container, Grid, Button, Card, Image } from "semantic-ui-react"
 import axios from 'axios'
 import CourseForm from './CourseForm'
@@ -40,162 +41,165 @@ class EditCourses extends React.Component {
           <Link to="/Cohorts">
             <Button inverted color='blue'>Add Course</Button>
           </Link>
-        <Header centered>SLC Fulltime</Header>
-        <Grid stackable columns={3}>
-          <Grid.Row>
-            {cohorts.sort((a, b) => a.id - b.id).slice(0, 3).map(cohort => {
-              return (
-                <Grid.Column item={cohorts} key={cohort.id}>
-                  <CostCard style={styles.costBox} >
-                    <Image src={cohort.image_url} />
-                    <br />
+          <Header centered>SLC Fulltime</Header>
+          <Grid stackable columns={3}>
+            <Grid.Row>
+              {cohorts.sort((a, b) => a.id - b.id).slice(0, 3).map(cohort => {
+                return (
+                  <Grid.Column item={cohorts} key={cohort.id}>
+                    <CostCard style={styles.costBox} >
+                      <br />
 
-                    <CardHeader>{cohort.season}</CardHeader>
-                    <CostDes>
-                      {cohort.description}
-                    </CostDes>
-                    <ul>
-                      <CostPoint>
-                        {cohort.start_date}
-                      </CostPoint>
-                      <CostPoint>{cohort.schedule}</CostPoint>
-                      <CostPoint>{cohort.cost}</CostPoint>
-                      <CostPoint>{cohort.location}</CostPoint>
-                    </ul>
-                    <br />
-                    <Link to="/ApplicationsForm">
-                      <CardButton inverted color='blue'>Apply Now</CardButton>
-                    </Link>
-                    <br />
-                    <h5 style={{ width: '100%' }}>Or</h5>
-                    <br />
-                    <Link
-                      to="/"
-                      style={{
-                        display: 'flex !important',
-                        justifyContent: 'center !important',
-                        marginBottom: '2em',
-                        fontSize: "20px",
-                        fontStyle: "bold",
-                      }}
-                    >
-                      <CardButton inverted color='orange'>Learn More</CardButton>
-                    </Link>
-                  </CostCard>
-                  <Button >
-                    <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
-                  <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
-                  </Button>
-                </Grid.Column>
-              )
-            })
-            }
-          </Grid.Row>
-        </Grid>
-        <Header centered>SLC Part-time</Header>
-        <Grid stackable columns={3}>
-          <Grid.Row>
-            {cohorts.sort((a, b) => a.id - b.id).slice(3, 6).map(cohort => {
-              return (
-                <Grid.Column item={cohorts} key={cohort.id}>
-                  <CostCard style={styles.costBox} >
-                    <Image src={cohort.image_url} />
-                    <br />
+                      <CardHeader>{cohort.season}</CardHeader>
+                      <CostDes>
+                        {cohort.description}
+                      </CostDes>
+                      <ul>
+                        <CostPoint>
+                          {cohort.start_date}
+                        </CostPoint>
+                        <CostPoint>{cohort.schedule}</CostPoint>
+                        <CostPoint>{cohort.cost}</CostPoint>
+                        <CostPoint>{cohort.location}</CostPoint>
+                      </ul>
+                      <br />
+                      <Link to="/ApplicationsForm">
+                        <Button.Group>
+                          <Button>Apply Now</Button>
+                          <Button.Or />
+                          <Button positive>Learn More</Button>
+                        </Button.Group>
+                      </Link>
+                      <br />
+                      <h5 style={{ width: '100%' }}>Or</h5>
+                      <br />
+                      <Link
+                        to="/"
+                        style={{
+                          display: 'flex !important',
+                          justifyContent: 'center !important',
+                          marginBottom: '2em',
+                          fontSize: "20px",
+                          fontStyle: "bold",
+                        }}
+                      >
+                        <CardButton inverted color='orange'>Learn More</CardButton>
+                      </Link>
+                    </CostCard>
+                    <Button >
+                      <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
+                    {/* <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
+                  </Button> */}
+                  </Grid.Column>
+                )
+              })
+              }
+            </Grid.Row>
+          </Grid>
+          <Header centered>SLC Part-time</Header>
+          <Grid stackable columns={3}>
+            <Grid.Row>
+              {cohorts.sort((a, b) => a.id - b.id).slice(3, 6).map(cohort => {
+                return (
+                  <Grid.Column item={cohorts} key={cohort.id}>
+                    <CostCard style={styles.costBox} >
+                      <Image src={WinterTree} />
+                      <br />
 
-                    <CardHeader>{cohort.season}</CardHeader>
-                    <CostDes>
-                      {cohort.description}
-                    </CostDes>
-                    <ul>
-                      <CostPoint>
-                        {cohort.start_date}
-                      </CostPoint>
-                      <CostPoint>{cohort.schedule}</CostPoint>
-                      <CostPoint>{cohort.cost}</CostPoint>
-                      <CostPoint>{cohort.location}</CostPoint>
-                    </ul>
-                    <br />
-                    <Link to="/ApplicationsForm">
-                      <CardButton inverted color='blue'>Apply Now</CardButton>
-                    </Link>
-                    <br />
-                    <h5 style={{ width: '100%' }}>Or</h5>
-                    <br />
-                    <Link
-                      to="/"
-                      style={{
-                        display: 'flex !important',
-                        justifyContent: 'center !important',
-                        marginBottom: '2em',
-                        fontSize: "20px",
-                        fontStyle: "bold",
-                      }}
-                    >
-                      <CardButton inverted color='orange'>Learn More</CardButton>
-                    </Link>
-                  </CostCard>
-                  <Button >
-                    <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
-                  {/* <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
+                      <CardHeader>{cohort.season}</CardHeader>
+                      <CostDes>
+                        {cohort.description}
+                      </CostDes>
+                      <ul>
+                        <CostPoint>
+                          {cohort.start_date}
+                        </CostPoint>
+                        <CostPoint>{cohort.schedule}</CostPoint>
+                        <CostPoint>{cohort.cost}</CostPoint>
+                        <CostPoint>{cohort.location}</CostPoint>
+                      </ul>
+                      <br />
+                      <Link to="/ApplicationsForm">
+                        <CardButton inverted color='blue'>Apply Now</CardButton>
+                      </Link>
+                      <br />
+                      <h5 style={{ width: '100%' }}>Or</h5>
+                      <br />
+                      <Link
+                        to="/"
+                        style={{
+                          display: 'flex !important',
+                          justifyContent: 'center !important',
+                          marginBottom: '2em',
+                          fontSize: "20px",
+                          fontStyle: "bold",
+                        }}
+                      >
+                        <CardButton inverted color='orange'>Learn More</CardButton>
+                      </Link>
+                    </CostCard>
+                    <Button >
+                      <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
+                    {/* <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
                       </Button> */}
-                </Grid.Column>
-              )
-            })
-            }
-          </Grid.Row>
-        </Grid>
-        <Header centered>UNLV Part-time</Header>
-        <Grid stackable columns={3}>
-          <Grid.Row>
-            {cohorts.sort((a, b) => a.id - b.id).slice(6, 9).map(cohort => {
-              return (
-                <Grid.Column item={cohorts} key={cohort.id}>
-                  <CostCard style={styles.costBox} >
-                    <Image src={cohort.image_url} />
-                    <br />
-                    <CardHeader>{cohort.season}</CardHeader>
-                    <CostDes>
-                      {cohort.description}
-                    </CostDes>
-                    <ul>
-                      <CostPoint>
-                        {cohort.start_date}
-                      </CostPoint>
-                      <CostPoint>{cohort.schedule}</CostPoint>
-                      <CostPoint>{cohort.cost}</CostPoint>
-                      <CostPoint>{cohort.location}</CostPoint>
-                    </ul>
-                    <br />
-                    <Link to="/ApplicationsForm">
-                      <CardButton inverted color='blue'>Apply Now</CardButton>
-                    </Link>
-                    <br />
-                    <h5 style={{ width: '100%' }}>Or</h5>
-                    <br />
-                    <Link
-                      to="/"
-                      style={{
-                        display: 'flex !important',
-                        justifyContent: 'center !important',
-                        marginBottom: '2em',
-                        fontSize: "20px",
-                        fontStyle: "bold",
-                      }}
-                    >
-                      <CardButton inverted color='orange'>Learn More</CardButton>
-                    </Link>
-                  </CostCard>
-                  <Button >
-                    <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
-                  {/* <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
+                  </Grid.Column>
+                )
+              })
+              }
+            </Grid.Row>
+          </Grid>
+          <Header centered>UNLV Part-time</Header>
+          <Grid stackable columns={3}>
+            <Grid.Row>
+              {cohorts.sort((a, b) => a.id - b.id).slice(6, 9).map(cohort => {
+                return (
+                  <Grid.Column item={cohorts} key={cohort.id}>
+                    <CostCard style={styles.costBox} >
+                      <Image src={WinterTree} />
+                      <br />
+                      <CardHeader>{cohort.season}</CardHeader>
+                      <CostDes>
+                        {cohort.description}
+                      </CostDes>
+                      <ul>
+                        <CostPoint>
+                          {cohort.start_date}
+                        </CostPoint>
+                        <CostPoint>{cohort.schedule}</CostPoint>
+                        <CostPoint>{cohort.cost}</CostPoint>
+                        <CostPoint>{cohort.location}</CostPoint>
+                      </ul>
+                      <br />
+                      <Link to="/ApplicationsForm">
+                        <CardButton inverted color='blue'>Apply Now</CardButton>
+                      </Link>
+                      <br />
+                      <h5 style={{ width: '100%' }}>Or</h5>
+                      <br />
+                      <Link
+                        to="/"
+                        style={{
+                          display: 'flex !important',
+                          justifyContent: 'center !important',
+                          marginBottom: '2em',
+                          fontSize: "20px",
+                          fontStyle: "bold",
+                        }}
+                      >
+                        <CardButton inverted color='orange'>Learn More</CardButton>
+                      </Link>
+                    </CostCard>
+                    <Button >
+                      <Link to={`/Cohorts/${cohort.id}/edit`} as={Button}>Edit</Link></Button>
+                    {/* <Button onClick={() => this.handleDelete(cohort.id)} color='black'>
                       </Button> */}
-                </Grid.Column>
-              )
-            })
-            }
-          </Grid.Row>
-        </Grid>
-      </CostContainer>
+                  </Grid.Column>
+                )
+              })
+              }
+            </Grid.Row>
+          </Grid>
+        </CostContainer>
       </>
     )
   }
@@ -221,6 +225,7 @@ const CostDes = styled.text`
 
 const CostCard = styled(Card)`
   height: auto;
+  background: "${WinterTree} !important";
 `;
 
 const TextContainer = styled(Container)``;
@@ -257,6 +262,11 @@ const CardButton = styled(Button)`
   ${media.phone`
     width: 7.5em
   `};
+`;
+
+const ButtonStyle = styled(Button)`
+  background-color: #53407a !important;
+  color: white !important;
 `;
 
 export default EditCourses;

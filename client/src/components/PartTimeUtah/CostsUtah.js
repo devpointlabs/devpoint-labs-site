@@ -66,28 +66,13 @@ const CostDates = props => {
                           <CostPoint>{cohort.location}</CostPoint>
                         </ul>
                         <br />
-                        <Link to="/ApplicationsForm">
-                          <CardButton inverted color="blue">
-                            Apply Now
-                          </CardButton>
-                        </Link>
+                        <Button.Group style={{ justifyContent: "center" }}>
+                          <Link href='/ApplicationsForm'><ButtonStyle>Apply Now</ButtonStyle></Link>
+                          <Button.Or />
+                          <Link to="/">
+                            <Button>Learn More</Button></Link>
+                        </Button.Group>
                         <br />
-                        <h5 style={{ width: "100%" }}>Or</h5>
-                        <br />
-                        <Link
-                          to="/"
-                          style={{
-                            display: "flex !important",
-                            justifyContent: "center !important",
-                            marginBottom: "2em",
-                            fontSize: "20px",
-                            fontStyle: "bold"
-                          }}
-                        >
-                          <CardButton inverted color="orange">
-                            Learn More
-                          </CardButton>
-                        </Link>
                       </CostCard>
                     </Grid.Column>
                   );
@@ -175,6 +160,11 @@ const CardButton = styled(Button)`
   ${media.phone`
     width: 7.5em
   `};
+`;
+
+const ButtonStyle = styled(Button)`
+  background-color: #53407a !important;
+  color: white !important;
 `;
 
 export default CostDates;

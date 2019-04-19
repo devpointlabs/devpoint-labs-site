@@ -235,9 +235,8 @@ const OvrP = styled.div`
   `}
   ${media.phone`
     position: relative;
-    background: #6E54A3;
     width: auto;
-    opacity: 1
+    opacity: 0.9
     height: 500px
   `}
 `;
@@ -249,6 +248,8 @@ const TeamImage = styled(Image)`
   opacity: .3;
   z-index: -1;
   ${media.phone`
+    width: 900px
+    height: 500px
   `}
 `;
 

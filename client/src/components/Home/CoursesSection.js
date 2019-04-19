@@ -217,17 +217,25 @@ const FullHead = styled.text`
 
 const PTUImage = styled(Image)`
   position: absolute;
-  opacity: 0.2
+  opacity: 0.4
   z-index: -1;
-  border-radius: 5%
-
+  ${media.giant`
+  height: 178px
+  `}
+  ${media.phone`
+    width: 320px
+    height: 200px
+  `}
 `;
 const FTUImage = styled(Image)`
   position: absolute;
   opacity: 0.2
   z-index: -1;
   height: 378px
-  border-radius: 5%
+  ${media.phone`
+    width: 320px
+    height: 320px
+  `}
 `;
 
 const OvrP = styled.div`
@@ -241,12 +249,12 @@ const OvrP = styled.div`
   opacity: 0.9
   `} ${media.phone`
     position: relative;
-    background: #6E54A3;
     width: auto;
-    opacity: 1
-    height: 500px
-  `};
-`;
+    opacity: 0.9
+    `};
+    `;
+    // height: 500px
+    // background: #6E54A3;
 
 const colors = {
   black: `#141414`,
