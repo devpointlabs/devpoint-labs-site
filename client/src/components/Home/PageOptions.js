@@ -31,6 +31,10 @@ class PageOptions extends React.Component {
     this.setState({ bG: 0})
   }
 
+  stopClick = () => {
+    this.setState({ bG: 0})
+  }
+
   render() {
     const { bG } = this.state
 
@@ -83,6 +87,7 @@ class PageOptions extends React.Component {
         })()}
           <Grid.Row style={{ display: 'flex', alignItems: 'center'}}>
               <Grid.Column 
+                onClick={() => this.stopClick()}
                 onMouseEnter={this.handleBackground1} 
                 onMouseLeave={() => this.handleLeave()} 
                 style={ 
@@ -133,6 +138,7 @@ class PageOptions extends React.Component {
                   }
               </Grid.Column>
             <Grid.Column 
+              onClick={() => this.stopClick()}
               onMouseEnter={this.handleBackground2} 
               onMouseLeave={() => this.handleLeave()} 
               style={
@@ -176,6 +182,7 @@ class PageOptions extends React.Component {
                   }
             </Grid.Column>
             <Grid.Column 
+              onClick={() => this.stopClick()}
               onMouseEnter={this.handleBackground3} 
               onMouseLeave={() => this.handleLeave()} 
               style={
