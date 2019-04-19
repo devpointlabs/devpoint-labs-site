@@ -11,7 +11,9 @@ const CoursesSection = () => {
   return (
     <div
       style={{
-        backgroundImage: `linear-gradient(to left, ${colors.purp}, ${colors.darkPurp})`
+        backgroundImage: `linear-gradient(to left, ${colors.purp}, ${
+          colors.darkPurp
+        })`
       }}
     >
       <Container>
@@ -217,18 +219,21 @@ const PTUImage = styled(Image)`
   position: absolute;
   opacity: 0.2
   z-index: -1;
+  border-radius: 5%
+
 `;
 const FTUImage = styled(Image)`
   position: absolute;
   opacity: 0.2
   z-index: -1;
   height: 378px
+  border-radius: 5%
 `;
 
 const OvrP = styled.div`
   position: relative;
-  background-image: linear-gradient(grey, black);
-  opacity: 0.9;
+  background-image: linear-gradient(black, black);
+  opacity: 0.8;
   box-shadow: 2px 3px 8px;
   ${media.tablet`
   position: relative;
