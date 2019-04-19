@@ -227,7 +227,7 @@ const TeamText = styled.text`
 
 const OvrP = styled.div`
   position: relative;
-  background-image: linear-gradient(grey, black);
+  background-image: linear-gradient(black, black);
   opacity: 0.9;
   ${media.tablet`
   position: relative;
@@ -247,7 +247,7 @@ const TeamImage = styled(Image)`
   position: absolute
   width: 100%;
   height: auto;
-  opacity: .3;
+  opacity: .2;
   z-index: -1;
   ${media.phone`
   `}

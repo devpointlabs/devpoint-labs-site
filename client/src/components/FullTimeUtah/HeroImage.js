@@ -226,7 +226,7 @@ const TeamText = styled.text`
 
 const OvrP = styled.div`
   position: relative;
-  background-image: linear-gradient(grey, black);
+  background-image: linear-gradient(black, black);
   opacity: 0.9;
   ${media.tablet`
   position: relative;

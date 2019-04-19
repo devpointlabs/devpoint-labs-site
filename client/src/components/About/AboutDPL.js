@@ -22,7 +22,7 @@ class AboutDPL extends React.Component {
     const { abouts } = this.state
 
     return (
-      <div style={{ background: `url(${wallpaper})`}}> 
+      <div style={{background: `url(${wallpaper})`}}> 
         <Container style={{ width: "55%", }}>
           <AbText>ABOUT</AbText>
           <DevHead as="h1">DevPoint Labs</DevHead>
