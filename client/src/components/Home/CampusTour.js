@@ -4,9 +4,7 @@ import { Grid, Button, Container } from "semantic-ui-react";
 const CampusTour = () => (
   <div
     style={{
-      backgroundImage: `linear-gradient(to left, ${colors.purp}, ${
-        colors.darkPurp
-      })`
+      backgroundImage: `linear-gradient(to left, ${colors.purp}, ${colors.darkPurp})`
     }}
   >
     <Container>

@@ -180,9 +180,9 @@ class Navbar extends React.Component {
       },
       {
         key: 2,
-        text: "Tuition & Financing",
+        text: "Student Housing",
         value: 2,
-        href: "/ApplicationsForm"
+        href: "/StudentHousing"
       },
       {
         key: 3,
@@ -300,9 +300,9 @@ class Navbar extends React.Component {
       },
       {
         key: 2,
-        text: "Tuition & Financing",
+        text: "Student Housing",
         value: 2,
-        href: "/ApplicationsForm"
+        href: "/StudentHousing"
       },
       {
         key: 3,
