@@ -24,7 +24,7 @@ const Topimages = () => {
       </OvrP>
       <BannerTwo>
         <BlackBeak src={blackbeak} />
-        <BTHead>DevPoint lab's 12 week</BTHead>
+        <BTHead>DevPoint lab's 11 week</BTHead>
         <BTFont>
           More than just code. Whether you’re a local or coming from
           out-of-state <br /> we blend students into a vibrant developer
