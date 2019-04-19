@@ -32,9 +32,21 @@ export default class SubscribeForm extends Component {
           placeholder="Email"
           value={email}
           onChange={this.handleChange}
+          style={{ opacity: '.9'}}
         />
-        <Form.Button onClick={this.handleSubmit}>Subscribe</Form.Button>
+        <Form.Button inverted style={{ color: `${colors.blue}`}} onClick={this.handleSubmit}>Subscribe</Form.Button>
       </Form>
     );
   }
 }
+
+const colors = {
+  black: `#141414`,
+  darkGrey: `#2d2d2d`,
+  grey: `#757575`,
+  darkPurp: `#53407A`,
+  purp: `#6E54A3`,
+  white: `#FFFFFF`,
+  lightPurp: "#e4dced",
+  blue: `#B2DBF1`
+};
