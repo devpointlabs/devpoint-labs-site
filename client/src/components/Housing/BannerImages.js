@@ -11,7 +11,7 @@ import styled from "styled-components";
 import teamimage from "../../assets/images/teamphoto.png";
 import dayinlife from "../../assets/images/coderscropped.jpg";
 import blackbeak from "../../assets/icons/blackbeaker.png";
-import housingpic from "../../assets/images/housingpic.jpg";
+import housingpic from "../../assets/images/sitguy.jpg";
 
 const Topimages = () => {
   return (
@@ -234,7 +234,7 @@ const TeamText = styled.text`
 
 const OvrP = styled.div`
   position: relative;
-  background-image: linear-gradient(grey, black);
+  background-image: linear-gradient(black, black);
   opacity: 0.9;
   ${media.tablet`
   position: relative;
@@ -253,7 +253,7 @@ const TeamImage = styled(Image)`
   position: absolute
   width: 100%;
   height: auto;
-  opacity: .3;
+  opacity: .2;
   z-index: -1;
   ${media.phone`
   `}
