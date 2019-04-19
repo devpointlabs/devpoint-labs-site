@@ -5,7 +5,7 @@ import Footer from '../MAIN/Footer'
 
 const AppSubmitPage = () => (
     <>
-        <Header style={{ fontSize: '4em', height: '100%' }} textAlign='center'>
+        <Header style={{ fontSize: '4em'}} textAlign='center'>
             Thank you for submitting your Application
             <br />
             <em>
