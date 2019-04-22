@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 import { Table, Header, Icon, Button, Container } from 'semantic-ui-react'
+import wallpaper from "../../assets/images/qbkls.png";
 
 
 
@@ -25,6 +26,7 @@ class Scholarship extends React.Component {
     const { scholarships } = this.state
     return (
       <>
+      <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%' }} >
         <Container>
           <Header>Scholarship Applications</Header>
           <Table celled>
@@ -58,7 +60,7 @@ class Scholarship extends React.Component {
             </Table.Body>
           </Table>
         </Container>
-
+        </div>
       </>
     )
   }
