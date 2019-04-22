@@ -38,7 +38,7 @@ const Topimages = () => {
           A Day in the life at <br /> DevPoint Labs
         </BanHead>
         <BanLink>
-          <MELink href="/Community">Learn About Us ></MELink>
+          <MELink href="/About">Learn About Us ></MELink>
         </BanLink>
       </OvrP>
     </>

@@ -18,6 +18,7 @@ class Footer extends React.Component {
                   <Image src={icon} width="60px" />
                   <p
                     style={{
+                      textAlign: "left",
                       fontSize: "14px",
                       fontWeight: "200",
                       color: "white"

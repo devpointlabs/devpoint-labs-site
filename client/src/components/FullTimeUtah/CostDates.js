@@ -67,9 +67,9 @@ const CostDates = props => {
                         </ul>
                         <br />
                         <Button.Group style={{ justifyContent: "center" }}>
-                          <Link href='/ApplicationsForm'><ButtonStyle>Apply Now</ButtonStyle></Link>
+                          <Link to='/ApplicationsForm'><ButtonStyle>Apply Now</ButtonStyle></Link>
                           <Button.Or />
-                          <Link to="/">
+                          <Link to="/ContactUs">
                             <Button>Learn More</Button></Link>
                         </Button.Group>
                         <br />
