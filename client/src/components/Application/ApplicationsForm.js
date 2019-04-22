@@ -3,8 +3,8 @@ import axios from "axios";
 import { media } from "../../theme/media";
 import styled from "styled-components";
 import Footer from "../MAIN/Footer";
+import wallpaper from "../../assets/images/qbkls.png";
 import { Form, Header, Dropdown, Container } from "semantic-ui-react";
-import wallpaper from '../../assets/images/qbkls.png'
 
 class ApplicationsForm extends React.Component {
   defaultValues = {
@@ -201,168 +201,170 @@ class ApplicationsForm extends React.Component {
       }
     ];
     return (
-      <div style={{ padding: '1px', background: `url(${wallpaper})` }}>
-        <FormStyle>
-          <div
-            style={{
-              textAlign: "center",
-              fontSize: "2em",
-              fontWeight: "100",
-              lineHeight: "1.5"
-            }}
-          >
-            {" "}
-            DevPoint Labs - Full Application{" "}
-          </div>
-          <br />
-          <h4 style={{ textAlign: "justify" }}>
-            {" "}
-            Thanks for your Interest in DevPoint Labs! Please fill out the
-            entirety of the application.
-          </h4>
-          <br />
-          <Form
-            style={{ position: "relative", marginBottom: "5em" }}
-            onSubmit={this.handleSubmit}
-          >
-            <Form.Input
-              label="First Name"
-              name="first_name"
-              placeholder="Name"
-              value={first_name}
-              onChange={this.handleChange}
-              required
-            />
-            <Form.Input
-              label="Last Name"
-              name="last_name"
-              placeholder="Name"
-              value={last_name}
-              onChange={this.handleChange}
-              required
-            />
-            <Form.Input
-              label="Email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              onChange={this.handleChange}
-              required
-            />
-            <Form.Input
-              label="Phone Number"
-              name="phone_number"
-              placeholder="Phone Number"
-              value={phone_number}
-              onChange={this.handleChange}
-              required
-            />
-            <Form.Input
-              label="Current City"
-              name="current_city"
-              placeholder="Current City"
-              type="current_city"
-              value={current_city}
-              onChange={this.handleChange}
-              required
-            />
+      <>
+        <div style={{ background: `url(${wallpaper})`, positon: "ab" }}>
+          <FormStyle>
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "2em",
+                fontWeight: "100",
+                lineHeight: "1.5"
+              }}
+            >
+              {" "}
+              DevPoint Labs - Full Application{" "}
+            </div>
             <br />
+            <h4 style={{ textAlign: "justify" }}>
+              {" "}
+              Thanks for your Interest in DevPoint Labs! Please fill out the
+              entirety of the application.
+            </h4>
             <br />
-            <em>
-              <h3>Essay Questions</h3>
-            </em>
-            <Form.Input
-              placeholder="Why Are You Applying To DevPoint Labs?"
-              name="comments"
-              value={comments}
-              onChange={this.handleChange}
-            />
-            <Form.Input
-              placeholder="What Is Your Education background?"
-              name="comments1"
-              value={comments1}
-              onChange={this.handleChange}
-            />
-            <Form.Input
-              placeholder="What Hobbies Do You Have And What Are You Passionate About In Life?"
-              name="comments2"
-              value={comments2}
-              onChange={this.handleChange}
-            />
-            <br />
-            <br />
-            <em>
-              <h3>Please Choose An Option From the Dropdowns</h3>
-            </em>
-            <Dropdown
-              placeholder="Which Course Are You Interested In?"
-              fluid
-              selection
-              options={options}
-              onChange={this.handleChange}
-              value={course}
-              name="course"
-            />
-            <br />
-            <Dropdown
-              placeholder="Which Location Are You Interested In?"
-              fluid
-              selection
-              options={options1}
-              onChange={this.handleChange}
-              value={location}
-              name="location"
-            />
-            <br />
-            <Dropdown
-              placeholder="What Do You Want To Do After Graduating Our Course?"
-              fluid
-              selection
-              options={options2}
-              onChange={this.handleChange}
-              value={grad}
-              name="grad"
-            />
-            <br />
-            <Dropdown
-              placeholder="What Is Your Coding Background?"
-              fluid
-              selection
-              options={options3}
-              onChange={this.handleChange}
-              value={experience}
-              name="experience"
-            />
-            <br />
-            <Dropdown
-              placeholder="What Is Your Gender?"
-              fluid
-              selection
-              options={options4}
-              onChange={this.handleChange}
-              value={gender}
-              name="gender"
-            />
-            <br />
-            <Dropdown
-              placeholder="How Did You Hear About Us?"
-              fluid
-              selection
-              options={options5}
-              onChange={this.handleChange}
-              value={social}
-              name="social"
-            />
-            <br />
-            <ButtonStyle>
-              <ButtLink onClick={this.handleSubmit} href="/AppSubmitPage">
-                Submit
-              </ButtLink>
-            </ButtonStyle>
-          </Form>
-        </FormStyle>
+            <Form
+              style={{ position: "relative", marginBottom: "5em" }}
+              onSubmit={this.handleSubmit}
+            >
+              <Form.Input
+                label="First Name"
+                name="first_name"
+                placeholder="Name"
+                value={first_name}
+                onChange={this.handleChange}
+                required
+              />
+              <Form.Input
+                label="Last Name"
+                name="last_name"
+                placeholder="Name"
+                value={last_name}
+                onChange={this.handleChange}
+                required
+              />
+              <Form.Input
+                label="Email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={this.handleChange}
+                required
+              />
+              <Form.Input
+                label="Phone Number"
+                name="phone_number"
+                placeholder="Phone Number"
+                value={phone_number}
+                onChange={this.handleChange}
+                required
+              />
+              <Form.Input
+                label="Current City"
+                name="current_city"
+                placeholder="Current City"
+                type="current_city"
+                value={current_city}
+                onChange={this.handleChange}
+                required
+              />
+              <br />
+              <br />
+              <em>
+                <h3>Essay Questions</h3>
+              </em>
+              <Form.Input
+                placeholder="Why Are You Applying To DevPoint Labs?"
+                name="comments"
+                value={comments}
+                onChange={this.handleChange}
+              />
+              <Form.Input
+                placeholder="What Is Your Education background?"
+                name="comments1"
+                value={comments1}
+                onChange={this.handleChange}
+              />
+              <Form.Input
+                placeholder="What Hobbies Do You Have And What Are You Passionate About In Life?"
+                name="comments2"
+                value={comments2}
+                onChange={this.handleChange}
+              />
+              <br />
+              <br />
+              <em>
+                <h3>Please Choose An Option From the Dropdowns</h3>
+              </em>
+              <Dropdown
+                placeholder="Which Course Are You Interested In?"
+                fluid
+                selection
+                options={options}
+                onChange={this.handleChange}
+                value={course}
+                name="course"
+              />
+              <br />
+              <Dropdown
+                placeholder="Which Location Are You Interested In?"
+                fluid
+                selection
+                options={options1}
+                onChange={this.handleChange}
+                value={location}
+                name="location"
+              />
+              <br />
+              <Dropdown
+                placeholder="What Do You Want To Do After Graduating Our Course?"
+                fluid
+                selection
+                options={options2}
+                onChange={this.handleChange}
+                value={grad}
+                name="grad"
+              />
+              <br />
+              <Dropdown
+                placeholder="What Is Your Coding Background?"
+                fluid
+                selection
+                options={options3}
+                onChange={this.handleChange}
+                value={experience}
+                name="experience"
+              />
+              <br />
+              <Dropdown
+                placeholder="What Is Your Gender?"
+                fluid
+                selection
+                options={options4}
+                onChange={this.handleChange}
+                value={gender}
+                name="gender"
+              />
+              <br />
+              <Dropdown
+                placeholder="How Did You Hear About Us?"
+                fluid
+                selection
+                options={options5}
+                onChange={this.handleChange}
+                value={social}
+                name="social"
+              />
+              <br />
+              <ButtonStyle>
+                <ButtLink onClick={this.handleSubmit} href="/AppSubmitPage">
+                  Submit
+                </ButtLink>
+              </ButtonStyle>
+            </Form>
+          </FormStyle>
+        </div>
         <Footer />
-      </div>
+      </>
     );
   }
 }
@@ -386,7 +388,7 @@ const ButtLink = styled.a`
   }
   ${media.tablet`
     font-size: 1em
-  `} 
+  `}
 `;
 
 const FormStyle = styled(Container)`

@@ -236,7 +236,7 @@ const OvrP = styled.div`
   ${media.phone`
     position: relative;
     width: auto;
-    opacity: 0.8
+    opacity: 0.9
     height: 500px
   `}
 `;
