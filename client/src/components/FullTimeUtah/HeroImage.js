@@ -37,7 +37,7 @@ const Topimages = () => {
           A Day in the life at <br /> DevPoint Labs
         </BanHead>
         <BanLink>
-          <MELink href="/Community">Learn About Us ></MELink>
+          <MELink href="/About">Learn About Us ></MELink>
         </BanLink>
       </OvrP>
     </>
@@ -236,7 +236,7 @@ const OvrP = styled.div`
   ${media.phone`
     position: relative;
     width: auto;
-    opacity: 0.8
+    opacity: 0.9
     height: 500px
   `}
 `;

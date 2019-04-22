@@ -24,7 +24,7 @@ const Topimages = () => {
       </OvrP>
       <BannerTwo>
         <BlackBeak src={blackbeak} />
-        <BTHead>DevPoint lab's 12 week</BTHead>
+        <BTHead>DevPoint lab's 11 week</BTHead>
         <BTFont>
           More than just code. Whether you’re a local or coming from
           out-of-state <br /> we blend students into a vibrant developer
@@ -38,7 +38,7 @@ const Topimages = () => {
           A Day in the life at <br /> DevPoint Labs
         </BanHead>
         <BanLink>
-          <MELink href="/Community">Learn About Us ></MELink>
+          <MELink href="/About">Learn About Us ></MELink>
         </BanLink>
       </OvrP>
     </>
@@ -236,9 +236,9 @@ const OvrP = styled.div`
   `}
   ${media.phone`
     position: relative;
-    background: #6E54A3;
+    background-image: linear-gradient(black, black);
     width: auto;
-    opacity: 1
+    opacity: 0.9
     height: 500px
   `}
 `;
@@ -250,6 +250,8 @@ const TeamImage = styled(Image)`
   opacity: .2;
   z-index: -1;
   ${media.phone`
+    width: 900px
+    height: 500px
   `}
 `;
 

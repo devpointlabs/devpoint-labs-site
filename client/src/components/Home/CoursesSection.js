@@ -91,7 +91,7 @@ const PartLink = styled(Link)`
   font-weight: 500;
   &:hover {
     text-decoration: none;
-    color: #141414;
+    color: #B2DBF1;
   }
   ${media.tablet`
     font-size: 1em
