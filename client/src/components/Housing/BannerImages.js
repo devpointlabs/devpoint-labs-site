@@ -41,12 +41,6 @@ const Topimages = () => {
       </Container>
       <OvrP>
         <TeamImage src={housingpic} />
-        {/* <BanHead>
-          A Day in the life at <br /> DevPoint Labs
-        </BanHead>
-        <BanLink>
-          <MELink href="/About">Learn About Us ></MELink>
-        </BanLink> */}
       </OvrP>
     </>
   );
@@ -130,6 +124,9 @@ const BTFont = styled.p`
 const BTHead = styled.p`
   font-size: 60px;
   font-weight: 600;
+  ${media.phone`
+    font-size: 35px
+  `}
 `;
 
 const BannerTwo = styled.div`
@@ -173,7 +170,7 @@ const TagText = styled.text`
   `}
   ${media.phone`
     font-size: 1em
-    padding-bottom: 50px
+    padding-bottom: 200px
   `}
   ${media.desktop`
     font-size: 1em
@@ -244,7 +241,7 @@ const OvrP = styled.div`
   ${media.phone`
     position: relative;
     width: auto;
-    opacity: 1
+    opacity: 0.8
     height: 500px
   `}
 `;
@@ -256,6 +253,10 @@ const TeamImage = styled(Image)`
   opacity: .2;
   z-index: -1;
   ${media.phone`
+  position: relative;
+  width: auto;
+  opacity: 0.8
+  height: 500px 
   `}
 `;
 
