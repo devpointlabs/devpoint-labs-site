@@ -22,65 +22,53 @@ const StudentSchedule = () => (
       </Grid.Row>
 
       <Grid.Row>
-      <Grid.Column width={2}>
-          <StudentIcons src={AtomIcon} />
-        </Grid.Column>
-        <Grid.Column width={6}>
+      
+        <Grid.Column width={8}>
           <Header as="h1">What's Included</Header>
-          <p>Utilities and amenitites including gas, water, internet, kitchenware, furniture, a bed, a washer and dryer</p>
+          <h4>Utilities and amenitites including gas, water, internet, kitchenware, furniture, a bed, a washer and dryer</h4>
         </Grid.Column>
 
-        <Grid.Column width={2}>
-          <StudentIcons src={AtomIcon} />
-        </Grid.Column>
-        <Grid.Column width={6}>
+        
+        <Grid.Column width={8}>
           <Header as="h1">What's Not Included</Header>
-          <p>Toiletries, bath towels, laundry detergent, and tupperware</p>
+          <h4>Toiletries, bath towels, laundry detergent, and tupperware</h4>
         </Grid.Column>
       </Grid.Row>
 
       <Grid.Row>
-      <Grid.Column width={2}>
-          <StudentIcons src={AtomIcon} />
-        </Grid.Column>
-        <Grid.Column width={6}>
+      
+        <Grid.Column width={8}>
           <Header as="h1">Rules</Header>
-          <p>
+          <h4>
             No Pets, No smoking. Pickup after yourself and follow the cleaning schedule
-          </p>
+          </h4>
         </Grid.Column>
 
-        <Grid.Column width={2}>
-          <StudentIcons src={AtomIcon} />
-        </Grid.Column>
-        <Grid.Column width={6}>
+        
+        <Grid.Column width={8}>
           <Header as="h1">Move In Dates</Header>
-          <p>
+          <h4>
             You will be contacted via email regarding move-in dates and availability for your cohort
-          </p>
+          </h4>
         </Grid.Column>
       </Grid.Row>
 
       <Grid.Row>
-      <Grid.Column width={2}>
-          <StudentIcons src={AtomIcon} />
-        </Grid.Column>
-        <Grid.Column width={6}>
+      
+        <Grid.Column width={8}>
           <Header as="h1">Location</Header>
-          <p>
+          <h4>
             The DevHouse is approximately 0.7 miles away from campus or a 14 minute walk
-          </p>
+          </h4>
         </Grid.Column>
 
-        <Grid.Column width={2}>
-          <StudentIcons src={AtomIcon} />
-        </Grid.Column>
-        <Grid.Column width={6}>
+        
+        <Grid.Column width={8}>
           <Header as="h1">Rent</Header>
-          <p>Free for out-of-state full-time and part-time students on a first coem first serve basis. *Background checks will be conducted.
+          <h4>Free for out-of-state full-time and part-time students on a first coem first serve basis. *Background checks will be conducted.
             <br />
-            Security Deposit: $250($150 non-refundable for application and admin fees)
-          </p>
+            Security Deposit: $250 ($150 non-refundable for application and admin fees)
+          </h4>
         </Grid.Column>
       </Grid.Row>
     </Grid>
