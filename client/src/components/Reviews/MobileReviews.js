@@ -105,10 +105,10 @@ const SegStyle = styled(Segment)`
   font-size: 16px
   text-align: center
   font-weight: 200
-  height: 26em
+  height: 27em
 `
 const RevStyle = styled.div`
-  height: 21em
+  height: 22em
   width: 80%
   margin-left: auto
   margin-right: auto

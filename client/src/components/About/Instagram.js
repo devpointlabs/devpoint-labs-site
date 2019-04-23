@@ -45,10 +45,10 @@ const Instagram = () => {
                 <SegStyle>
                   <Grid stackable columns={2} style={{ margin: '1em', }}>
                     <Grid.Column width={10}>
-                      <TextStyle>Tagline</TextStyle>
+                      <TextStyle>More than just code</TextStyle>
                       <HeaderStyle as='h1'>You're in good company</HeaderStyle>
-                      <TextStyle>When applied to building block a website or similar work product,
-                      a Visual Guide can be an intermediate step toward.</TextStyle>
+                      <TextStyle>Whether you’re a local or coming from out-of-state we blend students 
+                      into a vibrant developer community building life long friendships.</TextStyle>
                     </Grid.Column>
                     <Grid.Column width={6}>
                       <a href='https://www.instagram.com/devpointlabs/?hl=en' target='_blank' rel="noopener noreferrer">
@@ -158,6 +158,10 @@ box-shadow: 2px 3px 8px;
 }
 
 @media (max-width: 2000px) {
+  height: 24.5em
+}
+
+@media (max-width: 1500px) {
   height: 20em
 }
 

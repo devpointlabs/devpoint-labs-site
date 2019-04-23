@@ -86,7 +86,7 @@ ${media.phone`
 const PartLink = styled(Link)`
   position: relative;
   text-decoration: none;
-  color: yellow;
+  color: white;
   font-size: 18px;
   font-weight: 500;
   &:hover {
