@@ -18,19 +18,19 @@ const Topimages = () => {
     <>
       <OvrP>
         <TeamImage src={teamimage} />
-        <TagText>DEVPOINT LABS | STUDENT HOUSING</TagText>
-        <TeamText>Free Student Housing</TeamText>
-        <TeamMeta>
+        <TagText style={{ fontFamily: `'Exo 2', sans-serif`}}>DEVPOINT LABS | STUDENT HOUSING</TagText>
+        <TeamText style={{ fontFamily: `'Exo 2', sans-serif`}} >Free Student Housing</TeamText>
+        <TeamMeta style={{ fontFamily: `'Exo 2', sans-serif`}}>
           Fully Furnished free student housing steps away from campus!
         </TeamMeta>
         <ButtonStyle>
-          <ButtLink href="/ApplicationsForm">Apply Now</ButtLink>
+          <ButtLink href="/ApplicationsForm" style={{ fontFamily: `'Exo 2', sans-serif`}}>Apply Now</ButtLink>
         </ButtonStyle>
       </OvrP>
       <Container>
       <BannerTwo>
-        <BTHead>Student Housing at No Cost.</BTHead>
-        <BTFont>
+        <BTHead style={{ fontFamily: `'Exo 2', sans-serif`}}>Student Housing at No Cost.</BTHead>
+        <BTFont style={{ fontFamily: `'Exo 2', sans-serif`}}>
           At DevPoint Labs our goal has been to be the most accessible school in
           <br/>
           the country. With free housing included, you can focus on achieving your
