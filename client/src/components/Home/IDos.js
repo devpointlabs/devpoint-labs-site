@@ -65,13 +65,13 @@ const Lin1Style = styled.div`
     font-size: 2em !important
 
    @media (max-width: 700px) {
-    font-size: 1.55em
+    font-size: 1.55em !important
    }
    @media (max-width: 1025px) {
-    font-size: 1.6em
+    font-size: 1.6em !important
    }
    @media (max-width: 400px) {
-    font-size: 1.4em
+    font-size: 1.4em !important
 
 `
 const Lin2Style = styled.div`
