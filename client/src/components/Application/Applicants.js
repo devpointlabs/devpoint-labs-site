@@ -24,7 +24,7 @@ class Applicants extends React.Component {
       const { applications } = this.state
         return (
         <>
-          <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%' }} >
+          <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%', paddingBottom: '30em' }} >
         <Container>
             <br/>
           <Header>DevPoint Labs Applications</Header>

@@ -26,7 +26,7 @@ class Scholarship extends React.Component {
     const { scholarships } = this.state
     return (
       <>
-      <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%' }} >
+      <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%', paddingBottom: '45em'  }} >
         <Container>
           <Header>Scholarship Applications</Header>
           <Table celled>
