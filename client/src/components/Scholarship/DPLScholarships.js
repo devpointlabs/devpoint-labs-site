@@ -6,6 +6,7 @@ import { media } from "../../theme/media";
 import { Image, Grid, Icon, Header, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import wallpaper from "../../assets/images/qbkls.png";
+import { Container } from "react-bootstrap";
 
 class DPLScholarships extends React.Component {
   render() {
