@@ -12,20 +12,31 @@ const Topimages = () => {
     <>
       <OvrP>
         <TeamImage src={GirlCodes} />
-        <TagText>DEVPOINT LABS | WEB DEVELOPMENT</TagText>
-        <TeamText>Part-time Web Development</TeamText>
-        <TeamMeta>
+        <TagText style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          DEVPOINT LABS | WEB DEVELOPMENT
+        </TagText>
+        <TeamText style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          Part-time Web Development
+        </TeamText>
+        <TeamMeta style={{ fontFamily: `'Exo 2', sans-serif` }}>
           Learn why we're the best at what we do and why we're regarded <br />{" "}
           as one of the best in the edtech industry today.
         </TeamMeta>
         <ButtonStyle>
-          <ButtLink href="/ApplicationsForm">Apply Now</ButtLink>
+          <ButtLink
+            href="/ApplicationsForm"
+            style={{ fontFamily: `'Exo 2', sans-serif` }}
+          >
+            Apply Now
+          </ButtLink>
         </ButtonStyle>
       </OvrP>
       <BannerTwo>
         <BlackBeak src={blackbeak} />
-        <BTHead>DevPoint lab's 11 week</BTHead>
-        <BTFont>
+        <BTHead style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          DevPoint lab's 11 week
+        </BTHead>
+        <BTFont style={{ fontFamily: `'Exo 2', sans-serif` }}>
           More than just code. Whether you’re a local or coming from
           out-of-state <br /> we blend students into a vibrant developer
           community <br />
@@ -34,11 +45,13 @@ const Topimages = () => {
       </BannerTwo>
       <OvrP>
         <TeamImage src={LDCode} />
-        <BanHead>
+        <BanHead style={{ fontFamily: `'Exo 2', sans-serif` }}>
           A Day in the life at <br /> DevPoint Labs
         </BanHead>
         <BanLink>
-          <MELink href="/About">Learn About Us ></MELink>
+          <MELink href="/About" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Learn About Us >
+          </MELink>
         </BanLink>
       </OvrP>
     </>

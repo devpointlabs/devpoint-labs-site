@@ -11,20 +11,31 @@ const Topimages = () => {
     <>
       <OvrP>
         <TeamImage src={GirlCodes} />
-        <TagText>DEVPOINT LABS | WEB DEVELOPMENT</TagText>
-        <TeamText>Full-time Web Development</TeamText>
-        <TeamMeta>
+        <TagText style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          DEVPOINT LABS | WEB DEVELOPMENT
+        </TagText>
+        <TeamText style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          Full-Time Web Development
+        </TeamText>
+        <TeamMeta style={{ fontFamily: `'Exo 2', sans-serif` }}>
           Learn why we're the best at what we do and why we're regarded <br />{" "}
           as one of the best in the edtech industry today.
         </TeamMeta>
         <ButtonStyle>
-          <ButtLink href="/ApplicationsForm">Apply Now</ButtLink>
+          <ButtLink
+            href="/ApplicationsForm"
+            style={{ fontFamily: `'Exo 2', sans-serif` }}
+          >
+            Apply Now
+          </ButtLink>
         </ButtonStyle>
       </OvrP>
       <BannerTwo>
         <BlackBeak src={blackbeak} />
-        <BTHead>DevPoint lab's 11 week</BTHead>
-        <BTFont>
+        <BTHead style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          DevPoint lab's 11 week
+        </BTHead>
+        <BTFont style={{ fontFamily: `'Exo 2', sans-serif` }}>
           More than just code. Whether you’re a local or coming from
           out-of-state <br /> we blend students into a vibrant developer
           community <br />
@@ -33,11 +44,13 @@ const Topimages = () => {
       </BannerTwo>
       <OvrP>
         <TeamImage src={dayinlife} />
-        <BanHead>
+        <BanHead style={{ fontFamily: `'Exo 2', sans-serif` }}>
           A Day in the life at <br /> DevPoint Labs
         </BanHead>
         <BanLink>
-          <MELink href="/About">Learn About Us ></MELink>
+          <MELink href="/About" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Learn About Us >
+          </MELink>
         </BanLink>
       </OvrP>
     </>
@@ -154,7 +167,7 @@ const ButtLink = styled.a`
 const TagText = styled.text`
   font-size: 20px;
   color: white;
-  font-weight: 600;
+  font-family: Exo 2;
   position: absolute;
   text-align: center;
   top: 32%;
@@ -180,7 +193,7 @@ const TagText = styled.text`
 const TeamMeta = styled.text`
   font-size: 24px;
   color: white;
-  font-weight: 400;
+  font-family: Exo 2;
   position: absolute;
   text-align: center;
   top: 55%;
@@ -204,8 +217,8 @@ const TeamMeta = styled.text`
 
 const TeamText = styled.text`
   z-index: 0;
+  font-family: Exo 2;
   font-size: 55px;
-  font-weight: 600;
   position: absolute;
   text-align: center;
   top: 40%;
