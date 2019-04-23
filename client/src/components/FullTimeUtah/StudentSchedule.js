@@ -14,7 +14,10 @@ const StudentSchedule = () => (
     <Grid stackable style={styles.grid}>
       <Grid.Row width={16}>
         <Grid.Column>
-          <Header style={{ fontSize: "3em" }} textAlign="center">
+          <Header
+            style={{ fontSize: "3em", fontFamily: `'Exo 2', sans-serif` }}
+            textAlign="center"
+          >
             Student Life
           </Header>
           <br />
@@ -26,15 +29,23 @@ const StudentSchedule = () => (
           <StudentIcons src={AtomIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Hackathons</Header>
-          <p>See how much you can accomplish in a day-long coding event.</p>
+          <Header as="h3" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Hackathons
+          </Header>
+          <p style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            See how much you can accomplish in a day-long coding event.
+          </p>
         </Grid.Column>
         <Grid.Column width={2}>
           <StudentIcons src={Skyscraper} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Conveniently Downtown</Header>
-          <p>Located in the heart of Downtown, SLC.</p>
+          <Header as="h3" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Conveniently Downtown
+          </Header>
+          <p style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Located in the heart of Downtown, SLC.
+          </p>
         </Grid.Column>
       </Grid.Row>
 
@@ -43,8 +54,10 @@ const StudentSchedule = () => (
           <StudentIcons src={SwitchIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">DPL Nights | Student Activities</Header>
-          <p>
+          <Header as="h3" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            DPL Nights | Student Activities
+          </Header>
+          <p style={{ fontFamily: `'Exo 2', sans-serif` }}>
             Unwind from learning during DPL led activities like The Bowling
             Classic, Tuesday Movie Nights, or some casual meetups.
           </p>
@@ -53,8 +66,10 @@ const StudentSchedule = () => (
           <StudentIcons src={Clock} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Daily Learning Schedule</Header>
-          <p>
+          <Header as="h3" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Daily Learning Schedule
+          </Header>
+          <p style={{ fontFamily: `'Exo 2', sans-serif` }}>
             Through a mix of lectures and hands-on labs you’ll gain the
             technical knowledge.
           </p>
@@ -66,8 +81,10 @@ const StudentSchedule = () => (
           <StudentIcons src={CompIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Advanced Curriculum</Header>
-          <p>
+          <Header as="h3" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Advanced Curriculum
+          </Header>
+          <p style={{ fontFamily: `'Exo 2', sans-serif` }}>
             Learn the latest web technologies like React.js, Ruby on Rails, and
             more.
           </p>
@@ -76,8 +93,12 @@ const StudentSchedule = () => (
           <StudentIcons src={UIcon} />
         </Grid.Column>
         <Grid.Column width={6}>
-          <Header as="h3">Earn Your U of U Certificate</Header>
-          <p>Earn Your U of U Certificate</p>
+          <Header as="h3" style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Earn Your U of U Certificate
+          </Header>
+          <p style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Earn Your U of U Certificate
+          </p>
         </Grid.Column>
       </Grid.Row>
     </Grid>
