@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Table, Container, Header, Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import wallpaper from "../../assets/images/qbkls.png";
 
 class Contacts extends React.Component {
     state = { contacts: [] }
@@ -24,6 +25,7 @@ class Contacts extends React.Component {
         const { contacts } = this.state
         return (
             <>
+            <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%', paddingBottom: '45em'  }} >
                 <Container>
                     <Header>People Who need More info</Header>
                     <Table celled>
@@ -74,6 +76,7 @@ class Contacts extends React.Component {
                         </Table.Body>
                     </Table>
                 </Container>
+                </div>
             </>
         )
     }
