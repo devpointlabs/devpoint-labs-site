@@ -112,8 +112,8 @@ class PageOptions extends React.Component {
                   {
                     (bG !== 2 && bG !== 3) ? 
                     <>
-                      <Icon name="university" size="big" style={{ marginLeft: "49%", marginTop: '20%', color: "white" }} />
-                      <Header inverted as="h2" textAlign="center">
+                      <Icon name="university" size="big" style={{ marginLeft: "47%", marginTop: '20%', color: "white" }} />
+                      <Header inverted as="h3" textAlign="center" style={{ fontFamily: `'Exo 2', sans-serif`}}>
                         University Partner
                       </Header>
                       <p style={{ textAlign: "center", fontSize: "1.2em", color: 'white' }}>
@@ -160,7 +160,7 @@ class PageOptions extends React.Component {
                   (bG !== 1 && bG !== 3) ? 
                     <>
                       <Icon name="student" size="big" style={{ marginLeft: "47%", marginTop: '20%', color: "white" }} />
-                      <Header inverted as="h2" textAlign="center">
+                      <Header inverted as="h3" textAlign="center" style={{ fontFamily: `'Exo 2', sans-serif`}}>
                         Financing And Scholarships
                       </Header>
                       <p style={{ textAlign: "center", fontSize: "1.2em", color: "white" }}>
@@ -200,7 +200,7 @@ class PageOptions extends React.Component {
                   (bG !== 1 && bG !== 2) ? 
                   <>
                     <Icon name="home" size="big" style={{ marginLeft: "47%", marginTop: '20%', transform: 'translate(0, .25em)', color: 'white' }} />
-                    <Header inverted as="h2" textAlign="center" style={{ marginLeft: "10px" }}>
+                    <Header inverted as="h3" textAlign="center" style={{ fontFamily: `'Exo 2', sans-serif`}}>
                       Free Student Housing
                     </Header>
                     <p style={{ textAlign: "center", fontSize: "1.2em", color: 'white' }}>

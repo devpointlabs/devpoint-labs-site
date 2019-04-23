@@ -32,7 +32,7 @@ class IDos extends React.Component {
                         <br />
                         <br />
                       </div>
-                      <Lin1Style>
+                      <Lin1Style style={{ fontFamily: `'Exo 2', sans-serif`}}>
                         The DevPoint Labs Approach
                       </Lin1Style>
                       <br />
@@ -62,7 +62,7 @@ const colors = {
 }
 
 const Lin1Style = styled.div`
-    font-size: 2em;
+    font-size: 2em !important
 
    @media (max-width: 700px) {
     font-size: 1.55em
