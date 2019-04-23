@@ -17,7 +17,7 @@ const Reviews = () => {
 
   const renderReviews = () => {
     return (
-      <SegStyle style={{ background: `${colors.white}`, color: `${colors.darkPurp}`, boxShadow: `0em .5em 1em ${colors.darkGrey}` }}>
+      <SegStyle style={{ background: `${colors.white}`, color: `${colors.darkPurp}`, boxShadow: `0em .5em 1em ${colors.darkGrey}`, fontFamily: `'Exo 2', sans-serif` }}>
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -40,7 +40,7 @@ const Reviews = () => {
                     awesome but if you dont give it your all that all means
                     nothing. It was an awesome experience for me overall. I
                     highly recommend this course!
-                    </RightText>
+                  </RightText>
                   <br />
                   <h3>Usong Cho</h3>
                   <p style={{ color: `${colors.purp}`, opacity: '.6'}}>U of U Full-Time Student</p>
@@ -57,7 +57,7 @@ const Reviews = () => {
                     curriculum was difficult but there was always consistent
                     and relevant support from the instructors, the TAs as well
                     as the active mentors. I would do it again.
-                    </LeftText>
+                  </LeftText>
                   <br />
                   <h3>Bryan Holbrook</h3>
                   <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Co-founder of Forma DS</p>
@@ -86,7 +86,7 @@ const Reviews = () => {
                     full stack course offers quality, relevant content and
                     tons of hands on experience and mentorship over the course
                     of an intensive 11 weeks.
-                    </RightText>
+                  </RightText>
                   <br />
                   <h3>Dan</h3>
                   <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Full Stack Software Engineer</p>
@@ -143,8 +143,9 @@ const IconStyle = styled(Icon)`
 `
 
 const ColStyle = styled.div`
-  @media (max-width: 2600px) {
-    height: 16em;
+  margin-top: 2em
+@media (max-width: 2600px) {
+    height: 19em;
   }
 
   @media (max-width: 1600px) {
@@ -167,19 +168,19 @@ const SegStyle = styled(Segment)`
   font-weight: 200
 
   @media (max-width: 2600px) {
-    height: 18em;
-  }
-
-  @media (max-width: 1600px) {
-    height: 20em;
-  }
-
-  @media (max-width: 1250px) {
     height: 23em;
   }
 
+  @media (max-width: 1600px) {
+    height: 25em;
+  }
+
+  @media (max-width: 1250px) {
+    height: 26em;
+  }
+
   @media (max-width: 800px) {
-    height: 28em;
+    height: 30em;
   }
 `
 

@@ -17,7 +17,7 @@ class DPLScholarships extends React.Component {
             DevPoint Labs <br /> Scholarships
           </BanHead>
         </OvrP>
-        <div style={{ background: `url(${wallpaper})` }}>
+        <div style={{ background: `url(${wallpaper})`, fontFamily: `'Exo 2', sans-serif` }}>
           <SegStyle>
             <HeaderStyle style={{ fontFamily: `'Exo 2', sans-serif`}}>About</HeaderStyle>
             <br />
@@ -40,9 +40,9 @@ class DPLScholarships extends React.Component {
           </HeaderStyle>
         </div>
         <GridStyle>
-          <Grid stackable columns={6}>
+          <Grid stackable columns={6} style={{ fontFamily: `'Exo 2', sans-serif` }}>
             <Grid.Column width={1}>
-              <Icon name="server" size="large" />
+              <Icon name="envelope outline" size="large" />
             </Grid.Column>
             <Grid.Column width={4}>
               <HdStyle>Apply</HdStyle>
@@ -63,7 +63,7 @@ class DPLScholarships extends React.Component {
               </Link>
             </Grid.Column>
             <Grid.Column width={1}>
-              <Icon name="th" size="large" />
+              <Icon name="edit" size="large" />
             </Grid.Column>
             <Grid.Column width={4}>
               <HdStyle>Essay & Recommendation</HdStyle>
@@ -87,7 +87,7 @@ class DPLScholarships extends React.Component {
               </Link>
             </Grid.Column>
             <Grid.Column width={1}>
-              <Icon name="database" size="large" />
+              <Icon name="paper plane outline" size="large" />
             </Grid.Column>
             <Grid.Column width={4}>
               <HdStyle>Follow Us</HdStyle>
@@ -137,9 +137,9 @@ class DPLScholarships extends React.Component {
         </GridStyle>
         <div style={{ background: `url(${wallpaper})` }}>
           <GridStyle2>
-            <Grid columns={2}>
+            <Grid columns={2} style={{ fontFamily: `'Exo 2', sans-serif` }}>
               <Grid.Column mobile={16} tablet={8} computer={7}>
-                <Header as="h1" style={{ height: "1.5em",  }}>
+                <Header as="h1" style={{ height: "1.5em", fontFamily: `'Exo 2', sans-serif` }}>
                   Women In Tech Scholarship
                 </Header>
                 <RowStyle2>
@@ -158,7 +158,7 @@ class DPLScholarships extends React.Component {
                   <Button>
                     <Link
                       to="/ScholarshipForm"
-                      style={{ color: `${colors.darkPurp}` }}
+                      style={{ color: `${colors.darkPurp}`, fontFamily: `'Exo 2', sans-serif` }}
                     >
                       Apply
                     </Link>
@@ -166,7 +166,7 @@ class DPLScholarships extends React.Component {
                 </BtnStyle>
               </Grid.Column>
               <Grid.Column mobile={16} tablet={8} computer={7}>
-                <Header as="h1" style={{ height: "1.5em" }}>
+                <Header as="h1" style={{ height: "1.5em", fontFamily: `'Exo 2', sans-serif` }}>
                   Opportunity In Tech Scholarship
                 </Header>
                 <RowStyle2>
@@ -185,7 +185,7 @@ class DPLScholarships extends React.Component {
                   <Button>
                     <Link
                       to="/ScholarshipForm"
-                      style={{ color: `${colors.darkPurp}` }}
+                      style={{ color: `${colors.darkPurp}`, fontFamily: `'Exo 2', sans-serif` }}
                     >
                       Apply
                     </Link>
@@ -252,7 +252,7 @@ ${media.xsPhone`
 
 const HdStyle = styled.div`
   font-size: 26px
-  font-weight: 600
+  font-weight: bolder
   height: 3em
   ${media.giant`
   height: 3em
@@ -338,7 +338,7 @@ const ContentStyle = styled.div`
 
 const HeaderStyle = styled.text`
   font-size: 3em
-  font-weight: 600
+  font-weight: bolder
   ${media.tablet`
   font-size: 2em
   `}
@@ -376,7 +376,7 @@ const TeamImage = styled(Image)`
 
 const BanHead = styled.text`
   font-size: 4em;
-  font-weight: 600;
+  font-weight: bolder;
   color: white;
   position: absolute;
   z-index: 0;

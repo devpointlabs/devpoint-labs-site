@@ -202,7 +202,7 @@ class ApplicationsForm extends React.Component {
     ];
     return (
       <>
-        <div style={{ background: `url(${wallpaper})`, positon: "ab" }}>
+        <div style={{ padding: '1px', background: `url(${wallpaper})`, positon: "ab" }}>
           <FormStyle>
             <div
               style={{
