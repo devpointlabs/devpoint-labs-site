@@ -1,36 +1,41 @@
-import React from 'react'
-import axios from 'axios';
-import { Table, Header, Container, Button, Icon,} from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import axios from "axios";
+import { Table, Header, Container, Button, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import wallpaper from "../../assets/images/qbkls.png";
 
-
 class Applicants extends React.Component {
-    state = { applications: [] }
-    
-    componentDidMount() {
-      axios.get('/api/applications')
-        .then(res => this.setState({ applications: res.data }))
-    }
+  state = { applications: [] };
 
-    handleDelete = id => {
-      axios.delete(`/api/applications/${id}`).then(res => {
-        const { applications } = this.state;
-        this.setState({ applications: applications.filter(t => t.id !== id) });
-      });
-    };
+  componentDidMount() {
+    axios
+      .get("/api/applications")
+      .then(res => this.setState({ applications: res.data }));
+  }
 
-    render() {
-      const { applications } = this.state
-        return (
-        <>
-          <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%', paddingBottom: '30em' }} >
-        <Container>
-            <br/>
-          <Header>DevPoint Labs Applications</Header>
-            <Table 
-            celled 
-            style={{ position: "relative", marginBottom: "5em" }}>
+  handleDelete = id => {
+    axios.delete(`/api/applications/${id}`).then(res => {
+      const { applications } = this.state;
+      this.setState({ applications: applications.filter(t => t.id !== id) });
+    });
+  };
+
+  render() {
+    const { applications } = this.state;
+    return (
+      <>
+        <div
+          style={{
+            background: `url(${wallpaper})`,
+            positon: "absolute",
+            height: "100%",
+            paddingBottom: "30em"
+          }}
+        >
+          <Container>
+            <br />
+            <Header>DevPoint Labs Applications</Header>
+            <Table celled style={{ position: "relative", marginBottom: "5em" }}>
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>First Name</Table.HeaderCell>
@@ -43,31 +48,34 @@ class Applicants extends React.Component {
               </Table.Header>
 
               <Table.Body>
-                { applications.map( application =>
-                <Table.Row  key={application.id}>
-                <Link to={`/applications/${application.id}`}>
-                  <Table.Cell>{application.first_name}</Table.Cell>
-                </Link>
-                  <Table.Cell>{application.last_name}</Table.Cell>
-                  <Table.Cell>{application.email}</Table.Cell>
-                  <Table.Cell>{application.phone_number}</Table.Cell>
-                  <Table.Cell>{application.course}</Table.Cell>
-                  <Button
-                     floated="right"
-                     onClick={() => this.handleDelete(application.id)}
-                     color="black"
-                   >
-                     <Icon name="trash" size="small" />
-                   </Button>
-                </Table.Row>
-               )}
+                {applications.map(application => (
+                  <Table.Row key={application.id}>
+                    <Link to={`/applications/${application.id}`}>
+                      <Table.Cell>{application.first_name}</Table.Cell>
+                    </Link>
+                    <Table.Cell>{application.last_name}</Table.Cell>
+                    <Table.Cell>{application.email}</Table.Cell>
+                    <Table.Cell>{application.phone_number}</Table.Cell>
+                    <Table.Cell>{application.course}</Table.Cell>
+                    <Table.Cell>
+                      <div style={{ textAlign: "center" }}>
+                        <Icon
+                          name="trash"
+                          textAlign="center"
+                          onClick={() => this.handleDelete(application.id)}
+                          color="red"
+                        />
+                      </div>
+                    </Table.Cell>
+                  </Table.Row>
+                ))}
               </Table.Body>
             </Table>
-        </Container>
+          </Container>
         </div>
-        </>       
-        )
-    }
+      </>
+    );
+  }
 }
 
-export default Applicants
+export default Applicants;

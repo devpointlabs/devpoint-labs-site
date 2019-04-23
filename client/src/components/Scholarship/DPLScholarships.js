@@ -13,13 +13,13 @@ class DPLScholarships extends React.Component {
       <>
         <OvrP>
           <TeamImage src={dayinlife} />
-          <BanHead style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          <BanHead style={{ fontFamily: `'Exo 2', sans-serif`}}>
             DevPoint Labs <br /> Scholarships
           </BanHead>
         </OvrP>
         <div style={{ background: `url(${wallpaper})`, fontFamily: `'Exo 2', sans-serif` }}>
           <SegStyle>
-            <HeaderStyle>About</HeaderStyle>
+            <HeaderStyle style={{ fontFamily: `'Exo 2', sans-serif`}}>About</HeaderStyle>
             <br />
             <br />
             <ContentStyle>
@@ -35,7 +35,7 @@ class DPLScholarships extends React.Component {
         </div>
         <div style={{ textAlign: "center" }}>
           <br />
-          <HeaderStyle style={{ textDecoration: "underline", fontFamily: `'Exo 2', sans-serif` }}>
+          <HeaderStyle style={{ textDecoration: "underline", fontFamily: `'Exo 2', sans-serif` }} >
             How To Apply
           </HeaderStyle>
         </div>
