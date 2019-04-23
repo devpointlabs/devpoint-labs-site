@@ -10,7 +10,7 @@ const CampusTour = () => (
     <Container>
       <Grid style={styles.grid} stackable>
         <Grid.Column width={5}>
-          <h4 style={{ color: `${colors.white}` }}>
+          <h4 style={{ color: `${colors.white}`, fontFamily: `'Exo 2', sans-serif` }}>
             Want to come by for a campus tour?{" "}
           </h4>
         </Grid.Column>
@@ -22,7 +22,7 @@ const CampusTour = () => (
           </p>
         </Grid.Column>
         <Grid.Column width={2} verticalAlign="middle">
-          <Button inverted href="/ContactUs" style={{ color: `${colors.blue}`}}>
+          <Button inverted href="/ContactUs" style={{ color: `${colors.blue}`, fontFamily: `'Exo 2', sans-serif`}}>
             Schedule
           </Button>
         </Grid.Column>

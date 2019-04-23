@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 import { Table, Button, Icon, Header, Container } from 'semantic-ui-react'
+import wallpaper from "../../assets/images/qbkls.png";
+
 
 
 class Subscribers extends React.Component {
@@ -25,6 +27,7 @@ class Subscribers extends React.Component {
         const { subscribers } = this.state
         return (
             <>
+            <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%', paddingBottom: '45em'  }} >
                 <Container>
 
                     <Header>Subscribers</Header>
@@ -52,6 +55,7 @@ class Subscribers extends React.Component {
                         </Table.Body>
                     </Table>
                 </Container>
+                </div>
             </>
         )
     }

@@ -27,12 +27,17 @@ const CostDates = props => {
         <TextContainer>
           <Header
             textAlign="center"
-            style={{ fontSize: "4em", color: "white", paddingTop: "90px" }}
+            style={{
+              fontSize: "4em",
+              color: "white",
+              paddingTop: "90px",
+              fontFamily: `'Exo 2', sans-serif`
+            }}
           >
             Tuition & Course Dates
           </Header>
           <br />
-          <BlockText>
+          <BlockText style={{ fontFamily: `'Exo 2', sans-serif` }}>
             This non-credit program is offered in partnership with The
             University of Utah Professional Education. The online application
             process is handled by DevPoint Labs. Appliocant can expect to
@@ -67,10 +72,13 @@ const CostDates = props => {
                         </ul>
                         <br />
                         <Button.Group style={{ justifyContent: "center" }}>
-                          <Link to='/ApplicationsForm'><ButtonStyle>Apply Now</ButtonStyle></Link>
+                          <Link to="/ApplicationsForm">
+                            <ButtonStyle>Apply Now</ButtonStyle>
+                          </Link>
                           <Button.Or />
                           <Link to="/ContactUs">
-                            <Button>Learn More</Button></Link>
+                            <Button>Learn More</Button>
+                          </Link>
                         </Button.Group>
                         <br />
                       </CostCard>
@@ -159,7 +167,5 @@ const ButtonStyle = styled(Button)`
   background-color: #53407a !important;
   color: white !important;
 `;
-
-
 
 export default CostDates;

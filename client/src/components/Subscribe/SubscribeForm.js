@@ -34,7 +34,7 @@ export default class SubscribeForm extends Component {
           onChange={this.handleChange}
           style={{ opacity: '.9'}}
         />
-        <Form.Button inverted style={{ color: `${colors.blue}`}} onClick={this.handleSubmit}>Subscribe</Form.Button>
+        <Form.Button inverted style={{ color: `${colors.blue}`, fontFamily: `'Exo 2', sans-serif`}} onClick={this.handleSubmit}>Subscribe</Form.Button>
       </Form>
     );
   }

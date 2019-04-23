@@ -100,7 +100,7 @@ const Reviews = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button color="grey">
+                    <Button color="grey" style={{ fontFamily: `'Exo 2', sans-serif` }}>
                       See more Reviews
                     </Button>
                   </a>

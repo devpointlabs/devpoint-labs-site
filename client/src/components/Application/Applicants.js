@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Table, Header, Container, Button, Icon,} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-
+import wallpaper from "../../assets/images/qbkls.png";
 
 
 class Applicants extends React.Component {
@@ -24,6 +24,7 @@ class Applicants extends React.Component {
       const { applications } = this.state
         return (
         <>
+          <div style={{  background: `url(${wallpaper})`, positon: "absolute", height: '100%', paddingBottom: '30em' }} >
         <Container>
             <br/>
           <Header>DevPoint Labs Applications</Header>
@@ -63,6 +64,7 @@ class Applicants extends React.Component {
               </Table.Body>
             </Table>
         </Container>
+        </div>
         </>       
         )
     }
