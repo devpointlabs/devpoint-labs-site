@@ -14,7 +14,7 @@ const MobileReviews = () => {
 
   return (
     <>
-      <SegStyle style={{ background: `linear-gradient(to bottom, ${colors.darkGrey}, ${colors.black})`, color: `${colors.white}` }}>
+      <SegStyle style={{ background: `linear-gradient(to bottom, ${colors.darkGrey}, ${colors.black})`, color: `${colors.white}`, fontFamily: `'Exo 2', sans-serif` }}>
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -33,7 +33,7 @@ const MobileReviews = () => {
                 highly recommend this course!
                     </p>
               <h3 color="#2d2d2d">Usong Cho</h3>
-              <p style={{ color: `${colors.purp}`, opacity: '.6'}}>U of U Full-Time Student</p>
+              <p style={{ color: `${colors.lightPurp}`, opacity: '.6'}}>U of U Full-Time Student</p>
             </RevStyle>
           </Carousel.Item>
           <Carousel.Item>
@@ -48,7 +48,7 @@ const MobileReviews = () => {
                 as the active mentors. I would do it again.
                     </p>
               <h3>Bryan Holbrook</h3>
-              <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Co-founder of Forma DS</p>
+              <p style={{ color: `${colors.lightPurp}`, opacity: '.6'}}>Co-founder of Forma DS</p>
             </RevStyle>
           </Carousel.Item>
           <Carousel.Item>
@@ -65,7 +65,7 @@ const MobileReviews = () => {
                 of an intensive 11 weeks.
                     </p>
               <h3>Dan</h3>
-              <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Full Stack Software Engineer</p>
+              <p style={{ color: `${colors.lightPurp}`, opacity: '.6'}}>Full Stack Software Engineer</p>
             </RevStyle>
           </Carousel.Item>
         </Carousel>
@@ -75,7 +75,7 @@ const MobileReviews = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button color="grey">
+          <Button color="grey" style={{ fontFamily: `'Exo 2', sans-serif` }}>
             See more Reviews
           </Button>
         </a>

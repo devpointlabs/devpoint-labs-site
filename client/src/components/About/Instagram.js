@@ -43,10 +43,10 @@ const Instagram = () => {
               })}
               <div style={styles.div}>
                 <SegStyle>
-                  <Grid stackable columns={2} style={{ margin: '1em', }}>
+                  <Grid stackable columns={2} style={{ margin: '1em', fontFamily: `'Exo 2', sans-serif` }}>
                     <Grid.Column width={10}>
                       <TextStyle>More than just code</TextStyle>
-                      <HeaderStyle as='h1'>You're in good company</HeaderStyle>
+                      <HeaderStyle as='h1' style={{fontFamily: `'Exo 2', sans-serif`}}>You're in good company</HeaderStyle>
                       <TextStyle>Whether you’re a local or coming from out-of-state we blend students 
                       into a vibrant developer community building life long friendships.</TextStyle>
                     </Grid.Column>
@@ -65,8 +65,8 @@ const Instagram = () => {
           </Grid>
         </GridStyle>
         <LinkStyle>
-          <Link to='/'>
-            <p style={{ color: 'white', fontSize: '16px' }}>Learn More ></p>
+          <Link to="/ContactUs">
+            <p style={{ color: 'white', fontSize: '16px', fontFamily: `'Exo 2', sans-serif` }}>Learn More ></p>
           </Link>
         </LinkStyle>
       </div>
@@ -130,12 +130,12 @@ const TextStyle = styled.text`
 
 const HeaderStyle = styled.text`
 @media (max-width: 2560px) {
-  font-size: 5em
-  font-weight: bold
+  font-size: 4em
+  font-weight: bolder
 }
 
 @media (max-width: 2000px) {
-  font-size: 2.5em
+  font-size: 2em
 }
 
 @media (max-width: 1030px) {

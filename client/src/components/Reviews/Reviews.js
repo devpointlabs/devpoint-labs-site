@@ -17,7 +17,7 @@ const Reviews = () => {
 
   const renderReviews = () => {
     return (
-      <SegStyle style={{ background: `${colors.white}`, color: `${colors.darkPurp}`, boxShadow: `0em .5em 1em ${colors.darkGrey}` }}>
+      <SegStyle style={{ background: `${colors.white}`, color: `${colors.darkPurp}`, boxShadow: `0em .5em 1em ${colors.darkGrey}`, fontFamily: `'Exo 2', sans-serif` }}>
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -145,7 +145,7 @@ const IconStyle = styled(Icon)`
 const ColStyle = styled.div`
   margin-top: 2em
 @media (max-width: 2600px) {
-    height: 20em;
+    height: 19em;
   }
 
   @media (max-width: 1600px) {
@@ -168,7 +168,7 @@ const SegStyle = styled(Segment)`
   font-weight: 200
 
   @media (max-width: 2600px) {
-    height: 24em;
+    height: 23em;
   }
 
   @media (max-width: 1600px) {
