@@ -6,7 +6,7 @@ const Landing = () => (
     <Grid as={SegmentStyles} columns={2} textAlign='center'>
       <Grid.Row verticalAlign='middle'>
         <Grid.Column>
-          <Header inverted style={{ fontSize: '5em', transform: 'translate(0, -1em)' }}>
+          <Header inverted style={{ fontSize: '5em', transform: 'translate(0, -1em)', fontFamily: `'Exo 2', sans-serif`, fontWeight: '900' }}>
             Ready to <br /> code? Let's <br/> get started.
           </Header>
         </Grid.Column>

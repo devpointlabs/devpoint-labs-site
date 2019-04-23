@@ -22,12 +22,12 @@ const CoursesSection = () => {
             <Grid.Row>
               <OvrP>
                 <PTUImage src={CnS} />
-                <PartHead>Part-Time Web Development</PartHead>
+                <PartHead style={{ fontFamily: `'Exo 2', sans-serif` }}>Part-Time Web Development</PartHead>
 
                 <TagText>Salt Lake City, Utah</TagText>
                 <PartDescription>Learn why we're the best</PartDescription>
                 <LinkButt>
-                  <PartLink to="./PartTimeUtah">Learn More</PartLink>
+                  <PartLink to="./PartTimeUtah" style={{ color: `${colors.blue}`}}>Learn More</PartLink>
                 </LinkButt>
               </OvrP>
             </Grid.Row>
@@ -35,14 +35,14 @@ const CoursesSection = () => {
             <Grid.Row>
               <OvrP>
                 <PTUImage src={LaunchImg} />
-                <PartHead>Part-Time Web Development</PartHead>
+                <PartHead style={{ fontFamily: `'Exo 2', sans-serif` }}>Part-Time Web Development</PartHead>
 
                 <TagText>Las Vegas, Nevada</TagText>
                 <PartDescription>
                   Become a coding master, while keeping a job
                 </PartDescription>
                 <LinkButt>
-                  <PartLink to="./PartTimeLV">Learn More</PartLink>
+                  <PartLink to="./PartTimeLV" style={{ color: `${colors.blue}`}}>Learn More</PartLink>
                 </LinkButt>
               </OvrP>
             </Grid.Row>
@@ -50,7 +50,7 @@ const CoursesSection = () => {
           <Grid.Column>
             <OvrP>
               <FTUImage src={Audience} />
-              <FullHead>Full-Time Web Development</FullHead>
+              <FullHead style={{ fontFamily: `'Exo 2', sans-serif` }}>Full-Time Web Development</FullHead>
 
               <TagText>Salt Lake City, Utah</TagText>
               <PartDescription>
@@ -58,7 +58,7 @@ const CoursesSection = () => {
                 one of the best in the edtech industry today.
               </PartDescription>
               <LinkButt>
-                <PartLink to="./FulltimeUtah">Learn More</PartLink>
+                <PartLink to="./FulltimeUtah" style={{ color: `${colors.blue}`}}>Learn More</PartLink>
               </LinkButt>
             </OvrP>
           </Grid.Column>
@@ -263,7 +263,8 @@ const colors = {
   darkPurp: `#53407A`,
   purp: `#6E54A3`,
   white: `#FFFFFF`,
-  lightPurp: "#e4dced"
+  lightPurp: "#e4dced",
+  blue: "#B2DBF1"
 };
 
 const styles = {

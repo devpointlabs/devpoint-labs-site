@@ -33,7 +33,7 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <HeadStyle class="ui header"> Courses </HeadStyle>
+                  <HeadStyle class="ui header" style={{ fontFamily: `'Exo 2', sans-serif`}}> Courses </HeadStyle>
                   <div class="ui link list">
                   
                     <Link to='./FullTimeUtah' style={{ color: "white" }} class="item">
@@ -55,7 +55,7 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <HeadStyle class="ui header"> About </HeadStyle>
+                  <HeadStyle class="ui header" style={{ fontFamily: `'Exo 2', sans-serif`}}> About </HeadStyle>
                   <div class="ui link list">
                     <Link to='./ApplicationsForm' style={{ color: "white" }} class="item">
                       {" "}
@@ -76,7 +76,7 @@ class Footer extends React.Component {
                   class="three wide column"
                   style={{ textAlign: "center" }}
                 >
-                  <HeadStyle class="ui header"> Community </HeadStyle>
+                  <HeadStyle class="ui header" style={{ fontFamily: `'Exo 2', sans-serif`}}> Community </HeadStyle>
                   <div class="ui link list">
                     <a href="https://www.meetup.com/devpoint-labs/" style={{ color: "white" }} class="item">
                       {" "}
