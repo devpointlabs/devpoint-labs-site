@@ -85,7 +85,7 @@ class App extends React.Component {
               />
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
+              <Route exact path="/register1893" component={Register} />
               <Route exact path="/fulltimeutah" component={FullTimeUtah} />
               <Route exact path="/PartTimeLV" component={PartTimeLV} />
               <Route exact path="/PartTimeUtah" component={PartTimeUtah} />
@@ -150,7 +150,7 @@ class App extends React.Component {
                 path="/contacts/:id"
                 render={() => <ContactsView />}
               />
-              <ProtectedRoute component={NoMatch} />
+              <Route component={NoMatch} />
             </Switch>
           </FetchUser>
         </div>
