@@ -29,7 +29,7 @@ const Topimages = () => {
       </OvrP>
       <Container>
       <BannerTwo>
-        <BTHead style={{ fontFamily: `'Exo 2', sans-serif`}}>Student Housing at No Cost.</BTHead>
+        <BTHead style={{ fontFamily: `'Exo 2', sans-serif`}}>Student Housing at No Cost</BTHead>
         <BTFont style={{ fontFamily: `'Exo 2', sans-serif`}}>
           At DevPoint Labs our goal has been to be the most accessible school in
           <br/>
