@@ -1,7 +1,7 @@
 import React from "react";
 import IDos from "./IDos";
-import { Container, } from "semantic-ui-react";
-import images from "../../assets/images/Airplaneshot-1-min.png";
+import { Container } from "semantic-ui-react";
+import images from "../../assets/images/sitguys.jpg";
 import PageOptions from "./PageOptions";
 import Landing from "./Landing";
 import Reviews from "../Reviews/Reviews";
@@ -9,18 +9,16 @@ import CoursesSection from "./CoursesSection";
 import CampusTour from "./CampusTour";
 import HomeLogos from "./HomeLogos";
 import Footer from "../MAIN/Footer";
-import styled from 'styled-components'
-import { media, } from "../../theme/media";
+import styled from "styled-components";
+import { media } from "../../theme/media";
 
 const BackgroundStyles = styled.div`
-  height: 60em
-  ${media.tablet`
+  height: 60em ${media.tablet`
   height: 79.5em
-  `}
-  ${media.phone`
+  `} ${media.phone`
   height: 77em
-  `}
-`
+  `};
+`;
 
 class Home extends React.Component {
   render() {
@@ -31,12 +29,10 @@ class Home extends React.Component {
           backgroundPosition: `center`,
           backgroundRepeat: `no-repeat`,
           backgroundSize: `cover`,
-          transform: `translate(0, -5em)`
+          transform: `translate(0, 0)`
         }}
       >
-      <div>
-        
-      </div>
+        <div />
         <Landing />
         <Container>
           <HomeLogos />

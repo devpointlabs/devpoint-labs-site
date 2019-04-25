@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Image,
-  Icon, 
-  Container,
-} from "semantic-ui-react";
+import { Button, Image, Icon, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { media } from "../../theme/media";
 import styled from "styled-components";
@@ -18,26 +13,39 @@ const Topimages = () => {
     <>
       <OvrP>
         <TeamImage src={teamimage} />
-        <TagText style={{ fontFamily: `'Exo 2', sans-serif`}}>DEVPOINT LABS | STUDENT HOUSING</TagText>
-        <TeamText style={{ fontFamily: `'Exo 2', sans-serif`}} >Free Student Housing</TeamText>
-        <TeamMeta style={{ fontFamily: `'Exo 2', sans-serif`}}>
+        <TagText style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          DEVPOINT LABS | STUDENT HOUSING
+        </TagText>
+        <TeamText style={{ fontFamily: `'Exo 2', sans-serif` }}>
+          Free Student Housing
+        </TeamText>
+        <TeamMeta style={{ fontFamily: `'Exo 2', sans-serif` }}>
           Fully Furnished free student housing steps away from campus!
         </TeamMeta>
         <ButtonStyle>
-          <ButtLink href="/ApplicationsForm" style={{ fontFamily: `'Exo 2', sans-serif`}}>Apply Now</ButtLink>
+          <ButtLink
+            href="/ApplicationsForm"
+            style={{ fontFamily: `'Exo 2', sans-serif` }}
+          >
+            Apply Now
+          </ButtLink>
         </ButtonStyle>
       </OvrP>
       <Container>
-      <BannerTwo>
-        <BTHead style={{ fontFamily: `'Exo 2', sans-serif`}}>Student Housing at No Cost</BTHead>
-        <BTFont style={{ fontFamily: `'Exo 2', sans-serif`}}>
-          At DevPoint Labs our goal has been to be the most accessible school in
-          <br/>
-          the country. With free housing included, you can focus on achieving your
-          <br/>
-          goals and getting ready for the industry.
-        </BTFont>
-      </BannerTwo>
+        <BannerTwo>
+          <BTHead style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            Student Housing at No Cost
+          </BTHead>
+          <BTFont style={{ fontFamily: `'Exo 2', sans-serif` }}>
+            At DevPoint Labs our goal has been to be the most accessible school
+            in
+            <br />
+            the country. With free housing included, you can focus on achieving
+            your
+            <br />
+            goals and getting ready for the industry.
+          </BTFont>
+        </BannerTwo>
       </Container>
       <OvrP>
         <TeamImage src={housingpic} />
