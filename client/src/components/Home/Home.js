@@ -25,7 +25,7 @@ class Home extends React.Component {
     return (
       <BackgroundStyles
         style={{
-          backgroundImage: `url('${images}')`,
+          backgroundImage: `linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('${images}')`,
           backgroundPosition: `center`,
           backgroundRepeat: `no-repeat`,
           backgroundSize: `cover`,

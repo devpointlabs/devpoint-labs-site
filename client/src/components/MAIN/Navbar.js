@@ -4,7 +4,7 @@ import { Menu, Dropdown, Icon, Button, Image } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { media } from "../../theme/media";
-import blackLogo from "../../assets/icons/dplblacklogo.png";
+import blackLogo from "../../assets/icons/dplwhitelogo.png";
 
 class Navbar extends React.Component {
   state = {
@@ -308,7 +308,7 @@ class Navbar extends React.Component {
 
     return (
       <>
-        <MenuStyles secondary>
+        <MenuStyles inverted secondary style={{ background: `${colors.black}`}}>
           <Link to="/">
             <WebLogoStyle floated="left" src={blackLogo} />
           </Link>
@@ -382,6 +382,7 @@ const LogoStyle = styled(Image)`
 const MenuStyles = styled(Menu)`
   position: relative !important
   z-index: 1 !important
+  margin-bottom: 0 !important
 `;
 const MenuMobile = styled(Menu)`
   display: none !important ${media.phone`
