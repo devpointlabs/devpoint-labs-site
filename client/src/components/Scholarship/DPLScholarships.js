@@ -159,7 +159,7 @@ class DPLScholarships extends React.Component {
                   <Button>
                     <Link
                       to="/ScholarshipForm"
-                      style={{ color: `${colors.darkPurp}`, fontFamily: `'Exo 2', sans-serif` }}
+                      style={{ color: `${colors.darkPurp}`, }}
                     >
                       Apply
                     </Link>
@@ -186,7 +186,7 @@ class DPLScholarships extends React.Component {
                   <Button>
                     <Link
                       to="/ScholarshipForm"
-                      style={{ color: `${colors.darkPurp}`, fontFamily: `'Exo 2', sans-serif` }}
+                      style={{ color: `${colors.darkPurp}`, }}
                     >
                       Apply
                     </Link>

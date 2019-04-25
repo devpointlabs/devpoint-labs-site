@@ -9,20 +9,34 @@ import CoursesSection from "./CoursesSection";
 import CampusTour from "./CampusTour";
 import HomeLogos from "./HomeLogos";
 import Footer from "../MAIN/Footer";
+import styled from 'styled-components'
+import { media, } from "../../theme/media";
 
-const BackgroundStyles = {
-  backgroundImage: `url('${images}')`,
-  backgroundPosition: `center`,
-  backgroundRepeat: `no-repeat`,
-  backgroundSize: `cover`,
-  height: `60em`,
-  transform: `translate(0, -5em)`
-}
+const BackgroundStyles = styled.div`
+  height: 60em
+  ${media.tablet`
+  height: 79.5em
+  `}
+  ${media.phone`
+  height: 77em
+  `}
+`
 
 class Home extends React.Component {
   render() {
     return (
-      <div style={BackgroundStyles}>
+      <BackgroundStyles
+        style={{
+          backgroundImage: `url('${images}')`,
+          backgroundPosition: `center`,
+          backgroundRepeat: `no-repeat`,
+          backgroundSize: `cover`,
+          transform: `translate(0, -5em)`
+        }}
+      >
+      <div>
+        
+      </div>
         <Landing />
         <Container>
           <HomeLogos />
@@ -33,7 +47,7 @@ class Home extends React.Component {
         <CampusTour />
         <CoursesSection />
         <Footer />
-      </div>
+      </BackgroundStyles>
     );
   }
 }

@@ -43,7 +43,7 @@ const Reviews = () => {
                   </RightText>
                   <br />
                   <h3>Usong Cho</h3>
-                  <p style={{ color: `${colors.purp}`, opacity: '.6'}}>U of U Full-Time Student</p>
+                  <p style={{ color: `${colors.darkPurp}`, opacity: '.6'}}>U of U Full-Time Student</p>
                 </ColStyle>
               </Grid.Column>
 
@@ -60,7 +60,7 @@ const Reviews = () => {
                   </LeftText>
                   <br />
                   <h3>Bryan Holbrook</h3>
-                  <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Co-founder of Forma DS</p>
+                  <p style={{ color: `${colors.darkPurp}`, opacity: '.6'}}>Co-founder of Forma DS</p>
                 </ColStyle>
               </Grid.Column>
             </Grid>
@@ -89,7 +89,7 @@ const Reviews = () => {
                   </RightText>
                   <br />
                   <h3>Dan</h3>
-                  <p style={{ color: `${colors.purp}`, opacity: '.6'}}>Full Stack Software Engineer</p>
+                  <p style={{ color: `${colors.darkPurp}`, opacity: '.6'}}>Full Stack Software Engineer</p>
                 </ColStyle>
               </Grid.Column>
 

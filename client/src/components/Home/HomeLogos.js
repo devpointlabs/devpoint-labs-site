@@ -36,9 +36,6 @@ const LogoGrid = styled(Grid)`
   width: 100%;
   opacity: .3 !important
   padding-bottom: 7em !important
-  ${media.phone`
-    visibility: hidden
-  `};
   ${media.tablet`
     visibility: hidden
   `}

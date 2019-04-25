@@ -34,7 +34,7 @@ const Topimages = () => {
       <BannerTwo>
         <BlackBeak src={blackbeak} />
         <BTHead style={{ fontFamily: `'Exo 2', sans-serif` }}>
-          DevPoint lab's 11 week
+          DevPoint Labs' 11 week
         </BTHead>
         <BTFont style={{ fontFamily: `'Exo 2', sans-serif` }}>
           More than just code. Whether you’re a local or coming from
