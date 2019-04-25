@@ -45,7 +45,7 @@ class ContactForm extends React.Component {
       {
         key: "1",
         text:
-          "U of U Professional Education Web Development(May 6th - July 23rd, 2019)",
+          "Salt Lake City, Part Time Web Development",
         value: "course"
       },
       {
