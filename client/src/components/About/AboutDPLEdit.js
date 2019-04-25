@@ -36,7 +36,7 @@ class AboutDPL extends React.Component {
             Add Content To About DPL
           </Button>
         </Link> */}
-        <Container style={{ width: "55%" }}>
+        <Container style={{ width: "55%" , border: "1px solid black"}}>
           <AbText>ABOUT</AbText>
           <DevHead as="h1">DevPoint Labs</DevHead>
           <br />
@@ -44,15 +44,14 @@ class AboutDPL extends React.Component {
             <div key={about.id}>
               <AbBody>{about.abBody1}</AbBody>
               <br />
-              <br />
               <AbBody>{about.abBody2}</AbBody>
               <AbBody>{about.abBody3}</AbBody>
               <br />
               <br />
-              <Button>
-                <Link to={`/About/${about.id}/edit`} as={Button}>
+              <Button color="grey">
+                <Link to={`/About/${about.id}/edit`} as={Button} style={{color: "white"}}>
                   <Icon name="edit" size="small" />
-                  Edit Content of About DPL
+                  Edit About DPL
                 </Link>
               </Button>
               <br />

@@ -16,7 +16,7 @@ const CoursesSection = () => {
         })`
       }}
     >
-      <Container>
+    <Container>
         <Grid stackable columns={2}>
           <Grid.Column>
             <Grid.Row>
@@ -63,26 +63,23 @@ const CoursesSection = () => {
             </OvrP>
           </Grid.Column>
         </Grid>
-      </Container>
+        </Container>
     </div>
   );
 };
 
 const LinkButt = styled.div`
-width: 25%;
+width: 40%;
 border-radius: 3%
 padding: 10px;
 font-weight: 400;
 position: absolute;
 text-align: center;
-top: 90%;
+top: 70%;
 left: 50%;
 transform: translate(-50%, -50%);
 ${media.phone`
-  width: 200px;
-`}
-${media.tablet`
-  width: 30%;
+  top: 75%
 `}
 `;
 
@@ -98,9 +95,7 @@ const PartLink = styled(Link)`
   }
   ${media.tablet`
     font-size: 1em
-  `} ${media.phone`
-    font-size: 1em;
-  `};
+  `} 
 `;
 
 const TagText = styled.text`
@@ -109,107 +104,58 @@ const TagText = styled.text`
   font-weight: 600;
   position: absolute;
   text-align: center;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   ${media.tablet`
     font-size: 1em
   `}
-  ${media.phone`
-    font-size: 1em
-    padding-bottom: 50px
-  `}
-  ${media.desktop`
-    font-size: 1em
-    padding-top: 0
-  `}
-  ${media.giant`
-    font-size: 1em
-    padding-top: 0
-  `}
 `;
 
-const PartMeta = styled.text`
-font-size: 20px;
-color: white;
-font-weight: 600;
-position: absolute;
-text-align: center;
-top: 32%;
-left: 50%;
-transform: translate(-50%, -50%);
-${media.tablet`
-  font-size: 1em
-`}
-${media.phone`
-  font-size: 1em
-  padding-bottom: 50px
-`}
-${media.desktop`
-  font-size: 1em
-  padding-top: 0
-`}
-${media.giant`
-  font-size: 1em
-  padding-top: 0
-`}
-`;
 const PartDescription = styled.text`
-    font-size: 14px;
+    font-size: 1em;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     position: absolute;
     text-align: center;
-    top: 58%;
+    top: 55%;
     left: 50%;
+    width: 85%
     transform: translate(-50%, -50%);
-    ${media.tablet`
-      font-size: 1em
-    `}
     ${media.phone`
-      font-size: 1em
-      padding-bottom: 50px
+      width: 95%
     `}
-    ${media.desktop`
-      font-size: 1em
-      padding-top: 0
-    `}
-    ${media.giant`
-      font-size: 1em
-      padding-top: 0
-    `}
-    `;
+`
 
 const PartHead = styled.text`
-  font-size: 14px;
-  color: white;
-  font-weight: 600;
-  position: absolute;
-  text-align: center;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  ${media.tablet`
-    font-size: 1em
-  `}
-  ${media.phone`
-    font-size: 1em
-    padding-bottom: 50px
-  `}
-`;
-const FullHead = styled.text`
-  font-size: 28px;
+  font-size: 1em;
   color: white;
   font-weight: 700;
   position: absolute;
   text-align: center;
-  top: 36%;
+  top: 40%;
   left: 50%;
+  width: 100%
+  transform: translate(-50%, -50%);
+  ${media.phone`
+  top: 40%
+  `}
+`;
+const FullHead = styled.text`
+  font-size: 26px;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  width: 100%
   transform: translate(-50%, -50%);
   ${media.tablet`
-    font-size: 1em
+    font-size: 1.2em
   `}
   ${media.phone`
+    top: 42%
     font-size: 1em
     padding-bottom: 50px
   `}
@@ -223,7 +169,7 @@ const PTUImage = styled(Image)`
   height: 178px
   `}
   ${media.phone`
-    width: 320px
+    width: auto
     height: 200px
   `}
 `;
@@ -233,26 +179,27 @@ const FTUImage = styled(Image)`
   z-index: -1;
   height: 378px
   ${media.phone`
-    width: 320px
-    height: 320px
+    width: 400px !important
+    height: 250px
   `}
 `;
 
 const OvrP = styled.div`
   position: relative;
   background-image: linear-gradient(black, black);
-  opacity: 0.8;
+  opacity: 0.9;
   box-shadow: 2px 3px 8px;
   ${media.tablet`
   position: relative;
   width: auto;
   opacity: 0.9
-  `} ${media.phone`
-    position: relative;
-    width: auto;
-    opacity: 0.9
-    `};
-    `;
+  `} 
+  ${media.phone`
+  position: relative;
+  width: auto;
+  opacity: 0.9
+  `};
+  `;
     // height: 500px
     // background: #6E54A3;
 

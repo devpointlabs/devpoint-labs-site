@@ -55,11 +55,12 @@ const MobileInstagram = () => {
           boxShadow: '2px 3px 8px',
           marginLeft: '1em',
           marginRight: '1em',
+          fontFamily: `'Exo 2', sans-serif`,
         }}>
-        <TextStyle>Tagline</TextStyle>
-        <HeaderStyle as='h1'>You're in good company</HeaderStyle>
-        <TextStyle>When applied to building block a website or similar work product,
-                      a Visual Guide can be an intermediate step toward.</TextStyle>
+        <TextStyle>More than just code</TextStyle>
+        <HeaderStyle as='h1' style={{fontFamily: `'Exo 2', sans-serif`}}>You're in good company</HeaderStyle>
+        <TextStyle>Whether you’re a local or coming from out-of-state we blend students 
+        into a vibrant developer community building life long friendships.</TextStyle>
         <br />
         <a href='https://www.instagram.com/devpointlabs/?hl=en' target='_blank' rel="noopener noreferrer">
           <Icon name='instagram' size='big' style={{ float: 'right', color: `${colors.darkPurp}` }} />
@@ -67,8 +68,8 @@ const MobileInstagram = () => {
         <a href='https://www.facebook.com/DevPointLabs/' target='_blank' rel="noopener noreferrer">
           <Icon name='facebook' size='big' style={{ float: 'right', color: `${colors.darkPurp}` }} />
         </a>
-        <Link to='/'>
-          <p style={{ color: `${colors.darkPurp}` }}>Learn More ></p>
+        <Link to="/ContactUs">
+          <p style={{ color: `${colors.darkPurp}`, fontFamily: `'Exo 2', sans-serif` }}>Learn More ></p>
         </Link>
       </Segment>
     </div>
@@ -90,7 +91,7 @@ const TextStyle = styled.div`
 const HeaderStyle = styled.div`
   @media (max-width: 500px) {
       font-size: 1.2em
-      font-weight: bold
+      font-weight: bolder
   }
 `
 

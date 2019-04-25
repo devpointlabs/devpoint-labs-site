@@ -58,7 +58,7 @@ const CostDates = props => {
                 .map(cohort => {
                   return (
                     <Grid.Column item={cohorts} key={cohorts.id}>
-                      <CostCard style={styles.costBox}>
+                      <CostCard style={styles.costBox} style={{ fontFamily: `'Exo 2', sans-serif`, fontWeight: "bolder" }}>
                         <Image src={cohort.image_url} />
                         <br />
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import { Form } from 'semantic-ui-react'
+import { Form, Container, Header } from 'semantic-ui-react'
+import styled from 'styled-components'
 
 class AboutEditForm extends React.Component {
   defaultValues = {
@@ -14,42 +15,45 @@ class AboutEditForm extends React.Component {
   componentDidMount() {
     const { match: { params: { id } } } = this.props
     if (id)
-    axios.get(`/api/abouts/${id}`)
+      axios.get(`/api/abouts/${id}`)
         .then(res => {
-            this.setState({ 
-              abBody1: res.data.abBody1, 
-              abBody2: res.data.abBody2,
-              abBody3: res.data.abBody3,
-            })
+          this.setState({
+            abBody1: res.data.abBody1,
+            abBody2: res.data.abBody2,
+            abBody3: res.data.abBody3,
+          })
         })
         .catch(err => {
-            console.log(err.response)
+          console.log(err.response)
         })
-}   
-
-handleSubmit = e => {
-  e.preventDefault()
-  const about = this.state
-  const { match: { params: {id } }, history: { push } } = this.props
-  if (id) {
-      axios.put(`/api/abouts/${id}`, about)
-          .then( res => push('/About'))
-  } else {
-      axios.post(`/api/abouts`, about)
-      .then (res => push('/About'))
   }
-}   
 
-handleChange = (e) => {
-const { target: { name, value } } = e
-this.setState({ [name]: value })
-}
+  handleSubmit = e => {
+    e.preventDefault()
+    const about = this.state
+    const { match: { params: { id } }, history: { push } } = this.props
+    if (id) {
+      axios.put(`/api/abouts/${id}`, about)
+        .then(res => push('/About'))
+    } else {
+      axios.post(`/api/abouts`, about)
+        .then(res => push('/About'))
+    }
+  }
 
-  render () {
-    const { abBody1, abBody2, abBody3} = this.state
+  handleChange = (e) => {
+    const { target: { name, value } } = e
+    this.setState({ [name]: value })
+  }
+
+  render() {
+    const { abBody1, abBody2, abBody3 } = this.state
 
     return (
-      <>
+      <Container style={{ paddingTop: "2em" }}>
+        <AbText>ABOUT</AbText>
+        <DevHead as="h1">DevPoint Labs</DevHead>
+        <br />
         <Form onSubmit={this.handleSubmit}>
           <textarea
             placeholder='Content1'
@@ -79,11 +83,28 @@ this.setState({ [name]: value })
           />
           <br />
           <br />
-          <Form.Button>Submit</Form.Button>
+          <Form.Button>Update</Form.Button>
         </Form>
-      </>
+      </Container>
     )
   }
 }
+
+const DevHead = styled(Header)`
+  font-size: 38px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+`;
+
+const AbText = styled.p`
+  font-size: 15px;
+  text-align: center;
+  padding-top: 60px
+  padding-bottom: 0;
+  line-height: 0;
+  font-weight: 600;
+  color: #9c9c9c;
+`;
 
 export default AboutEditForm

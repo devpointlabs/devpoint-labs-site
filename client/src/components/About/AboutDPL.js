@@ -23,9 +23,9 @@ class AboutDPL extends React.Component {
 
     return (
       <div style={{background: `url(${wallpaper})`}}> 
-        <Container style={{ width: "55%", }}>
+        <Container style={{ width: "55%", fontFamily: `'Exo 2', sans-serif` }}>
           <AbText>ABOUT</AbText>
-          <DevHead as="h1">DevPoint Labs</DevHead>
+          <DevHead as="h1" style={{fontFamily: `'Exo 2', sans-serif`}}>DevPoint Labs</DevHead>
           <br />
       {abouts.map(about =>
           <div key={about.id}>
@@ -53,7 +53,7 @@ const DevHead = styled(Header)`
   font-size: 38px;
   text-align: center;
   font-style: italic;
-  font-weight: 500;
+  font-weight: bolder;
 `;
 
 const AbText = styled.p`
@@ -62,8 +62,7 @@ const AbText = styled.p`
   padding-top: 60px
   padding-bottom: 0;
   line-height: 0;
-  font-weight: 600;
-  color: #9c9c9c;
+  font-weight: bolder;
 `;
 
 const AbBody = styled.p`
