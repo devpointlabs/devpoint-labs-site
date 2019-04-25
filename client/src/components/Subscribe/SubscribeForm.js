@@ -13,7 +13,7 @@ export default class SubscribeForm extends Component {
     axios.post("/api/subscribers", subscriber).then(res => {
       alert("You are subscribed");
     });
-    this.setState({ ...this.state });
+    this.setState({ ...this.defaultValues });
   };
 
   handleChange = e => {
