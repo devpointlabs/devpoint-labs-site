@@ -4,7 +4,7 @@ import { Menu, Dropdown, Icon, Button, Image } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { media } from "../../theme/media";
-import blackLogo from "../../assets/icons/dpllogo.png";
+import blackLogo from "../../assets/icons/dplblacklogo.png";
 
 class Navbar extends React.Component {
   state = {
@@ -27,10 +27,7 @@ class Navbar extends React.Component {
 
     if (user) {
       return (
-        <Dropdown
-          text="Profile"
-          as={Menu.Item}
-        >
+        <Dropdown text="Profile" as={Menu.Item}>
           <Dropdown.Menu>
             <Dropdown.Item text="Dashboard" href="/Profile" />
             <Dropdown.Item text="Applicants" href="/Applicants" />
@@ -48,11 +45,11 @@ class Navbar extends React.Component {
     } else {
       return (
         <>
-          <Link 
-            to="/login" 
+          <Link
+            to="/login"
             style={{ transform: "translate(0, 1em)" }}
             onClick={this.toggleClick}
-            >
+          >
             <Menu.Item
               as={Button}
               inverted
@@ -60,15 +57,12 @@ class Navbar extends React.Component {
               id="login"
               name="login"
               active={location.pathname === "/login"}
-              
             />
           </Link>
         </>
       );
     }
   };
-
-  
 
   rightNavItems = () => {
     const {
@@ -87,7 +81,7 @@ class Navbar extends React.Component {
         >
           <Dropdown.Menu
             direction="left"
-            style={{ transform: 'translate(0, 1em)'}}
+            style={{ transform: "translate(0, 1em)" }}
           >
             <Dropdown.Item text="Dashboard" href="/Profile" />
             <Dropdown.Item text="Applicants" href="/Applicants" />
@@ -105,10 +99,7 @@ class Navbar extends React.Component {
     } else {
       return (
         <>
-          <Link 
-            to="/login" 
-            style={{ transform: "translate(0, 1em)" }}
-            >
+          <Link to="/login" style={{ transform: "translate(0, 1em)" }}>
             <Menu.Item
               as={Button}
               inverted
@@ -198,7 +189,6 @@ class Navbar extends React.Component {
       }
     ];
 
-
     if (show)
       return (
         <Mobile>
@@ -210,12 +200,13 @@ class Navbar extends React.Component {
             item
           />
 
-          <Dropdown 
+          <Dropdown
             as={Menu.Item}
-            text="About" 
-            options={aboutOptions} 
+            text="About"
+            options={aboutOptions}
             fluid
-            item />
+            item
+          />
           <Dropdown
             as={Menu.Item}
             text="Community"
@@ -223,10 +214,7 @@ class Navbar extends React.Component {
             fluid
             item
           />
-          <Link 
-            to="/ApplicationsForm"
-            onClick={this.toggleClick}
-            >
+          <Link to="/ApplicationsForm" onClick={this.toggleClick}>
             <Menu.Item
               id="application"
               name="Apply Now"
