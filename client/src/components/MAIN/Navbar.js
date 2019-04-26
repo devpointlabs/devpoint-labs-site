@@ -4,7 +4,7 @@ import { Menu, Dropdown, Icon, Button, Image } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { media } from "../../theme/media";
-import blackLogo from "../../assets/icons/dplblacklogo.png";
+import blackLogo from "../../assets/icons/dplwhitelogo.png";
 
 class Navbar extends React.Component {
   state = {
@@ -308,7 +308,7 @@ class Navbar extends React.Component {
 
     return (
       <>
-        <MenuStyles secondary>
+        <MenuStyles inverted secondary style={{ background: `${colors.black}`}}>
           <Link to="/">
             <WebLogoStyle floated="left" src={blackLogo} />
           </Link>
@@ -325,7 +325,7 @@ class Navbar extends React.Component {
               >
                 <Button.Content visible>Apply Now</Button.Content>
                 <Button.Content hidden color="black">
-                  <Icon name="arrow right" />
+                  <Icon inverted name="arrow right" />
                 </Button.Content>
               </ButtonStyle>
             </Link>
@@ -340,13 +340,7 @@ class Navbar extends React.Component {
               </Menu.Item>
               {this.handleDropdown()}
               <Link to="/">
-                {this.state.show ? (
-                  <Link to="/" onClick={this.toggleClick}>
-                    <LogoStyle src="https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142677.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=2xhb01VaI25UViJMvJqZZeMcdyA%3D" />
-                  </Link>
-                ) : (
-                  <LogoStyle src="https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142674.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=WtADJjHKLaiVmZh%2BIHmiw%2FjnJPw%3D" />
-                )}
+                <LogoStyle src="https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/105142677.png?x-amz-meta-iv=6&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1556668800&Signature=2xhb01VaI25UViJMvJqZZeMcdyA%3D" />
               </Link>
             </Menu.Menu>
           </MenuMobile>
@@ -382,6 +376,7 @@ const LogoStyle = styled(Image)`
 const MenuStyles = styled(Menu)`
   position: relative !important
   z-index: 1 !important
+  margin-bottom: 0 !important
 `;
 const MenuMobile = styled(Menu)`
   display: none !important ${media.phone`
