@@ -1,7 +1,7 @@
 import React from "react";
 import IDos from "./IDos";
 import { Container } from "semantic-ui-react";
-import images from "../../assets/images/sitguys.jpg";
+import images from "../../assets/images/sitdesk.jpg";
 import PageOptions from "./PageOptions";
 import Landing from "./Landing";
 import Reviews from "../Reviews/Reviews";
@@ -13,7 +13,8 @@ import styled from "styled-components";
 import { media } from "../../theme/media";
 
 const BackgroundStyles = styled.div`
-  height: 60em ${media.tablet`
+  height: 60em;
+  ${media.tablet`
   height: 79.5em
   `} ${media.phone`
   height: 77em
@@ -26,7 +27,7 @@ class Home extends React.Component {
       <BackgroundStyles
         style={{
           backgroundImage: `linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('${images}')`,
-          backgroundPosition: `center`,
+          backgroundPosition: `top`,
           backgroundRepeat: `no-repeat`,
           backgroundSize: `cover`,
           transform: `translate(0, 0)`
