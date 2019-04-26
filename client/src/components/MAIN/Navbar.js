@@ -74,8 +74,8 @@ class Navbar extends React.Component {
       return (
         <Dropdown
           as={Icon}
+          inverted
           name="user circle"
-          color="black"
           size="large"
           style={{ transform: "translate(0, 1em)" }}
         >
@@ -395,11 +395,12 @@ const MenuWeb = styled(Menu.Menu)`
     display: none !important
   `}
 `;
+
 const ButtonStyle = styled(Button)`
   margin-right: 1em !important
   margin-left: .5em !important
   transform: translate(0, 1em) !important
-`;
+`
 const ButtonStyle2 = styled(Button)`
   z-index: 2 !important;
 `;
