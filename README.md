@@ -5,9 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - Ruby on Rails with PostgreSQL
 
-* System dependencies
+* System dependencies - Yarn, Axios, SemanticUi React, Styled Components
 
 * Configuration
 
@@ -20,5 +20,6 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+  http://devpointlabs.herokuapp.com
 
 * ...
